@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực Đơn - Âm Thực Việt</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Be+Vietnam+Pro:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 48px;
+        }
+
+        .menu-item-large {
+            grid-column: span 7;
+        }
+
+        .menu-item-side {
+            grid-column: span 5;
+            padding-top: 48px;
+        }
+
+        .menu-item-card {
+            grid-column: span 4;
+        }
+
+        .item-img-wrap {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 24px;
+        }
+
+        .item-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+
+        .item-img-wrap:hover img {
+            transform: scale(1.05);
+        }
+
+        .item-price {
+            color: var(--primary);
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        @media (max-width: 992px) {
+
+            .menu-item-large,
+            .menu-item-side,
+            .menu-item-card {
+                grid-column: span 12;
+            }
+
+            .menu-item-side {
+                padding-top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container nav">
+            <div class="logo">Âm Thực Việt</div>
+            <nav class="nav-links">
+                <a href="index.html">Trang Chủ</a>
+                <a href="thuc-don.html" class="active">Thực Đơn</a>
+                <a href="lich-su.html">Lịch Sử</a>
+                <a href="#">Liên Hệ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container section">
+        <div style="text-align: center; margin-bottom: 64px;">
+            <h1 style="font-size: 48px; color: var(--primary); margin-bottom: 16px;">Tinh Hoa Ẩm Thực</h1>
+            <div style="width: 48px; height: 2px; background: var(--secondary); margin: 0 auto 24px;"></div>
+            <p style="font-style: italic; color: var(--on-surface-variant); max-width: 600px; margin: 0 auto;">
+                Hành trình tìm về hương vị nguyên bản của làng quê Việt Nam, nơi mỗi món ăn là một câu chuyện về tình
+                yêu và lòng trân quý đất mẹ.
+            </p>
+        </div>
+
+        <div class="menu-tabs">
+            <button class="tab-btn active">Món Khai Vị</button>
+            <button class="tab-btn">Món Chính</button>
+            <button class="tab-btn">Món Nước</button>
+            <button class="tab-btn">Tráng Miệng</button>
+        </div>
+
+        <div class="menu-grid">
+            <!-- Large Feature -->
+            <div class="menu-item-large">
+                <div class="item-img-wrap" style="aspect-ratio: 16/9;">
+                    <img src="./assets/img/goi-cuon-tom-thit.jpg" alt="Gỏi Cuốn">
+                    <div
+                        style="position: absolute; top: 16px; left: 16px; background: var(--secondary); color: #fff; padding: 4px 12px; font-size: 10px; text-transform: uppercase; letter-spacing: 2px;">
+                        Đặc Sản</div>
+                </div>
+                <div
+                    style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px;">
+                    <h3 style="font-size: 32px;">Gỏi Cuốn Tôm Thịt</h3>
+                    <span class="item-price">125.000đ</span>
+                </div>
+                <p style="color: var(--on-surface-variant); max-width: 500px;">
+                    Sự kết hợp tinh tế giữa tôm tươi, thịt luộc và rau sống, cuộn tròn trong lớp bánh tráng mỏng manh,
+                    chấm cùng tương đậu phộng bùi ngậy.
+                </p>
+            </div>
+
+            <!-- Side Feature -->
+            <div class="menu-item-side">
+                <div class="item-img-wrap"
+                    style="aspect-ratio: 4/5; border: 1px solid var(--outline-variant); padding: 8px;">
+                    <img src="assets/img/hero_pho.png" alt="Phở Bò">
+                </div>
+                <div style="margin-bottom: 16px;">
+                    <h3 style="font-size: 24px;">Phở Bò Nam Định</h3>
+                    <span class="item-price">185.000đ</span>
+                </div>
+                <p style="font-style: italic; color: var(--on-surface-variant);">
+                    Nước dùng trong vắt, đậm đà vị xương hầm, thoảng hương gừng nướng và hồi quế - linh hồn của ẩm thực
+                    thành Nam.
+                </p>
+            </div>
+
+            <!-- Bento/Card Items -->
+            <div class="menu-item-card">
+                <div class="item-img-wrap" style="aspect-ratio: 1/1;">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800"
+                        alt="Cá Kho">
+                </div>
+                <h3 style="font-size: 24px;">Cá Kho Tộ</h3>
+                <span class="item-price">245.000đ</span>
+                <p style="font-size: 14px; color: var(--on-surface-variant); margin-top: 8px;">
+                    Cá lóc đồng kho trong tộ đất với nước mắm nhỉ và tiêu sọ, mang đến hương vị mặn ngọt hài hòa.
+                </p>
+            </div>
+
+            <div class="menu-item-card"
+                style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border-left: 1px solid rgba(139, 113, 108, 0.2); border-right: 1px solid rgba(139, 113, 108, 0.2); padding: 0 32px;">
+                <p style="font-size: 24px; font-family: var(--font-display); font-style: italic; margin-bottom: 24px;">
+                    "Ăn một miếng ngon, nhớ một đời lành."</p>
+                <div style="width: 32px; height: 1px; background: var(--primary); margin-bottom: 16px;"></div>
+                <span
+                    style="font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--secondary);">Triết
+                    lý Ẩm Thực Việt</span>
+            </div>
+
+            <div class="menu-item-card">
+                <div class="item-img-wrap" style="aspect-ratio: 1/1;">
+                    <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&q=80&w=800"
+                        alt="Chè Sen">
+                </div>
+                <h3 style="font-size: 24px;">Chè Sen Nhãn Nhục</h3>
+                <span class="item-price">85.000đ</span>
+                <p style="font-size: 14px; color: var(--on-surface-variant); margin-top: 8px;">
+                    Vị ngọt thanh khiết của nhãn lồng Hưng Yên kết hợp cùng hạt sen Huế bùi dẻo, thức quà giải nhiệt
+                    thanh tao.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div>
+                <div class="footer-logo">Âm Thực Việt</div>
+                <p style="font-size: 12px; color: #888;">© 2024 Âm Thực Việt - Hồn Quê Việt.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
