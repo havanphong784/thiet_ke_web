@@ -5,13 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Âm Thực Việt - Hồn Quê Việt</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Be+Vietnam+Pro:wght@400;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Be+Vietnam+Pro:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobileNav">
+        <button class="mobile-nav-close" onclick="document.getElementById('mobileNav').classList.remove('active')">&times;</button>
+        <a href="index.html" class="active">Trang Chủ</a>
+        <a href="thuc-don.html">Thực Đơn</a>
+        <a href="lich-su.html">Lịch Sử</a>
+        <a href="lien-he.html">Liên Hệ</a>
+    </div>
+
     <header class="header">
         <div class="container nav">
             <div class="logo">Âm Thực Việt</div>
@@ -19,15 +26,18 @@
                 <a href="index.html" class="active">Trang Chủ</a>
                 <a href="thuc-don.html">Thực Đơn</a>
                 <a href="lich-su.html">Lịch Sử</a>
-                <a href="#">Liên Hệ</a>
+                <a href="lien-he.html">Liên Hệ</a>
             </nav>
-            <div class="nav-actions">
-                <!-- Search or Menu Icon could go here -->
-            </div>
+            <button class="hamburger" onclick="document.getElementById('mobileNav').classList.add('active')">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
     <main>
+        <!-- Hero -->
         <section class="hero">
             <img src="assets/img/hero_pho.png" alt="Tô Phở Nghệ Thuật" class="hero-img">
             <div class="container hero-content">
@@ -37,62 +47,50 @@
             </div>
         </section>
 
+        <!-- Intro Quote -->
         <section class="section container">
-            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <div style="width: 60px; height: 1px; background: var(--primary); margin: 0 auto 32px;"></div>
-                <p style="font-size: 20px; font-style: italic; color: var(--on-surface-variant); line-height: 1.8;">
-                    "Ẩm thực không chỉ là món ăn, mà là bản giao hưởng của ký ức, đất trời và đôi bàn tay khéo léo của
-                    người Việt qua bao thế hệ. Chúng tôi kể câu chuyện về cội nguồn qua từng gia vị, từng nguyên liệu
-                    mộc mạc nhất."
-                </p>
+            <div class="section-intro">
+                <div class="divider"></div>
+                <p>"Ẩm thực không chỉ là món ăn, mà là bản giao hưởng của ký ức, đất trời và đôi bàn tay khéo léo của người Việt qua bao thế hệ. Chúng tôi kể câu chuyện về cội nguồn qua từng gia vị, từng nguyên liệu mộc mạc nhất."</p>
             </div>
         </section>
 
+        <!-- Hương Vị 3 Miền -->
         <section class="section container">
-            <h2
-                style="text-align: center; font-size: 48px; color: var(--primary); font-style: italic; margin-bottom: 64px;">
-                Hương Vị 3 Miền</h2>
+            <h2 class="section-title">Hương Vị 3 Miền</h2>
             <div class="regional-grid">
-                <!-- North -->
                 <div class="region-card">
                     <div class="region-img-wrap">
                         <img src="assets/img/north.png" alt="Miền Bắc">
                     </div>
                     <h3>Bắc Bộ</h3>
-                    <p>Sự tinh tế trong nét thanh tao. Gia vị nhẹ nhàng, giữ trọn vị nguyên bản của đất trời trong từng
-                        bát canh, chén trà.</p>
+                    <p>Sự tinh tế trong nét thanh tao. Gia vị nhẹ nhàng, giữ trọn vị nguyên bản của đất trời trong từng bát canh, chén trà.</p>
                 </div>
-                <!-- Central -->
-                <div class="region-card" style="margin-top: 48px;">
+                <div class="region-card region-card--offset">
                     <div class="region-img-wrap">
                         <img src="assets/img/central.png" alt="Miền Trung">
                     </div>
                     <h3>Trung Bộ</h3>
-                    <p>Đậm đà và nồng nàn. Sự kết hợp hoàn hảo giữa vị cay nồng của ớt và nét quý tộc từ cung đình Huế
-                        xưa.</p>
+                    <p>Đậm đà và nồng nàn. Sự kết hợp hoàn hảo giữa vị cay nồng của ớt và nét quý tộc từ cung đình Huế xưa.</p>
                 </div>
-                <!-- South -->
                 <div class="region-card">
                     <div class="region-img-wrap">
                         <img src="assets/img/south.png" alt="Miền Nam">
                     </div>
                     <h3>Nam Bộ</h3>
-                    <p>Phóng khoáng và ngọt ngào. Hương vị sông nước miền Tây hòa quyện cùng sự đa dạng của các loại rau
-                        đồng nội.</p>
+                    <p>Phóng khoáng và ngọt ngào. Hương vị sông nước miền Tây hòa quyện cùng sự đa dạng của các loại rau đồng nội.</p>
                 </div>
             </div>
         </section>
 
+        <!-- Món Ăn Nổi Bật -->
         <section class="section dishes-section">
             <div class="container">
                 <div class="dishes-header">
                     <h2>Những Món Ăn Ghi Dấu Thời Gian</h2>
-                    <a href="thuc-don.html"
-                        style="font-size: 13px; text-transform: uppercase; letter-spacing: 2px; border-bottom: 1px solid var(--primary); font-weight: 600;">Xem
-                        Toàn Bộ Thực Đơn</a>
+                    <a href="thuc-don.html">Xem Toàn Bộ Thực Đơn</a>
                 </div>
                 <div class="dishes-grid">
-                    <!-- Card 1 -->
                     <div class="dish-card">
                         <div class="dish-img-wrap">
                             <img src="assets/img/bun_cha.png" alt="Bún Chả">
@@ -102,7 +100,6 @@
                         <p>Hương thơm nồng nàn từ thịt nướng than hoa, quyện cùng nước chấm chua ngọt thanh tao.</p>
                         <div class="dish-footer">Nét truyền thống</div>
                     </div>
-                    <!-- Card 2 -->
                     <div class="dish-card">
                         <div class="dish-img-wrap">
                             <img src="assets/img/banh_xeo.png" alt="Bánh Xèo">
@@ -112,20 +109,18 @@
                         <p>Món bánh dân dã với lớp vỏ vàng ươm, giòn rụm, gói trọn hương vị tôm thịt và rau vườn.</p>
                         <div class="dish-footer">Hương vị đồng nội</div>
                     </div>
-                    <!-- Card 3 -->
                     <div class="dish-card">
                         <div class="dish-img-wrap">
-                            <img src="./assets/img/cha-ca-la-vong.jpg" alt="Chả Cá">
+                            <img src="assets/img/cha-ca-la-vong.jpg" alt="Chả Cá">
                         </div>
                         <div class="dish-tag">Bắc Bộ</div>
                         <h4>Chả Cá Lã Vọng</h4>
                         <p>Tinh hoa ẩm thực Hà Thành với cá lăng nướng nghệ, ăn kèm thì là nồng nàn.</p>
                         <div class="dish-footer">Di sản Tràng An</div>
                     </div>
-                    <!-- Card 4 -->
                     <div class="dish-card">
                         <div class="dish-img-wrap">
-                            <img src="./assets/img/bun-bo-hue.jpg" alt="Bún Bò Huế">
+                            <img src="assets/img/bun-bo-hue.jpg" alt="Bún Bò Huế">
                         </div>
                         <div class="dish-tag">Trung Bộ</div>
                         <h4>Bún Bò Xứ Huế</h4>
@@ -136,44 +131,142 @@
             </div>
         </section>
 
-        <section class="section container" style="display: flex; gap: 64px; align-items: center;">
-            <div style="flex: 1;">
-                <img src="https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&q=80&w=800"
-                    alt="Gia vị Việt" style="width: 100%; height: 600px; object-fit: cover;">
+        <!-- Gia Vị -->
+        <section class="section container">
+            <div class="flex-section">
+                <div class="flex-section__img">
+                    <img src="assets/img/gia-vi.jpg" alt="Gia vị Việt">
+                </div>
+                <div class="flex-section__content">
+                    <span class="section-subtitle">Tiểu Luận Ẩm Thực</span>
+                    <h2>Gia Vị: Linh Hồn Của Đất</h2>
+                    <div class="divider"></div>
+                    <p>Sức mạnh của món ăn Việt nằm ở sự cân bằng. Không quá mặn, không quá ngọt, mà là sự hòa quyện tuyệt vời của ngũ hành: Chua, Cay, Mặn, Ngọt, Đắng. Mỗi vùng miền lại có cách phối gia vị riêng, tạo nên bản sắc không thể nhầm lẫn.</p>
+                    <blockquote>"Người Việt nấu ăn bằng trái tim, nêm nếm bằng tình yêu và trình bày bằng cả niềm tự hào dân tộc."</blockquote>
+                </div>
             </div>
-            <div style="flex: 1; display: flex; flex-direction: column; gap: 32px;">
-                <span
-                    style="font-size: 12px; text-transform: uppercase; letter-spacing: 3px; color: var(--primary); font-weight: 600;">Tiểu
-                    Luận Ẩm Thực</span>
-                <h2 style="font-size: 64px; line-height: 1.1;">Gia Vị: Linh Hồn Của Đất</h2>
-                <div style="width: 48px; height: 2px; background: var(--primary);"></div>
-                <p style="font-size: 18px; color: var(--on-surface-variant);">
-                    Sức mạnh của món ăn Việt nằm ở sự cân bằng. Không quá mặn, không quá ngọt, mà là sự hòa quyện tuyệt
-                    vời của ngũ hành: Chua, Cay, Mặn, Ngọt, Đắng.
-                </p>
-                <blockquote
-                    style="border-left: 4px solid var(--primary); padding-left: 32px; font-style: italic; font-size: 24px; font-family: var(--font-display); color: var(--primary);">
-                    "Người Việt nấu ăn bằng trái tim, nêm nếm bằng tình yêu và trình bày bằng cả niềm tự hào dân tộc."
-                </blockquote>
+        </section>
+
+        <!-- Bữa Cơm Gia Đình -->
+        <section class="section container">
+            <div class="flex-section flex-section--reverse">
+                <div class="flex-section__img">
+                    <img src="assets/img/bua-com.jpg" alt="Bữa Cơm Việt">
+                </div>
+                <div class="flex-section__content">
+                    <span class="section-subtitle">Sợi Dây Gắn Kết</span>
+                    <h2>Bữa Cơm Gia Đình</h2>
+                    <div class="divider"></div>
+                    <p>Bữa cơm tối không chỉ để no bụng, mà là nơi những câu chuyện ngày thường được chia sẻ, là sự quan tâm thầm lặng qua từng gắp thức ăn. Chén nước mắm chung giữa mâm cơm tượng trưng cho sự gắn kết không thể tách rời của gia đình Việt.</p>
+                    <a href="lich-su.html" class="btn">Tìm Hiểu Thêm</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Văn Hóa Đường Phố -->
+        <section class="section container">
+            <div class="section-intro">
+                <span class="section-subtitle">Nhịp Sống</span>
+                <h2 class="section-title" style="margin-top: 16px;">Văn Hóa Đường Phố</h2>
+            </div>
+            <div class="street-food-grid">
+                <div class="street-food-card">
+                    <img src="assets/img/pho-via-he.jpg" alt="Phở Vỉa Hè">
+                    <div class="street-food-content">
+                        <h3>Quán Cóc Vỉa Hè</h3>
+                        <p>Nơi nhịp sống hối hả nhường chỗ cho sự bình dị, dân dã. Một tô phở nóng, một chiếc ghế nhựa thấp - đó là Hà Nội.</p>
+                    </div>
+                </div>
+                <div class="street-food-card">
+                    <img src="assets/img/banh-mi.jpg" alt="Bánh Mì">
+                    <div class="street-food-content">
+                        <h3>Bánh Mì Kẹp</h3>
+                        <p>Sự giao thoa hoàn hảo giữa văn hóa ẩm thực Á - Âu. Vỏ giòn, nhân đầy đặn, hương vị khó quên.</p>
+                    </div>
+                </div>
+                <div class="street-food-card">
+                    <img src="assets/img/ca-phe.jpg" alt="Cà Phê Đá">
+                    <div class="street-food-content">
+                        <h3>Cà Phê Phin</h3>
+                        <p>Từng giọt tí tách mang theo sự tĩnh lặng của thời gian. Đậm đà, thơm nồng, đặc trưng Việt Nam.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nghệ Nhân -->
+        <section class="section container">
+            <div class="flex-section flex-section--reverse">
+                <div class="flex-section__img">
+                    <img src="assets/img/nghe-nhan.jpg" alt="Nghệ Nhân Bếp">
+                </div>
+                <div class="flex-section__content">
+                    <span class="section-subtitle">Bàn Tay Tài Hoa</span>
+                    <h2>Nghệ Nhân Bếp Việt</h2>
+                    <div class="divider"></div>
+                    <p>Đằng sau mỗi món ăn ngon là một nghệ nhân thầm lặng. Từ gánh hàng rong góc phố đến gian bếp cung đình, họ lưu giữ công thức gia truyền bằng cả cuộc đời, tỉ mỉ trong từng lát cắt, trau chuốt từng ngọn lửa để giữ vẹn nguyên cái hồn của dân tộc.</p>
+                    <p>Nhiều gia đình đã truyền nghề qua ba, bốn thế hệ. Bí quyết nằm ở sự kiên nhẫn, ở đôi tay đã thuộc lòng từng động tác, và ở tấm lòng yêu nghề không bao giờ nguội.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section container" style="text-align: center;">
+            <span class="section-subtitle">Góc Nhìn</span>
+            <h2 class="section-title" style="margin-top: 16px;">Dấu Ấn Toàn Cầu</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p>Ẩm thực Việt Nam là một trong những nền ẩm thực tinh tế, lành mạnh và phong phú nhất mà tôi từng được trải nghiệm.</p>
+                    <div>
+                        <h4>Gordon Ramsay</h4>
+                        <span class="role">Siêu Đầu Bếp</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p>Chỉ một bát phở vỉa hè cũng chứa đựng sự kỳ diệu của hàng chục loại hương liệu. Đây quả thực là bản giao hưởng vị giác.</p>
+                    <div>
+                        <h4>Anthony Bourdain</h4>
+                        <span class="role">Chuyên Gia Ẩm Thực</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="quote-mark">"</div>
+                    <p>Sự cân bằng hoàn hảo giữa chua, cay, mặn, ngọt khiến ẩm thực Việt không chỉ ngon miệng mà còn mang đậm tính triết lý.</p>
+                    <div>
+                        <h4>Tạp chí CNN Travel</h4>
+                        <span class="role">Chuyên trang Du lịch</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter-section">
+            <div class="container">
+                <h2>Hương Vị Trao Tay</h2>
+                <p>Đăng ký để nhận những câu chuyện ẩm thực, công thức gia truyền và ưu đãi đặc biệt từ chúng tôi.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Nhập email của bạn..." required>
+                    <button type="submit">Đăng Ký</button>
+                </form>
             </div>
         </section>
     </main>
 
     <footer class="footer">
         <div class="container footer-content">
-            <div style="display: flex; flex-direction: column; gap: 16px;">
+            <div>
                 <div class="footer-logo">Âm Thực Việt</div>
-                <p style="font-size: 12px; color: #888;">© 2024 Âm Thực Việt - Hồn Quê Việt. Tinh hoa ẩm thực Việt Nam.
-                </p>
+                <p class="footer-copy">© 2024 Âm Thực Việt - Hồn Quê Việt. Tinh hoa ẩm thực Việt Nam.</p>
             </div>
             <div class="footer-socials">
                 <a href="#">Facebook</a>
                 <a href="#">Instagram</a>
                 <a href="#">Pinterest</a>
             </div>
-            <div style="font-size: 10px; text-transform: uppercase; letter-spacing: 2px; color: #ccc;">
-                Đẹp - Tinh Tế - Truyền Thống
-            </div>
+            <div class="footer-tagline">Đẹp - Tinh Tế - Truyền Thống</div>
         </div>
     </footer>
 </body>

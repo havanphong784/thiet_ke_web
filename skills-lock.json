@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "css": {
+      "source": "mindrally/skills",
+      "sourceType": "github",
+      "skillPath": "css/SKILL.md",
+      "computedHash": "5c7eb0aebe0bf60b466ae6794ed5f071d6f6f858aee508beb1e902b9a502811d"
+    }
+  }
+}
