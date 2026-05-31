@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="51f455c6-0994-4081-8fbc-c747c23e4e23" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/AmThucVN.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotChats">
+    <option name="panelChat">
+      <chat>
+        <option name="activeSessionId" value="aa68b096-1c43-47af-9213-7b31cfd030fe" />
+        <option name="sessions">
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="aa68b096-1c43-47af-9213-7b31cfd030fe" />
+            <option name="modeId" value="Agent" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="gpt-5-mini" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+        </option>
+        <option name="type" value="PANEL" />
+      </chat>
+    </option>
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_/mnt/D/Code/Web/AmThucVN" value="3EWClUvA1FVjkwzfMEMG2Mr59CJ" />
+      <entry key="_D:/Code/Web/AmThucVN" value="3EVc47fIdN85dl5a0D2wJ4v1tvR" />
+    </persistenceIdMap>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;havanphong784&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/havanphong784/thiet_ke_web.git&quot;,
+    &quot;accountId&quot;: &quot;c4f2f7a4-07bb-4342-b917-de48ca3bbd34&quot;
+  }
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0170181479814896E-10" />
+      <entry key="MS500" value="0.02738827127350862" />
+      <entry key="S2" value="1.6940884680335584" />
+      <entry key="S5" value="4.452720030634484" />
+      <entry key="S10" value="6.45899668027458" />
+      <entry key="S30" value="10.564383937272192" />
+      <entry key="S60" value="13.559899998655968" />
+      <entry key="M2" value="15.864987574419144" />
+      <entry key="M5" value="17.627768904827505" />
+      <entry key="M10" value="18.292380997519764" />
+      <entry key="M15" value="18.523332261962" />
+      <entry key="M30" value="18.7591684496605" />
+      <entry key="H1" value="18.878952804466053" />
+      <entry key="H2" value="18.939317663493853" />
+      <entry key="H4" value="18.969619036061303" />
+      <entry key="D1" value="18.994930969384857" />
+      <entry key="W1" value="18.999275717055085" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.000000009046457" />
+      <entry key="S5" value="1.0006061657673468" />
+      <entry key="S10" value="1.0246204339390421" />
+      <entry key="S30" value="1.2909144103337944" />
+      <entry key="S60" value="1.539364821186731" />
+      <entry key="M2" value="1.73441461122906" />
+      <entry key="M5" value="1.8838458425884084" />
+      <entry key="M10" value="1.9401307582397291" />
+      <entry key="M15" value="1.9596779310923316" />
+      <entry key="M30" value="1.97963152822494" />
+      <entry key="H1" value="1.9897633698136838" />
+      <entry key="H2" value="1.9948685188574837" />
+      <entry key="H4" value="1.9974309594440531" />
+      <entry key="D1" value="1.999571367521924" />
+      <entry key="W1" value="1.9999387555373422" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="2.469250675901725E-7" />
+      <entry key="MS500" value="0.07486133615431854" />
+      <entry key="S2" value="2.1581175990652377" />
+      <entry key="S5" value="5.187604880568983" />
+      <entry key="S10" value="7.339278333002016" />
+      <entry key="S30" value="11.800847123079919" />
+      <entry key="S60" value="15.069832476191914" />
+      <entry key="M2" value="17.583846885906695" />
+      <entry key="M5" value="19.505137538330445" />
+      <entry key="M10" value="20.22922521243563" />
+      <entry key="M15" value="20.480808070028754" />
+      <entry key="M30" value="20.737693254954056" />
+      <entry key="H1" value="20.86816137562546" />
+      <entry key="H2" value="20.933908420962805" />
+      <entry key="H4" value="20.966911023948004" />
+      <entry key="D1" value="20.994479162331057" />
+      <entry key="W1" value="20.999211161628587" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3EWClUvA1FVjkwzfMEMG2Mr59CJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "e910f516",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/Code/Web/AmThucVN",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "terminal"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-WS-261.24374.125" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="51f455c6-0994-4081-8fbc-c747c23e4e23" name="Changes" comment="" />
+      <created>1780285089601</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1780285089601</updated>
+      <workItem from="1780285090791" duration="5929000" />
+      <workItem from="1780266987035" duration="1056000" />
+      <workItem from="1780269397165" duration="857000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>

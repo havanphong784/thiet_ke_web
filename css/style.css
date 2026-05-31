@@ -46,7 +46,7 @@ img {
     display: block;
 }
 
-/* Layout */
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -57,7 +57,7 @@ img {
     padding: var(--section-gap) 0;
 }
 
-/* Header & Navigation */
+
 .header {
     background: var(--background);
     border-bottom: 1px solid rgba(194, 78, 58, 0.1);
@@ -105,7 +105,7 @@ img {
     padding-bottom: 4px;
 }
 
-/* Hamburger Menu */
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -123,7 +123,7 @@ img {
     transition: all 0.3s ease;
 }
 
-/* Mobile Nav Overlay */
+
 .mobile-nav {
     display: none;
     position: fixed;
@@ -167,7 +167,7 @@ img {
     color: var(--on-surface);
 }
 
-/* Hero Section */
+
 .hero {
     height: 90vh;
     position: relative;
@@ -208,7 +208,7 @@ img {
     margin: 0 auto 48px;
 }
 
-/* Button */
+
 .btn {
     display: inline-block;
     padding: 16px 48px;
@@ -227,7 +227,7 @@ img {
     background-color: var(--primary);
 }
 
-/* Section Intro */
+
 .section-intro {
     max-width: 800px;
     margin: 0 auto;
@@ -248,7 +248,7 @@ img {
     line-height: 1.8;
 }
 
-/* Section Title */
+
 .section-title {
     text-align: center;
     font-size: clamp(32px, 5vw, 48px);
@@ -266,7 +266,7 @@ img {
     display: block;
 }
 
-/* Regional Section */
+
 .regional-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -313,7 +313,7 @@ img {
     color: var(--on-surface-variant);
 }
 
-/* Featured Dishes */
+
 .dishes-section {
     background-color: #f1edea;
 }
@@ -406,7 +406,7 @@ img {
     color: var(--on-surface-variant);
 }
 
-/* Flex Responsive Layout */
+
 .flex-section {
     display: flex;
     gap: 64px;
@@ -461,7 +461,7 @@ img {
     color: var(--primary);
 }
 
-/* Street Food Grid */
+
 .street-food-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -507,7 +507,7 @@ img {
     opacity: 0.9;
 }
 
-/* Testimonials */
+
 .testimonial-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -556,7 +556,7 @@ img {
     letter-spacing: 1px;
 }
 
-/* Newsletter */
+
 .newsletter-section {
     background-color: var(--primary);
     color: white;
@@ -618,7 +618,7 @@ img {
     color: var(--primary);
 }
 
-/* Footer */
+
 .footer {
     background: #f9f5f0;
     padding: 48px 0;
@@ -668,7 +668,7 @@ img {
     color: #ccc;
 }
 
-/* History Timeline */
+
 .timeline {
     position: relative;
     max-width: 800px;
@@ -723,7 +723,7 @@ img {
     line-height: 1.8;
 }
 
-/* Dark Quote Section */
+
 .dark-quote {
     background-color: #1c1b1a;
     color: #fff;
@@ -754,7 +754,7 @@ img {
     opacity: 0.6;
 }
 
-/* Menu Page */
+
 .menu-tabs {
     display: flex;
     justify-content: center;
@@ -844,7 +844,7 @@ img {
     margin-bottom: 24px;
 }
 
-/* Button Variants */
+
 .btn--outline {
     background: transparent;
     border: 1px solid white;
@@ -855,7 +855,7 @@ img {
     color: var(--primary);
 }
 
-/* Menu Page - Tab Links */
+
 .tab-link {
     display: inline-block;
     font-size: 12px;
@@ -885,7 +885,7 @@ img {
     color: var(--primary);
 }
 
-/* Menu Section Header */
+
 .menu-section-header {
     margin-bottom: 48px;
 }
@@ -904,7 +904,7 @@ img {
     font-style: italic;
 }
 
-/* Menu Item Info Row */
+
 .menu-item-info {
     display: flex;
     justify-content: space-between;
@@ -920,7 +920,7 @@ img {
     line-height: 1.7;
 }
 
-/* Dish Footer with Price */
+
 .dish-footer {
     margin-top: auto;
     padding-top: 16px;
@@ -932,7 +932,7 @@ img {
     align-items: center;
 }
 
-/* Dessert Grid */
+
 .dessert-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -980,7 +980,7 @@ img {
     line-height: 1.6;
 }
 
-/* Ingredient Grid */
+
 .ingredient-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1005,7 +1005,7 @@ img {
     line-height: 1.7;
 }
 
-/* FAQ */
+
 .faq-list {
     max-width: 800px;
     margin: 0 auto;
@@ -1034,14 +1034,14 @@ img {
     line-height: 1.7;
 }
 
-/* Form Row (2 columns) */
+
 .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 24px;
 }
 
-/* Seasonal Grid (Menu Page) */
+
 .seasonal-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1095,7 +1095,7 @@ img {
     line-height: 1.6;
 }
 
-/* Contact Page */
+
 .contact-layout {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
@@ -1211,7 +1211,7 @@ img {
     cursor: pointer;
 }
 
-/* Map */
+
 .map-placeholder {
     position: relative;
     width: 100%;
@@ -1237,7 +1237,7 @@ img {
     color: var(--on-surface);
 }
 
-/* Responsive */
+
 @media (max-width: 992px) {
     :root {
         --section-gap: 80px;
