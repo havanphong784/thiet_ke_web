@@ -4,221 +4,300 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liên Hệ - Âm Thực Việt</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Be+Vietnam+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <meta name="description" content="Liên hệ Âm Thực Việt để đặt bàn, đặt tiệc nhóm, hỏi thực đơn chay, ghi chú dị ứng hoặc nhận tư vấn mâm cơm Việt tại Hà Nội.">
+    <meta name="theme-color" content="#8f2f22">
+    <meta property="og:title" content="Liên Hệ & Đặt Bàn - Âm Thực Việt">
+    <meta property="og:description" content="Đặt bàn tại Âm Thực Việt, xem địa chỉ, giờ mở cửa, dịch vụ nhóm, bản đồ và câu hỏi thường gặp.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/img/lien-he-hero.jpg">
+    <title>Liên Hệ & Đặt Bàn - Âm Thực Việt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="assets/js/main.js"></script>
 </head>
 
-<body>
-    <!-- Mobile Nav -->
-    <div class="mobile-nav" id="mobileNav">
-        <button class="mobile-nav-close" onclick="document.getElementById('mobileNav').classList.remove('active')">&times;</button>
-        <a href="index.html">Trang Chủ</a>
-        <a href="thuc-don.html">Thực Đơn</a>
-        <a href="lich-su.html">Lịch Sử</a>
-        <a href="lien-he.html" class="active">Liên Hệ</a>
+<body data-page="contact">
+    <a class="skip-link" href="#main">Bỏ qua điều hướng</a>
+
+    <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+        <div class="mobile-nav__panel">
+            <button class="icon-button mobile-nav__close" type="button" aria-label="Đóng menu" data-nav-close>
+                <span aria-hidden="true">×</span>
+            </button>
+            <a href="index.html">Trang Chủ</a>
+            <a href="thuc-don.html">Thực Đơn</a>
+            <a href="lich-su.html">Lịch Sử</a>
+            <a href="lien-he.html" class="active">Liên Hệ</a>
+            <a href="lien-he.html#dat-ban" class="mobile-nav__cta">Đặt Bàn</a>
+        </div>
     </div>
 
-    <header class="header">
+    <header class="site-header">
         <div class="container nav">
-            <div class="logo">Âm Thực Việt</div>
-            <nav class="nav-links">
+            <a class="logo" href="index.html" aria-label="Âm Thực Việt">
+                <span class="logo__mark">AV</span>
+                <span class="logo__text">Âm Thực Việt</span>
+            </a>
+            <nav class="nav-links" aria-label="Điều hướng chính">
                 <a href="index.html">Trang Chủ</a>
                 <a href="thuc-don.html">Thực Đơn</a>
                 <a href="lich-su.html">Lịch Sử</a>
                 <a href="lien-he.html" class="active">Liên Hệ</a>
             </nav>
-            <button class="hamburger" onclick="document.getElementById('mobileNav').classList.add('active')">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="nav-actions">
+                <a class="btn btn--small nav-reserve" href="#dat-ban">Đặt Bàn</a>
+                <button class="hamburger" type="button" aria-label="Mở menu" aria-controls="mobileNav" aria-expanded="false" data-nav-toggle>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </header>
 
-    <main>
-        <!-- Hero -->
+    <main id="main">
         <section class="hero hero--short">
-            <img src="assets/img/lien-he-hero.jpg" alt="Không gian nhà hàng" class="hero-img">
+            <img src="assets/img/lien-he-hero.jpg" alt="Không gian nhà hàng Âm Thực Việt với ánh sáng ấm" class="hero-img" loading="eager" fetchpriority="high">
+            <div class="hero__shade"></div>
             <div class="container hero-content">
-                <h1>Kết Nối Với Chúng Tôi</h1>
-                <p>Mỗi cuộc trò chuyện là khởi đầu cho một hành trình ẩm thực mới.</p>
+                <p class="eyebrow">Liên hệ & đặt bàn</p>
+                <h1>Giữ chỗ cho một bữa ăn Việt trọn vị</h1>
+                <p class="hero-lead">Đặt bàn gia đình, tiệc nhóm, tư vấn thực đơn theo vùng miền hoặc để lại ghi chú dị ứng trước khi ghé.</p>
             </div>
         </section>
 
-        <!-- Contact Info + Form -->
-        <section class="section container">
-            <div class="contact-layout">
-                <!-- Left: Info -->
-                <div class="contact-info">
-                    <span class="section-subtitle">Thông Tin</span>
-                    <h2 class="contact-info__title">Ghé Thăm Chúng Tôi</h2>
-                    <div class="contact-info__divider"></div>
+        <section class="section container contact-overview">
+            <div class="contact-card">
+                <span class="section-subtitle">Địa Chỉ</span>
+                <h2>36 Lý Thường Kiệt</h2>
+                <p>Quận Hoàn Kiếm, Hà Nội. Cách hồ Hoàn Kiếm khoảng 10 phút đi bộ.</p>
+                <a class="text-link" href="https://www.google.com/maps/search/?api=1&query=36%20Ly%20Thuong%20Kiet%20Hoan%20Kiem%20Ha%20Noi" target="_blank" rel="noreferrer">Mở chỉ đường</a>
+            </div>
+            <div class="contact-card">
+                <span class="section-subtitle">Giờ Mở Cửa</span>
+                <h2>10:00 - 22:00</h2>
+                <p>Thứ Hai - Thứ Sáu: 10:00 - 22:00. Thứ Bảy - Chủ Nhật: 08:00 - 23:00.</p>
+                <a class="text-link" href="tel:+842438267890">Gọi đặt bàn</a>
+            </div>
+            <div class="contact-card">
+                <span class="section-subtitle">Phản Hồi</span>
+                <h2>Trong 24 giờ</h2>
+                <p>Yêu cầu đặt bàn gấp nên gọi trực tiếp. Tin nhắn và email được phản hồi trong ngày.</p>
+                <a class="text-link" href="mailto:xin.chao@amthucviet.vn">Gửi email</a>
+            </div>
+        </section>
 
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <h4>Địa Chỉ</h4>
-                            <p>36 Phố Lý Thường Kiệt<br>Quận Hoàn Kiếm, Hà Nội</p>
-                        </div>
-                        <div class="contact-item">
-                            <h4>Giờ Mở Cửa</h4>
-                            <p>Thứ Hai - Thứ Sáu: 10:00 - 22:00<br>Thứ Bảy - Chủ Nhật: 08:00 - 23:00</p>
-                        </div>
-                        <div class="contact-item">
-                            <h4>Liên Lạc</h4>
-                            <p>Điện thoại: (024) 3826 7890<br>Email: xin.chao@amthucviet.vn</p>
-                        </div>
-                        <div class="contact-item">
-                            <h4>Đặt Bàn</h4>
-                            <p>Vui lòng đặt bàn trước ít nhất 2 giờ.<br>Nhóm trên 10 người xin liên hệ trực tiếp.</p>
-                        </div>
-                        <div class="contact-item">
-                            <h4>Mạng Xã Hội</h4>
-                            <div class="contact-socials">
-                                <a href="#">Facebook</a>
-                                <a href="#">Instagram</a>
-                                <a href="#">Pinterest</a>
-                            </div>
-                        </div>
+        <section id="dat-ban" class="section section--tinted">
+            <div class="container contact-layout">
+                <div class="contact-copy">
+                    <span class="section-subtitle">Đặt Bàn</span>
+                    <h2>Cho chúng tôi biết bữa ăn bạn đang cần</h2>
+                    <p>Form này hoạt động ở chế độ website tĩnh: thông tin được kiểm tra ngay trên trình duyệt và hiển thị xác nhận. Khi cần kết nối thật, có thể nối form với email service hoặc backend nhẹ.</p>
+                    <div class="reservation-tips">
+                        <h3>Nên đặt trước khi:</h3>
+                        <ul class="check-list">
+                            <li>Đi nhóm trên 6 người hoặc cần phòng riêng.</li>
+                            <li>Có trẻ em, người lớn tuổi, xe lăn hoặc yêu cầu chỗ ngồi yên tĩnh.</li>
+                            <li>Cần món chay, ít cay, ít mặn hoặc tránh dị ứng thực phẩm.</li>
+                        </ul>
                     </div>
                 </div>
-
-                <!-- Right: Form -->
-                <div class="contact-form-wrap">
-                    <h3>Gửi Lời Nhắn</h3>
-                    <p class="contact-form-desc">Bạn có câu hỏi, góp ý hay muốn đặt bàn? Hãy để lại lời nhắn, chúng tôi sẽ phản hồi trong vòng 24 giờ.</p>
-                    <form class="contact-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Họ và Tên</label>
-                                <input type="text" id="name" name="name" placeholder="Nguyễn Văn A" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Số Điện Thoại</label>
-                                <input type="tel" id="phone" name="phone" placeholder="0912 345 678">
-                            </div>
+                <form class="form-panel" data-form="reservation">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="reservationName">Họ và tên</label>
+                            <input type="text" id="reservationName" name="name" placeholder="Nguyễn Văn A" autocomplete="name" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="email@example.com" required>
+                            <label for="reservationPhone">Số điện thoại</label>
+                            <input type="tel" id="reservationPhone" name="phone" placeholder="0912 345 678" autocomplete="tel" required>
                         </div>
                         <div class="form-group">
-                            <label for="subject">Chủ Đề</label>
-                            <select id="subject" name="subject">
-                                <option value="">-- Chọn chủ đề --</option>
-                                <option value="reservation">Đặt Bàn</option>
-                                <option value="catering">Tiệc / Sự Kiện</option>
-                                <option value="feedback">Góp Ý</option>
-                                <option value="cooperation">Hợp Tác</option>
-                                <option value="other">Khác</option>
+                            <label for="reservationDate">Ngày</label>
+                            <input type="date" id="reservationDate" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reservationTime">Giờ</label>
+                            <input type="time" id="reservationTime" name="time" min="08:00" max="23:00" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reservationGuests">Số khách</label>
+                            <select id="reservationGuests" name="guests" required>
+                                <option value="">Chọn số khách</option>
+                                <option>1-2 khách</option>
+                                <option>3-5 khách</option>
+                                <option>6-10 khách</option>
+                                <option>Trên 10 khách</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="message">Lời Nhắn</label>
-                            <textarea id="message" name="message" rows="6" placeholder="Nội dung tin nhắn của bạn..." required></textarea>
+                            <label for="reservationNeed">Nhu cầu</label>
+                            <select id="reservationNeed" name="need" required>
+                                <option value="">Chọn nhu cầu</option>
+                                <option>Đặt bàn thường</option>
+                                <option>Mâm cơm gia đình</option>
+                                <option>Tiệc nhóm riêng</option>
+                                <option>Tư vấn thực đơn chay</option>
+                            </select>
                         </div>
-                        <button type="submit" class="btn">Gửi Tin Nhắn</button>
-                    </form>
-                </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="reservationNote">Ghi chú</label>
+                        <textarea id="reservationNote" name="note" rows="5" placeholder="Ví dụ: có trẻ em, không ăn cay, dị ứng đậu phộng, cần bánh sinh nhật..."></textarea>
+                    </div>
+                    <button type="submit" class="btn">Gửi Yêu Cầu Đặt Bàn</button>
+                    <p class="form-status" data-form-status aria-live="polite"></p>
+                </form>
             </div>
         </section>
 
-        <!-- Service Notes -->
         <section class="section container">
-            <div class="section-intro" style="margin-bottom: 64px;">
-                <span class="section-subtitle">Chuẩn Bị</span>
-                <h2 class="section-title" style="margin-top: 16px;">Dịch Vụ Cho Từng Dịp Gặp Mặt</h2>
-                <p>Dù là bữa cơm gia đình, buổi hẹn thân mật hay tiệc công ty, đội ngũ bếp và phục vụ sẽ tư vấn thực đơn phù hợp số lượng khách, khẩu vị và ngân sách.</p>
+            <div class="section-heading section-heading--center">
+                <span class="section-subtitle">Dịch Vụ</span>
+                <h2>Phục vụ đúng dịp gặp mặt</h2>
+                <p>Mỗi nhóm khách có một nhịp ăn khác nhau. Chúng tôi chuẩn bị các lựa chọn rõ ràng để bạn dễ quyết định.</p>
             </div>
-            <div class="ingredient-grid">
-                <div class="ingredient-card">
-                    <h4>Đặt Bàn Gia Đình</h4>
-                    <p>Bàn 2-8 khách được giữ trong 15 phút sau giờ hẹn. Bạn có thể ghi chú nhu cầu ghế trẻ em, món ít cay hoặc dị ứng thực phẩm khi gửi form.</p>
-                </div>
-                <div class="ingredient-card">
-                    <h4>Tiệc Nhóm Riêng</h4>
-                    <p>Nhóm từ 10 khách có thể chọn set menu theo vùng miền, thêm món chay, món trẻ em hoặc khu vực riêng tùy tình trạng phòng trong ngày.</p>
-                </div>
-                <div class="ingredient-card">
-                    <h4>Tư Vấn Thực Đơn</h4>
-                    <p>Chúng tôi gợi ý thứ tự món hợp lý: khai vị thanh, món chính đậm, món nước ấm và tráng miệng nhẹ để bữa ăn trọn vẹn hơn.</p>
-                </div>
-                <div class="ingredient-card">
-                    <h4>Góp Ý Sau Bữa Ăn</h4>
-                    <p>Mọi phản hồi về món ăn, phục vụ và không gian đều được ghi nhận để điều chỉnh công thức, tốc độ phục vụ và trải nghiệm khách hàng.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Map Section -->
-        <section class="section">
-            <div class="container">
-                <div class="section-intro" style="margin-bottom: 48px;">
-                    <span class="section-subtitle">Vị Trí</span>
-                    <h2 class="section-title" style="margin-top: 16px; margin-bottom: 0;">Tìm Đường Đến Chúng Tôi</h2>
-                </div>
-                <div class="map-placeholder">
-                    <img src="assets/img/map-placeholder.jpg" alt="Bản đồ khu vực Hoàn Kiếm, Hà Nội">
-                </div>
+            <div class="service-grid">
+                <article class="service-card">
+                    <h3>Bữa cơm gia đình</h3>
+                    <p>Bàn 2-8 khách, món gọi lẻ hoặc set mâm cơm. Có ghế trẻ em và lựa chọn ít cay.</p>
+                </article>
+                <article class="service-card">
+                    <h3>Tiệc nhóm riêng</h3>
+                    <p>Nhóm 10-30 khách có thể chọn set theo vùng miền, thêm món chay hoặc khu vực riêng tùy tình trạng bàn.</p>
+                </article>
+                <article class="service-card">
+                    <h3>Tiệc văn phòng</h3>
+                    <p>Set ăn trưa, khay món Việt hoặc mâm cỗ nhỏ đặt trước tối thiểu 48 giờ.</p>
+                </article>
+                <article class="service-card">
+                    <h3>Tư vấn thực đơn</h3>
+                    <p>Gợi ý thứ tự món để bữa ăn cân bằng: khai vị tươi, món chính đậm, món nước ấm và tráng miệng thanh.</p>
+                </article>
             </div>
         </section>
 
-        <!-- FAQ Section -->
+        <section class="section section--image-band">
+            <img src="assets/img/map-placeholder.jpg" alt="Bản đồ khu vực Hoàn Kiếm gần nhà hàng Âm Thực Việt" loading="lazy">
+            <div class="container image-band__content">
+                <span class="section-subtitle">Vị Trí</span>
+                <h2>Dễ ghé trước hoặc sau khi dạo phố</h2>
+                <p>Nhà hàng nằm tại khu Hoàn Kiếm, thuận tiện cho bữa trưa công việc, bữa tối gia đình hoặc gặp bạn bè cuối tuần.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=36%20Ly%20Thuong%20Kiet%20Hoan%20Kiem%20Ha%20Noi" class="btn btn--ghost" target="_blank" rel="noreferrer">Xem Bản Đồ</a>
+            </div>
+        </section>
+
         <section class="section container">
-            <div class="section-intro" style="margin-bottom: 64px;">
-                <span class="section-subtitle">Hỏi Đáp</span>
-                <h2 class="section-title" style="margin-top: 16px;">Câu Hỏi Thường Gặp</h2>
-            </div>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <h4>Có cần đặt bàn trước không?</h4>
-                    <p>Chúng tôi khuyến khích đặt bàn trước, đặc biệt vào cuối tuần và ngày lễ. Bạn có thể đặt qua điện thoại hoặc form liên hệ phía trên.</p>
+            <div class="contact-message-grid">
+                <div>
+                    <span class="section-subtitle">Góp Ý</span>
+                    <h2>Gửi lời nhắn cho bếp và đội phục vụ</h2>
+                    <p>Phản hồi về món ăn, phục vụ, không gian hoặc đề xuất món mới đều được ghi nhận để cải thiện thực đơn.</p>
+                    <ul class="contact-list">
+                        <li><strong>Điện thoại:</strong> <a href="tel:+842438267890">024 3826 7890</a></li>
+                        <li><strong>Email:</strong> <a href="mailto:xin.chao@amthucviet.vn">xin.chao@amthucviet.vn</a></li>
+                        <li><strong>Mạng xã hội:</strong> Facebook, Instagram, Pinterest</li>
+                    </ul>
                 </div>
-                <div class="faq-item">
-                    <h4>Nhà hàng có phục vụ tiệc riêng không?</h4>
-                    <p>Có. Chúng tôi có phòng riêng cho nhóm từ 10-30 người, phù hợp cho tiệc sinh nhật, họp mặt gia đình hoặc sự kiện công ty. Vui lòng liên hệ trước 3 ngày.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Có thực đơn chay không?</h4>
-                    <p>Có. Chúng tôi có thực đơn chay riêng với các món được chế biến từ nguyên liệu thực vật tươi ngon, giữ nguyên tinh thần ẩm thực truyền thống.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Có giao hàng tận nơi không?</h4>
-                    <p>Chúng tôi giao hàng trong bán kính 5km từ nhà hàng. Đơn hàng từ 200.000đ được miễn phí giao hàng. Thời gian giao trung bình 30-45 phút.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Có thể yêu cầu món ít cay hoặc ít mặn không?</h4>
-                    <p>Có. Bạn chỉ cần ghi chú khi đặt bàn hoặc báo với nhân viên trước khi gọi món. Một số món truyền thống có vị nền cố định, nhưng bếp sẽ điều chỉnh trong phạm vi giữ được hương vị gốc.</p>
-                </div>
-                <div class="faq-item">
-                    <h4>Nhà hàng có nhận đặt món cho sự kiện bên ngoài không?</h4>
-                    <p>Có, với đơn đặt trước tối thiểu 48 giờ. Chúng tôi hỗ trợ khay tiệc gia đình, mâm cỗ truyền thống và set ăn văn phòng theo số lượng khách cụ thể.</p>
-                </div>
+                <form class="form-panel" data-form="contact">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="contactName">Họ và tên</label>
+                            <input type="text" id="contactName" name="name" autocomplete="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email</label>
+                            <input type="email" id="contactEmail" name="email" autocomplete="email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactSubject">Chủ đề</label>
+                        <select id="contactSubject" name="subject" required>
+                            <option value="">Chọn chủ đề</option>
+                            <option>Góp ý món ăn</option>
+                            <option>Hợp tác</option>
+                            <option>Catering</option>
+                            <option>Khác</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage">Lời nhắn</label>
+                        <textarea id="contactMessage" name="message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Gửi Lời Nhắn</button>
+                    <p class="form-status" data-form-status aria-live="polite"></p>
+                </form>
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="dark-quote">
+        <section class="section section--tinted">
             <div class="container">
-                <blockquote>"Mỗi bữa ăn là một lời mời, mỗi vị khách là một người bạn."</blockquote>
-                <div class="divider"></div>
-                <p class="caption">Triết Lý Hiếu Khách Việt</p>
+                <div class="section-heading section-heading--center">
+                    <span class="section-subtitle">Hỏi Đáp</span>
+                    <h2>Câu hỏi thường gặp</h2>
+                </div>
+                <div class="faq-list">
+                    <details>
+                        <summary>Có cần đặt bàn trước không?</summary>
+                        <p>Nên đặt trước, đặc biệt vào tối cuối tuần, ngày lễ hoặc khi đi nhóm trên 6 người. Bàn được giữ 15 phút sau giờ hẹn.</p>
+                    </details>
+                    <details>
+                        <summary>Nhà hàng có món chay không?</summary>
+                        <p>Có. Thực đơn có món chay gọi lẻ và set mâm chay. Nếu ăn chay nghiêm ngặt, vui lòng ghi chú trước để bếp chuẩn bị riêng.</p>
+                    </details>
+                    <details>
+                        <summary>Có thể yêu cầu ít cay hoặc ít mặn không?</summary>
+                        <p>Có thể với đa số món. Một số món có vị nền truyền thống như mắm tôm hoặc mắm ruốc, bếp sẽ tư vấn lựa chọn phù hợp.</p>
+                    </details>
+                    <details>
+                        <summary>Có phòng riêng cho nhóm không?</summary>
+                        <p>Có khu vực riêng cho nhóm 10-30 khách tùy lịch đặt bàn. Vui lòng liên hệ trước tối thiểu 3 ngày cho tiệc riêng.</p>
+                    </details>
+                    <details>
+                        <summary>Nhà hàng có giao hàng không?</summary>
+                        <p>Có giao trong bán kính 5km với một số món phù hợp. Món nước và món cần ăn nóng tại bàn có thể không nhận giao xa để giữ chất lượng.</p>
+                    </details>
+                </div>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <div class="container footer-content">
+        <div class="container footer-grid">
             <div>
-                <div class="footer-logo">Âm Thực Việt</div>
-                <p class="footer-copy">© 2024 Âm Thực Việt - Hồn Quê Việt. Tinh hoa ẩm thực Việt Nam.</p>
+                <a class="footer-logo" href="index.html">Âm Thực Việt</a>
+                <p class="footer-copy">Hồn quê trong từng món ăn, từ bát phở nóng đến mâm cơm gia đình.</p>
             </div>
-            <div class="footer-socials">
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-                <a href="#">Pinterest</a>
+            <div>
+                <h2>Liên hệ</h2>
+                <ul class="footer-list">
+                    <li><a href="tel:+842438267890">024 3826 7890</a></li>
+                    <li><a href="mailto:xin.chao@amthucviet.vn">xin.chao@amthucviet.vn</a></li>
+                    <li>36 Lý Thường Kiệt, Hoàn Kiếm, Hà Nội</li>
+                </ul>
             </div>
-            <div class="footer-tagline">Đẹp - Tinh Tế - Truyền Thống</div>
+            <div>
+                <h2>Khám phá</h2>
+                <ul class="footer-list">
+                    <li><a href="thuc-don.html">Thực đơn</a></li>
+                    <li><a href="lich-su.html">Lịch sử món Việt</a></li>
+                    <li><a href="lien-he.html#dat-ban">Đặt bàn</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2>Theo dõi</h2>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">Facebook</a>
+                    <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram</a>
+                    <a href="https://www.pinterest.com/" target="_blank" rel="noreferrer">Pinterest</a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <span>© <span data-current-year>2026</span> Âm Thực Việt.</span>
+            <span>Đẹp - Tinh Tế - Truyền Thống</span>
         </div>
     </footer>
 </body>
