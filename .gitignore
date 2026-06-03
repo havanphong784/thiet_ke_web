@@ -11,3 +11,7 @@ skills/
 /.idea/
 !/.gitignore
 .idea/*
+/.idea/
+!/.idea/workspace.xml
+!/.idea/shelf/
+!/.idea/vcs.xml
