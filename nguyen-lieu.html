@@ -5,109 +5,140 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Nghệ thuật Nguyên liệu - Sắc Vị</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+          rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,400&amp;display=swap"
+          rel="stylesheet"/>
     <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "surface-variant": "#e8e2d6",
-                        "on-surface": "#1e1c14",
-                        "inverse-on-surface": "#f6f0e4",
-                        "on-surface-variant": "#5a4042",
-                        "on-error-container": "#93000a",
-                        "error-container": "#ffdad6",
-                        "tertiary-fixed-dim": "#c8c6c2",
-                        "on-error": "#ffffff",
-                        "primary-fixed": "#ffd9dc",
-                        "on-secondary-fixed-variant": "#474746",
-                        "surface-dim": "#dfd9ce",
-                        "tertiary": "#5c5c58",
-                        "inverse-primary": "#ffb2ba",
-                        "on-tertiary": "#ffffff",
-                        "primary-fixed-dim": "#ffb2ba",
-                        "on-tertiary-container": "#fefcf7",
-                        "surface-container-high": "#eee8db",
-                        "on-secondary": "#ffffff",
-                        "surface": "#fff9ed",
-                        "secondary": "#5f5e5e",
-                        "surface-tint": "#b91543",
-                        "outline-variant": "#e2bec0",
-                        "on-primary-container": "#fffbff",
-                        "inverse-surface": "#333028",
-                        "surface-container-low": "#f9f3e7",
-                        "on-secondary-fixed": "#1b1c1c",
-                        "secondary-fixed-dim": "#c8c6c5",
-                        "on-primary-fixed-variant": "#910030",
-                        "secondary-container": "#e4e2e1",
-                        "secondary-fixed": "#e4e2e1",
-                        "on-background": "#1e1c14",
-                        "on-tertiary-fixed-variant": "#474744",
-                        "error": "#ba1a1a",
-                        "tertiary-fixed": "#e4e2dd",
-                        "primary-container": "#d93158",
-                        "on-tertiary-fixed": "#1b1c19",
-                        "surface-container": "#f3ede1",
-                        "surface-container-lowest": "#ffffff",
-                        "background": "#fff9ed",
-                        "on-primary-fixed": "#400010",
-                        "surface-container-highest": "#e8e2d6",
-                        "primary": "#b61041",
-                        "tertiary-container": "#757571",
-                        "outline": "#8e6f72",
-                        "on-secondary-container": "#656464",
-                        "on-primary": "#ffffff",
-                        "surface-bright": "#fff9ed"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0px",
-                        "lg": "0px",
-                        "xl": "0px",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "unit": "8px",
-                        "margin-mobile": "24px",
-                        "gutter": "32px",
-                        "section-gap": "160px",
-                        "margin-desktop": "80px",
-                        "container-max": "1440px"
-                    },
-                    "fontFamily": {
-                        "sans": ["Be Vietnam Pro", "sans-serif"],
-                        "serif": ["Noto Serif", "serif"],
-                        "body-md": ["Be Vietnam Pro"],
-                        "headline-lg": ["Noto Serif"],
-                        "display-xl": ["Noto Serif"],
-                        "body-lg": ["Be Vietnam Pro"],
-                        "headline-md": ["Noto Serif"],
-                        "label-caps": ["Be Vietnam Pro"]
-                    },
-                    "fontSize": {
-                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "400" }],
-                        "display-xl": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "300" }],
-                        "body-lg": ["18px", { "lineHeight": "1.8", "letterSpacing": "0.01em", "fontWeight": "400" }],
-                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "400" }],
-                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "600" }]
-                    }
-                }
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+              "surface-variant": "#e8e2d6",
+              "on-surface": "#1e1c14",
+              "inverse-on-surface": "#f6f0e4",
+              "on-surface-variant": "#5a4042",
+              "on-error-container": "#93000a",
+              "error-container": "#ffdad6",
+              "tertiary-fixed-dim": "#c8c6c2",
+              "on-error": "#ffffff",
+              "primary-fixed": "#ffd9dc",
+              "on-secondary-fixed-variant": "#474746",
+              "surface-dim": "#dfd9ce",
+              "tertiary": "#5c5c58",
+              "inverse-primary": "#ffb2ba",
+              "on-tertiary": "#ffffff",
+              "primary-fixed-dim": "#ffb2ba",
+              "on-tertiary-container": "#fefcf7",
+              "surface-container-high": "#eee8db",
+              "on-secondary": "#ffffff",
+              "surface": "#fff9ed",
+              "secondary": "#5f5e5e",
+              "surface-tint": "#b91543",
+              "outline-variant": "#e2bec0",
+              "on-primary-container": "#fffbff",
+              "inverse-surface": "#333028",
+              "surface-container-low": "#f9f3e7",
+              "on-secondary-fixed": "#1b1c1c",
+              "secondary-fixed-dim": "#c8c6c5",
+              "on-primary-fixed-variant": "#910030",
+              "secondary-container": "#e4e2e1",
+              "secondary-fixed": "#e4e2e1",
+              "on-background": "#1e1c14",
+              "on-tertiary-fixed-variant": "#474744",
+              "error": "#ba1a1a",
+              "tertiary-fixed": "#e4e2dd",
+              "primary-container": "#d93158",
+              "on-tertiary-fixed": "#1b1c19",
+              "surface-container": "#f3ede1",
+              "surface-container-lowest": "#ffffff",
+              "background": "#fff9ed",
+              "on-primary-fixed": "#400010",
+              "surface-container-highest": "#e8e2d6",
+              "primary": "#b61041",
+              "tertiary-container": "#757571",
+              "outline": "#8e6f72",
+              "on-secondary-container": "#656464",
+              "on-primary": "#ffffff",
+              "surface-bright": "#fff9ed"
+            },
+            "borderRadius": {
+              "DEFAULT": "0px",
+              "lg": "0px",
+              "xl": "0px",
+              "full": "9999px"
+            },
+            "spacing": {
+              "unit": "8px",
+              "margin-mobile": "24px",
+              "gutter": "32px",
+              "section-gap": "160px",
+              "margin-desktop": "80px",
+              "container-max": "1440px"
+            },
+            "fontFamily": {
+              "sans": ["Be Vietnam Pro", "sans-serif"],
+              "serif": ["Noto Serif", "serif"],
+              "body-md": ["Be Vietnam Pro"],
+              "headline-lg": ["Noto Serif"],
+              "display-xl": ["Noto Serif"],
+              "body-lg": ["Be Vietnam Pro"],
+              "headline-md": ["Noto Serif"],
+              "label-caps": ["Be Vietnam Pro"]
+            },
+            "fontSize": {
+              "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+              "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
+              "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "300"}],
+              "body-lg": ["18px", {"lineHeight": "1.8", "letterSpacing": "0.01em", "fontWeight": "400"}],
+              "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+              "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "600"}]
             }
+          }
         }
+      }
     </script>
     <style>
-        body { background-color: #FEFDF5; }
-        .text-mustard { color: #E9C46A; }
-        .text-brick { color: #E76F51; }
-        .text-leaf { color: #2A9D8F; }
-        .bg-mustard { background-color: #E9C46A; }
-        .bg-brick { background-color: #E76F51; }
-        .bg-leaf { background-color: #2A9D8F; }
-        .border-brick { border-color: #E76F51; }
-        .border-mustard { border-color: #E9C46A; }
-        .border-leaf { border-color: #2A9D8F; }
+        body {
+            background-color: #FEFDF5;
+        }
+
+        .text-mustard {
+            color: #E9C46A;
+        }
+
+        .text-brick {
+            color: #E76F51;
+        }
+
+        .text-leaf {
+            color: #2A9D8F;
+        }
+
+        .bg-mustard {
+            background-color: #E9C46A;
+        }
+
+        .bg-brick {
+            background-color: #E76F51;
+        }
+
+        .bg-leaf {
+            background-color: #2A9D8F;
+        }
+
+        .border-brick {
+            border-color: #E76F51;
+        }
+
+        .border-mustard {
+            border-color: #E9C46A;
+        }
+
+        .border-leaf {
+            border-color: #2A9D8F;
+        }
 
         /* Custom Scroll Reveal Animations */
         .reveal {
@@ -115,34 +146,54 @@
             transform: translateY(30px);
             transition: opacity 1.2s cubic-bezier(0.215, 0.610, 0.355, 1), transform 1.2s cubic-bezier(0.215, 0.610, 0.355, 1);
         }
+
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
         }
+
         .reveal-left {
             opacity: 0;
             transform: translateX(-40px);
             transition: opacity 1.2s cubic-bezier(0.215, 0.610, 0.355, 1), transform 1.2s cubic-bezier(0.215, 0.610, 0.355, 1);
         }
+
         .reveal-left.active {
             opacity: 1;
             transform: translateX(0);
         }
+
         .reveal-right {
             opacity: 0;
             transform: translateX(40px);
             transition: opacity 1.2s cubic-bezier(0.215, 0.610, 0.355, 1), transform 1.2s cubic-bezier(0.215, 0.610, 0.355, 1);
         }
+
         .reveal-right.active {
             opacity: 1;
             transform: translateX(0);
         }
 
         /* Animation Delays */
-        .delay-100 { transition-delay: 100ms; animation-delay: 100ms; }
-        .delay-200 { transition-delay: 200ms; animation-delay: 200ms; }
-        .delay-300 { transition-delay: 300ms; animation-delay: 300ms; }
-        .delay-400 { transition-delay: 400ms; animation-delay: 400ms; }
+        .delay-100 {
+            transition-delay: 100ms;
+            animation-delay: 100ms;
+        }
+
+        .delay-200 {
+            transition-delay: 200ms;
+            animation-delay: 200ms;
+        }
+
+        .delay-300 {
+            transition-delay: 300ms;
+            animation-delay: 300ms;
+        }
+
+        .delay-400 {
+            transition-delay: 400ms;
+            animation-delay: 400ms;
+        }
 
         /* Direct Entrance Animations */
         @keyframes fadeUp {
@@ -155,6 +206,7 @@
                 transform: translateY(0);
             }
         }
+
         .animate-fade-up {
             animation: fadeUp 1.2s cubic-bezier(0.215, 0.610, 0.355, 1) both;
         }
@@ -165,17 +217,34 @@
 <!-- Navigation Bar -->
 <nav class="bg-[#FAF9F6] dark:bg-stone-950 font-serif tracking-tight text-stone-900 dark:text-stone-50 border-stone-200 dark:border-stone-800 flex justify-between items-center w-full px-8 md:px-16 py-6 border-b z-50 sticky top-0 ease-in-out transition-all">
     <div class="flex-1">
-        <a href="index.html" class="text-2xl font-serif italic tracking-tighter text-stone-900 dark:text-stone-50">Sắc Vị</a>
+        <a class="text-2xl font-serif italic tracking-tighter text-stone-900 dark:text-stone-50" href="index.html">Sắc
+            Vị</a>
     </div>
     <div class="hidden xl:flex gap-8 items-center justify-center">
-        <a id="nav-index" class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300" href="index.html">Trang Chủ</a>
-        <a id="nav-vung-mien" class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300" href="vung-mien.html">Vùng Miền</a>
-        <a id="nav-thuc-don" class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300" href="thuc-don.html">Thực Đơn</a>
-        <a id="nav-nguyen-lieu" class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300" href="nguyen-lieu.html">Nguyên Liệu</a>
-        <a id="nav-cong-thuc" class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300" href="cong-thuc.html">Công Thức</a>
-        <a id="nav-duong-pho" class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300" href="duong-pho.html">Đường Phố</a>
-        <a id="nav-lich-su" class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300" href="lich-su.html">Lịch Sử</a>
-        <a id="nav-lien-he" class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300" href="lien-he.html">Liên Hệ</a>
+        <a class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300"
+           href="index.html"
+           id="nav-index">Trang Chủ</a>
+        <a class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300"
+           href="vung-mien.html"
+           id="nav-vung-mien">Vùng Miền</a>
+        <a class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300"
+           href="thuc-don.html"
+           id="nav-thuc-don">Thực Đơn</a>
+        <a class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300"
+           href="nguyen-lieu.html"
+           id="nav-nguyen-lieu">Nguyên Liệu</a>
+        <a class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300"
+           href="cong-thuc.html"
+           id="nav-cong-thuc">Công Thức</a>
+        <a class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300"
+           href="duong-pho.html"
+           id="nav-duong-pho">Đường Phố</a>
+        <a class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300"
+           href="lich-su.html"
+           id="nav-lich-su">Lịch Sử</a>
+        <a class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300"
+           href="lien-he.html"
+           id="nav-lien-he">Liên Hệ</a>
     </div>
     <div class="flex-1 flex justify-end gap-4 text-[#b61041] dark:text-[#F3708D] items-center">
         <button class="hover:text-stone-900 transition-colors duration-300">
@@ -184,33 +253,46 @@
         <button class="hover:text-stone-900 transition-colors duration-300">
             <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">search</span>
         </button>
-        <button onclick="toggleMobileMenu()" class="xl:hidden hover:text-stone-900 transition-colors duration-300">
-            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0; font-size: 28px;">menu</span>
+        <button class="xl:hidden hover:text-stone-900 transition-colors duration-300" onclick="toggleMobileMenu()">
+            <span class="material-symbols-outlined"
+                  style="font-variation-settings: 'FILL' 0; font-size: 28px;">menu</span>
         </button>
     </div>
 </nav>
 
 <!-- Mobile Menu Drawer -->
-<div id="mobileMenu" class="fixed inset-y-0 right-0 z-50 w-full max-w-xs bg-background border-l border-outline-variant shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out xl:hidden flex flex-col p-8">
+<div class="fixed inset-y-0 right-0 z-50 w-full max-w-xs bg-background border-l border-outline-variant shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out xl:hidden flex flex-col p-8"
+     id="mobileMenu">
     <div class="flex justify-between items-center mb-8">
         <span class="font-serif italic text-2xl text-stone-950">Sắc Vị</span>
-        <button onclick="toggleMobileMenu()" class="text-stone-950 hover:text-primary transition-colors focus:outline-none">
+        <button class="text-stone-950 hover:text-primary transition-colors focus:outline-none"
+                onclick="toggleMobileMenu()">
             <span class="material-symbols-outlined text-3xl">close</span>
         </button>
     </div>
     <nav class="flex flex-col gap-5 text-sm font-sans uppercase tracking-widest">
-        <a href="index.html" class="hover:text-primary transition-colors py-2 border-b border-stone-100/50">Trang Chủ</a>
-        <a href="vung-mien.html" class="hover:text-primary transition-colors py-2 border-b border-stone-100/50">Vùng Miền</a>
-        <a href="thuc-don.html" class="hover:text-primary transition-colors py-2 border-b border-stone-100/50">Thực Đơn</a>
-        <a href="nguyen-lieu.html" class="hover:text-primary transition-colors py-2 border-b border-stone-100/50">Nguyên Liệu</a>
-        <a href="cong-thuc.html" class="hover:text-primary transition-colors py-2 border-b border-stone-100/50">Công Thức</a>
-        <a href="duong-pho.html" class="hover:text-primary transition-colors py-2 border-b border-stone-100/50">Đường Phố</a>
-        <a href="lich-su.html" class="hover:text-primary transition-colors py-2 border-b border-stone-100/50">Lịch Sử</a>
-        <a href="lien-he.html" class="hover:text-primary transition-colors py-2 border-b border-stone-100/50">Liên Hệ</a>
+        <a class="hover:text-primary transition-colors py-2 border-b border-stone-100/50" href="index.html">Trang
+            Chủ</a>
+        <a class="hover:text-primary transition-colors py-2 border-b border-stone-100/50" href="vung-mien.html">Vùng
+            Miền</a>
+        <a class="hover:text-primary transition-colors py-2 border-b border-stone-100/50" href="thuc-don.html">Thực
+            Đơn</a>
+        <a class="hover:text-primary transition-colors py-2 border-b border-stone-100/50" href="nguyen-lieu.html">Nguyên
+            Liệu</a>
+        <a class="hover:text-primary transition-colors py-2 border-b border-stone-100/50" href="cong-thuc.html">Công
+            Thức</a>
+        <a class="hover:text-primary transition-colors py-2 border-b border-stone-100/50" href="duong-pho.html">Đường
+            Phố</a>
+        <a class="hover:text-primary transition-colors py-2 border-b border-stone-100/50" href="lich-su.html">Lịch
+            Sử</a>
+        <a class="hover:text-primary transition-colors py-2 border-b border-stone-100/50" href="lien-he.html">Liên
+            Hệ</a>
     </nav>
 </div>
 <!-- Mobile Menu Overlay -->
-<div id="mobileMenuOverlay" class="fixed inset-0 z-40 bg-stone-950/20 backdrop-blur-sm hidden transition-opacity duration-300 xl:hidden" onclick="toggleMobileMenu()"></div>
+<div class="fixed inset-0 z-40 bg-stone-950/20 backdrop-blur-sm hidden transition-opacity duration-300 xl:hidden"
+     id="mobileMenuOverlay"
+     onclick="toggleMobileMenu()"></div>
 
 <!-- Main Canvas -->
 <main class="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-32">
@@ -220,12 +302,14 @@
             <span class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest block mb-4">Nghi thức &amp; Nguyên liệu</span>
             <h1 class="font-display-xl text-display-xl text-on-background mb-8">Nghệ thuật<br/>Nguyên liệu</h1>
             <p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
-                Khám phá vẻ đẹp nguyên bản và vai trò tối thượng của những nguyên liệu cốt lõi làm nên tinh hồn của nước dùng Phở truyền thống. Một bản giao hưởng của hương vị và thời gian.
+                Khám phá vẻ đẹp nguyên bản và vai trò tối thượng của những nguyên liệu cốt lõi làm nên tinh hồn của nước
+                dùng Phở truyền thống. Một bản giao hưởng của hương vị và thời gian.
             </p>
         </div>
         <div class="col-span-12 md:col-span-7 order-1 md:order-2 reveal-right">
             <div class="relative h-[600px] w-full bg-surface-container-highest">
-                <img alt="Nguyên liệu làm phở nướng xém thơm lừng" class="w-full h-full object-cover filter brightness-95" src="assets/img/gia-vi-pho.png"/>
+                <img alt="Nguyên liệu làm phở nướng xém thơm lừng"
+                     class="w-full h-full object-cover filter brightness-95" src="assets/img/gia-vi-pho.png"/>
             </div>
             <div class="text-right mt-2">
                 <span class="font-body-md text-sm italic text-on-surface-variant">Đại hồi và Quế chi, linh hồn của hương vị.</span>
@@ -237,7 +321,8 @@
     <section class="mb-32 flex justify-center px-4 md:px-0">
         <div class="max-w-3xl border-l border-primary pl-8 py-4">
             <p class="font-headline-lg text-headline-lg text-on-background italic text-center">
-                "Mỗi nguyên liệu không chỉ là một thành phần, mà là một câu chuyện được kể lại qua ngọn lửa và thời gian."
+                "Mỗi nguyên liệu không chỉ là một thành phần, mà là một câu chuyện được kể lại qua ngọn lửa và thời
+                gian."
             </p>
         </div>
     </section>
@@ -248,36 +333,45 @@
             <!-- Bone -->
             <div class="col-span-12 md:col-span-8 group reveal-left">
                 <div class="relative h-[500px] w-full mb-6 overflow-hidden bg-surface-container">
-                    <img alt="Xương ống bò làm phở ngọt nước" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIKEG22xcnObJqRFBE-iaUGTQL5Tjb-F_EmLxH2Hhtx2kpEdnGwOfAmLzmyGY1uCVNv2yrwIRa2zpzMCndfC-_XuGMdGT-CyKlhWVCoPr4pXp-09vEA2ndUfsI63N_I7YzG9RK3o1Di5KQLB0Kk0Jkgvzmaaw1dIT4sdHXHauMnAMpz3mdTtLb7XGv3GfDD8uh_tSaTuZOQRM2PYQ1JMe9uMTl54dBlOFjfWFpyqmcF6rWHDnSRpaaWekFZrtYx9uQj1d-CUb8CA"/>
+                    <img alt="Xương ống bò làm phở ngọt nước"
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                         src="https://minhnganfreshfood.com/upload/product/xuong-ong-bo-600001kg10121.jpg"/>
                 </div>
                 <div class="max-w-lg">
                     <h2 class="font-headline-md text-headline-md text-on-background mb-4">Xương Ống Bò</h2>
                     <p class="font-body-md text-body-md text-on-surface-variant">
-                        Nền tảng của mọi tinh túy. Xương ống được ninh râm ran trong nhiều giờ liền để chiết xuất trọn vẹn tủy ngọt và vị thanh tao, tạo nên cốt cách trong trẻo mà sâu lắng của nước dùng.
+                        Nền tảng của mọi tinh túy. Xương ống được ninh râm ran trong nhiều giờ liền để chiết xuất trọn
+                        vẹn tủy ngọt và vị thanh tao, tạo nên cốt cách trong trẻo mà sâu lắng của nước dùng.
                     </p>
                 </div>
             </div>
             <!-- Star Anise -->
             <div class="col-span-12 md:col-span-4 mt-0 md:mt-[100px] group reveal-right">
                 <div class="relative h-[400px] w-full mb-6 overflow-hidden bg-surface-variant">
-                    <img alt="Hoa hồi đại hồi khô thơm lừng" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpW984W_lyXQtA4TPjvRdrID0bKn-5Ay17ySIlaoSmnIlYkrTVjq4SxXIwuwoiAB2LrhHR7g1De8X5KH89ohjwODmnnpOzqxhUYMUm1v8qg6etseHTgA1HiQ0XUmGahJ6Jf8Mu2uz-gI_R2jyJsu0B9pisJQn0vfUWECmY-Q52yE-Uj4RAkz-wk1A2hzFESHUYSgtHFa7xrk-4n4Q6j98Nvr3jfy0GyIM8oyPkHhVXBoYjTNYIl64uIOAr5vfCCSQFFmMTLgL_hw"/>
+                    <img alt="Hoa hồi đại hồi khô thơm lừng"
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpW984W_lyXQtA4TPjvRdrID0bKn-5Ay17ySIlaoSmnIlYkrTVjq4SxXIwuwoiAB2LrhHR7g1De8X5KH89ohjwODmnnpOzqxhUYMUm1v8qg6etseHTgA1HiQ0XUmGahJ6Jf8Mu2uz-gI_R2jyJsu0B9pisJQn0vfUWECmY-Q52yE-Uj4RAkz-wk1A2hzFESHUYSgtHFa7xrk-4n4Q6j98Nvr3jfy0GyIM8oyPkHhVXBoYjTNYIl64uIOAr5vfCCSQFFmMTLgL_hw"/>
                 </div>
                 <div>
                     <h2 class="font-headline-md text-headline-md text-on-background mb-4">Đại Hồi</h2>
                     <p class="font-body-md text-body-md text-on-surface-variant">
-                        Sự nồng ấm kiêu sa. Từng cánh hồi được nướng xém nhẹ để đánh thức tinh dầu, mang lại nốt hương cay nồng, ngọt ngào lan tỏa đặc trưng.
+                        Sự nồng ấm kiêu sa. Từng cánh hồi được nướng xém nhẹ để đánh thức tinh dầu, mang lại nốt hương
+                        cay nồng, ngọt ngào lan tỏa đặc trưng.
                     </p>
                 </div>
             </div>
             <!-- Cinnamon -->
             <div class="col-span-12 md:col-span-5 md:col-start-2 mt-12 group reveal">
                 <div class="relative h-[450px] w-full mb-6 overflow-hidden bg-surface-dim">
-                    <img alt="Các thanh quế khô nướng thơm ngát" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDe0mfJzfndcU7k2ihvGJl9AwauCRIqL-kWqBEEaOdENDpxW6ukQvpci0DvOQI06jCQAcF65lAlNW4iREjMefDgRpmTpQMb66xkJ-0x8NymQ8u2pflxpTIiiRPs3wDEtX1MwKI4iImssu-Rf3HEOtKrqcL6yx_8szZQe_fLKCLt1R_QmHyNFETPmWAHQB8L9diNMLpGMgI15-SyrDYFWO0un3IpG0ivk2wbX-BEIBbQWD7oExiymT0-CPwXNYERVkS3Dxq5pbP3yw"/>
+                    <img alt="Các thanh quế khô nướng thơm ngát"
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuDe0mfJzfndcU7k2ihvGJl9AwauCRIqL-kWqBEEaOdENDpxW6ukQvpci0DvOQI06jCQAcF65lAlNW4iREjMefDgRpmTpQMb66xkJ-0x8NymQ8u2pflxpTIiiRPs3wDEtX1MwKI4iImssu-Rf3HEOtKrqcL6yx_8szZQe_fLKCLt1R_QmHyNFETPmWAHQB8L9diNMLpGMgI15-SyrDYFWO0un3IpG0ivk2wbX-BEIBbQWD7oExiymT0-CPwXNYERVkS3Dxq5pbP3yw"/>
                 </div>
                 <div>
                     <h2 class="font-headline-md text-headline-md text-on-background mb-4">Quế Thanh</h2>
                     <p class="font-body-md text-body-md text-on-surface-variant">
-                        Vị ngọt thầm kín. Quế thanh cạo sạch vỏ ngoài, nướng trên than hoa, đóng vai trò như một sợi dây liên kết các hương vị lại với nhau thành một tổng thể hài hòa.
+                        Vị ngọt thầm kín. Quế thanh cạo sạch vỏ ngoài, nướng trên than hoa, đóng vai trò như một sợi dây
+                        liên kết các hương vị lại với nhau thành một tổng thể hài hòa.
                     </p>
                 </div>
             </div>
@@ -295,28 +389,34 @@
                 <span class="font-headline-md text-headline-md text-primary-fixed-dim min-w-[60px]">01</span>
                 <div class="flex-1">
                     <h3 class="font-headline-md text-2xl text-on-background mb-2">Thanh tẩy</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant">Xương bò được ngâm rửa và chần sơ qua nước sôi cùng gừng và muối biển để loại bỏ hoàn toàn tạp chất, giữ lại sự tinh khiết nhất.</p>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Xương bò được ngâm rửa và chần sơ qua
+                        nước sôi cùng gừng và muối biển để loại bỏ hoàn toàn tạp chất, giữ lại sự tinh khiết nhất.</p>
                 </div>
             </li>
             <li class="py-8 border-t border-outline-variant flex flex-col md:flex-row gap-8 items-start group hover:bg-surface-container-low transition-colors duration-300 px-4 reveal delay-100">
                 <span class="font-headline-md text-headline-md text-primary-fixed-dim min-w-[60px]">02</span>
                 <div class="flex-1">
                     <h3 class="font-headline-md text-2xl text-on-background mb-2">Đánh thức Hương vị</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant">Các gia vị mộc như hồi, quế, thảo quả, hành tăm được nướng trên lửa than hoa cho đến khi vỏ ngoài xém nhẹ và tỏa hương ngào ngạt.</p>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Các gia vị mộc như hồi, quế, thảo quả,
+                        hành tăm được nướng trên lửa than hoa cho đến khi vỏ ngoài xém nhẹ và tỏa hương ngào ngạt.</p>
                 </div>
             </li>
             <li class="py-8 border-t border-outline-variant flex flex-col md:flex-row gap-8 items-start group hover:bg-surface-container-low transition-colors duration-300 px-4 reveal delay-200">
                 <span class="font-headline-md text-headline-md text-primary-fixed-dim min-w-[60px]">03</span>
                 <div class="flex-1">
                     <h3 class="font-headline-md text-2xl text-on-background mb-2">Hầm râm ran</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant">Quá trình ninh xương kéo dài từ 12-16 tiếng trên ngọn lửa liu riu, hớt bọt liên tục để đảm bảo nước dùng đạt độ trong vắt như hổ phách.</p>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Quá trình ninh xương kéo dài từ 12-16
+                        tiếng trên ngọn lửa liu riu, hớt bọt liên tục để đảm bảo nước dùng đạt độ trong vắt như hổ
+                        phách.</p>
                 </div>
             </li>
             <li class="py-8 border-t border-b border-outline-variant flex flex-col md:flex-row gap-8 items-start group hover:bg-surface-container-low transition-colors duration-300 px-4 reveal delay-300">
                 <span class="font-headline-md text-headline-md text-primary-fixed-dim min-w-[60px]">04</span>
                 <div class="flex-1">
                     <h3 class="font-headline-md text-2xl text-on-background mb-2">Phối hòa</h3>
-                    <p class="font-body-md text-body-md text-on-surface-variant">Túi gia vị rang được thả vào nồi nước dùng ở những giờ cuối cùng, đủ để hương thơm hòa quyện mà không làm mất đi vị thanh của xương.</p>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Túi gia vị rang được thả vào nồi nước
+                        dùng ở những giờ cuối cùng, đủ để hương thơm hòa quyện mà không làm mất đi vị thanh của
+                        xương.</p>
                 </div>
             </li>
         </ul>
@@ -327,10 +427,14 @@
 <footer class="bg-[#FAF9F6] dark:bg-stone-950 border-t border-stone-200 dark:border-stone-800 flex flex-col md:flex-row justify-between items-center w-full px-8 md:px-16 py-12 gap-8 text-[10px] tracking-widest uppercase">
     <div class="text-xl font-serif italic tracking-[0.2em] text-stone-900 dark:text-stone-50">SẮC VỊ</div>
     <div class="flex flex-wrap justify-center gap-6 md:gap-8">
-        <a class="text-stone-400 dark:text-stone-600 hover:text-[#b61041] transition-opacity duration-300" href="#">Bảo mật</a>
-        <a class="text-stone-400 dark:text-stone-600 hover:text-[#b61041] transition-opacity duration-300" href="#">Điều khoản</a>
-        <a class="text-stone-400 dark:text-stone-600 hover:text-[#b61041] transition-opacity duration-300" href="lien-he.html">Liên hệ</a>
-        <a class="text-stone-400 dark:text-stone-600 hover:text-[#b61041] transition-opacity duration-300" href="#">Bản tin</a>
+        <a class="text-stone-400 dark:text-stone-600 hover:text-[#b61041] transition-opacity duration-300" href="#">Bảo
+            mật</a>
+        <a class="text-stone-400 dark:text-stone-600 hover:text-[#b61041] transition-opacity duration-300" href="#">Điều
+            khoản</a>
+        <a class="text-stone-400 dark:text-stone-600 hover:text-[#b61041] transition-opacity duration-300"
+           href="lien-he.html">Liên hệ</a>
+        <a class="text-stone-400 dark:text-stone-600 hover:text-[#b61041] transition-opacity duration-300" href="#">Bản
+            tin</a>
     </div>
     <div class="text-stone-400 dark:text-stone-600">
         © 2024 SẮC VỊ. KHÚC CA DI SẢN ẨM THỰC VIỆT.
@@ -338,63 +442,64 @@
 </footer>
 
 <script>
-    function toggleMobileMenu() {
-        const menu = document.getElementById('mobileMenu');
-        const overlay = document.getElementById('mobileMenuOverlay');
-        if (menu.classList.contains('translate-x-full')) {
-            menu.classList.remove('translate-x-full');
-            menu.classList.add('translate-x-0');
-            overlay.classList.remove('hidden');
-        } else {
-            menu.classList.add('translate-x-full');
-            menu.classList.remove('translate-x-0');
-            overlay.classList.add('hidden');
-        }
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const overlay = document.getElementById('mobileMenuOverlay');
+    if (menu.classList.contains('translate-x-full')) {
+      menu.classList.remove('translate-x-full');
+      menu.classList.add('translate-x-0');
+      overlay.classList.remove('hidden');
+    } else {
+      menu.classList.add('translate-x-full');
+      menu.classList.remove('translate-x-0');
+      overlay.classList.add('hidden');
     }
-    document.addEventListener("DOMContentLoaded", () => {
-        const path = window.location.pathname.split("/").pop() || "index.html";
-        const navMap = {
-            "index.html": "nav-index",
-            "vung-mien.html": "nav-vung-mien",
-            "thuc-don.html": "nav-thuc-don",
-            "nguyen-lieu.html": "nav-nguyen-lieu",
-            "cong-thuc.html": "nav-cong-thuc",
-            "duong-pho.html": "nav-duong-pho",
-            "lich-su.html": "nav-lich-su",
-            "lien-he.html": "nav-lien-he"
-        };
-        const activeId = navMap[path];
-        if (activeId) {
-            const activeEl = document.getElementById(activeId);
-            if (activeEl) {
-                activeEl.classList.remove("text-stone-500", "dark:text-stone-400");
-                activeEl.classList.add("text-[#b61041]", "font-semibold");
-            }
-            const mobileActiveEl = document.querySelector(`#mobileMenu a[href="${path}"]`);
-            if (mobileActiveEl) {
-                mobileActiveEl.classList.add("text-[#b61041]", "font-semibold");
-            }
-        }
+  }
 
-        // Intersection Observer for Scroll Reveals
-        const observerOptions = {
-            root: null,
-            rootMargin: "0px",
-            threshold: 0.15
-        };
-        
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("active");
-                    observer.unobserve(entry.target); // Reveal only once
-                }
-            });
-        }, observerOptions);
-        
-        const revealElements = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
-        revealElements.forEach(el => observer.observe(el));
-    });
+  document.addEventListener("DOMContentLoaded", () => {
+    const path = window.location.pathname.split("/").pop() || "index.html";
+    const navMap = {
+      "index.html": "nav-index",
+      "vung-mien.html": "nav-vung-mien",
+      "thuc-don.html": "nav-thuc-don",
+      "nguyen-lieu.html": "nav-nguyen-lieu",
+      "cong-thuc.html": "nav-cong-thuc",
+      "duong-pho.html": "nav-duong-pho",
+      "lich-su.html": "nav-lich-su",
+      "lien-he.html": "nav-lien-he"
+    };
+    const activeId = navMap[path];
+    if (activeId) {
+      const activeEl = document.getElementById(activeId);
+      if (activeEl) {
+        activeEl.classList.remove("text-stone-500", "dark:text-stone-400");
+        activeEl.classList.add("text-[#b61041]", "font-semibold");
+      }
+      const mobileActiveEl = document.querySelector(`#mobileMenu a[href="${path}"]`);
+      if (mobileActiveEl) {
+        mobileActiveEl.classList.add("text-[#b61041]", "font-semibold");
+      }
+    }
+
+    // Intersection Observer for Scroll Reveals
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.15
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+          observer.unobserve(entry.target); // Reveal only once
+        }
+      });
+    }, observerOptions);
+
+    const revealElements = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
+    revealElements.forEach(el => observer.observe(el));
+  });
 </script>
 </body>
 </html>
