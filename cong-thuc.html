@@ -108,6 +108,56 @@
         .border-brick { border-color: #E76F51; }
         .border-mustard { border-color: #E9C46A; }
         .border-leaf { border-color: #2A9D8F; }
+
+        /* Custom Scroll Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1.2s cubic-bezier(0.215, 0.610, 0.355, 1), transform 1.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: opacity 1.2s cubic-bezier(0.215, 0.610, 0.355, 1), transform 1.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+        }
+        .reveal-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: opacity 1.2s cubic-bezier(0.215, 0.610, 0.355, 1), transform 1.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+        }
+        .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Animation Delays */
+        .delay-100 { transition-delay: 100ms; animation-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; animation-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; animation-delay: 300ms; }
+        .delay-400 { transition-delay: 400ms; animation-delay: 400ms; }
+
+        /* Direct Entrance Animations */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-up {
+            animation: fadeUp 1.2s cubic-bezier(0.215, 0.610, 0.355, 1) both;
+        }
     </style>
 </head>
 <body class="text-on-surface font-sans antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
@@ -165,7 +215,7 @@
 <main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-32">
     <!-- Hero Section: Art Gallery Aesthetic -->
     <article class="grid grid-cols-12 gap-gutter mb-32">
-        <div class="col-span-12 md:col-span-5 flex flex-col justify-center">
+        <div class="col-span-12 md:col-span-5 flex flex-col justify-center animate-fade-up">
             <div class="mb-8">
                 <span class="font-label-caps text-label-caps text-tertiary tracking-widest uppercase mb-4 block">Nghệ Thuật Của Nguyên Liệu</span>
                 <h1 class="font-display-xl text-display-xl text-on-surface mb-6">Hoa Hồi &amp; Nước Dùng Xương.</h1>
@@ -179,7 +229,7 @@
                 <span class="font-label-caps text-label-caps text-on-surface">Ninh xương: 12 Giờ</span>
             </div>
         </div>
-        <div class="col-span-12 md:col-span-6 md:col-start-7 mt-12 md:mt-0 relative group">
+        <div class="col-span-12 md:col-span-6 md:col-start-7 mt-12 md:mt-0 relative group reveal-right">
             <img alt="Quế hồi thảo quả nướng thơm ngon làm nước dùng phở" class="w-full h-auto object-cover aspect-[4/5] filter grayscale-[20%] group-hover:grayscale-0 transition-all duration-700 ease-out shadow-[0_32px_64px_-12px_rgba(0,0,0,0.1)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2p7v-3klMAb9CRyupeRgCzNfVdzjGDb98BfCC840D2PEh7cSR3qDm7rMMsB-trvnLfrUTI5hUnnyS1vWEgHT8MD-spJTYUkensEMamo2lQlNxqw-1h3PspRb5l9EbTbEnI4Bs45Yq5kHcfsqzp3ppCZtScGQr76nhgCzvoFSeFHf0Dp16k5jbay2DbTJMoiyo_gt6dAHjWv6krQWcVwsU2VZaq5wRUh9WIAqVJBw3KKpFgr3N5vL2WiqOv81MkaSBOoEkamWZIg"/>
             <p class="absolute -right-8 bottom-12 rotate-90 origin-left font-body-md text-body-md italic text-on-surface-variant hidden xl:block">
                 Hoa Hồi — Illicium verum
@@ -189,7 +239,7 @@
 
     <!-- Asymmetrical Ingredients Section -->
     <section class="grid grid-cols-12 gap-gutter mb-32">
-        <div class="col-span-12 md:col-span-4 border-t border-surface-container-highest pt-8">
+        <div class="col-span-12 md:col-span-4 border-t border-surface-container-highest pt-8 reveal-left">
             <h2 class="font-headline-md text-headline-md text-on-surface mb-12">Hương Vị Mộc.</h2>
             <ul class="space-y-6">
                 <li class="flex justify-between items-end border-b border-surface-container-highest pb-4">
@@ -216,8 +266,8 @@
         </div>
         <div class="col-span-12 md:col-span-7 md:col-start-6">
             <div class="grid grid-cols-2 gap-gutter">
-                <img alt="Quế thanh và đinh hương trên nền vải lanh mộc mạc" class="w-full aspect-square object-cover mt-24 shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABuKQ8FU0wgwz_gvBU0YSx2m9PPsqdSuToXp3X0Iv2aI9Dp8LAM9MIloWq3rIBMl7zeACzct55I3ehQ24AG_4ZmV7iANXmUj-pUx6rENKIqzlCHg49nlKFDUb2XF0vlo2kPpWTWzOAYBVZzyTg6JAMsEHvJfjNn7EDhvCSlYGafEnZooZFGFUfFWxnXgZ2ne_46kQLjo3vi8n2kfjraiEqkHQzsjqBCaVmOHYhxGxYsnTBsWgVE2U-_KCMF_OnoZSHAy0t2oRLhA"/>
-                <img alt="Thảo quả giã dập trong cối đá cổ truyền" class="w-full aspect-square object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpaVKtQpYEhRkogBXBlmT_x3W_cgoh6Jo8Cr7UyWzjiyQH27Lmpp-ZegZcBBIGZfAFWv3wlG9J44SRudWNA5lggf4ynoPCIfluT-uBplIyXisoQWHE3C_1bv-0r-HcgaJ36lpo187arT8sSGHYPOuOIZDsOGbI570hB3asVNM1gkYFzsZJ5mPZQPotVyR-Dl793ccMgn29s-BOwkwB7rO7ZeQNoH8e0053YevrBM9aQgJRgYRqsOxS2pDjbrxpsf0Ju_OUenzVmg"/>
+                <img alt="Quế thanh và đinh hương trên nền vải lanh mộc mạc" class="w-full aspect-square object-cover mt-24 shadow-sm reveal delay-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABuKQ8FU0wgwz_gvBU0YSx2m9PPsqdSuToXp3X0Iv2aI9Dp8LAM9MIloWq3rIBMl7zeACzct55I3ehQ24AG_4ZmV7iANXmUj-pUx6rENKIqzlCHg49nlKFDUb2XF0vlo2kPpWTWzOAYBVZzyTg6JAMsEHvJfjNn7EDhvCSlYGafEnZooZFGFUfFWxnXgZ2ne_46kQLjo3vi8n2kfjraiEqkHQzsjqBCaVmOHYhxGxYsnTBsWgVE2U-_KCMF_OnoZSHAy0t2oRLhA"/>
+                <img alt="Thảo quả giã dập trong cối đá cổ truyền" class="w-full aspect-square object-cover shadow-sm reveal delay-200" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpaVKtQpYEhRkogBXBlmT_x3W_cgoh6Jo8Cr7UyWzjiyQH27Lmpp-ZegZcBBIGZfAFWv3wlG9J44SRudWNA5lggf4ynoPCIfluT-uBplIyXisoQWHE3C_1bv-0r-HcgaJ36lpo187arT8sSGHYPOuOIZDsOGbI570hB3asVNM1gkYFzsZJ5mPZQPotVyR-Dl793ccMgn29s-BOwkwB7rO7ZeQNoH8e0053YevrBM9aQgJRgYRqsOxS2pDjbrxpsf0Ju_OUenzVmg"/>
             </div>
         </div>
     </section>
@@ -233,9 +283,9 @@
 
     <!-- Method Section: Minimalist Instructions -->
     <section class="max-w-4xl mx-auto">
-        <h2 class="font-headline-md text-headline-md text-on-surface mb-16 text-center">Phương Pháp Chế Biến.</h2>
+        <h2 class="font-headline-md text-headline-md text-on-surface mb-16 text-center reveal">Phương Pháp Chế Biến.</h2>
         <div class="space-y-24">
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 reveal">
                 <div class="md:col-span-2">
                     <span class="font-headline-lg text-headline-lg text-tertiary-fixed-dim">01</span>
                 </div>
@@ -246,7 +296,7 @@
                     </p>
                 </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 reveal">
                 <div class="md:col-span-2">
                     <span class="font-headline-lg text-headline-lg text-tertiary-fixed-dim">02</span>
                 </div>
@@ -257,7 +307,7 @@
                     </p>
                 </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 reveal">
                 <div class="md:col-span-2">
                     <span class="font-headline-lg text-headline-lg text-tertiary-fixed-dim">03</span>
                 </div>
@@ -324,6 +374,25 @@
                 mobileActiveEl.classList.add("text-[#b61041]", "font-semibold");
             }
         }
+
+        // Intersection Observer for Scroll Reveals
+        const observerOptions = {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.15
+        };
+        
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active");
+                    observer.unobserve(entry.target); // Reveal only once
+                }
+            });
+        }, observerOptions);
+        
+        const revealElements = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
+        revealElements.forEach(el => observer.observe(el));
     });
 </script>
 </body>

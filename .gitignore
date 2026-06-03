@@ -1,1 +1,13 @@
 skills/
+.gitignore
+.ai/*
+.vscode/*
+*.log
+*.tmp
+*.bak
+*.swp
+/.idea/*
+/.ai/
+/.idea/
+!/.gitignore
+.idea/*

@@ -108,6 +108,56 @@
         .border-brick { border-color: #E76F51; }
         .border-mustard { border-color: #E9C46A; }
         .border-leaf { border-color: #2A9D8F; }
+
+        /* Custom Scroll Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1.2s cubic-bezier(0.215, 0.610, 0.355, 1), transform 1.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: opacity 1.2s cubic-bezier(0.215, 0.610, 0.355, 1), transform 1.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+        }
+        .reveal-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: opacity 1.2s cubic-bezier(0.215, 0.610, 0.355, 1), transform 1.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+        }
+        .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Animation Delays */
+        .delay-100 { transition-delay: 100ms; animation-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; animation-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; animation-delay: 300ms; }
+        .delay-400 { transition-delay: 400ms; animation-delay: 400ms; }
+
+        /* Direct Entrance Animations */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-fade-up {
+            animation: fadeUp 1.2s cubic-bezier(0.215, 0.610, 0.355, 1) both;
+        }
     </style>
 </head>
 <body class="text-on-surface font-sans antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
@@ -169,10 +219,10 @@
             <img alt="Không gian sang trọng tĩnh lặng của nhà hàng" class="w-full h-full object-cover object-center filter brightness-75" src="assets/img/lien-he-hero.jpg"/>
             <div class="absolute inset-0 bg-stone-900/30 mix-blend-multiply"></div>
         </div>
-        <div class="relative z-10 max-w-4xl px-8 text-center text-white">
-            <span class="font-label-caps text-label-caps text-mustard mb-4 block uppercase tracking-widest">Kết Nối Với Chúng Tôi</span>
-            <h1 class="font-display-xl text-headline-lg md:text-display-xl mb-4 text-white drop-shadow-md">Gặp Gỡ Tri Kỷ</h1>
-            <p class="font-body-lg text-body-lg text-stone-100 max-w-2xl mx-auto font-light">Mỗi cuộc trò chuyện là khởi đầu cho một hành trình ẩm thực mới.</p>
+        <div class="relative z-10 max-w-4xl px-8 text-center text-white animate-fade-up">
+            <span class="font-label-caps text-label-caps text-mustard mb-4 block uppercase tracking-widest animate-fade-up">Kết Nối Với Chúng Tôi</span>
+            <h1 class="font-display-xl text-headline-lg md:text-display-xl mb-4 text-white drop-shadow-md animate-fade-up delay-100">Gặp Gỡ Tri Kỷ</h1>
+            <p class="font-body-lg text-body-lg text-stone-100 max-w-2xl mx-auto font-light animate-fade-up delay-200">Mỗi cuộc trò chuyện là khởi đầu cho một hành trình ẩm thực mới.</p>
         </div>
     </section>
 
@@ -180,7 +230,7 @@
     <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-32">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
             <!-- Left Info Column -->
-            <div class="lg:col-span-5 border-t border-surface-container-highest pt-8">
+            <div class="lg:col-span-5 border-t border-surface-container-highest pt-8 reveal-left">
                 <span class="font-label-caps text-label-caps text-tertiary mb-4 block uppercase tracking-widest">Gặp Gỡ</span>
                 <h2 class="font-headline-lg text-headline-lg text-[#b61041] mb-12 leading-tight">Ghé Thăm Chúng Tôi</h2>
                 
@@ -213,7 +263,7 @@
             </div>
 
             <!-- Right Form Column -->
-            <div class="lg:col-span-7 bg-surface-container-low p-12 border border-outline-variant/30">
+            <div class="lg:col-span-7 bg-surface-container-low p-12 border border-outline-variant/30 reveal-right">
                 <h3 class="font-headline-md text-3xl text-on-surface mb-4">Gửi Lời Nhắn</h3>
                 <p class="font-body-md text-on-surface-variant mb-10 font-light">
                     Bạn có câu hỏi, ý kiến đóng góp hoặc nhu cầu đặt bàn đặt tiệc riêng? Hãy điền vào biểu mẫu bên dưới, chúng tôi sẽ phản hồi trong vòng 24 giờ.
@@ -259,34 +309,34 @@
     <!-- Services Notes Section -->
     <section class="bg-surface-container-low py-24 border-t border-b border-surface-container-high">
         <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16 reveal">
                 <span class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest block mb-2">Dịch Vụ Sắc Vị</span>
                 <h2 class="font-headline-lg text-[#b61041] italic">Dành Cho Từng Dịp Gặp Gỡ</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <!-- Card 1 -->
-                <div class="border-t border-[#b61041]/30 pt-6">
+                <div class="border-t border-[#b61041]/30 pt-6 reveal">
                     <h4 class="font-headline-md text-xl text-stone-950 mb-3">Đặt Bàn Gia Đình</h4>
                     <p class="font-body-md text-sm text-on-surface-variant">
                         Bàn từ 2 đến 8 người được giữ tối đa 15 phút sau giờ đặt hẹn. Quý khách vui lòng lưu ý các yêu cầu đặc biệt như ghế trẻ em hoặc dị ứng để nhà bếp phục vụ tốt nhất.
                     </p>
                 </div>
                 <!-- Card 2 -->
-                <div class="border-t border-[#b61041]/30 pt-6">
+                <div class="border-t border-[#b61041]/30 pt-6 reveal delay-100">
                     <h4 class="font-headline-md text-xl text-stone-950 mb-3">Sự Kiện Nhóm Tiệc</h4>
                     <p class="font-body-md text-sm text-on-surface-variant">
                         Các hội nhóm lớn từ 10 khách trở lên có thể chọn thực đơn lập sẵn theo phong vị ba miền đặc sắc, thiết kế không gian phòng ăn riêng theo yêu cầu sự kiện.
                     </p>
                 </div>
                 <!-- Card 3 -->
-                <div class="border-t border-[#b61041]/30 pt-6">
+                <div class="border-t border-[#b61041]/30 pt-6 reveal delay-200">
                     <h4 class="font-headline-md text-xl text-stone-950 mb-3">Tư Vấn Thực Đơn</h4>
                     <p class="font-body-md text-sm text-on-surface-variant">
                         Chúng tôi hỗ trợ thiết kế thứ tự dọn món hoàn hảo: khơi vị thanh tao mát lành, đưa món chính đậm đà sâu lắng, điểm xuyết món nước nóng ấm và kết đọng bằng thức ngọt lành.
                     </p>
                 </div>
                 <!-- Card 4 -->
-                <div class="border-t border-[#b61041]/30 pt-6">
+                <div class="border-t border-[#b61041]/30 pt-6 reveal delay-300">
                     <h4 class="font-headline-md text-xl text-stone-950 mb-3">Đóng Góp Ý Kiến</h4>
                     <p class="font-body-md text-sm text-on-surface-variant">
                         Mọi phản hồi quý báu về món ăn, thái độ phục vụ hay trải nghiệm không gian đều được ghi nhận trực tiếp để cải tiến quy trình bếp ăn và nâng chất lượng phục vụ ngày một cao hơn.
@@ -297,7 +347,7 @@
     </section>
 
     <!-- Map Section -->
-    <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-24">
+    <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-24 reveal">
         <div class="text-center mb-12">
             <span class="font-label-caps text-label-caps text-tertiary mb-2 block uppercase tracking-widest">Đường Đi</span>
             <h2 class="font-headline-lg text-[#b61041]">Vị Trí Của Chúng Tôi</h2>
@@ -414,6 +464,25 @@
                 mobileActiveEl.classList.add("text-[#b61041]", "font-semibold");
             }
         }
+
+        // Intersection Observer for Scroll Reveals
+        const observerOptions = {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.15
+        };
+        
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active");
+                    observer.unobserve(entry.target); // Reveal only once
+                }
+            });
+        }, observerOptions);
+        
+        const revealElements = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
+        revealElements.forEach(el => observer.observe(el));
     });
 </script>
 </body>

@@ -113,6 +113,41 @@
         html {
             scroll-behavior: smooth;
         }
+
+        /* Custom Scroll Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1.2s cubic-bezier(0.215, 0.610, 0.355, 1), transform 1.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: opacity 1.2s cubic-bezier(0.215, 0.610, 0.355, 1), transform 1.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+        }
+        .reveal-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: opacity 1.2s cubic-bezier(0.215, 0.610, 0.355, 1), transform 1.2s cubic-bezier(0.215, 0.610, 0.355, 1);
+        }
+        .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Animation Delays */
+        .delay-100 { transition-delay: 100ms; animation-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; animation-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; animation-delay: 300ms; }
+        .delay-400 { transition-delay: 400ms; animation-delay: 400ms; }
     </style>
 </head>
 <body class="text-on-surface font-sans antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
@@ -171,17 +206,17 @@
     <!-- Page Title Header -->
     <section class="mb-16">
         <div class="text-center max-w-3xl mx-auto">
-            <span class="font-label-caps text-label-caps text-tertiary tracking-widest uppercase mb-4 block">Tinh Hoa Ẩm Thực</span>
-            <h1 class="font-display-xl text-display-xl text-[#b61041] mb-6 italic">Thực Đơn Sắc Vị</h1>
-            <div class="w-16 h-px bg-[#b61041] mx-auto mb-6"></div>
-            <p class="font-body-lg text-body-lg text-on-surface-variant font-light">
+            <span class="font-label-caps text-label-caps text-tertiary tracking-widest uppercase mb-4 block reveal">Tinh Hoa Ẩm Thực</span>
+            <h1 class="font-display-xl text-display-xl text-[#b61041] mb-6 italic reveal delay-100">Thực Đơn Sắc Vị</h1>
+            <div class="w-16 h-px bg-[#b61041] mx-auto mb-6 reveal delay-200"></div>
+            <p class="font-body-lg text-body-lg text-on-surface-variant font-light reveal delay-300">
                 Hành trình tìm về hương vị nguyên bản của làng quê Việt Nam, nơi mỗi món ăn là một tác phẩm chứa đựng niềm trân quý sâu sắc với sản vật đất mẹ.
             </p>
         </div>
     </section>
 
     <!-- Menu Sticky Filter Bar -->
-    <div class="sticky top-[80px] z-30 bg-[#FEFDF5]/90 backdrop-blur-md py-4 border-b border-surface-container-high mb-16">
+    <div class="sticky top-[80px] z-30 bg-[#FEFDF5]/90 backdrop-blur-md py-4 border-b border-surface-container-high mb-16 reveal delay-400">
         <div class="flex justify-center gap-6 overflow-x-auto px-4 font-sans text-xs uppercase tracking-widest font-semibold" id="menuTabs">
             <a href="#khai-vi" class="tab-btn px-4 py-2 text-[#b61041] border-b-2 border-[#b61041] whitespace-nowrap">Món Khai Vị</a>
             <a href="#mon-chinh" class="tab-btn px-4 py-2 text-stone-500 hover:text-[#b61041] transition-colors whitespace-nowrap">Món Chính</a>
@@ -193,7 +228,7 @@
 
     <!-- Món Khai Vị Section -->
     <section id="khai-vi" class="menu-section mb-32 scroll-mt-48">
-        <div class="border-t border-surface-container-highest pt-8 mb-12">
+        <div class="border-t border-surface-container-highest pt-8 mb-12 reveal">
             <div class="flex items-baseline gap-4">
                 <span class="font-display-xl text-display-xl text-stone-200 leading-none">01</span>
                 <div>
@@ -208,7 +243,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
             <!-- Large Feature: Gỏi Cuốn -->
-            <div class="group">
+            <div class="group reveal-left">
                 <div class="relative aspect-[16/9] w-full overflow-hidden bg-surface-container mb-6">
                     <img alt="Gỏi cuốn tôm thịt bày trí nghệ thuật" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/img/goi-cuon-tom-thit.jpg"/>
                     <span class="absolute top-4 left-4 bg-brick text-white text-[10px] tracking-widest uppercase px-3 py-1 font-semibold">Đặc Sản</span>
@@ -223,7 +258,7 @@
             </div>
 
             <!-- Side Feature: Bánh Xèo -->
-            <div class="group">
+            <div class="group reveal-right">
                 <div class="relative aspect-[16/9] w-full overflow-hidden bg-surface-container mb-6">
                     <img alt="Bánh xèo miền Tây giòn rụm màu vàng nghệ" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/img/banh_xeo.png"/>
                 </div>
@@ -240,7 +275,7 @@
 
     <!-- Món Chính Section -->
     <section id="mon-chinh" class="menu-section mb-32 scroll-mt-48">
-        <div class="border-t border-surface-container-highest pt-8 mb-12">
+        <div class="border-t border-surface-container-highest pt-8 mb-12 reveal">
             <div class="flex items-baseline gap-4">
                 <span class="font-display-xl text-display-xl text-stone-200 leading-none">02</span>
                 <div>
@@ -255,7 +290,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-16">
             <!-- Item 1: Bún Chả -->
-            <div class="group flex flex-col justify-between">
+            <div class="group flex flex-col justify-between reveal">
                 <div>
                     <div class="relative aspect-square w-full overflow-hidden bg-surface-container mb-6">
                         <img alt="Bún chả Hà Nội thơm mùi thịt nướng than hoa" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/img/bun_cha.png"/>
@@ -272,7 +307,7 @@
             </div>
 
             <!-- Item 2: Chả Cá -->
-            <div class="group flex flex-col justify-between">
+            <div class="group flex flex-col justify-between reveal delay-100">
                 <div>
                     <div class="relative aspect-square w-full overflow-hidden bg-surface-container mb-6">
                         <img alt="Chả cá Lã Vọng nướng nghệ thì là" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/img/cha-ca-la-vong.jpg"/>
@@ -289,7 +324,7 @@
             </div>
 
             <!-- Item 3: Cá Kho Tộ -->
-            <div class="group flex flex-col justify-between">
+            <div class="group flex flex-col justify-between reveal delay-200">
                 <div>
                     <div class="relative aspect-square w-full overflow-hidden bg-surface-container mb-6">
                         <img alt="Cá lóc kho tộ đất sệt nước hàng tiêu sọ" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/img/ca-kho.jpg"/>
@@ -306,7 +341,7 @@
             </div>
 
             <!-- Item 4: Bún Bò Huế -->
-            <div class="group flex flex-col justify-between">
+            <div class="group flex flex-col justify-between reveal">
                 <div>
                     <div class="relative aspect-square w-full overflow-hidden bg-surface-container mb-6">
                         <img alt="Tô bún bò Huế thơm cay nồng ấm" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/img/bun-bo-hue.jpg"/>
@@ -323,7 +358,7 @@
             </div>
 
             <!-- Item 5: Phở Cuốn -->
-            <div class="group flex flex-col justify-between">
+            <div class="group flex flex-col justify-between reveal delay-100">
                 <div>
                     <div class="relative aspect-square w-full overflow-hidden bg-surface-container mb-6">
                         <img alt="Phở cuốn ngũ sắc thanh mát Hà Thành" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/img/pho-viet.jpg"/>
@@ -340,7 +375,7 @@
             </div>
 
             <!-- Item 6: Gỏi Bưởi -->
-            <div class="group flex flex-col justify-between">
+            <div class="group flex flex-col justify-between reveal delay-200">
                 <div>
                     <div class="relative aspect-square w-full overflow-hidden bg-surface-container mb-6">
                         <img alt="Gỏi bưởi tôm thịt tươi mát vị miền Tây" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/img/goi-buoi.jpg"/>
@@ -360,7 +395,7 @@
 
     <!-- Món Nước Section -->
     <section id="mon-nuoc" class="menu-section mb-32 scroll-mt-48">
-        <div class="border-t border-surface-container-highest pt-8 mb-12">
+        <div class="border-t border-surface-container-highest pt-8 mb-12 reveal">
             <div class="flex items-baseline gap-4">
                 <span class="font-display-xl text-display-xl text-stone-200 leading-none">03</span>
                 <div>
@@ -375,7 +410,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
             <!-- Special Feature: Phở Bò -->
-            <div class="group">
+            <div class="group reveal-left">
                 <div class="relative aspect-[16/9] w-full overflow-hidden bg-surface-container mb-6">
                     <img alt="Bát phở bò Nam Định tuyệt phẩm" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/img/hero_pho.png"/>
                     <span class="absolute top-4 left-4 bg-brick text-white text-[10px] tracking-widest uppercase px-3 py-1 font-semibold">Đặc Biệt</span>
@@ -390,7 +425,7 @@
             </div>
 
             <!-- Side Feature: Lẩu Riêu -->
-            <div class="group">
+            <div class="group reveal-right">
                 <div class="relative aspect-[16/9] w-full overflow-hidden bg-surface-container mb-6">
                     <img alt="Nồi lẩu riêu cua đồng ấm áp" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/img/lau-rieu.jpg"/>
                 </div>
@@ -407,7 +442,7 @@
 
     <!-- Tráng Miệng Section -->
     <section id="trang-mieng" class="menu-section mb-32 scroll-mt-48">
-        <div class="border-t border-surface-container-highest pt-8 mb-12">
+        <div class="border-t border-surface-container-highest pt-8 mb-12 reveal">
             <div class="flex items-baseline gap-4">
                 <span class="font-display-xl text-display-xl text-stone-200 leading-none">04</span>
                 <div>
@@ -422,7 +457,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
             <!-- Dessert 1: Chè Sen -->
-            <div class="group border border-outline-variant/30 p-8 flex flex-col justify-between bg-surface-container-low">
+            <div class="group border border-outline-variant/30 p-8 flex flex-col justify-between bg-surface-container-low reveal">
                 <div>
                     <div class="relative aspect-video w-full overflow-hidden bg-surface-container mb-6">
                         <img alt="Bát chè hạt sen nhãn lồng thanh nhã" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/img/che-sen.jpg"/>
@@ -439,7 +474,7 @@
             </div>
 
             <!-- Dessert 2: Bánh Trôi Tàu -->
-            <div class="group border border-outline-variant/30 p-8 flex flex-col justify-between bg-surface-container-low">
+            <div class="group border border-outline-variant/30 p-8 flex flex-col justify-between bg-surface-container-low reveal delay-100">
                 <div>
                     <div class="relative aspect-video w-full overflow-hidden bg-surface-container mb-6">
                         <img alt="Viên bánh trôi tàu nóng ấm thơm gừng" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/img/banh-cuon.jpg"/>
@@ -456,7 +491,7 @@
             </div>
 
             <!-- Dessert 3: Chè Bưởi -->
-            <div class="group border border-outline-variant/30 p-8 flex flex-col justify-between bg-surface-container-low">
+            <div class="group border border-outline-variant/30 p-8 flex flex-col justify-between bg-surface-container-low reveal delay-200">
                 <div>
                     <div class="relative aspect-video w-full overflow-hidden bg-surface-container mb-6">
                         <img alt="Bát chè bưởi ngậy cốt dừa béo bùi" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/img/goi-buoi.jpg"/>
@@ -476,7 +511,7 @@
 
     <!-- Gợi Ý Theo Mùa Section -->
     <section id="theo-mua" class="menu-section mb-16 scroll-mt-48">
-        <div class="border-t border-surface-container-highest pt-8 mb-12">
+        <div class="border-t border-surface-container-highest pt-8 mb-12 reveal">
             <div class="flex items-baseline gap-4">
                 <span class="font-display-xl text-display-xl text-stone-200 leading-none">05</span>
                 <div>
@@ -491,7 +526,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
             <!-- Seasonal 1: Summer -->
-            <div class="group">
+            <div class="group reveal">
                 <div class="relative aspect-square w-full overflow-hidden bg-surface-container mb-6">
                     <img alt="Bộ món ăn thanh tao mùa hè" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/img/goi-cuon-tom-thit.jpg"/>
                 </div>
@@ -503,7 +538,7 @@
             </div>
 
             <!-- Seasonal 2: Winter -->
-            <div class="group">
+            <div class="group reveal delay-100">
                 <div class="relative aspect-square w-full overflow-hidden bg-surface-container mb-6">
                     <img alt="Bữa cá kho tộ ấm cúng trời lạnh" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/img/ca-kho.jpg"/>
                 </div>
@@ -515,7 +550,7 @@
             </div>
 
             <!-- Seasonal 3: Family Set -->
-            <div class="group">
+            <div class="group reveal delay-200">
                 <div class="relative aspect-square w-full overflow-hidden bg-surface-container mb-6">
                     <img alt="Mâm cơm tối gia đình quây quần ấm cúng" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="assets/img/bua-com.jpg"/>
                 </div>
@@ -529,7 +564,7 @@
     </section>
 
     <!-- Triết lý ẩm thực -->
-    <div class="my-32 flex justify-center">
+    <div class="my-32 flex justify-center reveal">
         <div class="max-w-xl text-center border-y border-surface-variant py-12 px-6">
             <p class="font-headline-md text-headline-md text-[#b61041] italic mb-4">"Ăn một miếng ngon, nhớ một đời lành."</p>
             <span class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest block">Triết Lý Ẩm Thực Sắc Vị</span>
@@ -537,7 +572,7 @@
     </div>
 
     <!-- Booking CTA -->
-    <section class="bg-[#FAF9F6] border border-outline-variant/40 p-12 md:p-24 text-center max-w-4xl mx-auto mb-16">
+    <section class="bg-[#FAF9F6] border border-outline-variant/40 p-12 md:p-24 text-center max-w-4xl mx-auto mb-16 reveal">
         <span class="font-label-caps text-label-caps text-tertiary tracking-widest uppercase mb-4 block">Hẹn Gặp Bạn</span>
         <h2 class="font-display-xl text-headline-lg text-[#b61041] mb-6">Đặt Bàn Trải Nghiệm</h2>
         <p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-lg mx-auto font-light">
@@ -642,6 +677,25 @@
                 btn.classList.remove("text-stone-500");
             });
         });
+
+        // Intersection Observer for Scroll Reveals
+        const observerOptions = {
+            root: null,
+            rootMargin: "0px",
+            threshold: 0.15
+        };
+        
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active");
+                    observer.unobserve(entry.target); // Reveal only once
+                }
+            });
+        }, observerOptions);
+        
+        const revealElements = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
+        revealElements.forEach(el => observer.observe(el));
     });
 </script>
 </body>
