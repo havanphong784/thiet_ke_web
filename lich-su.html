@@ -1,204 +1,437 @@
 <!DOCTYPE html>
-<html lang="vi">
-
+<html class="light" lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lịch Sử - Âm Thực Việt</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Be+Vietnam+Pro:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Lịch Sử - Sắc Vị</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e8e2d6",
+                        "on-surface": "#1e1c14",
+                        "inverse-on-surface": "#f6f0e4",
+                        "on-surface-variant": "#5a4042",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed-dim": "#c8c6c2",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#ffd9dc",
+                        "on-secondary-fixed-variant": "#474746",
+                        "surface-dim": "#dfd9ce",
+                        "tertiary": "#5c5c58",
+                        "inverse-primary": "#ffb2ba",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed-dim": "#ffb2ba",
+                        "on-tertiary-container": "#fefcf7",
+                        "surface-container-high": "#eee8db",
+                        "on-secondary": "#ffffff",
+                        "surface": "#fff9ed",
+                        "secondary": "#5f5e5e",
+                        "surface-tint": "#b91543",
+                        "outline-variant": "#e2bec0",
+                        "on-primary-container": "#fffbff",
+                        "inverse-surface": "#333028",
+                        "surface-container-low": "#f9f3e7",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-primary-fixed-variant": "#910030",
+                        "secondary-container": "#e4e2e1",
+                        "secondary-fixed": "#e4e2e1",
+                        "on-background": "#1e1c14",
+                        "on-tertiary-fixed-variant": "#474744",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed": "#e4e2dd",
+                        "primary-container": "#d93158",
+                        "on-tertiary-fixed": "#1b1c19",
+                        "surface-container": "#f3ede1",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#fff9ed",
+                        "on-primary-fixed": "#400010",
+                        "surface-container-highest": "#e8e2d6",
+                        "primary": "#b61041",
+                        "tertiary-container": "#757571",
+                        "outline": "#8e6f72",
+                        "on-secondary-container": "#656464",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#fff9ed"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-mobile": "24px",
+                        "gutter": "32px",
+                        "section-gap": "160px",
+                        "margin-desktop": "80px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Be Vietnam Pro"],
+                        "headline-lg": ["Noto Serif"],
+                        "display-xl": ["Noto Serif"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "headline-md": ["Noto Serif"],
+                        "label-caps": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "400" }],
+                        "display-xl": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "300" }],
+                        "body-lg": ["18px", { "lineHeight": "1.8", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #FEFDF5; }
+        .text-mustard { color: #E9C46A; }
+        .text-brick { color: #E76F51; }
+        .text-leaf { color: #2A9D8F; }
+        .bg-mustard { background-color: #E9C46A; }
+        .bg-brick { background-color: #E76F51; }
+        .bg-leaf { background-color: #2A9D8F; }
+        .border-brick { border-color: #E76F51; }
+        .border-mustard { border-color: #E9C46A; }
+        .border-leaf { border-color: #2A9D8F; }
+    </style>
 </head>
+<body class="text-on-surface antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
 
-<body>
-    <!-- Mobile Nav -->
-    <div class="mobile-nav" id="mobileNav">
-        <button class="mobile-nav-close" onclick="document.getElementById('mobileNav').classList.remove('active')">&times;</button>
-        <a href="index.html">Trang Chủ</a>
-        <a href="thuc-don.html">Thực Đơn</a>
-        <a href="lich-su.html" class="active">Lịch Sử</a>
-        <a href="lien-he.html">Liên Hệ</a>
+<!-- Navigation Bar -->
+<nav class="bg-[#FAF9F6] dark:bg-stone-950 font-serif tracking-tight text-stone-900 dark:text-stone-50 border-stone-200 dark:border-stone-800 flex justify-between items-center w-full px-8 md:px-16 py-6 border-b z-50 sticky top-0 ease-in-out transition-all">
+    <div class="flex-1">
+        <a href="index.html" class="text-2xl font-serif italic tracking-tighter text-stone-900 dark:text-stone-50">Sắc Vị</a>
     </div>
+    <div class="hidden xl:flex gap-8 items-center justify-center">
+        <a id="nav-index" class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300" href="index.html">Trang Chủ</a>
+        <a id="nav-vung-mien" class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300" href="vung-mien.html">Vùng Miền</a>
+        <a id="nav-thuc-don" class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300" href="thuc-don.html">Thực Đơn</a>
+        <a id="nav-nguyen-lieu" class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300" href="nguyen-lieu.html">Nguyên Liệu</a>
+        <a id="nav-cong-thuc" class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300" href="cong-thuc.html">Công Thức</a>
+        <a id="nav-duong-pho" class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300" href="duong-pho.html">Đường Phố</a>
+        <a id="nav-lich-su" class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300" href="lich-su.html">Lịch Sử</a>
+        <a id="nav-lien-he" class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300" href="lien-he.html">Liên Hệ</a>
+    </div>
+    <div class="flex-1 flex justify-end gap-4 text-[#b61041] dark:text-[#F3708D] items-center">
+        <button class="hover:text-stone-900 transition-colors duration-300">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">language</span>
+        </button>
+        <button class="hover:text-stone-900 transition-colors duration-300">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">search</span>
+        </button>
+        <button onclick="toggleMobileMenu()" class="xl:hidden hover:text-stone-900 transition-colors duration-300">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0; font-size: 28px;">menu</span>
+        </button>
+    </div>
+</nav>
 
-    <header class="header">
-        <div class="container nav">
-            <div class="logo">Âm Thực Việt</div>
-            <nav class="nav-links">
-                <a href="index.html">Trang Chủ</a>
-                <a href="thuc-don.html">Thực Đơn</a>
-                <a href="lich-su.html" class="active">Lịch Sử</a>
-                <a href="lien-he.html">Liên Hệ</a>
-            </nav>
-            <button class="hamburger" onclick="document.getElementById('mobileNav').classList.add('active')">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+<!-- Mobile Menu Drawer -->
+<div id="mobileMenu" class="fixed inset-y-0 right-0 z-50 w-full max-w-xs bg-background border-l border-outline-variant shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out xl:hidden flex flex-col p-8">
+    <div class="flex justify-between items-center mb-8">
+        <span class="font-serif italic text-2xl text-stone-950">Sắc Vị</span>
+        <button onclick="toggleMobileMenu()" class="text-stone-950 hover:text-primary transition-colors focus:outline-none">
+            <span class="material-symbols-outlined text-3xl">close</span>
+        </button>
+    </div>
+    <nav class="flex flex-col gap-5 text-sm font-sans uppercase tracking-widest">
+        <a href="index.html" class="hover:text-primary transition-colors py-2 border-b border-stone-100/50">Trang Chủ</a>
+        <a href="vung-mien.html" class="hover:text-primary transition-colors py-2 border-b border-stone-100/50">Vùng Miền</a>
+        <a href="thuc-don.html" class="hover:text-primary transition-colors py-2 border-b border-stone-100/50">Thực Đơn</a>
+        <a href="nguyen-lieu.html" class="hover:text-primary transition-colors py-2 border-b border-stone-100/50">Nguyên Liệu</a>
+        <a href="cong-thuc.html" class="hover:text-primary transition-colors py-2 border-b border-stone-100/50">Công Thức</a>
+        <a href="duong-pho.html" class="hover:text-primary transition-colors py-2 border-b border-stone-100/50">Đường Phố</a>
+        <a href="lich-su.html" class="hover:text-primary transition-colors py-2 border-b border-stone-100/50">Lịch Sử</a>
+        <a href="lien-he.html" class="hover:text-primary transition-colors py-2 border-b border-stone-100/50">Liên Hệ</a>
+    </nav>
+</div>
+<!-- Mobile Menu Overlay -->
+<div id="mobileMenuOverlay" class="fixed inset-0 z-40 bg-stone-950/20 backdrop-blur-sm hidden transition-opacity duration-300 xl:hidden" onclick="toggleMobileMenu()"></div>
+
+<main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="relative w-full h-[500px] min-h-[400px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img alt="Bức ảnh căn bếp xưa đầy hoài niệm" class="w-full h-full object-cover object-center filter brightness-75 scale-105 transition-transform duration-[12s]" src="assets/img/history.png"/>
+            <div class="absolute inset-0 bg-stone-900/30 mix-blend-multiply"></div>
         </div>
-    </header>
-
-    <main>
-        <!-- Hero -->
-        <section class="hero hero--short">
-            <img src="assets/img/history.png" alt="Căn bếp xưa" class="hero-img">
-            <div class="container hero-content">
-                <h1>Hành Trình Ngàn Năm</h1>
-                <p>Khám phá dòng chảy văn hóa ẩm thực Việt qua từng thời kỳ lịch sử.</p>
-            </div>
-        </section>
-
-        <!-- Timeline -->
-        <section class="section container">
-            <div class="section-intro" style="margin-bottom: 80px;">
-                <h2 class="section-title">Dòng Chảy Văn Hóa</h2>
-                <div class="divider"></div>
-            </div>
-
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">Thời Kỳ Cổ Đại</div>
-                    <h3>Cội Nguồn Nông Nghiệp Lúa Nước</h3>
-                    <p>Từ ngàn năm trước, tổ tiên người Việt đã đặt nền móng cho nền văn minh lúa nước. Những hạt gạo trắng trong, những chum mắm mặn mòi đã trở thành linh hồn của bữa cơm Việt ngay từ thuở sơ khai. Cơm - canh - mắm là bộ ba không thể thiếu, phản ánh triết lý sống giản dị mà sâu sắc.</p>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">Thời Kỳ Phong Kiến</div>
-                    <h3>Sự Tinh Tế Của Ẩm Thực Cung Đình</h3>
-                    <p>Dưới triều đại nhà Nguyễn, ẩm thực Việt đạt đến đỉnh cao của sự cầu kỳ và tinh mỹ. Mỗi món ăn không chỉ ngon mà còn là một tác phẩm nghệ thuật, tuân thủ nghiêm ngặt quy tắc ngũ hành âm dương. Mâm cỗ cung đình Huế có thể lên đến hàng chục món, mỗi món một vị, một sắc, không trùng lặp.</p>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">Thời Làng Xã</div>
-                    <h3>Mâm Cỗ Và Nghi Lễ Cộng Đồng</h3>
-                    <p>Trong đình làng, ngày giỗ tổ, lễ hội mùa xuân hay Tết đoàn viên, món ăn trở thành một phần của nghi thức. Bánh chưng, xôi gấc, gà luộc, nem rán, chè kho không chỉ để đãi khách mà còn gửi gắm ước vọng no đủ, may mắn và lòng biết ơn với tổ tiên.</p>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">Thời Kỳ Pháp Thuộc</div>
-                    <h3>Giao Thoa Văn Hóa Đông Tây</h3>
-                    <p>Sự xuất hiện của bánh mì, cà phê, bơ và pho mát đã tạo nên những biến tấu thú vị. Người Việt không đơn thuần tiếp nhận mà sáng tạo lại: bánh mì Việt Nam ra đời với nhân pate, chả lụa, rau mùi - trở thành niềm tự hào của ẩm thực đường phố thế giới. Cà phê phin cũng từ đó trở thành biểu tượng văn hóa.</p>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">Thế Kỷ XX</div>
-                    <h3>Đường Phố Thành Thị Và Gánh Hàng Rong</h3>
-                    <p>Khi đô thị phát triển, những gánh phở, bún, cháo, xôi và chè len vào từng con phố. Ẩm thực đường phố tạo nên nhịp sống riêng: nhanh, gần gũi, giá vừa phải nhưng vẫn giữ sự khéo léo trong nước dùng, đồ chấm và cách phục vụ thân tình.</p>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">Sau 1975</div>
-                    <h3>Ẩm Thực Việt Kiều Và Sự Lan Tỏa</h3>
-                    <p>Cộng đồng người Việt hải ngoại mang theo hương vị quê nhà đến khắp năm châu. Phở, bánh mì, bún bò xuất hiện tại Paris, Los Angeles, Sydney. Ẩm thực Việt bắt đầu được thế giới biết đến và yêu mến, không chỉ vì ngon mà còn vì sự lành mạnh và cân bằng dinh dưỡng.</p>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-date">Thời Đại Hiện Nay</div>
-                    <h3>Linh Hồn Việt Trong Nhịp Sống Hiện Đại</h3>
-                    <p>Dù thế giới thay đổi, người Việt vẫn luôn giữ gìn bản sắc trong từng bữa ăn gia đình. Ẩm thực Việt ngày nay vươn tầm thế giới, mang theo hơi thở của truyền thống hòa quyện cùng sự sáng tạo hiện đại. Các đầu bếp trẻ đang viết tiếp câu chuyện ẩm thực bằng ngôn ngữ mới, nhưng gốc rễ vẫn là tình yêu với hương vị quê nhà.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Dark Quote -->
-        <section class="dark-quote">
-            <div class="container">
-                <blockquote>"Căn bếp là trái tim của ngôi nhà Việt, nơi lửa luôn cháy và tình yêu luôn đong đầy."</blockquote>
-                <div class="divider"></div>
-                <p class="caption">Di Sản Văn Hóa Việt</p>
-            </div>
-        </section>
-
-        <!-- Ngũ Hành -->
-        <section class="section container">
-            <div class="flex-section">
-                <div class="flex-section__img">
-                    <img src="assets/img/ngu-hanh.jpg" alt="Ngũ Hành trong ẩm thực">
-                </div>
-                <div class="flex-section__content">
-                    <span class="section-subtitle">Triết Lý</span>
-                    <h2>Ngũ Hành Trong Ẩm Thực</h2>
-                    <div class="divider"></div>
-                    <p>Người Việt xưa tin rằng mỗi món ăn cần cân bằng năm yếu tố: Kim (cay), Mộc (chua), Thủy (mặn), Hỏa (đắng), Thổ (ngọt). Sự hài hòa này không chỉ tạo nên hương vị tuyệt vời mà còn mang lại sức khỏe cho người thưởng thức.</p>
-                    <p>Mỗi mùa trong năm, người Việt lại điều chỉnh thực đơn theo nguyên tắc âm dương: mùa hè ăn mát, mùa đông ăn ấm. Đó là y học cổ truyền ẩn mình trong từng bữa cơm hàng ngày.</p>
-                    <blockquote>"Ăn theo thuốc, nằm theo hướng" - triết lý dưỡng sinh qua ẩm thực của ông cha ta.</blockquote>
-                </div>
-            </div>
-        </section>
-
-        <!-- Vươn Tầm Thế Giới -->
-        <section class="section container">
-            <div class="flex-section flex-section--reverse">
-                <div class="flex-section__img">
-                    <img src="assets/img/pho-viet.jpg" alt="Phở Việt Nam">
-                </div>
-                <div class="flex-section__content">
-                    <span class="section-subtitle">Tự Hào</span>
-                    <h2>Vươn Tầm Thế Giới</h2>
-                    <div class="divider"></div>
-                    <p>Phở, bánh mì, cà phê sữa đá - những cái tên đã trở thành biểu tượng toàn cầu. Phở Việt Nam được nhiều tổ chức quốc tế vinh danh là một trong những món súp ngon nhất thế giới.</p>
-                    <p>Ẩm thực Việt không chỉ nuôi dưỡng thể xác mà còn kể câu chuyện về một dân tộc kiên cường, sáng tạo. Từ gánh hàng rong Sài Gòn đến nhà hàng Michelin tại Paris, hương vị Việt luôn chinh phục mọi thực khách bằng sự chân thành và tinh tế.</p>
-                    <a href="thuc-don.html" class="btn">Khám Phá Thực Đơn</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Nguyên Liệu -->
-        <section class="section container">
-            <div class="section-intro" style="margin-bottom: 64px;">
-                <span class="section-subtitle">Bản Sắc</span>
-                <h2 class="section-title" style="margin-top: 16px;">Nguyên Liệu Đặc Trưng</h2>
-            </div>
-            <div class="ingredient-grid">
-                <div class="ingredient-card">
-                    <h4>Nước Mắm</h4>
-                    <p>Linh hồn của ẩm thực Việt. Từ Phú Quốc đến Phan Thiết, mỗi vùng có một loại nước mắm riêng, tạo nên bản sắc không thể nhầm lẫn cho từng món ăn.</p>
-                </div>
-                <div class="ingredient-card">
-                    <h4>Rau Thơm</h4>
-                    <p>Húng quế, rau mùi, tía tô, kinh giới - mỗi loại rau thơm là một nốt nhạc trong bản hòa tấu hương vị. Không có rau thơm, món Việt mất đi một nửa linh hồn.</p>
-                </div>
-                <div class="ingredient-card">
-                    <h4>Gạo Nếp</h4>
-                    <p>Từ bánh chưng ngày Tết đến xôi sáng hàng ngày, gạo nếp gắn liền với đời sống tinh thần người Việt. Dẻo thơm, bùi ngậy - hương vị của quê nhà.</p>
-                </div>
-                <div class="ingredient-card">
-                    <h4>Gia Vị Tươi</h4>
-                    <p>Sả, gừng, nghệ, ớt, tỏi - những gia vị tươi tạo nên sức sống cho món ăn Việt. Không dùng gia vị khô hay chế biến sẵn, mọi thứ phải tươi mới nhất.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Gìn Giữ Di Sản -->
-        <section class="section container">
-            <div class="flex-section">
-                <div class="flex-section__img">
-                    <img src="assets/img/nghe-nhan.jpg" alt="Gìn giữ nghề bếp Việt">
-                </div>
-                <div class="flex-section__content">
-                    <span class="section-subtitle">Tiếp Nối</span>
-                    <h2>Gìn Giữ Di Sản Trong Căn Bếp Hôm Nay</h2>
-                    <div class="divider"></div>
-                    <p>Di sản ẩm thực không nằm yên trong sách vở. Nó sống trong cách người bà chỉ cháu vo gạo, cách người mẹ pha bát nước chấm, cách người đầu bếp trẻ tìm lại hương vị quê nhà bằng kỹ thuật mới nhưng vẫn tôn trọng gốc rễ.</p>
-                    <p>Muốn món Việt đi xa, điều quan trọng là giữ được sự cân bằng: tôn trọng công thức cũ, chuẩn hóa quy trình nấu, kể đúng câu chuyện vùng miền và sử dụng nguyên liệu tử tế.</p>
-                    <a href="thuc-don.html" class="btn">Thưởng Thức Hương Vị Việt</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container footer-content">
-            <div>
-                <div class="footer-logo">Âm Thực Việt</div>
-                <p class="footer-copy">© 2024 Âm Thực Việt - Hồn Quê Việt. Tinh hoa ẩm thực Việt Nam.</p>
-            </div>
-            <div class="footer-socials">
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-                <a href="#">Pinterest</a>
-            </div>
-            <div class="footer-tagline">Đẹp - Tinh Tế - Truyền Thống</div>
+        <div class="relative z-10 max-w-4xl px-8 text-center text-white">
+            <span class="font-label-caps text-label-caps text-mustard mb-4 block uppercase tracking-widest">Hành Trình Ngàn Năm</span>
+            <h1 class="font-display-xl text-headline-lg md:text-display-xl mb-4 text-white drop-shadow-md">Khúc Ca Di Sản</h1>
+            <p class="font-body-lg text-body-lg text-stone-100 max-w-2xl mx-auto font-light">Khám phá dòng chảy văn hóa ẩm thực Việt qua từng thời kỳ lịch sử.</p>
         </div>
-    </footer>
+    </section>
+
+    <!-- Timeline Title -->
+    <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-24 pb-8">
+        <div class="text-center max-w-3xl mx-auto">
+            <h2 class="font-display-xl text-headline-lg text-[#b61041] mb-4">Dòng Chảy Lịch Sử</h2>
+            <div class="w-16 h-px bg-[#b61041] mx-auto"></div>
+        </div>
+    </section>
+
+    <!-- Timeline List Section -->
+    <section class="max-w-4xl mx-auto px-margin-mobile pb-32">
+        <ul class="flex flex-col">
+            <!-- 01 -->
+            <li class="py-12 border-t border-outline-variant flex flex-col md:flex-row gap-8 items-start group hover:bg-surface-container-low transition-colors duration-300 px-6">
+                <div class="min-w-[160px]">
+                    <span class="font-label-caps text-label-caps text-[#b61041] block mb-2">Thời Kỳ Cổ Đại</span>
+                    <span class="font-headline-lg text-display-xl text-stone-200 leading-none block">01</span>
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-headline-md text-2xl text-on-background mb-4">Cội Nguồn Nông Nghiệp Lúa Nước</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">
+                        Từ ngàn năm trước, tổ tiên người Việt đã đặt nền móng cho nền văn minh lúa nước sông Hồng. Những hạt gạo trắng trong, những chum nước mắm mặn mòi nguyên bản đã trở thành linh hồn của bữa cơm Việt ngay từ thuở sơ khai. Triết lý cơm - canh - mắm phản ánh lối sống hài hòa tự nhiên, giản dị mà sâu sắc.
+                    </p>
+                </div>
+            </li>
+            <!-- 02 -->
+            <li class="py-12 border-t border-outline-variant flex flex-col md:flex-row gap-8 items-start group hover:bg-surface-container-low transition-colors duration-300 px-6">
+                <div class="min-w-[160px]">
+                    <span class="font-label-caps text-label-caps text-[#b61041] block mb-2">Thời Kỳ Phong Kiến</span>
+                    <span class="font-headline-lg text-display-xl text-stone-200 leading-none block">02</span>
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-headline-md text-2xl text-on-background mb-4">Sự Tinh Tế Của Ẩm Thực Cung Đình</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">
+                        Dưới các triều đại phong kiến, đặc biệt là triều Nguyễn tại Cố đô Huế, ẩm thực Việt đạt đến đỉnh cao của sự cầu kỳ và mỹ thuật. Mỗi món ăn dâng vua không chỉ ngon mà còn là một tác phẩm tạo hình nghệ thuật tuân thủ nghiêm ngặt ngũ hành sinh khắc. Mâm cỗ cung đình Huế có thể có hàng chục món tinh mỹ, cân bằng âm dương hoàn hảo.
+                    </p>
+                </div>
+            </li>
+            <!-- 03 -->
+            <li class="py-12 border-t border-outline-variant flex flex-col md:flex-row gap-8 items-start group hover:bg-surface-container-low transition-colors duration-300 px-6">
+                <div class="min-w-[160px]">
+                    <span class="font-label-caps text-label-caps text-[#b61041] block mb-2">Thời Làng Xã</span>
+                    <span class="font-headline-lg text-display-xl text-stone-200 leading-none block">03</span>
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-headline-md text-2xl text-on-background mb-4">Mâm Cỗ Và Nghi Lễ Cộng Đồng</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">
+                        Trong đình làng rêu phong ngày hội mùa hay tết đoàn viên, món ăn đóng vai trò liên kết cộng đồng bền chặt. Bánh chưng xanh vuông vức tượng đất, xôi gấc đỏ hồng, gà luộc cánh tiên, nem rán giòn và chè kho ngọt lịm dâng cúng tổ tiên, gửi gắm ước nguyện no ấm thái bình và lòng hiếu kính tổ tiên sâu sắc.
+                    </p>
+                </div>
+            </li>
+            <!-- 04 -->
+            <li class="py-12 border-t border-outline-variant flex flex-col md:flex-row gap-8 items-start group hover:bg-surface-container-low transition-colors duration-300 px-6">
+                <div class="min-w-[160px]">
+                    <span class="font-label-caps text-label-caps text-[#b61041] block mb-2">Thời Kỳ Pháp Thuộc</span>
+                    <span class="font-headline-lg text-display-xl text-stone-200 leading-none block">04</span>
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-headline-md text-2xl text-on-background mb-4">Giao Thoa Văn Hóa Đông Tây</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">
+                        Sự du nhập của bánh mì, bơ sữa, cà phê Pháp đã khơi nguồn cho những sáng tạo đột phá. Người Việt tiếp nhận nhưng bản địa hóa mạnh mẽ: chiếc bánh mì kẹp thịt patê chả lụa đẫm rau mùi nước xốt ra đời, và cà phê phin tí tách trở thành biểu tượng tinh thần giao thoa Á - Âu đầy tự hào.
+                    </p>
+                </div>
+            </li>
+            <!-- 05 -->
+            <li class="py-12 border-t border-outline-variant flex flex-col md:flex-row gap-8 items-start group hover:bg-surface-container-low transition-colors duration-300 px-6">
+                <div class="min-w-[160px]">
+                    <span class="font-label-caps text-label-caps text-[#b61041] block mb-2">Thế Kỷ XX</span>
+                    <span class="font-headline-lg text-display-xl text-stone-200 leading-none block">05</span>
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-headline-md text-2xl text-on-background mb-4">Đô Thị Đường Phố &amp; Hàng Rong</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">
+                        Khi các đô thị phát triển sầm uất, tiếng rao của những gánh phở gõ, hũ tiếu xe, xôi chè ngọt ngào len lỏi qua từng ngõ sâu. Ẩm thực đường phố bình dân tạo nên nét văn hóa đặc thù đầy chất thơ: nhanh, thân thiện, giá rẻ nhưng giữ trọn sự khéo léo chắt chiu trong từng thìa nước dùng gia truyền.
+                    </p>
+                </div>
+            </li>
+            <!-- 06 -->
+            <li class="py-12 border-t border-outline-variant flex flex-col md:flex-row gap-8 items-start group hover:bg-surface-container-low transition-colors duration-300 px-6">
+                <div class="min-w-[160px]">
+                    <span class="font-label-caps text-label-caps text-[#b61041] block mb-2">Sau 1975</span>
+                    <span class="font-headline-lg text-display-xl text-stone-200 leading-none block">06</span>
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-headline-md text-2xl text-on-background mb-4">Sự Lan Tỏa Ra Khắp Năm Châu</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">
+                        Theo bước chân kiều bào hải ngoại, hương vị quê hương xuất hiện rạng rỡ từ Paris, Los Angeles đến Sydney. Phở bò thơm lừng và bánh mì giòn tan bước vào từ điển ẩm thực quốc tế, chinh phục thế giới bằng sự lành mạnh, mộc mạc và cân bằng dinh dưỡng xuất sắc.
+                    </p>
+                </div>
+            </li>
+            <!-- 07 -->
+            <li class="py-12 border-t border-b border-outline-variant flex flex-col md:flex-row gap-8 items-start group hover:bg-surface-container-low transition-colors duration-300 px-6">
+                <div class="min-w-[160px]">
+                    <span class="font-label-caps text-label-caps text-[#b61041] block mb-2">Thời Đại Hiện Nay</span>
+                    <span class="font-headline-lg text-display-xl text-stone-200 leading-none block">07</span>
+                </div>
+                <div class="flex-1">
+                    <h3 class="font-headline-md text-2xl text-on-background mb-4">Linh Hồn Việt Trong Nhịp Sống Mới</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">
+                        Dù nhịp sống hiện đại hối hả, bếp nhà Việt vẫn luôn đỏ lửa. Kế thừa di sản ngàn năm, thế hệ đầu bếp trẻ ngày nay đang viết tiếp chương mới cho ẩm thực Việt bằng kỹ thuật hiện đại kết hợp với cội nguồn truyền thống sâu sắc, mang Sắc Vị Việt vươn tầm nghệ thuật cao cấp.
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Dark Quote -->
+    <section class="bg-stone-900 text-[#fff9ed] py-24 text-center my-16">
+        <div class="max-w-3xl mx-auto px-8">
+            <blockquote class="font-headline-lg text-3xl italic mb-6">"Căn bếp là trái tim của ngôi nhà Việt, nơi ngọn lửa luôn cháy ấm áp và tình yêu thương gia đình luôn đong đầy."</blockquote>
+            <div class="w-16 h-px bg-[#b61041] mx-auto mb-4"></div>
+            <p class="font-label-caps text-label-caps text-stone-400">Di Sản Văn Hóa Việt Nam</p>
+        </div>
+    </section>
+
+    <!-- Ngũ Hành Section: Asymmetrical Grid -->
+    <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16">
+        <div class="grid grid-cols-12 gap-gutter items-center mb-32">
+            <div class="col-span-12 md:col-span-7">
+                <img alt="Ngũ hành gia vị chua cay mặn ngọt đắng" class="w-full h-auto object-cover grayscale-[10%] hover:grayscale-0 transition-all duration-700 shadow-md" src="assets/img/ngu-hanh.jpg"/>
+            </div>
+            <div class="col-span-12 md:col-span-4 md:col-start-9 flex flex-col justify-center">
+                <span class="font-label-caps text-label-caps text-tertiary mb-6 relative pl-6 before:content-[''] before:absolute before:w-4 before:h-[1px] before:bg-tertiary before:left-0 before:top-1/2">TRIẾT LÝ DƯỠNG SINH</span>
+                <h2 class="font-headline-lg text-headline-lg text-[#b61041] mb-8 leading-tight">Ngũ Hành Trong Ẩm Thực</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+                    Bữa cơm Việt là sự dung hòa kỳ diệu của Ngũ Hành: Kim (vị cay nồng), Mộc (vị chua thanh), Thủy (vị mặn mà), Hỏa (vị đắng ấm), Thổ (vị ngọt lành). Sự phối hợp gia vị tài tình không chỉ đem lại khoái cảm vị giác mà còn là bài thuốc cân bằng âm dương, bồi bổ khí huyết cho cơ thể theo mùa.
+                </p>
+                <blockquote class="border-l border-[#b61041] pl-4 italic text-sm text-[#b61041]">
+                    "Ăn theo thuốc, nằm theo hướng" — Trí tuệ dưỡng sinh ngàn đời của ông cha ta ẩn chứa trong từng món ăn.
+                </blockquote>
+            </div>
+        </div>
+
+        <!-- Vươn Tầm Thế Giới Section: Reverse Asymmetrical Grid -->
+        <div class="grid grid-cols-12 gap-gutter items-center mb-32">
+            <div class="col-span-12 md:col-span-4 md:col-start-2 flex flex-col justify-center order-2 md:order-1">
+                <span class="font-label-caps text-label-caps text-tertiary mb-6 relative pl-6 before:content-[''] before:absolute before:w-4 before:h-[1px] before:bg-tertiary before:left-0 before:top-1/2">TỰ HÀO DÂN TỘC</span>
+                <h2 class="font-headline-lg text-headline-lg text-[#b61041] mb-8 leading-tight">Vươn Tầm Bản Đồ Thế Giới</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                    Phở, bánh mì, cà phê sữa đá không còn là những cái tên xa lạ, chúng đã trở thành danh từ riêng kiêu hãnh trong ẩm thực thế giới. Từ những gánh hàng rong mộc mạc vỉa hè Sài Gòn, Hà Nội đến những nhà hàng đạt sao Michelin danh giá tại Paris hay Tokyo, hương vị Việt chinh phục bạn bè quốc tế bằng sự chân thành, mộc mạc và tinh tế vô ngần.
+                </p>
+                <a class="inline-block bg-[#b61041] text-white font-label-caps text-label-caps uppercase tracking-widest px-8 py-4 hover:bg-stone-900 transition-colors duration-300 w-fit" href="thuc-don.html">Khám Phá Thực Đơn</a>
+            </div>
+            <div class="col-span-12 md:col-span-6 md:col-start-7 order-1 md:order-2">
+                <img alt="Bát phở bò Việt Nam nghệ thuật độc đáo" class="w-full h-auto object-cover grayscale-[10%] hover:grayscale-0 transition-all duration-700 shadow-md" src="assets/img/pho-viet.jpg"/>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nguyên Liệu Đặc Trưng (Clean borderless cards grid) -->
+    <section class="bg-surface-container-low py-24 border-t border-b border-surface-container-high">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div class="text-center mb-16">
+                <span class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest block mb-2">Bản Sắc Tự Nhiên</span>
+                <h2 class="font-headline-lg text-[#b61041] italic">Nguyên Liệu Đặc Trưng</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="border-t border-[#b61041]/30 pt-6">
+                    <h4 class="font-headline-md text-xl text-stone-950 mb-3">Nước Mắm Cốt</h4>
+                    <p class="font-body-md text-sm text-on-surface-variant">
+                        Linh hồn của ẩm thực Việt. Từ Phú Quốc đến Phan Thiết, giọt nước mắm chắt lọc tinh túy từ cá cơm muối biển lên men ròng rã cả năm, mang hương vị mặn mòi nồng nàn không thể thay thế.
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div class="border-t border-[#b61041]/30 pt-6">
+                    <h4 class="font-headline-md text-xl text-stone-950 mb-3">Rau Thơm Vườn</h4>
+                    <p class="font-body-md text-sm text-on-surface-variant">
+                        Húng láng, tía tô, kinh giới, ngò gai - mỗi cọng rau thơm là một nốt nhạc bừng sáng vị giác. Thiếu đi mớ rau thơm tươi giòn, món Việt mất đi một nửa sinh khí thuần khiết.
+                    </p>
+                </div>
+                <!-- Card 3 -->
+                <div class="border-t border-[#b61041]/30 pt-6">
+                    <h4 class="font-headline-md text-xl text-stone-950 mb-3">Hạt Gạo Nếp</h4>
+                    <p class="font-body-md text-sm text-on-surface-variant">
+                        Từ chiếc bánh chưng ngày Tết sum họp đến gói xôi sáng ấm lòng, gạo nếp nương gắn bó máu thịt với tinh thần cội nguồn người Việt. Dẻo quánh, ngọt hậu, thơm lừng hương đồng nội.
+                    </p>
+                </div>
+                <!-- Card 4 -->
+                <div class="border-t border-[#b61041]/30 pt-6">
+                    <h4 class="font-headline-md text-xl text-stone-950 mb-3">Gia Vị Tươi Mộc</h4>
+                    <p class="font-body-md text-sm text-on-surface-variant">
+                        Sả, gừng, nghệ tươi, ớt cay, tỏi ấm - những gia vị củ rễ mộc mạc giã nhuyễn tạo nên sức sống nguyên bản. Chúng tôi trân trọng gia vị tươi mới nêm nếm trực tiếp, nói không với hương liệu khô chế sẵn.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gìn Giữ Di Sản: Asymmetrical Row -->
+    <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-24">
+        <div class="grid grid-cols-12 gap-gutter items-center">
+            <div class="col-span-12 md:col-span-7">
+                <img alt="Nghệ nhân bếp Việt chế biến món ăn tỉ mỉ tỉ mẩn" class="w-full h-[500px] object-cover shadow-sm" src="assets/img/nghe-nhan.jpg"/>
+            </div>
+            <div class="col-span-12 md:col-span-4 md:col-start-9 flex flex-col justify-center">
+                <span class="font-label-caps text-label-caps text-tertiary mb-6 relative pl-6 before:content-[''] before:absolute before:w-4 before:h-[1px] before:bg-tertiary before:left-0 before:top-1/2">TIẾP NỐI DI SẢN</span>
+                <h2 class="font-headline-lg text-headline-lg text-[#b61041] mb-8 leading-tight">Gìn Giữ Lửa Bếp Việt</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant">
+                    Di sản ẩm thực không nằm yên trên trang giấy lịch sử. Nó đập nhịp sống động qua cách người bà hướng dẫn cháu vo gạo nếp thơm, cách người mẹ nêm chén nước chấm tỏi ớt, và cách người đầu bếp trẻ nâng niu tái hiện vị xưa quê nhà bằng tất cả tấm lòng hiếu kính và tôn trọng sâu sắc.
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer Component -->
+<footer class="bg-[#FAF9F6] dark:bg-stone-950 border-t border-stone-200 dark:border-stone-800 flex flex-col md:flex-row justify-between items-center w-full px-8 md:px-16 py-12 gap-8 text-[10px] tracking-widest uppercase">
+    <div class="text-xl font-serif italic tracking-[0.2em] text-stone-900 dark:text-stone-50">SẮC VỊ</div>
+    <div class="flex flex-wrap justify-center gap-6 md:gap-8">
+        <a class="text-stone-400 dark:text-stone-600 hover:text-[#b61041] transition-opacity duration-300" href="#">Bảo mật</a>
+        <a class="text-stone-400 dark:text-stone-600 hover:text-[#b61041] transition-opacity duration-300" href="#">Điều khoản</a>
+        <a class="text-stone-400 dark:text-stone-600 hover:text-[#b61041] transition-opacity duration-300" href="lien-he.html">Liên hệ</a>
+        <a class="text-stone-400 dark:text-stone-600 hover:text-[#b61041] transition-opacity duration-300" href="#">Bản tin</a>
+    </div>
+    <div class="text-stone-400 dark:text-stone-600">
+        © 2024 SẮC VỊ. KHÚC CA DI SẢN ẨM THỰC VIỆT.
+    </div>
+</footer>
+
+<script>
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobileMenu');
+        const overlay = document.getElementById('mobileMenuOverlay');
+        if (menu.classList.contains('translate-x-full')) {
+            menu.classList.remove('translate-x-full');
+            menu.classList.add('translate-x-0');
+            overlay.classList.remove('hidden');
+        } else {
+            menu.classList.add('translate-x-full');
+            menu.classList.remove('translate-x-0');
+            overlay.classList.add('hidden');
+        }
+    }
+    document.addEventListener("DOMContentLoaded", () => {
+        const path = window.location.pathname.split("/").pop() || "index.html";
+        const navMap = {
+            "index.html": "nav-index",
+            "vung-mien.html": "nav-vung-mien",
+            "thuc-don.html": "nav-thuc-don",
+            "nguyen-lieu.html": "nav-nguyen-lieu",
+            "cong-thuc.html": "nav-cong-thuc",
+            "duong-pho.html": "nav-duong-pho",
+            "lich-su.html": "nav-lich-su",
+            "lien-he.html": "nav-lien-he"
+        };
+        const activeId = navMap[path];
+        if (activeId) {
+            const activeEl = document.getElementById(activeId);
+            if (activeEl) {
+                activeEl.classList.remove("text-stone-500", "dark:text-stone-400");
+                activeEl.classList.add("text-[#b61041]", "font-semibold");
+            }
+            const mobileActiveEl = document.querySelector(`#mobileMenu a[href="${path}"]`);
+            if (mobileActiveEl) {
+                mobileActiveEl.classList.add("text-[#b61041]", "font-semibold");
+            }
+        }
+    });
+</script>
 </body>
-
 </html>

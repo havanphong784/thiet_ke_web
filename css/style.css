@@ -14,7 +14,9 @@
     --outline-variant: #dec0ba;
     --font-display: 'Noto Serif', serif;
     --font-body: 'Be Vietnam Pro', sans-serif;
-    --section-gap: 100px;
+    --section-gap: 70px;
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-soft: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 * {
@@ -29,6 +31,7 @@ body {
     font-family: var(--font-body);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    animation: pageFade 0.7s var(--ease-out) both;
 }
 
 h1, h2, h3, h4 {
@@ -44,6 +47,110 @@ a {
 img {
     max-width: 100%;
     display: block;
+}
+
+@keyframes pageFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(28px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-36px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(36px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes softZoom {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes heroZoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.08);
+    }
+}
+
+@keyframes lineGrow {
+    from {
+        transform: scaleX(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}
+
+@keyframes lineGrowY {
+    from {
+        transform: scaleY(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+@keyframes mobileMenuIn {
+    from {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
@@ -65,6 +172,7 @@ img {
     top: 0;
     z-index: 1000;
     padding: 20px 0;
+    animation: fadeUp 0.65s var(--ease-out) both;
 }
 
 .nav {
@@ -93,6 +201,20 @@ img {
     letter-spacing: 2px;
     font-weight: 600;
     color: var(--on-surface-variant);
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 1px;
+    background: var(--primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s var(--ease-out);
 }
 
 .nav-links a:hover,
@@ -100,8 +222,12 @@ img {
     color: var(--primary);
 }
 
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    transform: scaleX(1);
+}
+
 .nav-links a.active {
-    border-bottom: 1px solid var(--primary);
     padding-bottom: 4px;
 }
 
@@ -141,6 +267,7 @@ img {
 
 .mobile-nav.active {
     display: flex;
+    animation: mobileMenuIn 0.3s var(--ease-out) both;
 }
 
 .mobile-nav a {
@@ -171,12 +298,25 @@ img {
 .hero {
     height: 90vh;
     position: relative;
+    isolation: isolate;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: #fff;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+        rgba(28, 27, 26, 0.34),
+        rgba(28, 27, 26, 0.42)
+    );
+    pointer-events: none;
 }
 
 .hero--short {
@@ -190,14 +330,17 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1;
-    filter: brightness(0.7);
+    z-index: -2;
+    filter: brightness(0.78);
+    animation: heroZoom 12s var(--ease-soft) both;
 }
 
 .hero-content h1 {
     font-size: clamp(36px, 7vw, 80px);
     margin-bottom: 24px;
     line-height: 1.1;
+    text-shadow: 0 3px 22px rgba(0, 0, 0, 0.34);
+    animation: fadeUp 0.85s var(--ease-out) 0.15s both;
 }
 
 .hero-content p {
@@ -206,6 +349,12 @@ img {
     opacity: 0.9;
     max-width: 800px;
     margin: 0 auto 48px;
+    text-shadow: 0 2px 14px rgba(0, 0, 0, 0.3);
+    animation: fadeUp 0.85s var(--ease-out) 0.3s both;
+}
+
+.hero-content .btn {
+    animation: fadeUp 0.85s var(--ease-out) 0.45s both;
 }
 
 
@@ -220,11 +369,17 @@ img {
     font-weight: 600;
     border: none;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s var(--ease-out), box-shadow 0.3s ease;
 }
 
 .btn:hover {
     background-color: var(--primary);
+    box-shadow: 0 12px 28px rgba(161, 54, 37, 0.22);
+    transform: translateY(-3px);
+}
+
+.btn:active {
+    transform: translateY(-1px);
 }
 
 
@@ -239,6 +394,8 @@ img {
     height: 1px;
     background: var(--primary);
     margin: 0 auto 32px;
+    transform-origin: center;
+    animation: lineGrow 0.8s var(--ease-out) both;
 }
 
 .section-intro p {
@@ -278,6 +435,11 @@ img {
     display: flex;
     flex-direction: column;
     gap: 24px;
+    transition: transform 0.45s var(--ease-out);
+}
+
+.region-card:hover {
+    transform: translateY(-8px);
 }
 
 .region-card--offset {
@@ -355,11 +517,13 @@ img {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, transform 0.35s var(--ease-out), box-shadow 0.35s ease;
 }
 
 .dish-card:hover {
     border-color: rgba(161, 54, 37, 0.4);
+    box-shadow: 0 16px 36px rgba(88, 54, 46, 0.08);
+    transform: translateY(-6px);
 }
 
 .dish-img-wrap {
@@ -426,6 +590,12 @@ img {
     width: 100%;
     height: 500px;
     object-fit: cover;
+    transition: transform 0.7s var(--ease-out), filter 0.7s ease;
+}
+
+.flex-section__img:hover img {
+    filter: saturate(1.08);
+    transform: scale(1.03);
 }
 
 .flex-section__content {
@@ -494,6 +664,13 @@ img {
     padding: 32px;
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
     color: white;
+    transform: translateY(8px);
+    transition: transform 0.4s var(--ease-out), background 0.4s ease;
+}
+
+.street-food-card:hover .street-food-content {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    transform: translateY(0);
 }
 
 .street-food-content h3 {
@@ -597,6 +774,12 @@ img {
     font-family: var(--font-body);
     font-size: 14px;
     outline: none;
+    transition: box-shadow 0.3s ease, transform 0.3s var(--ease-out);
+}
+
+.newsletter-form input:focus {
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.24);
+    transform: translateY(-2px);
 }
 
 .newsletter-form button {
@@ -684,6 +867,8 @@ img {
     bottom: 0;
     width: 1px;
     background-color: var(--outline-variant);
+    transform-origin: top;
+    animation: lineGrowY 1s var(--ease-out) both;
 }
 
 .timeline-item {
@@ -701,6 +886,13 @@ img {
     height: 8px;
     background-color: var(--primary);
     border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(161, 54, 37, 0.24);
+    transition: box-shadow 0.3s ease, transform 0.3s var(--ease-out);
+}
+
+.timeline-item:hover::before {
+    box-shadow: 0 0 0 8px rgba(161, 54, 37, 0.12);
+    transform: scale(1.2);
 }
 
 .timeline-date {
@@ -879,6 +1071,7 @@ img {
     right: 0;
     height: 2px;
     background-color: var(--primary);
+    animation: lineGrow 0.35s var(--ease-out) both;
 }
 
 .tab-link:hover {
@@ -946,11 +1139,13 @@ img {
     align-items: center;
     padding: 24px;
     border: 1px solid var(--outline-variant);
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, transform 0.3s var(--ease-out), box-shadow 0.3s ease;
 }
 
 .dessert-card:hover {
     border-color: var(--primary);
+    box-shadow: 0 14px 28px rgba(88, 54, 46, 0.07);
+    transform: translateY(-4px);
 }
 
 .dessert-img {
@@ -991,6 +1186,12 @@ img {
     padding: 32px;
     border-top: 2px solid var(--primary);
     background: #fff;
+    transition: transform 0.35s var(--ease-out), box-shadow 0.35s ease;
+}
+
+.ingredient-card:hover {
+    box-shadow: 0 14px 30px rgba(88, 54, 46, 0.07);
+    transform: translateY(-5px);
 }
 
 .ingredient-card h4 {
@@ -1192,7 +1393,7 @@ img {
     font-family: var(--font-body);
     font-size: 14px;
     color: var(--on-surface);
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s var(--ease-out);
     outline: none;
 }
 
@@ -1200,6 +1401,8 @@ img {
 .form-group select:focus,
 .form-group textarea:focus {
     border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(161, 54, 37, 0.09);
+    transform: translateY(-2px);
 }
 
 .form-group textarea {
@@ -1235,6 +1438,128 @@ img {
     font-size: 14px;
     font-weight: 600;
     color: var(--on-surface);
+    animation: fadeUp 0.75s var(--ease-out) 0.2s both;
+}
+
+.section-intro,
+.section-title,
+.dishes-header,
+.menu-section-header,
+.region-card,
+.dish-card,
+.street-food-card,
+.testimonial-card,
+.flex-section__img,
+.flex-section__content,
+.ingredient-card,
+.timeline-item,
+.dark-quote blockquote,
+.menu-tabs,
+.menu-item-large,
+.menu-item-side,
+.menu-item-card,
+.menu-item-quote,
+.dessert-card,
+.seasonal-card,
+.contact-info,
+.contact-form-wrap,
+.map-placeholder,
+.faq-item,
+.newsletter-section .container,
+.footer-content {
+    animation: fadeUp 0.8s var(--ease-out) both;
+    animation-delay: var(--reveal-delay, 0ms);
+}
+
+.flex-section__img {
+    animation-name: fadeLeft;
+}
+
+.flex-section__content {
+    animation-name: fadeRight;
+}
+
+.dish-card,
+.testimonial-card,
+.seasonal-card {
+    animation-name: softZoom;
+}
+
+.region-card:nth-child(2),
+.dish-card:nth-child(2),
+.testimonial-card:nth-child(2),
+.ingredient-card:nth-child(2),
+.street-food-card:nth-child(2),
+.menu-item-card:nth-child(2),
+.dessert-card:nth-child(2),
+.seasonal-card:nth-child(2),
+.faq-item:nth-child(2) {
+    --reveal-delay: 90ms;
+}
+
+.region-card:nth-child(3),
+.dish-card:nth-child(3),
+.testimonial-card:nth-child(3),
+.ingredient-card:nth-child(3),
+.street-food-card:nth-child(3),
+.menu-item-card:nth-child(3),
+.dessert-card:nth-child(3),
+.seasonal-card:nth-child(3),
+.faq-item:nth-child(3) {
+    --reveal-delay: 180ms;
+}
+
+.dish-card:nth-child(4),
+.ingredient-card:nth-child(4),
+.menu-item-card:nth-child(4),
+.dessert-card:nth-child(4),
+.seasonal-card:nth-child(4),
+.faq-item:nth-child(4) {
+    --reveal-delay: 270ms;
+}
+
+@supports (animation-timeline: view()) {
+    .section-intro,
+    .section-title,
+    .dishes-header,
+    .menu-section-header,
+    .region-card,
+    .dish-card,
+    .street-food-card,
+    .testimonial-card,
+    .flex-section__img,
+    .flex-section__content,
+    .ingredient-card,
+    .timeline-item,
+    .dark-quote blockquote,
+    .menu-tabs,
+    .menu-item-large,
+    .menu-item-side,
+    .menu-item-card,
+    .menu-item-quote,
+    .dessert-card,
+    .seasonal-card,
+    .contact-info,
+    .contact-form-wrap,
+    .map-placeholder,
+    .faq-item,
+    .newsletter-section .container,
+    .footer-content {
+        animation-delay: 0s;
+        animation-timeline: view();
+        animation-range: entry 0% cover 28%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
 }
 
 

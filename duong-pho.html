@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Sắc Vị - Thưởng Thức Tinh Hoa Việt Nam</title>
+    <title>Nghệ Thuật Ẩm Thực Đường Phố - Sắc Vị</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
@@ -160,128 +160,116 @@
 <!-- Mobile Menu Overlay -->
 <div id="mobileMenuOverlay" class="fixed inset-0 z-40 bg-stone-950/20 backdrop-blur-sm hidden transition-opacity duration-300 xl:hidden" onclick="toggleMobileMenu()"></div>
 
-<main class="flex-grow">
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-32">
     <!-- Hero Section -->
-    <section class="relative w-full h-[819px] min-h-[600px] flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img alt="Bát phở bò bốc khói nghi ngút đầy tính nghệ thuật" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaBOcM1Y9rTl_sIV3vFHJmVbZX7C4_kM_L_gFZJPEQYdvlcwSHp4aCKFc1dR1hpfEAIm4s4RkHsVJVurhsH6fN3UJYd6ArmQNO4DeT6ST9Cw_nMMzaLld2QAZjWFpAQYsnZhEwH7j2Hbo6nody1XzRCzbheLe9ntdN-Hvql0dyF1-w0lDIunH_NNebaYg0oWsDuA1HqDnW-EQA7a1CdZUtX0hps7EcseJQAKiG94zydpD4z3V0eqnnqkBPevJUaKLf3qI01Picrg"/>
-            <div class="absolute inset-0 bg-stone-900/40 mix-blend-multiply"></div>
-        </div>
-        <div class="relative z-10 max-w-4xl px-8 text-center text-white">
-            <span class="font-label-caps text-label-caps text-mustard mb-6 block uppercase tracking-widest">Sắc Vị</span>
-            <h1 class="font-display-xl text-display-xl mb-6 text-white drop-shadow-lg">Thưởng Thức Tinh Hoa Việt Nam</h1>
-            <p class="font-body-lg text-body-lg mb-12 text-stone-100 max-w-2xl mx-auto font-light">Hành trình ẩm thực qua hương vị Bắc, Trung, Nam.</p>
-            <a class="inline-block bg-brick text-white font-label-caps text-label-caps uppercase tracking-widest px-10 py-4 hover:bg-stone-900 transition-colors duration-300 border border-transparent" href="thuc-don.html">Khám Phá Món Ngon</a>
-        </div>
-    </section>
-
-    <!-- Flavor Map Section -->
-    <section class="max-w-[1440px] mx-auto px-8 md:px-16 py-32" id="regions">
-        <div class="text-center mb-16">
-            <h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Bản Đồ Hương Vị Ba Miền</h2>
-            <div class="w-16 h-px bg-brick mx-auto"></div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-            <!-- North -->
-            <div class="group relative overflow-hidden bg-surface-variant/30 p-10 hover:bg-surface-variant transition-colors duration-500 flex flex-col items-center text-center">
-                <span class="material-symbols-outlined text-4xl text-brick mb-6" style="font-variation-settings: 'FILL' 0;">temple_buddhist</span>
-                <h3 class="font-headline-md text-headline-md text-on-surface mb-2">Miền Bắc</h3>
-                <p class="font-body-md text-body-md text-on-surface-variant mb-6 italic">Tinh tế &amp; Cân bằng</p>
-                <ul class="font-label-caps text-label-caps text-on-surface-variant mb-8 space-y-3">
-                    <li>BÚN CHẢ</li>
-                    <li>PHỞ HÀ NỘI</li>
-                    <li>CHẢ CÁ LÃ VỌNG</li>
-                </ul>
-                <a class="mt-auto font-label-caps text-label-caps text-brick uppercase tracking-widest hover:text-stone-900 transition-colors pb-1 border-b border-brick hover:border-stone-900" href="vung-mien.html">Khám Phá</a>
-            </div>
-            <!-- Central -->
-            <div class="group relative overflow-hidden bg-surface-variant/30 p-10 hover:bg-surface-variant transition-colors duration-500 flex flex-col items-center text-center">
-                <span class="material-symbols-outlined text-4xl text-mustard mb-6" style="font-variation-settings: 'FILL' 0;">spa</span>
-                <h3 class="font-headline-md text-headline-md text-on-surface mb-2">Miền Trung</h3>
-                <p class="font-body-md text-body-md text-on-surface-variant mb-6 italic">Đậm đà &amp; Cay nồng</p>
-                <ul class="font-label-caps text-label-caps text-on-surface-variant mb-8 space-y-3">
-                    <li>BÚN BÒ HUẾ</li>
-                    <li>MÌ QUẢNG</li>
-                    <li>BÁNH XÈO MIỀN TRUNG</li>
-                </ul>
-                <a class="mt-auto font-label-caps text-label-caps text-mustard uppercase tracking-widest hover:text-stone-900 transition-colors pb-1 border-b border-mustard hover:border-stone-900" href="vung-mien.html">Khám Phá</a>
-            </div>
-            <!-- South -->
-            <div class="group relative overflow-hidden bg-surface-variant/30 p-10 hover:bg-surface-variant transition-colors duration-500 flex flex-col items-center text-center">
-                <span class="material-symbols-outlined text-4xl text-leaf mb-6" style="font-variation-settings: 'FILL' 0;">storefront</span>
-                <h3 class="font-headline-md text-headline-md text-on-surface mb-2">Miền Nam</h3>
-                <p class="font-body-md text-body-md text-on-surface-variant mb-6 italic">Ngọt ngào &amp; Sống động</p>
-                <ul class="font-label-caps text-label-caps text-on-surface-variant mb-8 space-y-3">
-                    <li>CƠM TẤM</li>
-                    <li>HỦ TIẾU</li>
-                    <li>LẨU MẮM</li>
-                </ul>
-                <a class="mt-auto font-label-caps text-label-caps text-leaf uppercase tracking-widest hover:text-stone-900 transition-colors pb-1 border-b border-leaf hover:border-stone-900" href="vung-mien.html">Khám Phá</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Recipes Section -->
-    <section class="bg-surface-variant/20 py-32" id="recipes">
-        <div class="max-w-[1440px] mx-auto px-8 md:px-16">
-            <div class="flex justify-between items-end mb-16">
+    <section class="mb-32">
+        <div class="grid grid-cols-12 gap-gutter items-center">
+            <div class="col-span-12 md:col-span-5 flex flex-col justify-center order-2 md:order-1">
+                <span class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-6 tracking-[0.15em]">Triển Lãm 01</span>
+                <h1 class="font-display-xl text-display-xl text-on-surface mb-8 italic">Đường Phố<br/>Sài Gòn</h1>
+                <p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-md">
+                    Một hành trình khám phá tinh tuyển về cảnh sắc ẩm thực sống động, rộn rã và đậm đà hương vị trên những góc phố nhộn nhịp của Thành phố Hồ Chí Minh.
+                </p>
                 <div>
-                    <h2 class="font-headline-lg text-headline-lg text-on-surface">Món Ngon Trong Ngày</h2>
+                    <a href="#gallery" class="inline-block bg-primary text-on-primary px-8 py-4 font-label-caps text-label-caps uppercase tracking-wider hover:bg-primary-container hover:text-on-primary-container transition-colors duration-300">
+                        Khám Phá Bộ Sưu Tập
+                    </a>
                 </div>
-                <a class="hidden md:inline-block font-label-caps text-label-caps text-brick uppercase tracking-widest pb-1 border-b border-brick hover:text-stone-900 hover:border-stone-900 transition-all" href="thuc-don.html">Xem Tất Cả Món Ngon</a>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-                <!-- Recipe 1 -->
-                <article class="group cursor-pointer" onclick="window.location.href='thuc-don.html#khai-vi'">
-                    <div class="relative overflow-hidden mb-6 aspect-[4/3] bg-surface-container-high">
-                        <img alt="Gỏi cuốn tươi ngon đượm vị" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfLYUmHHnvyjyDWlGrXewl6Vo2aMiODUfUW6b76xI5t4pUNg-y8h-re9tJi9F--gCh2gq3agHU6IJ30Rs0tMllyf7hydVSrB3qWlGR-WoMtbdqIM4oOe2mqfR5sjX0wuoMplvtLCN2QcrOCNoZLed6GiH1vC3gKkwk732-Tfsv_FEDTaTTcH62KcCSiEarY_sx2WLD3co4WtujYXWv4dznFO5AdIFaw_Epnkr_bH2XOGqNwIxFRaBUs-tt_eg4T5KIBjSJ7neLKA"/>
-                    </div>
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="font-headline-md text-headline-md text-on-surface">Gỏi Cuốn</h3>
-                        <div class="flex text-mustard">
-                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-4 font-body-md text-body-md text-on-surface-variant mb-6">
-                        <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">schedule</span> Chuẩn bị: 30 phút</span>
-                        <span class="w-1 h-1 rounded-full bg-stone-300"></span>
-                        <span class="italic">Miền Nam</span>
-                    </div>
-                    <button class="bg-transparent border border-on-surface text-on-surface font-label-caps text-label-caps px-6 py-3 uppercase tracking-widest group-hover:bg-on-surface group-hover:text-white transition-colors duration-300">Xem Thực Đơn</button>
-                </article>
-                <!-- Recipe 2 -->
-                <article class="group cursor-pointer" onclick="window.location.href='thuc-don.html#mon-chinh'">
-                    <div class="relative overflow-hidden mb-6 aspect-[4/3] bg-surface-container-high">
-                        <img alt="Cơm tấm sườn bì chả trứ danh phương Nam" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYs_EOfmynZM8TeG-Vm-IqG7hf1dT4o-ruy3tZZjxP9oZQ9GTFe0lfBjJr69pmTPxzXUiYmznZtYvaySKfMaoIPM5ln4eTGvEw_2SQIh1v42A9QXjpCznzgjDNennPgbQz8q175t0rK5atZ7F9bECPyb2QVjFBY6C63Rl_0n5SSnIvYKZ67-1ux4lJK03l7Zw435F1QIqzDEDUfN8vJs9Ai4MzOK3ji3uxTqKyjUwfmp26muLECQrmHhXg_UVxk9CDNF_1ObslKA"/>
-                    </div>
-                    <div class="flex justify-between items-start mb-4">
-                        <h3 class="font-headline-md text-headline-md text-on-surface">Cơm Tấm</h3>
-                        <div class="flex text-mustard">
-                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star_half</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-4 font-body-md text-body-md text-on-surface-variant mb-6">
-                        <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">schedule</span> Chuẩn bị: 45 phút</span>
-                        <span class="w-1 h-1 rounded-full bg-stone-300"></span>
-                        <span class="italic">Miền Nam</span>
-                    </div>
-                    <button class="bg-transparent border border-on-surface text-on-surface font-label-caps text-label-caps px-6 py-3 uppercase tracking-widest group-hover:bg-on-surface group-hover:text-white transition-colors duration-300">Xem Thực Đơn</button>
-                </article>
+            <div class="col-span-12 md:col-span-6 md:col-start-7 order-1 md:order-2 mb-12 md:mb-0 relative">
+                <div class="aspect-[3/4] w-full bg-surface-container-high overflow-hidden shadow-[0_32px_64px_-12px_rgba(0,0,0,0.1)]">
+                    <img alt="Bánh mì kẹp đầy nhân trên giá đỡ tối giản phong cách nghệ thuật" class="w-full h-full object-cover object-center grayscale-[20%] contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdZ19aqt_-fYdzVqfP_1i4R5eA-yCoYAl9xgHBwIAwNqy5ukN-SdNlzeY7sT8UKG7vuSigenMlI6_6ImBy-qDgF33p21nYyEwUniRk5GARa9qy1ieMiRug40R1Q2YAktDWTtE_GmWdhDL80W_xBGKP-zXFVDbb6pLihks_1C1sAhOq-AsrnVfSSQDIQf0y4j9fTDrUZPeoNhn2ZwHEeNRtbIqKK8zkNsAD-OXSq_yid9f-05k06JfQgr7qBubFwDiaZ0rVGh5fug"/>
+                </div>
+                <div class="absolute -left-12 bottom-24 hidden md:block" style="writing-mode: vertical-rl; transform: rotate(180deg);">
+                    <span class="font-serif italic text-on-surface-variant text-lg tracking-widest">Bánh Mì Thịt</span>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="mb-32" id="gallery">
+        <div class="grid grid-cols-12 gap-gutter">
+            <!-- Item 1 (Left aligned, spans 7) -->
+            <div class="col-span-12 md:col-span-7 mb-24 md:mb-32">
+                <div class="aspect-[16/9] w-full bg-surface-container-high mb-8 overflow-hidden">
+                    <img alt="Bát phở bò nghi ngút khói chụp từ góc trên" class="w-full h-full object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5jL3hVrqjHA8WeY9mQbl0Umd3AdFGt1YIXHS9kQi9VTjQWagyzYDFEhwoM6vLCJz4spmxmDQCGj9HzatAdA-kVou_pSX2GF2iXwHiosDb_BVeRYCMHqsz6Pi7WpQ_jVkbYL3a-NOGXtnulKSjxshR2ghOl09NbaR2Jn4dJEQFIHChIKDg7YrKG1rlfZ7NKGhwrc_TAKHjb_HxTxOTJWFrydUj0KTvSbNEHumPkPYwotMw6V1Yt1DZmCyshoxSp5TObdHHdWIvUg"/>
+                </div>
+                <div class="flex gap-8">
+                    <div class="w-12 pt-2 border-t border-outline-variant flex-shrink-0">
+                        <span class="font-label-caps text-label-caps text-primary">01</span>
+                    </div>
+                    <div>
+                        <h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Phở Bò</h2>
+                        <p class="font-body-md text-body-md text-on-surface-variant max-w-lg mb-4">
+                            Sự vỗ về tinh tế. Nước dùng xương bò được ninh râm ran suốt 24 tiếng, đạt độ trong trẻo thuần khiết nhưng lại ẩn chứa chiều sâu hương vị vô cùng phong phú từ hoa hồi, gừng nướng và chút quế nhẹ.
+                        </p>
+                        <span class="font-label-caps text-label-caps text-outline uppercase">Hà Nội / TP. Hồ Chí Minh</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Spacer -->
+            <div class="hidden md:block col-span-5"></div>
+            
+            <!-- Spacer -->
+            <div class="hidden md:block col-span-4"></div>
+            
+            <!-- Item 2 (Right aligned, spans 8) -->
+            <div class="col-span-12 md:col-span-8 mb-24 md:mb-32">
+                <div class="aspect-[4/3] w-full bg-surface-container-high mb-8 overflow-hidden">
+                    <img alt="Cận cảnh gỏi cuốn tươi ngon trong suốt lộ tôm thịt" class="w-full h-full object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM9YMTpG1NwvhU9vK-RQxEp4wa52-JjyUJjPpQEQpHIbcnogluz6yfCBfS_hSK_-SkGwXIGhhDYdK0f-6Bg9NuCbz0W8-bOORYv5VXI1Zr8vey4OMwzncEE2b-X6oa1ou8D6X_0DLmzBiH7PPe4KHFB0605KTVJCS27Ify07omGK7hN4tbsauGkHm0cLQoLZPwtxK_Dr9whuVpm-hUhCoeBCfpxyDFhSlQ_j7iqOqvSb0IHZQ1AmLLDpM9Rf10zx0nYIde6DoI7g"/>
+                </div>
+                <div class="flex gap-8 justify-end text-right">
+                    <div>
+                        <h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Gỏi Cuốn</h2>
+                        <p class="font-body-md text-body-md text-on-surface-variant max-w-lg ml-auto mb-4">
+                            Sự hoàn mỹ trong suốt. Một bài học về kết cấu và sự tiết chế. Rau xanh giòn rụm, tôm luộc ngọt bùi, cùng độ dai dẻo vừa vặn của lớp bánh tráng được thấm nước hoàn hảo.
+                        </p>
+                        <span class="font-label-caps text-label-caps text-outline uppercase">Đồng Bằng Sông Cửu Long</span>
+                    </div>
+                    <div class="w-12 pt-2 border-t border-outline-variant flex-shrink-0 text-left">
+                        <span class="font-label-caps text-label-caps text-primary">02</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Item 3 (Center aligned, spans 6) -->
+            <div class="col-span-12 md:col-span-6 md:col-start-4">
+                <div class="aspect-square w-full bg-surface-container-high mb-8 overflow-hidden rounded-full shadow-sm">
+                    <img alt="Ly cà phê sữa đá đang được khuấy đều" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuIyTWkOWk8x70oehXzdZtzArmA5gIeCnd8c7j4Fb4ikSIssgGY5htBpZpZq37XsJs6G_S0fgaZPdynxXabsoghIfzpmPgN1OVrbCaRW2hPWMBJ-Ulv4CuUHg7u4hZ4uU6HDcNxwTbaA3iLG1VmukqR9SgOJj7pJtLoVaZH8m4JVtZ1Zx9vJWK5RyoL7QdBsn5lBVVSbs-5V2XHSs0YAP7ljzSMS3LRuaamVp6XNGO9bR_QmuMOSA0S1og1x2yNkz0s8d1KzDEYw"/>
+                </div>
+                <div class="text-center flex flex-col items-center">
+                    <div class="w-12 pt-2 border-t border-outline-variant mb-6 text-center">
+                        <span class="font-label-caps text-label-caps text-primary">03</span>
+                    </div>
+                    <h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Cà Phê Sữa Đá</h2>
+                    <p class="font-body-md text-body-md text-on-surface-variant max-w-md mx-auto">
+                        Vị đắng mạnh mẽ của hạt Robusta được làm dịu lại bởi sự ngọt ngào của sữa đặc. Một nghi thức hàng ngày hòa quyện đắng và ngọt, tí tách nhỏ giọt qua chiếc phin kim loại.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="py-24 border-y border-surface-variant">
+        <div class="max-w-3xl mx-auto text-center relative">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-background px-4">
+                <span class="material-symbols-outlined text-outline" style="font-size: 32px; font-variation-settings: 'FILL' 1;">format_quote</span>
+            </div>
+            <p class="font-headline-md text-headline-md text-on-surface italic leading-relaxed mb-8">
+                "Ẩm thực đường phố không đơn thuần là đồ ăn thức uống; đó là kho lưu trữ sống động và chân thực về linh hồn của một thành phố. Đó là nghệ thuật đỉnh cao được thực hiện trên những chiếc ghế nhựa vỉa hè."
+            </p>
+            <cite class="font-label-caps text-label-caps text-on-surface-variant uppercase not-italic tracking-widest">
+                — Các Giám Tuyển
+            </cite>
         </div>
     </section>
 </main>
 
 <!-- Footer Component -->
-<footer class="bg-[#FAF9F6] dark:bg-stone-950 border-t border-stone-200 dark:border-stone-800 flex flex-col md:flex-row justify-between items-center w-full px-8 md:px-16 py-12 gap-8 text-[10px] tracking-widest uppercase">
+<footer class="bg-[#FAF9F6] dark:bg-stone-950 border-t border-stone-200 dark:border-stone-800 flex flex-col md:flex-row justify-between items-center w-full px-8 md:px-16 py-12 mt-32 gap-8 text-[10px] tracking-widest uppercase">
     <div class="text-xl font-serif italic tracking-[0.2em] text-stone-900 dark:text-stone-50">SẮC VỊ</div>
     <div class="flex flex-wrap justify-center gap-6 md:gap-8">
         <a class="text-stone-400 dark:text-stone-600 hover:text-[#b61041] transition-opacity duration-300" href="#">Bảo mật</a>
