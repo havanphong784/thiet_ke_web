@@ -1,22 +1,41 @@
+/* ============================================================
+   SẮC VỊ — Global Stylesheet
+   ============================================================ */
+
+/* ── 1. DESIGN TOKENS ─────────────────────────────────────── */
 :root {
-  --primary: #a13625;
+  /* Colors */
+  --primary:      #a13625;
   --primary-strong: #7f2518;
-  --accent: #2b6959;
-  --gold: #b8842b;
-  --ink: #1c1b1a;
-  --muted: #66524d;
-  --line: #dec0ba;
-  --paper: #fdf9f6;
-  --paper-warm: #f4eee8;
-  --white: #ffffff;
-  --shadow: 0 18px 44px rgba(89, 54, 45, 0.1);
-  --font-body: "Be Vietnam Pro", Arial, sans-serif;
+  --accent:       #2b6959;
+  --gold:         #b8842b;
+  --ink:          #1c1b1a;
+  --muted:        #66524d;
+  --line:         #dec0ba;
+  --paper:        #fdf9f6;
+  --paper-warm:   #f4eee8;
+  --surface-low:  #f8f2ec;
+  --white:        #ffffff;
+  --dark:         #1c1b1a;
+
+  /* Shadows */
+  --shadow:       0 18px 44px rgba(89, 54, 45, 0.10);
+  --shadow-lg:    0 32px 64px -12px rgba(30, 28, 20, 0.10);
+
+  /* Typography */
+  --font-body:    "Be Vietnam Pro", Arial, sans-serif;
   --font-display: "Noto Serif", Georgia, serif;
-  --container: 1180px;
-  --section: 88px;
+
+  /* Layout */
+  --container:    1180px;
+  --section:      88px;
+  --gutter:       30px;
 }
 
-* {
+/* ── 2. RESET ─────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -39,19 +58,14 @@ body.is-locked {
   overflow: hidden;
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
   margin: 0;
   font-family: var(--font-display);
   font-weight: 500;
   line-height: 1.15;
 }
 
-p {
-  margin: 0;
-}
+p { margin: 0; }
 
 a {
   color: inherit;
@@ -71,11 +85,188 @@ textarea {
   font: inherit;
 }
 
+ul { margin: 0; padding: 0; list-style: none; }
+
+/* ── 3. LAYOUT ────────────────────────────────────────────── */
 .container {
   width: min(100% - 48px, var(--container));
   margin: 0 auto;
 }
 
+/* 12-column grid system */
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--gutter);
+}
+
+.col-1  { grid-column: span 1; }
+.col-2  { grid-column: span 2; }
+.col-3  { grid-column: span 3; }
+.col-4  { grid-column: span 4; }
+.col-5  { grid-column: span 5; }
+.col-6  { grid-column: span 6; }
+.col-7  { grid-column: span 7; }
+.col-8  { grid-column: span 8; }
+.col-9  { grid-column: span 9; }
+.col-10 { grid-column: span 10; }
+.col-11 { grid-column: span 11; }
+.col-12 { grid-column: span 12; }
+
+.col-start-2  { grid-column-start: 2; }
+.col-start-4  { grid-column-start: 4; }
+.col-start-6  { grid-column-start: 6; }
+.col-start-7  { grid-column-start: 7; }
+.col-start-8  { grid-column-start: 8; }
+.col-start-9  { grid-column-start: 9; }
+
+/* ── 4. TYPOGRAPHY SCALE ──────────────────────────────────── */
+.text-display-xl {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 8vw, 96px);
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.text-headline-lg {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 54px);
+  font-weight: 500;
+  line-height: 1.15;
+}
+
+.text-headline-md {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3.5vw, 36px);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.text-body-lg {
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.text-body-md {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.text-label-caps {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* ── 5. SPACING UTILITIES ─────────────────────────────────── */
+.mb-2  { margin-bottom: 8px; }
+.mb-4  { margin-bottom: 16px; }
+.mb-6  { margin-bottom: 24px; }
+.mb-8  { margin-bottom: 32px; }
+.mb-12 { margin-bottom: 48px; }
+.mb-16 { margin-bottom: 64px; }
+.mb-24 { margin-bottom: 96px; }
+.mb-32 { margin-bottom: 128px; }
+
+.mt-4  { margin-top: 16px; }
+.mt-6  { margin-top: 24px; }
+.mt-8  { margin-top: 32px; }
+.mt-12 { margin-top: 48px; }
+.mt-24 { margin-top: 96px; }
+
+.py-12 { padding-top: 48px;  padding-bottom: 48px; }
+.py-16 { padding-top: 64px;  padding-bottom: 64px; }
+.py-24 { padding-top: 96px;  padding-bottom: 96px; }
+.py-32 { padding-top: 128px; padding-bottom: 128px; }
+
+.pt-8  { padding-top: 32px; }
+
+/* ── 6. ASPECT RATIOS ─────────────────────────────────────── */
+.aspect-16-9  { aspect-ratio: 16 / 9; }
+.aspect-4-3   { aspect-ratio: 4 / 3; }
+.aspect-4-5   { aspect-ratio: 4 / 5; }
+.aspect-3-4   { aspect-ratio: 3 / 4; }
+.aspect-square { aspect-ratio: 1 / 1; }
+.aspect-video { aspect-ratio: 16 / 9; }
+
+/* ── 7. FLEX UTILITIES ────────────────────────────────────── */
+.flex         { display: flex; }
+.flex-col     { flex-direction: column; }
+.items-center { align-items: center; }
+.items-start  { align-items: flex-start; }
+.items-end    { align-items: flex-end; }
+.items-baseline { align-items: baseline; }
+.justify-between { justify-content: space-between; }
+.justify-center  { justify-content: center; }
+.justify-end     { justify-content: flex-end; }
+.flex-wrap    { flex-wrap: wrap; }
+.flex-1       { flex: 1; }
+.gap-4  { gap: 16px; }
+.gap-6  { gap: 24px; }
+.gap-8  { gap: 32px; }
+.gap-12 { gap: 48px; }
+
+/* ── 8. COLOUR UTILITIES ──────────────────────────────────── */
+.text-primary { color: var(--primary); }
+.text-muted   { color: var(--muted); }
+.text-gold    { color: var(--gold); }
+.text-white   { color: var(--white); }
+.text-ink     { color: var(--ink); }
+
+.bg-paper      { background: var(--paper); }
+.bg-paper-warm { background: var(--paper-warm); }
+.bg-white      { background: var(--white); }
+.bg-dark       { background: var(--dark); }
+.bg-primary    { background: var(--primary); }
+.bg-surface-low { background: var(--surface-low); }
+
+/* ── 9. OVERFLOW / OBJECT FIT ─────────────────────────────── */
+.overflow-hidden { overflow: hidden; }
+.object-cover   { object-fit: cover; width: 100%; height: 100%; }
+.object-center  { object-position: center; }
+.w-full  { width: 100%; }
+.h-full  { height: 100%; }
+.relative { position: relative; }
+.absolute { position: absolute; }
+.inset-0  { inset: 0; }
+.z-10 { z-index: 10; }
+
+/* ── 10. BORDER UTILITIES ─────────────────────────────────── */
+.border-top    { border-top: 1px solid var(--line); }
+.border-bottom { border-bottom: 1px solid var(--line); }
+.border-left-primary { border-left: 3px solid var(--primary); }
+.border-top-primary  { border-top: 2px solid var(--primary); }
+.border-muted  { border: 1px solid var(--line); }
+.rounded-full  { border-radius: 9999px; }
+
+/* ── 11. TEXT ALIGNMENT ───────────────────────────────────── */
+.text-center { text-align: center; }
+.text-right  { text-align: right; }
+.italic      { font-style: italic; }
+.uppercase   { text-transform: uppercase; }
+.tracking-wide { letter-spacing: 0.1em; }
+.tracking-wider { letter-spacing: 0.15em; }
+
+/* ── 12. MISC ─────────────────────────────────────────────── */
+.max-w-xl  { max-width: 540px; }
+.max-w-2xl { max-width: 672px; }
+.max-w-3xl { max-width: 768px; }
+.max-w-4xl { max-width: 896px; }
+.max-w-container { max-width: var(--container); }
+.mx-auto   { margin-left: auto; margin-right: auto; }
+.hidden    { display: none; }
+.sr-only   { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+
+/* Group hover pattern */
+.group .scale-hover { transition: transform 0.7s ease; }
+.group:hover .scale-hover { transform: scale(1.05); }
+
+/* Grayscale hover */
+.grayscale-hover { filter: grayscale(20%); transition: filter 0.7s ease; }
+.grayscale-hover:hover { filter: grayscale(0%); }
+
+/* ── 13. HEADER ───────────────────────────────────────────── */
 .site-header {
   position: sticky;
   top: 0;
@@ -176,6 +367,7 @@ textarea {
   display: none;
 }
 
+/* ── 14. MOBILE NAV ───────────────────────────────────────── */
 .mobile-nav {
   position: fixed;
   inset: 0 0 0 auto;
@@ -225,6 +417,7 @@ textarea {
   display: block;
 }
 
+/* ── 15. HERO ─────────────────────────────────────────────── */
 .hero,
 .page-hero {
   position: relative;
@@ -266,6 +459,22 @@ textarea {
   padding: 84px 0;
 }
 
+/* Hero with custom height */
+.hero--tall {
+  min-height: 500px;
+  min-height: clamp(400px, 60vh, 600px);
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(28, 27, 26, 0.30);
+}
+
+.hero--tall::after {
+  display: none;
+}
+
 .eyebrow {
   display: inline-block;
   margin-bottom: 18px;
@@ -295,6 +504,7 @@ textarea {
   opacity: 0.94;
 }
 
+/* ── 16. SECTIONS ─────────────────────────────────────────── */
 .section {
   padding: var(--section) 0;
 }
@@ -335,9 +545,10 @@ textarea {
   color: rgba(255, 255, 255, 0.72);
 }
 
+/* ── 17. CARD GRID ────────────────────────────────────────── */
 .card-grid {
   display: grid;
-  gap: 30px;
+  gap: var(--gutter);
 }
 
 .card-grid--three {
@@ -352,6 +563,7 @@ textarea {
   background: var(--white);
   border: 1px solid rgba(222, 192, 186, 0.72);
   transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+  cursor: pointer;
 }
 
 .card:hover {
@@ -390,6 +602,7 @@ textarea {
   color: var(--muted);
 }
 
+/* ── 18. STAT STRIP ───────────────────────────────────────── */
 .stat-strip {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -424,6 +637,7 @@ textarea {
   text-transform: uppercase;
 }
 
+/* ── 19. STORY PANEL ──────────────────────────────────────── */
 .story-panel {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
@@ -460,6 +674,7 @@ textarea {
   color: var(--muted);
 }
 
+/* ── 20. NOTE GRID ────────────────────────────────────────── */
 .note-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -482,6 +697,7 @@ textarea {
   color: var(--muted);
 }
 
+/* ── 21. FEATURE LAYOUT ───────────────────────────────────── */
 .feature {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -526,6 +742,7 @@ textarea {
   color: var(--muted);
 }
 
+/* ── 22. BUTTONS ──────────────────────────────────────────── */
 .button {
   display: inline-flex;
   align-items: center;
@@ -558,6 +775,18 @@ textarea {
   background: var(--primary);
 }
 
+.button--outline {
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--ink);
+}
+
+.button--outline:hover {
+  background: var(--ink);
+  color: var(--white);
+}
+
+/* ── 23. MENU TABS ────────────────────────────────────────── */
 .menu-tabs {
   position: sticky;
   top: 82px;
@@ -570,7 +799,10 @@ textarea {
   background: rgba(253, 249, 246, 0.92);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(12px);
+  scrollbar-width: none;
 }
+
+.menu-tabs::-webkit-scrollbar { display: none; }
 
 .menu-tabs a {
   flex: 0 0 auto;
@@ -597,6 +829,7 @@ textarea {
   margin-top: 74px;
 }
 
+/* ── 24. MENU LIST (Thực đơn) ─────────────────────────────── */
 .menu-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -635,6 +868,7 @@ textarea {
   font-weight: 800;
 }
 
+/* ── 25. INGREDIENT / TIMELINE / RECIPE / CONTACT ─────────── */
 .ingredient-list,
 .timeline,
 .recipe-steps,
@@ -665,6 +899,7 @@ textarea {
   text-transform: uppercase;
 }
 
+/* ── 26. QUOTE BAND ───────────────────────────────────────── */
 .quote-band {
   padding: 84px 24px;
   color: var(--white);
@@ -681,6 +916,24 @@ textarea {
   line-height: 1.35;
 }
 
+/* Dark quote (darker bg) */
+.quote-dark {
+  background: #111110;
+  color: #fff9ed;
+  padding: 96px 32px;
+  text-align: center;
+}
+
+.quote-dark blockquote {
+  max-width: 768px;
+  margin: 0 auto;
+  font-family: var(--font-display);
+  font-size: clamp(22px, 3vw, 36px);
+  font-style: italic;
+  line-height: 1.45;
+}
+
+/* ── 27. MAP CARD ─────────────────────────────────────────── */
 .map-card {
   min-height: 360px;
   padding: 32px;
@@ -700,6 +953,7 @@ textarea {
   box-shadow: var(--shadow);
 }
 
+/* ── 28. FAQ ──────────────────────────────────────────────── */
 .faq-list {
   display: grid;
   gap: 18px;
@@ -711,6 +965,7 @@ textarea {
   font-size: 22px;
 }
 
+/* ── 29. CONTACT ──────────────────────────────────────────── */
 .contact-layout {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;
@@ -764,6 +1019,7 @@ textarea {
   box-shadow: 0 0 0 4px rgba(161, 54, 37, 0.08);
 }
 
+/* ── 30. NEWSLETTER ───────────────────────────────────────── */
 .newsletter {
   padding: 72px 0;
   color: var(--white);
@@ -795,6 +1051,7 @@ textarea {
   border: 0;
 }
 
+/* ── 31. FOOTER ───────────────────────────────────────────── */
 .site-footer {
   padding: 42px 0;
   color: #85716c;
@@ -819,6 +1076,7 @@ textarea {
   text-transform: uppercase;
 }
 
+/* ── 32. SCROLL REVEAL ANIMATIONS ─────────────────────────── */
 .reveal,
 .reveal-left,
 .reveal-right {
@@ -845,6 +1103,159 @@ textarea {
   transform: translate(0);
 }
 
+/* Animation delays */
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+.delay-400 { transition-delay: 0.4s; }
+
+/* ── 33. PAGE-LEVEL SECTIONS (shared across pages) ─────────── */
+
+/* Editorial row: text + image 2-column */
+.editorial-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 128px;
+}
+
+.editorial-row--reverse .editorial-row__image {
+  order: 2;
+}
+
+.editorial-row__image img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  transition: filter 0.7s ease;
+}
+
+.editorial-row__image img:hover {
+  filter: grayscale(0%);
+}
+
+.editorial-row__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.editorial-row__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.editorial-row__eyebrow::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 1px;
+  background: currentColor;
+}
+
+.editorial-row__content h2 {
+  color: var(--primary);
+  font-size: clamp(28px, 4vw, 48px);
+  font-style: italic;
+  line-height: 1.15;
+}
+
+.editorial-row__content p {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.editorial-row__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--primary);
+  width: fit-content;
+  transition: color 0.2s ease;
+}
+
+.editorial-row__link:hover {
+  color: var(--ink);
+}
+
+/* Vertical text label */
+.vertical-label {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 17px;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+}
+
+/* Ordered list with step numbers */
+.steps-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.step-item {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  padding: 32px 16px;
+  border-top: 1px solid var(--line);
+  transition: background 0.3s ease;
+}
+
+.step-item:hover {
+  background: var(--paper-warm);
+}
+
+.step-item:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.step-number {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3vw, 36px);
+  color: var(--gold);
+  min-width: 60px;
+  line-height: 1;
+}
+
+.step-item h3 {
+  font-size: 22px;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+
+.step-item p {
+  color: var(--muted);
+  font-size: 16px;
+}
+
+/* Dark section with overlay */
+.section-dark {
+  background: var(--dark);
+  color: var(--white);
+  padding: 96px 0;
+}
+
+.section-dark p,
+.section-dark .text-muted {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* ── 34. RESPONSIVE ───────────────────────────────────────── */
 @media (max-width: 1024px) {
   .site-nav {
     display: none;
@@ -861,12 +1272,23 @@ textarea {
   .note-grid,
   .feature,
   .contact-layout,
-  .menu-list {
+  .menu-list,
+  .editorial-row {
     grid-template-columns: 1fr;
   }
 
-  .feature--reverse .feature__image {
+  .feature--reverse .feature__image,
+  .editorial-row--reverse .editorial-row__image {
     order: 0;
+  }
+
+  .grid-12 {
+    grid-template-columns: 1fr;
+  }
+
+  .col-1, .col-2, .col-3, .col-4, .col-5, .col-6,
+  .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+    grid-column: span 1;
   }
 }
 
@@ -904,6 +1326,10 @@ textarea {
     height: 320px;
   }
 
+  .editorial-row__image img {
+    height: 300px;
+  }
+
   .menu-tabs {
     top: 72px;
   }
@@ -927,4 +1353,13 @@ textarea {
   .site-footer__inner {
     text-align: center;
   }
+
+  .step-item {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .mb-32 { margin-bottom: 64px; }
+  .py-32 { padding-top: 64px; padding-bottom: 64px; }
+  .py-24 { padding-top: 48px; padding-bottom: 48px; }
 }

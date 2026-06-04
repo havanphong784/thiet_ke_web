@@ -1,0 +1,191 @@
+/* ============================================================
+   ĐƯỜNG PHỐ PAGE — css/pages/duong-pho.css
+   ============================================================ */
+
+/* Art-gallery hero */
+.gallery-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 128px;
+}
+
+.gallery-hero__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gallery-hero__content .eyebrow {
+  display: block;
+  margin-bottom: 24px;
+  color: var(--muted);
+}
+
+.gallery-hero__content h1 {
+  font-size: clamp(42px, 7vw, 86px);
+  font-style: italic;
+  color: var(--ink);
+  margin-bottom: 32px;
+  line-height: 1.05;
+}
+
+.gallery-hero__content p {
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.75;
+  max-width: 480px;
+  margin-bottom: 48px;
+}
+
+.gallery-hero__image {
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  box-shadow: 0 32px 64px -12px rgba(0, 0, 0, 0.10);
+  position: relative;
+}
+
+.gallery-hero__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(20%) contrast(1.1);
+}
+
+/* Asymmetric gallery grid */
+.gallery-section {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--gutter);
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-item--left {
+  grid-column: span 7;
+  margin-bottom: 128px;
+}
+
+.gallery-item--right {
+  grid-column: 5 / span 8;
+  margin-bottom: 128px;
+}
+
+.gallery-item--center {
+  grid-column: 4 / span 6;
+}
+
+.gallery-item__image {
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.gallery-item--center .gallery-item__image {
+  border-radius: 50%;
+}
+
+.gallery-item__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+}
+
+.gallery-item__meta {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.gallery-item--right .gallery-item__meta {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.gallery-item--right .gallery-item__text {
+  align-items: flex-end;
+}
+
+.gallery-item__number-box {
+  flex-shrink: 0;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+  width: 48px;
+}
+
+.gallery-item__number {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--primary);
+}
+
+.gallery-item__text h2 {
+  font-size: clamp(24px, 3.5vw, 38px);
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+
+.gallery-item__text p {
+  color: var(--muted);
+  font-size: 15px;
+  max-width: 480px;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.gallery-item__text .gallery-item__origin {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.gallery-spacer {
+  grid-column: span 5;
+}
+
+.gallery-spacer--left {
+  grid-column: span 4;
+}
+
+@media (max-width: 1024px) {
+  .gallery-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-hero__image {
+    aspect-ratio: 4 / 3;
+  }
+
+  .gallery-section {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item--left,
+  .gallery-item--right,
+  .gallery-item--center,
+  .gallery-spacer,
+  .gallery-spacer--left {
+    grid-column: span 1;
+    margin-bottom: 48px;
+  }
+
+  .gallery-item--right .gallery-item__meta {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .gallery-item--right .gallery-item__text {
+    align-items: flex-start;
+  }
+
+  .gallery-item--center .gallery-item__image {
+    border-radius: 0;
+  }
+}

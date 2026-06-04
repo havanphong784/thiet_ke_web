@@ -1,125 +1,115 @@
-const navMap = {
-  "index.html": "nav-index",
-  "vung-mien.html": "nav-vung-mien",
-  "thuc-don.html": "nav-thuc-don",
+/* ============================================================
+   SẮC VỊ — main.js
+   Tập trung toàn bộ logic chung cho website
+   ============================================================ */
+
+/* ── 1. NAV ACTIVE STATE ──────────────────────────────────── */
+const NAV_MAP = {
+  "index.html":       "nav-index",
+  "vung-mien.html":   "nav-vung-mien",
+  "thuc-don.html":    "nav-thuc-don",
   "nguyen-lieu.html": "nav-nguyen-lieu",
-  "cong-thuc.html": "nav-cong-thuc",
-  "duong-pho.html": "nav-duong-pho",
-  "lich-su.html": "nav-lich-su",
-  "lien-he.html": "nav-lien-he"
+  "cong-thuc.html":   "nav-cong-thuc",
+  "duong-pho.html":   "nav-duong-pho",
+  "lich-su.html":     "nav-lich-su",
+  "lien-he.html":     "nav-lien-he"
 };
 
-const toggleMobileMenu = () => {
-  const menu = document.getElementById("mobileMenu");
-  const overlay = document.getElementById("mobileMenuOverlay");
+function setActiveNavigation() {
+  const page = window.location.pathname.split("/").pop() || "index.html";
+  const activeId = NAV_MAP[page];
+  if (!activeId) return;
 
-  if (!menu || !overlay) {
-    return;
-  }
+  const el = document.getElementById(activeId);
+  if (el) el.classList.add("is-active");
+
+  const mobileEl = document.querySelector(`#mobileMenu a[href="${page}"]`);
+  if (mobileEl) mobileEl.classList.add("is-active");
+}
+
+/* ── 2. MOBILE MENU ───────────────────────────────────────── */
+function toggleMobileMenu() {
+  const menu    = document.getElementById("mobileMenu");
+  const overlay = document.getElementById("mobileMenuOverlay");
+  if (!menu || !overlay) return;
 
   const isOpen = menu.classList.toggle("is-open");
   overlay.classList.toggle("is-open", isOpen);
   document.body.classList.toggle("is-locked", isOpen);
-};
+}
 
-const closeMobileMenu = () => {
+function closeMobileMenu() {
   document.getElementById("mobileMenu")?.classList.remove("is-open");
   document.getElementById("mobileMenuOverlay")?.classList.remove("is-open");
   document.body.classList.remove("is-locked");
-};
+}
 
-const setActiveNavigation = () => {
-  const page = window.location.pathname.split("/").pop() || "index.html";
-  const activeId = navMap[page];
-
-  if (!activeId) {
-    return;
-  }
-
-  document.getElementById(activeId)?.classList.add("is-active");
-  document
-    .querySelector(`#mobileMenu a[href="${page}"]`)
-    ?.classList.add("is-active");
-};
-
-const setupReveal = () => {
+/* ── 3. SCROLL REVEAL ─────────────────────────────────────── */
+function setupReveal() {
   const items = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
-
-  if (!items.length) {
-    return;
-  }
+  if (!items.length) return;
 
   if (!("IntersectionObserver" in window)) {
-    items.forEach((item) => item.classList.add("is-visible"));
+    items.forEach(item => item.classList.add("is-visible"));
     return;
   }
 
-  const observer = new IntersectionObserver((entries, currentObserver) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) {
-        return;
-      }
-
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
       entry.target.classList.add("is-visible");
-      currentObserver.unobserve(entry.target);
+      obs.unobserve(entry.target);
     });
   }, { threshold: 0.14 });
 
-  items.forEach((item) => observer.observe(item));
-};
+  items.forEach(item => observer.observe(item));
+}
 
-const setupMenuTabs = () => {
+/* ── 4. MENU SECTION TABS (Thực đơn page) ────────────────── */
+function setupMenuTabs() {
   const sections = document.querySelectorAll(".menu-section");
-  const tabs = document.querySelectorAll(".menu-tabs a");
+  const tabs     = document.querySelectorAll(".menu-tabs a");
+  if (!sections.length || !tabs.length) return;
 
-  if (!sections.length || !tabs.length) {
-    return;
-  }
+  function activateCurrentTab() {
+    const scrollPos = window.scrollY + 170;
+    sections.forEach(section => {
+      const inRange = section.offsetTop <= scrollPos
+        && section.offsetTop + section.offsetHeight > scrollPos;
+      if (!inRange) return;
 
-  const activate = () => {
-    const currentTop = window.scrollY + 170;
-
-    sections.forEach((section) => {
-      const isCurrent = section.offsetTop <= currentTop
-        && section.offsetTop + section.offsetHeight > currentTop;
-
-      if (!isCurrent) {
-        return;
-      }
-
-      tabs.forEach((tab) => {
-        tab.classList.toggle("is-active", tab.getAttribute("href") === `#${section.id}`);
+      tabs.forEach(tab => {
+        tab.classList.toggle("is-active",
+          tab.getAttribute("href") === `#${section.id}`);
       });
     });
-  };
+  }
 
-  window.addEventListener("scroll", activate, { passive: true });
-  tabs.forEach((tab) => tab.addEventListener("click", activate));
-  activate();
-};
+  window.addEventListener("scroll", activateCurrentTab, { passive: true });
+  tabs.forEach(tab => tab.addEventListener("click", activateCurrentTab));
+  activateCurrentTab();
+}
 
-const setupCardLinks = () => {
-  document.querySelectorAll("[data-card-link]").forEach((card) => {
-    const navigate = () => {
-      window.location.href = card.dataset.cardLink;
-    };
-
+/* ── 5. CARD LINKS (keyboard + click) ────────────────────── */
+function setupCardLinks() {
+  document.querySelectorAll("[data-card-link]").forEach(card => {
+    const navigate = () => { window.location.href = card.dataset.cardLink; };
     card.addEventListener("click", navigate);
-    card.addEventListener("keydown", (event) => {
-      if (event.key === "Enter" || event.key === " ") {
-        event.preventDefault();
-        navigate();
-      }
+    card.addEventListener("keydown", e => {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); navigate(); }
     });
   });
-};
+}
 
+/* ── 6. INIT ──────────────────────────────────────────────── */
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll("[data-menu-toggle]").forEach((trigger) => {
+  /* Mobile menu toggles */
+  document.querySelectorAll("[data-menu-toggle]").forEach(trigger => {
     trigger.addEventListener("click", toggleMobileMenu);
   });
 
-  document.querySelectorAll("#mobileMenu a").forEach((link) => {
+  /* Close on link click */
+  document.querySelectorAll("#mobileMenu a").forEach(link => {
     link.addEventListener("click", closeMobileMenu);
   });
 

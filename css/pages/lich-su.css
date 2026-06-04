@@ -1,0 +1,261 @@
+/* ============================================================
+   LỊCH SỬ PAGE — css/pages/lich-su.css
+   ============================================================ */
+
+/* Timeline list (7 milestones) */
+.history-timeline {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.history-item {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  padding: 48px 24px;
+  border-top: 1px solid var(--line);
+  transition: background 0.3s ease;
+  cursor: default;
+}
+
+.history-item:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.history-item:hover {
+  background: var(--paper-warm);
+}
+
+.history-item__left {
+  min-width: 160px;
+}
+
+.history-item__era {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.history-item__number {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 8vw, 80px);
+  color: #e8ddd8;
+  line-height: 1;
+  display: block;
+}
+
+.history-item__body h3 {
+  font-size: clamp(20px, 2.5vw, 26px);
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+.history-item__body p {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+/* Dark inspirational quote */
+.dark-quote {
+  background: #111110;
+  color: #fff9ed;
+  padding: 96px 32px;
+  text-align: center;
+  margin: 64px 0;
+}
+
+.dark-quote blockquote {
+  max-width: 768px;
+  margin: 0 auto;
+  font-family: var(--font-display);
+  font-size: clamp(22px, 3vw, 36px);
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 32px;
+}
+
+.dark-quote__divider {
+  width: 64px;
+  height: 1px;
+  background: var(--primary);
+  margin: 0 auto 16px;
+}
+
+.dark-quote cite {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 249, 237, 0.5);
+}
+
+/* Ngũ hành / feature sections */
+.history-feature {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 48px;
+  align-items: center;
+  margin-bottom: 128px;
+}
+
+.history-feature--reverse {
+  grid-template-columns: 5fr 7fr;
+}
+
+.history-feature--reverse .history-feature__image {
+  order: 2;
+}
+
+.history-feature--reverse .history-feature__content {
+  order: 1;
+}
+
+.history-feature__image img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  transition: filter 0.7s ease;
+  filter: grayscale(10%);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+.history-feature__image img:hover {
+  filter: grayscale(0%);
+}
+
+.history-feature__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.history-feature__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.history-feature__eyebrow::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.history-feature__content h2 {
+  font-size: clamp(26px, 4vw, 42px);
+  color: var(--primary);
+  font-style: italic;
+  line-height: 1.2;
+}
+
+.history-feature__content p {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.history-feature__quote {
+  border-left: 2px solid var(--primary);
+  padding-left: 16px;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--primary);
+  line-height: 1.6;
+}
+
+/* Ingredients grid (4 cards) */
+.ingredients-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.ingredients-grid__card {
+  border-top: 2px solid rgba(161, 54, 37, 0.3);
+  padding-top: 24px;
+}
+
+.ingredients-grid__card h4 {
+  font-size: 20px;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+
+.ingredients-grid__card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* Timeline title section */
+.timeline-title {
+  text-align: center;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 96px 0 32px;
+}
+
+.timeline-title h2 {
+  font-size: clamp(28px, 4vw, 48px);
+  color: var(--primary);
+  font-style: italic;
+  margin-bottom: 24px;
+}
+
+.timeline-title__line {
+  width: 64px;
+  height: 1px;
+  background: var(--primary);
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .history-feature,
+  .history-feature--reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .history-feature--reverse .history-feature__image,
+  .history-feature--reverse .history-feature__content {
+    order: 0;
+  }
+
+  .history-feature__image img {
+    height: 320px;
+  }
+
+  .ingredients-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .history-item {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .history-item__left {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .ingredients-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dark-quote {
+    padding: 64px 24px;
+  }
+}

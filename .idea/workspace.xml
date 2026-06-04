@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="51f455c6-0994-4081-8fbc-c747c23e4e23" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/banh-mi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/banh-troi-tau.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/bua-com.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/bun-bo-hue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/ca-kho-to.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/ca-phe-sua-da.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/che-buoi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/che-sen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/com-tam.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/gia-vi-pho.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/goi-buoi-tom-thit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/lau-rieu-cua.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/lien-he-hero.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/map-placeholder.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/nghe-nhan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/ngu-hanh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/pho-cuon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cong-thuc.html" beforeDir="false" afterPath="$PROJECT_DIR$/cong-thuc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/duong-pho.html" beforeDir="false" afterPath="$PROJECT_DIR$/duong-pho.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lich-su.html" beforeDir="false" afterPath="$PROJECT_DIR$/lich-su.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lien-he.html" beforeDir="false" afterPath="$PROJECT_DIR$/lien-he.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nguyen-lieu.html" beforeDir="false" afterPath="$PROJECT_DIR$/nguyen-lieu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thuc-don.html" beforeDir="false" afterPath="$PROJECT_DIR$/thuc-don.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vung-mien.html" beforeDir="false" afterPath="$PROJECT_DIR$/vung-mien.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotChats">
+    <option name="panelChat">
+      <chat>
+        <option name="activeSessionId" value="aa68b096-1c43-47af-9213-7b31cfd030fe" />
+        <option name="sessions">
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="aa68b096-1c43-47af-9213-7b31cfd030fe" />
+            <option name="modeId" value="Agent" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="gpt-5-mini" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+        </option>
+        <option name="type" value="PANEL" />
+      </chat>
+    </option>
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_/mnt/D/Code/Web/AmThucVN" value="3EWClUvA1FVjkwzfMEMG2Mr59CJ" />
+      <entry key="_D:/Code/Web/AmThucVN" value="3EVc47fIdN85dl5a0D2wJ4v1tvR" />
+    </persistenceIdMap>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;havanphong784&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/havanphong784/thiet_ke_web.git&quot;,
+    &quot;accountId&quot;: &quot;c4f2f7a4-07bb-4342-b917-de48ca3bbd34&quot;
+  }
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.000000000000298" />
+      <entry key="MS500" value="1.003124844258667" />
+      <entry key="S2" value="1.2380800263235967" />
+      <entry key="S5" value="1.6406999413905805" />
+      <entry key="S10" value="2.089971017848323" />
+      <entry key="S30" value="3.2321217718481017" />
+      <entry key="S60" value="4.150160230880452" />
+      <entry key="M2" value="5.120390026404031" />
+      <entry key="M5" value="7.792903097225545" />
+      <entry key="M10" value="13.210471989098544" />
+      <entry key="M15" value="17.20025797678907" />
+      <entry key="M30" value="23.381416348926386" />
+      <entry key="H1" value="27.659228142527628" />
+      <entry key="H2" value="30.181363721468212" />
+      <entry key="H4" value="31.551501318355555" />
+      <entry key="D1" value="32.75295213718806" />
+      <entry key="W1" value="32.96456699294199" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.6792800512408194E-30" />
+      <entry key="MS500" value="1.109443515937556E-6" />
+      <entry key="S2" value="0.03624069844460465" />
+      <entry key="S5" value="0.3612907980066358" />
+      <entry key="S10" value="0.8316401862712035" />
+      <entry key="S30" value="1.485238988935447" />
+      <entry key="S60" value="1.7224132069067655" />
+      <entry key="M2" value="1.8620800280269756" />
+      <entry key="M5" value="2.2872098645534535" />
+      <entry key="M10" value="3.285425267486479" />
+      <entry key="M15" value="4.032533314032207" />
+      <entry key="M30" value="5.1933064375311035" />
+      <entry key="H1" value="5.997000224928285" />
+      <entry key="H2" value="6.470736261791791" />
+      <entry key="H4" value="6.728035115351969" />
+      <entry key="D1" value="6.953618959161276" />
+      <entry key="W1" value="6.993347865322259" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.06470405774010143" />
+      <entry key="MS500" value="0.5800707477393677" />
+      <entry key="S2" value="1.1011928920269516" />
+      <entry key="S5" value="1.8485623308951549" />
+      <entry key="S10" value="2.782873955617345" />
+      <entry key="S30" value="4.639835009300993" />
+      <entry key="S60" value="5.8274206345050725" />
+      <entry key="M2" value="6.957673072096913" />
+      <entry key="M5" value="10.06818974720902" />
+      <entry key="M10" value="16.48795238792804" />
+      <entry key="M15" value="21.226533220220652" />
+      <entry key="M30" value="28.57085531597688" />
+      <entry key="H1" value="33.654040778521534" />
+      <entry key="H2" value="36.650931612527195" />
+      <entry key="H4" value="38.27893202752238" />
+      <entry key="D1" value="39.70646741000741" />
+      <entry key="W1" value="39.957899971695845" />
+    </decayedShown>
+  </component>
+  <component name="OptimizeOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3EWClUvA1FVjkwzfMEMG2Mr59CJ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "code.cleanup.on.save": "true",
+    "git-widget-placeholder": "Reverting in new",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/Code/Web/AmThucVN/assets/video",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Code\Web\AmThucVN\assets\video" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-WS-261.24374.125" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="51f455c6-0994-4081-8fbc-c747c23e4e23" name="Changes" comment="" />
+      <created>1780285089601</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1780285089601</updated>
+      <workItem from="1780285090791" duration="5929000" />
+      <workItem from="1780266987035" duration="1056000" />
+      <workItem from="1780269397165" duration="857000" />
+      <workItem from="1780479606738" duration="4263000" />
+      <workItem from="1780518068360" duration="2178000" />
+      <workItem from="1780528240703" duration="4093000" />
+      <workItem from="1780559441177" duration="2023000" />
+      <workItem from="1780562236578" duration="2454000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>

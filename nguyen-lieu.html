@@ -4,31 +4,192 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nguyên liệu - Sắc Vị</title>
+  <meta name="description" content="Khám phá các nguyên liệu cốt lõi tạo nên tinh hoa ẩm thực Việt Nam: nước mắm, rau thơm, xương hầm, gia vị nướng và hành gừng.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages/nguyen-lieu.css">
 </head>
 <body>
-  <header class="site-header"><div class="container site-header__inner"><a class="brand" href="index.html">Sắc Vị</a><nav class="site-nav" aria-label="Điều hướng chính"><a id="nav-index" href="index.html">Trang chủ</a><a id="nav-vung-mien" href="vung-mien.html">Vùng miền</a><a id="nav-thuc-don" href="thuc-don.html">Thực đơn</a><a id="nav-nguyen-lieu" href="nguyen-lieu.html">Nguyên liệu</a><a id="nav-cong-thuc" href="cong-thuc.html">Công thức</a><a id="nav-duong-pho" href="duong-pho.html">Đường phố</a><a id="nav-lich-su" href="lich-su.html">Lịch sử</a><a id="nav-lien-he" href="lien-he.html">Liên hệ</a></nav><div class="header-actions"><button class="icon-button" type="button" aria-label="Ngôn ngữ"><span class="material-symbols-outlined">language</span></button><button class="icon-button menu-button" type="button" aria-label="Mở menu" data-menu-toggle><span class="material-symbols-outlined">menu</span></button></div></div></header>
-  <aside class="mobile-nav" id="mobileMenu" aria-label="Điều hướng di động"><div class="mobile-nav__head"><a class="brand" href="index.html">Sắc Vị</a><button class="icon-button" type="button" aria-label="Đóng menu" data-menu-toggle><span class="material-symbols-outlined">close</span></button></div><nav class="mobile-nav__links"><a href="index.html">Trang chủ</a><a href="vung-mien.html">Vùng miền</a><a href="thuc-don.html">Thực đơn</a><a href="nguyen-lieu.html">Nguyên liệu</a><a href="cong-thuc.html">Công thức</a><a href="duong-pho.html">Đường phố</a><a href="lich-su.html">Lịch sử</a><a href="lien-he.html">Liên hệ</a></nav></aside>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">Sắc Vị</a>
+      <nav class="site-nav" aria-label="Điều hướng chính">
+        <a id="nav-index" href="index.html">Trang chủ</a>
+        <a id="nav-vung-mien" href="vung-mien.html">Vùng miền</a>
+        <a id="nav-thuc-don" href="thuc-don.html">Thực đơn</a>
+        <a id="nav-nguyen-lieu" href="nguyen-lieu.html">Nguyên liệu</a>
+        <a id="nav-cong-thuc" href="cong-thuc.html">Công thức</a>
+        <a id="nav-duong-pho" href="duong-pho.html">Đường phố</a>
+        <a id="nav-lich-su" href="lich-su.html">Lịch sử</a>
+        <a id="nav-lien-he" href="lien-he.html">Liên hệ</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" type="button" aria-label="Ngôn ngữ"><span class="material-symbols-outlined">language</span></button>
+        <button class="icon-button" type="button" aria-label="Tìm kiếm"><span class="material-symbols-outlined">search</span></button>
+        <button class="icon-button menu-button" type="button" aria-label="Mở menu" data-menu-toggle><span class="material-symbols-outlined">menu</span></button>
+      </div>
+    </div>
+  </header>
+
+  <aside class="mobile-nav" id="mobileMenu" aria-label="Điều hướng di động">
+    <div class="mobile-nav__head">
+      <a class="brand" href="index.html">Sắc Vị</a>
+      <button class="icon-button" type="button" aria-label="Đóng menu" data-menu-toggle><span class="material-symbols-outlined">close</span></button>
+    </div>
+    <nav class="mobile-nav__links">
+      <a href="index.html">Trang chủ</a>
+      <a href="vung-mien.html">Vùng miền</a>
+      <a href="thuc-don.html">Thực đơn</a>
+      <a href="nguyen-lieu.html">Nguyên liệu</a>
+      <a href="cong-thuc.html">Công thức</a>
+      <a href="duong-pho.html">Đường phố</a>
+      <a href="lich-su.html">Lịch sử</a>
+      <a href="lien-he.html">Liên hệ</a>
+    </nav>
+  </aside>
   <div class="menu-overlay" id="mobileMenuOverlay" data-menu-toggle></div>
+
   <main>
-    <section class="page-hero"><img class="page-hero__image" src="assets/img/gia-vi.jpg" alt="Gia vị Việt Nam"><div class="page-hero__content"><span class="eyebrow">Gốc của hương vị</span><h1>Nguyên liệu Việt</h1><p>Rau thơm, nước mắm, gạo, gia vị và sản vật địa phương là nền tảng làm nên bản sắc món Việt.</p></div></section>
-    <section class="section"><div class="container"><div class="section-heading reveal"><span class="eyebrow">Kho nguyên liệu</span><h2>Những thành phần không thể thiếu</h2></div><div class="ingredient-list">
-      <article class="ingredient-row reveal"><h3>Nước mắm</h3><p>Vị mặn sâu, hậu ngọt và mùi thơm đặc trưng giúp liên kết nhiều món ăn Việt.</p></article>
-      <article class="ingredient-row reveal"><h3>Rau thơm</h3><p>Húng quế, ngò gai, tía tô, rau răm và kinh giới đem lại độ tươi, mát và hương tầng.</p></article>
-      <article class="ingredient-row reveal"><h3>Gạo và bún phở</h3><p>Từ hạt gạo tạo nên cơm, bún, phở, bánh cuốn và nhiều loại bánh truyền thống.</p></article>
-      <article class="ingredient-row reveal"><h3>Gia vị nướng thơm</h3><p>Quế, hồi, thảo quả, gừng, hành nướng là linh hồn của nhiều loại nước dùng.</p></article>
-    </div></div></section>
-    <section class="section section--warm"><div class="container"><div class="section-heading reveal"><span class="eyebrow">Theo mùa</span><h2>Chọn đúng mùa, món ăn tự ngon hơn</h2></div><div class="note-grid">
-      <article class="note-card reveal"><h3>Mùa mưa</h3><p>Lẩu, món kho và canh chua hợp với bữa cơm ấm, nhiều rau.</p></article>
-      <article class="note-card reveal"><h3>Mùa nóng</h3><p>Gỏi cuốn, chè sen, nước rau má và món luộc giúp khẩu vị nhẹ hơn.</p></article>
-      <article class="note-card reveal"><h3>Ngày lễ</h3><p>Bánh chưng, giò chả, dưa hành và mâm cỗ giữ vai trò kết nối gia đình.</p></article>
-      <article class="note-card reveal"><h3>Bữa thường</h3><p>Một món mặn, một món canh, một đĩa rau và chén nước mắm là đủ thành bữa.</p></article>
-    </div></div></section>
+    <!-- Hero: editorial split -->
+    <section class="section">
+      <div class="container">
+        <div class="feature reveal-left" style="margin-bottom: 128px;">
+          <div class="feature__content" style="border: none;">
+            <span class="eyebrow">Nghi thức &amp; Nguyên liệu</span>
+            <h1 style="font-size: clamp(42px, 6vw, 80px); color: var(--ink); font-style: italic; line-height: 1.05;">Nghệ thuật<br>Nguyên liệu</h1>
+            <p style="color: var(--muted); font-size: 18px; line-height: 1.75; max-width: 440px;">Khám phá vẻ đẹp nguyên bản và vai trò tối thượng của những nguyên liệu cốt lõi làm nên tinh hồn của nước dùng Phở truyền thống. Một bản giao hưởng của hương vị và thời gian.</p>
+          </div>
+          <div class="feature__image reveal-right">
+            <img src="assets/img/gia-vi.jpg" alt="Nguyên liệu làm phở nướng xém thơm lừng">
+            <p style="text-align:right; margin-top: 8px; font-size: 14px; font-style: italic; color: var(--muted);">Đại hồi và Quế chi, linh hồn của hương vị.</p>
+          </div>
+        </div>
+
+        <!-- Pull quote -->
+        <div class="pull-quote reveal" style="margin-bottom: 128px;">
+          <p>"Mỗi nguyên liệu không chỉ là một thành phần, mà là một câu chuyện được kể lại qua ngọn lửa và thời gian."</p>
+        </div>
+
+        <!-- Bento grid: Ingredients showcase -->
+        <div class="bento-grid">
+          <!-- Xương ống bò - wide -->
+          <div class="bento-grid__wide ingredient-showcase reveal-left">
+            <div class="ingredient-showcase__image ingredient-showcase__image--tall">
+              <img src="assets/img/pho-viet.jpg" alt="Xương ống bò làm phở ngọt nước">
+            </div>
+            <h2>Xương Ống Bò</h2>
+            <p>Nền tảng của mọi tinh túy. Xương ống được ninh râm ran trong nhiều giờ liền để chiết xuất trọn vẹn tủy ngọt và vị thanh tao, tạo nên cốt cách trong trẻo mà sâu lắng của nước dùng.</p>
+          </div>
+          <!-- Đại Hồi - narrow -->
+          <div class="bento-grid__narrow ingredient-showcase reveal-right">
+            <div class="ingredient-showcase__image ingredient-showcase__image--medium">
+              <img src="assets/img/gia-vi-pho.png" alt="Hoa hồi đại hồi khô thơm lừng">
+            </div>
+            <h2>Đại Hồi</h2>
+            <p>Sự nồng ấm kiêu sa. Từng cánh hồi được nướng xém nhẹ để đánh thức tinh dầu, mang lại nốt hương cay nồng, ngọt ngào lan tỏa đặc trưng.</p>
+          </div>
+          <!-- Quế thanh - center -->
+          <div class="bento-grid__center ingredient-showcase reveal">
+            <div class="ingredient-showcase__image ingredient-showcase__image--medium">
+              <img src="assets/img/gia-vi.jpg" alt="Các thanh quế khô nướng thơm ngát">
+            </div>
+            <h2>Quế Thanh</h2>
+            <p>Vị ngọt thầm kín. Quế thanh cạo sạch vỏ ngoài, nướng trên than hoa, đóng vai trò như một sợi dây liên kết các hương vị lại với nhau thành một tổng thể hài hòa.</p>
+          </div>
+        </div>
+
+        <!-- Ritual process -->
+        <div style="max-width: 768px; margin: 0 auto 128px;">
+          <div class="text-center reveal" style="margin-bottom: 64px;">
+            <span class="eyebrow">Quy trình</span>
+            <h2 style="font-size: clamp(28px, 4vw, 42px); color: var(--ink); font-style: italic;">Nghi thức chế biến</h2>
+          </div>
+          <div class="ritual-list">
+            <div class="ritual-item reveal">
+              <span class="ritual-item__number">01</span>
+              <div class="ritual-item__body">
+                <h3>Thanh tẩy</h3>
+                <p>Xương bò được ngâm rửa và chần sơ qua nước sôi cùng gừng và muối biển để loại bỏ hoàn toàn tạp chất, giữ lại sự tinh khiết nhất.</p>
+              </div>
+            </div>
+            <div class="ritual-item reveal delay-100">
+              <span class="ritual-item__number">02</span>
+              <div class="ritual-item__body">
+                <h3>Đánh thức hương vị</h3>
+                <p>Các gia vị mộc như hồi, quế, thảo quả, hành tăm được nướng trên lửa than hoa cho đến khi vỏ ngoài xém nhẹ và tỏa hương ngào ngạt.</p>
+              </div>
+            </div>
+            <div class="ritual-item reveal delay-200">
+              <span class="ritual-item__number">03</span>
+              <div class="ritual-item__body">
+                <h3>Hầm râm ran</h3>
+                <p>Quá trình ninh xương kéo dài từ 12–16 tiếng trên ngọn lửa liu riu, hớt bọt liên tục để đảm bảo nước dùng đạt độ trong vắt như hổ phách.</p>
+              </div>
+            </div>
+            <div class="ritual-item reveal delay-300">
+              <span class="ritual-item__number">04</span>
+              <div class="ritual-item__body">
+                <h3>Phối hòa</h3>
+                <p>Túi gia vị rang được thả vào nồi nước dùng ở những giờ cuối cùng, đủ để hương thơm hòa quyện mà không làm mất đi vị thanh của xương.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kho nguyên liệu (đơn giản) -->
+        <div class="section-heading reveal">
+          <span class="eyebrow">Kho nguyên liệu</span>
+          <h2>Những thành phần không thể thiếu</h2>
+        </div>
+        <div class="ingredient-list">
+          <article class="ingredient-row reveal">
+            <h3>Nước mắm</h3>
+            <p>Vị mặn sâu, hậu ngọt và mùi thơm đặc trưng giúp liên kết nhiều món ăn Việt.</p>
+          </article>
+          <article class="ingredient-row reveal">
+            <h3>Rau thơm</h3>
+            <p>Húng quế, ngò gai, tía tô, rau răm và kinh giới đem lại độ tươi, mát và hương tầng.</p>
+          </article>
+          <article class="ingredient-row reveal">
+            <h3>Gạo và bún phở</h3>
+            <p>Từ hạt gạo tạo nên cơm, bún, phở, bánh cuốn và nhiều loại bánh truyền thống.</p>
+          </article>
+          <article class="ingredient-row reveal">
+            <h3>Gia vị nướng thơm</h3>
+            <p>Quế, hồi, thảo quả, gừng, hành nướng là linh hồn của nhiều loại nước dùng.</p>
+          </article>
+        </div>
+
+        <!-- Theo mùa -->
+        <div style="margin-top: 80px;">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Theo mùa</span>
+            <h2>Chọn đúng mùa, món ăn tự ngon hơn</h2>
+          </div>
+          <div class="note-grid">
+            <article class="note-card reveal"><h3>Mùa mưa</h3><p>Lẩu, món kho và canh chua hợp với bữa cơm ấm, nhiều rau.</p></article>
+            <article class="note-card reveal delay-100"><h3>Mùa nóng</h3><p>Gỏi cuốn, chè sen, nước rau má và món luộc giúp khẩu vị nhẹ hơn.</p></article>
+            <article class="note-card reveal delay-200"><h3>Ngày lễ</h3><p>Bánh chưng, giò chả, dưa hành và mâm cỗ giữ vai trò kết nối gia đình.</p></article>
+            <article class="note-card reveal delay-300"><h3>Bữa thường</h3><p>Một món mặn, một món canh, một đĩa rau và chén nước mắm là đủ thành bữa.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer class="site-footer"><div class="container site-footer__inner"><a class="brand" href="index.html">Sắc Vị</a><nav class="footer-links" aria-label="Liên kết cuối trang"><a href="lien-he.html">Liên hệ</a><a href="thuc-don.html">Thực đơn</a><a href="lich-su.html">Lịch sử</a></nav><p>© 2026 Sắc Vị. Tinh hoa ẩm thực Việt.</p></div></footer>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <a class="brand" href="index.html">Sắc Vị</a>
+      <nav class="footer-links" aria-label="Liên kết cuối trang">
+        <a href="lien-he.html">Liên hệ</a>
+        <a href="thuc-don.html">Thực đơn</a>
+        <a href="lich-su.html">Lịch sử</a>
+      </nav>
+      <p>© 2026 Sắc Vị. Tinh hoa ẩm thực Việt.</p>
+    </div>
+  </footer>
   <script src="js/main.js"></script>
 </body>
 </html>

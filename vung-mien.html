@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vùng miền - Sắc Vị</title>
+  <meta name="description" content="Khám phá ẩm thực đặc trưng của ba miền Bắc - Trung - Nam Việt Nam. Từng vùng đất có nét hương vị riêng không thể trộn lẫn.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -14,17 +15,38 @@
     <div class="container site-header__inner">
       <a class="brand" href="index.html">Sắc Vị</a>
       <nav class="site-nav" aria-label="Điều hướng chính">
-        <a id="nav-index" href="index.html">Trang chủ</a><a id="nav-vung-mien" href="vung-mien.html">Vùng miền</a><a id="nav-thuc-don" href="thuc-don.html">Thực đơn</a><a id="nav-nguyen-lieu" href="nguyen-lieu.html">Nguyên liệu</a><a id="nav-cong-thuc" href="cong-thuc.html">Công thức</a><a id="nav-duong-pho" href="duong-pho.html">Đường phố</a><a id="nav-lich-su" href="lich-su.html">Lịch sử</a><a id="nav-lien-he" href="lien-he.html">Liên hệ</a>
+        <a id="nav-index" href="index.html">Trang chủ</a>
+        <a id="nav-vung-mien" href="vung-mien.html">Vùng miền</a>
+        <a id="nav-thuc-don" href="thuc-don.html">Thực đơn</a>
+        <a id="nav-nguyen-lieu" href="nguyen-lieu.html">Nguyên liệu</a>
+        <a id="nav-cong-thuc" href="cong-thuc.html">Công thức</a>
+        <a id="nav-duong-pho" href="duong-pho.html">Đường phố</a>
+        <a id="nav-lich-su" href="lich-su.html">Lịch sử</a>
+        <a id="nav-lien-he" href="lien-he.html">Liên hệ</a>
       </nav>
       <div class="header-actions">
         <button class="icon-button" type="button" aria-label="Ngôn ngữ"><span class="material-symbols-outlined">language</span></button>
+        <button class="icon-button" type="button" aria-label="Tìm kiếm"><span class="material-symbols-outlined">search</span></button>
         <button class="icon-button menu-button" type="button" aria-label="Mở menu" data-menu-toggle><span class="material-symbols-outlined">menu</span></button>
       </div>
     </div>
   </header>
+
   <aside class="mobile-nav" id="mobileMenu" aria-label="Điều hướng di động">
-    <div class="mobile-nav__head"><a class="brand" href="index.html">Sắc Vị</a><button class="icon-button" type="button" aria-label="Đóng menu" data-menu-toggle><span class="material-symbols-outlined">close</span></button></div>
-    <nav class="mobile-nav__links"><a href="index.html">Trang chủ</a><a href="vung-mien.html">Vùng miền</a><a href="thuc-don.html">Thực đơn</a><a href="nguyen-lieu.html">Nguyên liệu</a><a href="cong-thuc.html">Công thức</a><a href="duong-pho.html">Đường phố</a><a href="lich-su.html">Lịch sử</a><a href="lien-he.html">Liên hệ</a></nav>
+    <div class="mobile-nav__head">
+      <a class="brand" href="index.html">Sắc Vị</a>
+      <button class="icon-button" type="button" aria-label="Đóng menu" data-menu-toggle><span class="material-symbols-outlined">close</span></button>
+    </div>
+    <nav class="mobile-nav__links">
+      <a href="index.html">Trang chủ</a>
+      <a href="vung-mien.html">Vùng miền</a>
+      <a href="thuc-don.html">Thực đơn</a>
+      <a href="nguyen-lieu.html">Nguyên liệu</a>
+      <a href="cong-thuc.html">Công thức</a>
+      <a href="duong-pho.html">Đường phố</a>
+      <a href="lich-su.html">Lịch sử</a>
+      <a href="lien-he.html">Liên hệ</a>
+    </nav>
   </aside>
   <div class="menu-overlay" id="mobileMenuOverlay" data-menu-toggle></div>
 
@@ -40,42 +62,68 @@
 
     <section class="section">
       <div class="container">
-        <article class="feature">
-          <div class="feature__image reveal-left"><img src="assets/img/north.png" alt="Món ăn miền Bắc"></div>
-          <div class="feature__content reveal-right">
-            <span class="eyebrow">Miền Bắc</span>
-            <h2>Thanh, tinh và giữ vị gốc</h2>
+        <!-- Miền Bắc -->
+        <article class="editorial-row reveal-left">
+          <div class="editorial-row__image">
+            <img src="assets/img/north.png" alt="Món ăn miền Bắc" class="grayscale-hover">
+          </div>
+          <div class="editorial-row__content">
+            <span class="editorial-row__eyebrow">Bắc Bộ</span>
+            <h2>Nét thanh tao của mùa thu Hà Nội</h2>
             <p>Ẩm thực miền Bắc đề cao sự hài hòa. Gia vị được dùng vừa phải để tôn nguyên liệu, nước dùng trong và hương thơm tự nhiên.</p>
             <p>Phở Hà Nội, bún chả, chả cá Lã Vọng và bánh cuốn là những đại diện tiêu biểu cho tinh thần ấy.</p>
+            <a class="editorial-row__link" href="thuc-don.html#mon-chinh">
+              Khám phá món ăn miền Bắc
+              <span class="material-symbols-outlined" style="font-size:16px">arrow_forward</span>
+            </a>
           </div>
         </article>
-        <article class="feature feature--reverse">
-          <div class="feature__image reveal-right"><img src="assets/img/central.png" alt="Món ăn miền Trung"></div>
-          <div class="feature__content reveal-left">
-            <span class="eyebrow">Miền Trung</span>
-            <h2>Đậm đà, cay nồng và cầu kỳ</h2>
+
+        <!-- Miền Trung -->
+        <article class="editorial-row editorial-row--reverse reveal-right">
+          <div class="editorial-row__image">
+            <img src="assets/img/central.png" alt="Món ăn miền Trung" class="grayscale-hover">
+          </div>
+          <div class="editorial-row__content">
+            <span class="editorial-row__eyebrow">Trung Bộ</span>
+            <h2>Bản hòa tấu của nắng và gió</h2>
             <p>Miền Trung gói trong món ăn sự khắc nghiệt của nắng gió và sự tinh tế của cung đình. Món ăn thường nhỏ, sắc nét và giàu tầng vị.</p>
             <p>Bún bò Huế, mì Quảng, bánh bèo, bánh xèo và các loại mắm tạo nên dấu ấn mạnh mẽ.</p>
+            <a class="editorial-row__link" href="thuc-don.html#mon-chinh">
+              Khám phá món ăn miền Trung
+              <span class="material-symbols-outlined" style="font-size:16px">arrow_forward</span>
+            </a>
           </div>
         </article>
-        <article class="feature">
-          <div class="feature__image reveal-left"><img src="assets/img/south.png" alt="Món ăn miền Nam"></div>
-          <div class="feature__content reveal-right">
-            <span class="eyebrow">Miền Nam</span>
-            <h2>Phóng khoáng, ngọt lành và nhiều rau trái</h2>
+
+        <!-- Miền Nam -->
+        <article class="editorial-row reveal-left">
+          <div class="editorial-row__image">
+            <img src="assets/img/south.png" alt="Món ăn miền Nam" class="grayscale-hover">
+          </div>
+          <div class="editorial-row__content">
+            <span class="editorial-row__eyebrow">Nam Bộ</span>
+            <h2>Sự phóng khoáng của vùng đất chín rồng</h2>
             <p>Ẩm thực miền Nam rộng mở với sản vật sông nước, vườn cây và giao thương. Vị ngọt dịu, rau sống phong phú và nước chấm đa dạng là điểm nhận diện.</p>
             <p>Cơm tấm, cá kho tộ, lẩu mắm, gỏi cuốn và chè là những món ăn gần gũi với đời sống thường ngày.</p>
+            <a class="editorial-row__link" href="thuc-don.html#mon-chinh">
+              Khám phá món ăn miền Nam
+              <span class="material-symbols-outlined" style="font-size:16px">arrow_forward</span>
+            </a>
           </div>
         </article>
-        <section class="section">
-          <div class="section-heading reveal"><span class="eyebrow">Cách nhận diện</span><h2>Bốn dấu hiệu của khẩu vị vùng miền</h2></div>
-          <div class="note-grid">
-            <article class="note-card reveal"><h3>Gia vị</h3><p>Miền Bắc tiết chế, miền Trung sắc cạnh, miền Nam phóng khoáng hơn với vị ngọt.</p></article>
-            <article class="note-card reveal"><h3>Rau ăn kèm</h3><p>Mỗi vùng có bộ rau thơm riêng, quyết định cảm giác tươi và hậu vị.</p></article>
-            <article class="note-card reveal"><h3>Nước dùng</h3><p>Phở, bún bò, hủ tiếu đều khác nhau ở xương, gia vị và thời gian ninh.</p></article>
-            <article class="note-card reveal"><h3>Nước chấm</h3><p>Nước mắm, mắm nêm, tương và muối ớt tạo điểm nhấn cuối cùng.</p></article>
-          </div>
-        </section>
+
+        <!-- Note grid -->
+        <div class="section-heading reveal" style="margin-top: 48px;">
+          <span class="eyebrow">Cách nhận diện</span>
+          <h2>Bốn dấu hiệu của khẩu vị vùng miền</h2>
+        </div>
+        <div class="note-grid">
+          <article class="note-card reveal"><h3>Gia vị</h3><p>Miền Bắc tiết chế, miền Trung sắc cạnh, miền Nam phóng khoáng hơn với vị ngọt.</p></article>
+          <article class="note-card reveal delay-100"><h3>Rau ăn kèm</h3><p>Mỗi vùng có bộ rau thơm riêng, quyết định cảm giác tươi và hậu vị.</p></article>
+          <article class="note-card reveal delay-200"><h3>Nước dùng</h3><p>Phở, bún bò, hủ tiếu đều khác nhau ở xương, gia vị và thời gian ninh.</p></article>
+          <article class="note-card reveal delay-300"><h3>Nước chấm</h3><p>Nước mắm, mắm nêm, tương và muối ớt tạo điểm nhấn cuối cùng.</p></article>
+        </div>
       </div>
     </section>
   </main>
@@ -83,7 +131,11 @@
   <footer class="site-footer">
     <div class="container site-footer__inner">
       <a class="brand" href="index.html">Sắc Vị</a>
-      <nav class="footer-links" aria-label="Liên kết cuối trang"><a href="lien-he.html">Liên hệ</a><a href="thuc-don.html">Thực đơn</a><a href="lich-su.html">Lịch sử</a></nav>
+      <nav class="footer-links" aria-label="Liên kết cuối trang">
+        <a href="lien-he.html">Liên hệ</a>
+        <a href="thuc-don.html">Thực đơn</a>
+        <a href="lich-su.html">Lịch sử</a>
+      </nav>
       <p>© 2026 Sắc Vị. Tinh hoa ẩm thực Việt.</p>
     </div>
   </footer>
