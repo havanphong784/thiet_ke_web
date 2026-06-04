@@ -15,7 +15,3 @@ skills/
 !/.idea/workspace.xml
 !/.idea/shelf/
 !/.idea/vcs.xml
-/node_modules/
-!/paseo.json
-!/skills-lock.json
-!/.ai/
