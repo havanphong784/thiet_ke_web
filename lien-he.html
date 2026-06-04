@@ -1,489 +1,72 @@
 <!DOCTYPE html>
-<html class="light" lang="vi">
+<html lang="vi">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Liên Hệ - Sắc Vị</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "surface-variant": "#e8e2d6",
-                        "on-surface": "#1e1c14",
-                        "inverse-on-surface": "#f6f0e4",
-                        "on-surface-variant": "#5a4042",
-                        "on-error-container": "#93000a",
-                        "error-container": "#ffdad6",
-                        "tertiary-fixed-dim": "#c8c6c2",
-                        "on-error": "#ffffff",
-                        "primary-fixed": "#ffd9dc",
-                        "on-secondary-fixed-variant": "#474746",
-                        "surface-dim": "#dfd9ce",
-                        "tertiary": "#5c5c58",
-                        "inverse-primary": "#ffb2ba",
-                        "on-tertiary": "#ffffff",
-                        "primary-fixed-dim": "#ffb2ba",
-                        "on-tertiary-container": "#fefcf7",
-                        "surface-container-high": "#eee8db",
-                        "on-secondary": "#ffffff",
-                        "surface": "#fff9ed",
-                        "secondary": "#5f5e5e",
-                        "surface-tint": "#b91543",
-                        "outline-variant": "#e2bec0",
-                        "on-primary-container": "#fffbff",
-                        "inverse-surface": "#333028",
-                        "surface-container-low": "#f9f3e7",
-                        "on-secondary-fixed": "#1b1c1c",
-                        "secondary-fixed-dim": "#c8c6c5",
-                        "on-primary-fixed-variant": "#910030",
-                        "secondary-container": "#e4e2e1",
-                        "secondary-fixed": "#e4e2e1",
-                        "on-background": "#1e1c14",
-                        "on-tertiary-fixed-variant": "#474744",
-                        "error": "#ba1a1a",
-                        "tertiary-fixed": "#e4e2dd",
-                        "primary-container": "#d93158",
-                        "on-tertiary-fixed": "#1b1c19",
-                        "surface-container": "#f3ede1",
-                        "surface-container-lowest": "#ffffff",
-                        "background": "#fff9ed",
-                        "on-primary-fixed": "#400010",
-                        "surface-container-highest": "#e8e2d6",
-                        "primary": "#b61041",
-                        "tertiary-container": "#757571",
-                        "outline": "#8e6f72",
-                        "on-secondary-container": "#656464",
-                        "on-primary": "#ffffff",
-                        "surface-bright": "#fff9ed"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0px",
-                        "lg": "0px",
-                        "xl": "0px",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "unit": "8px",
-                        "margin-mobile": "24px",
-                        "gutter": "32px",
-                        "section-gap": "160px",
-                        "margin-desktop": "80px",
-                        "container-max": "1440px"
-                    },
-                    "fontFamily": {
-                        "sans": ["Be Vietnam Pro", "sans-serif"],
-                        "serif": ["Noto Serif", "serif"],
-                        "body-md": ["Be Vietnam Pro"],
-                        "headline-lg": ["Noto Serif"],
-                        "display-xl": ["Noto Serif"],
-                        "body-lg": ["Be Vietnam Pro"],
-                        "headline-md": ["Noto Serif"],
-                        "label-caps": ["Be Vietnam Pro"]
-                    },
-                    "fontSize": {
-                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "400" }],
-                        "display-xl": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "300" }],
-                        "body-lg": ["18px", { "lineHeight": "1.8", "letterSpacing": "0.01em", "fontWeight": "400" }],
-                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "400" }],
-                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "600" }]
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body { background-color: #FEFDF5; }
-        .text-mustard { color: #E9C46A; }
-        .text-brick { color: #E76F51; }
-        .text-leaf { color: #2A9D8F; }
-        .bg-mustard { background-color: #E9C46A; }
-        .bg-brick { background-color: #E76F51; }
-        .bg-leaf { background-color: #2A9D8F; }
-        .border-brick { border-color: #E76F51; }
-        .border-mustard { border-color: #E9C46A; }
-        .border-leaf { border-color: #2A9D8F; }
-
-        /* Custom Scroll Reveal Animations */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 1.2s cubic-bezier(0.215, 0.610, 0.355, 1), transform 1.2s cubic-bezier(0.215, 0.610, 0.355, 1);
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .reveal-left {
-            opacity: 0;
-            transform: translateX(-40px);
-            transition: opacity 1.2s cubic-bezier(0.215, 0.610, 0.355, 1), transform 1.2s cubic-bezier(0.215, 0.610, 0.355, 1);
-        }
-        .reveal-left.active {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        .reveal-right {
-            opacity: 0;
-            transform: translateX(40px);
-            transition: opacity 1.2s cubic-bezier(0.215, 0.610, 0.355, 1), transform 1.2s cubic-bezier(0.215, 0.610, 0.355, 1);
-        }
-        .reveal-right.active {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        /* Animation Delays */
-        .delay-100 { transition-delay: 100ms; animation-delay: 100ms; }
-        .delay-200 { transition-delay: 200ms; animation-delay: 200ms; }
-        .delay-300 { transition-delay: 300ms; animation-delay: 300ms; }
-        .delay-400 { transition-delay: 400ms; animation-delay: 400ms; }
-
-        /* Direct Entrance Animations */
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .animate-fade-up {
-            animation: fadeUp 1.2s cubic-bezier(0.215, 0.610, 0.355, 1) both;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liên hệ - Sắc Vị</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="text-on-surface font-sans antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
+<body>
+  <header class="site-header"><div class="container site-header__inner"><a class="brand" href="index.html">Sắc Vị</a><nav class="site-nav" aria-label="Điều hướng chính"><a id="nav-index" href="index.html">Trang chủ</a><a id="nav-vung-mien" href="vung-mien.html">Vùng miền</a><a id="nav-thuc-don" href="thuc-don.html">Thực đơn</a><a id="nav-nguyen-lieu" href="nguyen-lieu.html">Nguyên liệu</a><a id="nav-cong-thuc" href="cong-thuc.html">Công thức</a><a id="nav-duong-pho" href="duong-pho.html">Đường phố</a><a id="nav-lich-su" href="lich-su.html">Lịch sử</a><a id="nav-lien-he" href="lien-he.html">Liên hệ</a></nav><div class="header-actions"><button class="icon-button" type="button" aria-label="Ngôn ngữ"><span class="material-symbols-outlined">language</span></button><button class="icon-button menu-button" type="button" aria-label="Mở menu" data-menu-toggle><span class="material-symbols-outlined">menu</span></button></div></div></header>
+  <aside class="mobile-nav" id="mobileMenu" aria-label="Điều hướng di động"><div class="mobile-nav__head"><a class="brand" href="index.html">Sắc Vị</a><button class="icon-button" type="button" aria-label="Đóng menu" data-menu-toggle><span class="material-symbols-outlined">close</span></button></div><nav class="mobile-nav__links"><a href="index.html">Trang chủ</a><a href="vung-mien.html">Vùng miền</a><a href="thuc-don.html">Thực đơn</a><a href="nguyen-lieu.html">Nguyên liệu</a><a href="cong-thuc.html">Công thức</a><a href="duong-pho.html">Đường phố</a><a href="lich-su.html">Lịch sử</a><a href="lien-he.html">Liên hệ</a></nav></aside>
+  <div class="menu-overlay" id="mobileMenuOverlay" data-menu-toggle></div>
 
-<!-- Navigation Bar -->
-<nav class="bg-[#FAF9F6] dark:bg-stone-950 font-serif tracking-tight text-stone-900 dark:text-stone-50 border-stone-200 dark:border-stone-800 flex justify-between items-center w-full px-8 md:px-16 py-6 border-b z-50 sticky top-0 ease-in-out transition-all">
-    <div class="flex-1">
-        <a href="index.html" class="text-2xl font-serif italic tracking-tighter text-stone-900 dark:text-stone-50">Sắc Vị</a>
-    </div>
-    <div class="hidden xl:flex gap-8 items-center justify-center">
-        <a id="nav-index" class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300" href="index.html">Trang Chủ</a>
-        <a id="nav-vung-mien" class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300" href="vung-mien.html">Vùng Miền</a>
-        <a id="nav-thuc-don" class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300" href="thuc-don.html">Thực Đơn</a>
-        <a id="nav-nguyen-lieu" class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300" href="nguyen-lieu.html">Nguyên Liệu</a>
-        <a id="nav-cong-thuc" class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300" href="cong-thuc.html">Công Thức</a>
-        <a id="nav-duong-pho" class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300" href="duong-pho.html">Đường Phố</a>
-        <a id="nav-lich-su" class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300" href="lich-su.html">Lịch Sử</a>
-        <a id="nav-lien-he" class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300" href="lien-he.html">Liên Hệ</a>
-    </div>
-    <div class="flex-1 flex justify-end gap-4 text-[#b61041] dark:text-[#F3708D] items-center">
-        <button class="hover:text-stone-900 transition-colors duration-300">
-            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">language</span>
-        </button>
-        <button class="hover:text-stone-900 transition-colors duration-300">
-            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">search</span>
-        </button>
-        <button onclick="toggleMobileMenu()" class="xl:hidden hover:text-stone-900 transition-colors duration-300">
-            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0; font-size: 28px;">menu</span>
-        </button>
-    </div>
-</nav>
-
-<!-- Mobile Menu Drawer -->
-<div id="mobileMenu" class="fixed inset-y-0 right-0 z-50 w-full max-w-xs bg-background border-l border-outline-variant shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out xl:hidden flex flex-col p-8">
-    <div class="flex justify-between items-center mb-8">
-        <span class="font-serif italic text-2xl text-stone-950">Sắc Vị</span>
-        <button onclick="toggleMobileMenu()" class="text-stone-950 hover:text-primary transition-colors focus:outline-none">
-            <span class="material-symbols-outlined text-3xl">close</span>
-        </button>
-    </div>
-    <nav class="flex flex-col gap-5 text-sm font-sans uppercase tracking-widest">
-        <a href="index.html" class="hover:text-primary transition-colors py-2 border-b border-stone-100/50">Trang Chủ</a>
-        <a href="vung-mien.html" class="hover:text-primary transition-colors py-2 border-b border-stone-100/50">Vùng Miền</a>
-        <a href="thuc-don.html" class="hover:text-primary transition-colors py-2 border-b border-stone-100/50">Thực Đơn</a>
-        <a href="nguyen-lieu.html" class="hover:text-primary transition-colors py-2 border-b border-stone-100/50">Nguyên Liệu</a>
-        <a href="cong-thuc.html" class="hover:text-primary transition-colors py-2 border-b border-stone-100/50">Công Thức</a>
-        <a href="duong-pho.html" class="hover:text-primary transition-colors py-2 border-b border-stone-100/50">Đường Phố</a>
-        <a href="lich-su.html" class="hover:text-primary transition-colors py-2 border-b border-stone-100/50">Lịch Sử</a>
-        <a href="lien-he.html" class="hover:text-primary transition-colors py-2 border-b border-stone-100/50">Liên Hệ</a>
-    </nav>
-</div>
-<!-- Mobile Menu Overlay -->
-<div id="mobileMenuOverlay" class="fixed inset-0 z-40 bg-stone-950/20 backdrop-blur-sm hidden transition-opacity duration-300 xl:hidden" onclick="toggleMobileMenu()"></div>
-
-<main class="flex-grow">
-    <!-- Hero Section -->
-    <section class="relative w-full h-[500px] min-h-[400px] flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <img alt="Không gian sang trọng tĩnh lặng của nhà hàng" class="w-full h-full object-cover object-center filter brightness-75" src="assets/img/lien-he-hero.png"/>
-            <div class="absolute inset-0 bg-stone-900/30 mix-blend-multiply"></div>
-        </div>
-        <div class="relative z-10 max-w-4xl px-8 text-center text-white animate-fade-up">
-            <span class="font-label-caps text-label-caps text-mustard mb-4 block uppercase tracking-widest animate-fade-up">Kết Nối Với Chúng Tôi</span>
-            <h1 class="font-display-xl text-headline-lg md:text-display-xl mb-4 text-white drop-shadow-md animate-fade-up delay-100">Gặp Gỡ Tri Kỷ</h1>
-            <p class="font-body-lg text-body-lg text-stone-100 max-w-2xl mx-auto font-light animate-fade-up delay-200">Mỗi cuộc trò chuyện là khởi đầu cho một hành trình ẩm thực mới.</p>
-        </div>
+  <main>
+    <section class="page-hero">
+      <img class="page-hero__image" src="assets/img/lien-he-hero.jpg" alt="Không gian nhà hàng Sắc Vị">
+      <div class="page-hero__content"><span class="eyebrow">Kết nối</span><h1>Liên hệ Sắc Vị</h1><p>Gửi yêu cầu đặt bàn, hợp tác nội dung hoặc chia sẻ câu chuyện ẩm thực của bạn.</p></div>
     </section>
-
-    <!-- Contact Info + Form -->
-    <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-32">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-            <!-- Left Info Column -->
-            <div class="lg:col-span-5 border-t border-surface-container-highest pt-8 reveal-left">
-                <span class="font-label-caps text-label-caps text-tertiary mb-4 block uppercase tracking-widest">Gặp Gỡ</span>
-                <h2 class="font-headline-lg text-headline-lg text-[#b61041] mb-12 leading-tight">Ghé Thăm Chúng Tôi</h2>
-                
-                <div class="space-y-12">
-                    <div class="border-b border-surface-container-highest pb-6">
-                        <h4 class="font-label-caps text-label-caps text-stone-950 uppercase tracking-wider mb-2">Địa Chỉ</h4>
-                        <p class="font-body-md text-stone-600 leading-relaxed">
-                            36 Phố Lý Thường Kiệt<br>Quận Hoàn Kiếm, Hà Nội
-                        </p>
-                    </div>
-                    <div class="border-b border-surface-container-highest pb-6">
-                        <h4 class="font-label-caps text-label-caps text-stone-950 uppercase tracking-wider mb-2">Giờ Mở Cửa</h4>
-                        <p class="font-body-md text-stone-600 leading-relaxed">
-                            Thứ Hai - Thứ Sáu: 10:00 - 22:00<br>Thứ Bảy - Chủ Nhật: 08:00 - 23:00
-                        </p>
-                    </div>
-                    <div class="border-b border-surface-container-highest pb-6">
-                        <h4 class="font-label-caps text-label-caps text-stone-950 uppercase tracking-wider mb-2">Liên Lạc</h4>
-                        <p class="font-body-md text-stone-600 leading-relaxed">
-                            Điện thoại: (024) 3826 7890<br>Email: xin.chao@sacvi.vn
-                        </p>
-                    </div>
-                    <div>
-                        <h4 class="font-label-caps text-label-caps text-stone-950 uppercase tracking-wider mb-2">Lưu Ý Đặt Bàn</h4>
-                        <p class="font-body-md text-stone-600 leading-relaxed italic">
-                            Vui lòng đặt bàn trước ít nhất 2 giờ. Đối với các nhóm tiệc trên 10 người, xin hãy liên hệ trực tiếp qua số hotline để nhận tư vấn set menu riêng biệt.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right Form Column -->
-            <div class="lg:col-span-7 bg-surface-container-low p-12 border border-outline-variant/30 reveal-right">
-                <h3 class="font-headline-md text-3xl text-on-surface mb-4">Gửi Lời Nhắn</h3>
-                <p class="font-body-md text-on-surface-variant mb-10 font-light">
-                    Bạn có câu hỏi, ý kiến đóng góp hoặc nhu cầu đặt bàn đặt tiệc riêng? Hãy điền vào biểu mẫu bên dưới, chúng tôi sẽ phản hồi trong vòng 24 giờ.
-                </p>
-                <form class="space-y-8" onsubmit="event.preventDefault(); alert('Cảm ơn bạn! Thông điệp của bạn đã được gửi thành công.'); this.reset();">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="flex flex-col">
-                            <label for="name" class="font-label-caps text-label-caps text-stone-500 uppercase mb-2">Họ và Tên</label>
-                            <input type="text" id="name" name="name" placeholder="Nguyễn Văn A" required class="bg-transparent border-b border-outline-variant/70 focus:border-[#b61041] focus:outline-none py-2 text-stone-900 transition-colors font-body-md">
-                        </div>
-                        <div class="flex flex-col">
-                            <label for="phone" class="font-label-caps text-label-caps text-stone-500 uppercase mb-2">Số Điện Thoại</label>
-                            <input type="tel" id="phone" name="phone" placeholder="0912 345 678" class="bg-transparent border-b border-outline-variant/70 focus:border-[#b61041] focus:outline-none py-2 text-stone-900 transition-colors font-body-md">
-                        </div>
-                    </div>
-                    <div class="flex flex-col">
-                        <label for="email" class="font-label-caps text-label-caps text-stone-500 uppercase mb-2">Email</label>
-                        <input type="email" id="email" name="email" placeholder="email@example.com" required class="bg-transparent border-b border-outline-variant/70 focus:border-[#b61041] focus:outline-none py-2 text-stone-900 transition-colors font-body-md">
-                    </div>
-                    <div class="flex flex-col">
-                        <label for="subject" class="font-label-caps text-label-caps text-stone-500 uppercase mb-2">Chủ Đề</label>
-                        <select id="subject" name="subject" class="bg-transparent border-b border-outline-variant/70 focus:border-[#b61041] focus:outline-none py-2 text-stone-900 transition-colors font-body-md rounded-none">
-                            <option value="" class="bg-[#FEFDF5]">-- Chọn chủ đề --</option>
-                            <option value="reservation" class="bg-[#FEFDF5]">Đặt Bàn Ăn</option>
-                            <option value="catering" class="bg-[#FEFDF5]">Hội Họp / Tiệc Sự Kiện</option>
-                            <option value="feedback" class="bg-[#FEFDF5]">Góp Ý Dịch Vụ</option>
-                            <option value="cooperation" class="bg-[#FEFDF5]">Hợp Tác Phát Triển</option>
-                            <option value="other" class="bg-[#FEFDF5]">Chủ Đề Khác</option>
-                        </select>
-                    </div>
-                    <div class="flex flex-col">
-                        <label for="message" class="font-label-caps text-label-caps text-stone-500 uppercase mb-2">Lời Nhắn</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Nội dung lời nhắn hoặc thông tin chi tiết đặt bàn..." required class="bg-transparent border-b border-outline-variant/70 focus:border-[#b61041] focus:outline-none py-2 text-stone-900 transition-colors font-body-md resize-none"></textarea>
-                    </div>
-                    <button type="submit" class="bg-[#b61041] text-white font-label-caps text-label-caps uppercase tracking-widest px-8 py-4 hover:bg-stone-900 transition-colors duration-300 w-full md:w-auto">
-                        Gửi Tin Nhắn
-                    </button>
-                </form>
-            </div>
+    <section class="section">
+      <div class="container contact-layout">
+        <div class="reveal-left">
+          <div class="section-heading"><span class="eyebrow">Thông tin</span><h2>Chúng tôi luôn sẵn sàng lắng nghe</h2></div>
+          <div class="contact-list">
+            <article class="contact-item"><h3>Địa chỉ</h3><p>24 Nguyễn Thị Minh Khai, Quận 1, Thành phố Hồ Chí Minh</p></article>
+            <article class="contact-item"><h3>Giờ mở cửa</h3><p>10:00 - 22:00 hằng ngày</p></article>
+            <article class="contact-item"><h3>Hotline</h3><p>0900 123 456</p></article>
+            <article class="contact-item"><h3>Email</h3><p>hello@sacvi.vn</p></article>
+          </div>
         </div>
+        <form class="contact-form reveal-right">
+          <div class="form-row">
+            <div class="form-field"><label for="name">Họ tên</label><input id="name" name="name" type="text" placeholder="Nguyễn Văn A"></div>
+            <div class="form-field"><label for="phone">Số điện thoại</label><input id="phone" name="phone" type="tel" placeholder="0900 000 000"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="ban@example.com"></div>
+            <div class="form-field"><label for="topic">Chủ đề</label><select id="topic" name="topic"><option>Đặt bàn</option><option>Hợp tác</option><option>Góp ý nội dung</option></select></div>
+          </div>
+          <div class="form-field"><label for="message">Nội dung</label><textarea id="message" name="message" placeholder="Bạn muốn nhắn gì cho Sắc Vị?"></textarea></div>
+          <button class="button" type="submit">Gửi liên hệ</button>
+        </form>
+      </div>
     </section>
-
-    <!-- Services Notes Section -->
-    <section class="bg-surface-container-low py-24 border-t border-b border-surface-container-high">
-        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-            <div class="text-center mb-16 reveal">
-                <span class="font-label-caps text-label-caps text-tertiary uppercase tracking-widest block mb-2">Dịch Vụ Sắc Vị</span>
-                <h2 class="font-headline-lg text-[#b61041] italic">Dành Cho Từng Dịp Gặp Gỡ</h2>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Card 1 -->
-                <div class="border-t border-[#b61041]/30 pt-6 reveal">
-                    <h4 class="font-headline-md text-xl text-stone-950 mb-3">Đặt Bàn Gia Đình</h4>
-                    <p class="font-body-md text-sm text-on-surface-variant">
-                        Bàn từ 2 đến 8 người được giữ tối đa 15 phút sau giờ đặt hẹn. Quý khách vui lòng lưu ý các yêu cầu đặc biệt như ghế trẻ em hoặc dị ứng để nhà bếp phục vụ tốt nhất.
-                    </p>
-                </div>
-                <!-- Card 2 -->
-                <div class="border-t border-[#b61041]/30 pt-6 reveal delay-100">
-                    <h4 class="font-headline-md text-xl text-stone-950 mb-3">Sự Kiện Nhóm Tiệc</h4>
-                    <p class="font-body-md text-sm text-on-surface-variant">
-                        Các hội nhóm lớn từ 10 khách trở lên có thể chọn thực đơn lập sẵn theo phong vị ba miền đặc sắc, thiết kế không gian phòng ăn riêng theo yêu cầu sự kiện.
-                    </p>
-                </div>
-                <!-- Card 3 -->
-                <div class="border-t border-[#b61041]/30 pt-6 reveal delay-200">
-                    <h4 class="font-headline-md text-xl text-stone-950 mb-3">Tư Vấn Thực Đơn</h4>
-                    <p class="font-body-md text-sm text-on-surface-variant">
-                        Chúng tôi hỗ trợ thiết kế thứ tự dọn món hoàn hảo: khơi vị thanh tao mát lành, đưa món chính đậm đà sâu lắng, điểm xuyết món nước nóng ấm và kết đọng bằng thức ngọt lành.
-                    </p>
-                </div>
-                <!-- Card 4 -->
-                <div class="border-t border-[#b61041]/30 pt-6 reveal delay-300">
-                    <h4 class="font-headline-md text-xl text-stone-950 mb-3">Đóng Góp Ý Kiến</h4>
-                    <p class="font-body-md text-sm text-on-surface-variant">
-                        Mọi phản hồi quý báu về món ăn, thái độ phục vụ hay trải nghiệm không gian đều được ghi nhận trực tiếp để cải tiến quy trình bếp ăn và nâng chất lượng phục vụ ngày một cao hơn.
-                    </p>
-                </div>
-            </div>
+    <section class="section section--warm">
+      <div class="container">
+        <div class="map-card reveal">
+          <div class="map-card__caption">
+            <h3>Không gian trung tâm Quận 1</h3>
+            <p>Gần các tuyến phố chính, thuận tiện cho nhóm nhỏ, gia đình và khách du lịch muốn tìm hiểu món Việt.</p>
+          </div>
         </div>
+      </div>
     </section>
-
-    <!-- Map Section -->
-    <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-24 reveal">
-        <div class="text-center mb-12">
-            <span class="font-label-caps text-label-caps text-tertiary mb-2 block uppercase tracking-widest">Đường Đi</span>
-            <h2 class="font-headline-lg text-[#b61041]">Vị Trí Của Chúng Tôi</h2>
+    <section class="section">
+      <div class="container">
+        <div class="section-heading reveal"><span class="eyebrow">Câu hỏi thường gặp</span><h2>Trước khi ghé Sắc Vị</h2></div>
+        <div class="faq-list">
+          <article class="faq-item reveal"><h3>Có cần đặt bàn trước không?</h3><p>Nên đặt trước ít nhất 2 giờ, đặc biệt vào cuối tuần hoặc nhóm trên 6 người.</p></article>
+          <article class="faq-item reveal"><h3>Có món chay không?</h3><p>Có. Bạn có thể ghi chú khi đặt bàn để bếp chuẩn bị set món phù hợp.</p></article>
+          <article class="faq-item reveal"><h3>Có nhận hợp tác nội dung không?</h3><p>Có. Gửi thông tin qua form liên hệ, chúng tôi sẽ phản hồi trong 2 ngày làm việc.</p></article>
         </div>
-        <div class="w-full h-[500px] border border-outline-variant overflow-hidden">
-            <img alt="Bản đồ chỉ dẫn đến nhà hàng Sắc Vị Lý Thường Kiệt" class="w-full h-full object-cover filter saturate-[0.8] brightness-[0.95]" src="assets/img/map-placeholder.png"/>
-        </div>
+      </div>
     </section>
+  </main>
 
-    <!-- FAQ Section -->
-    <section class="max-w-4xl mx-auto px-margin-mobile pb-32">
-        <div class="text-center mb-16">
-            <span class="font-label-caps text-label-caps text-tertiary mb-2 block uppercase tracking-widest">Giải Đáp</span>
-            <h2 class="font-headline-lg text-[#b61041]">Câu Hỏi Thường Gặp</h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
-            <div>
-                <h4 class="font-headline-md text-lg text-stone-950 mb-2">Có cần đặt bàn trước không?</h4>
-                <p class="font-body-md text-sm text-on-surface-variant">
-                    Chúng tôi rất khuyến khích quý khách đặt bàn trước, đặc biệt vào bữa tối cuối tuần hoặc các dịp ngày lễ lớn nhằm giúp Sắc Vị chuẩn bị đón tiếp tốt nhất.
-                </p>
-            </div>
-            <div>
-                <h4 class="font-headline-md text-lg text-stone-950 mb-2">Nhà hàng có phục vụ tiệc riêng tư không?</h4>
-                <p class="font-body-md text-sm text-on-surface-variant">
-                    Có. Sắc Vị thiết kế các phòng tiệc riêng ấm cúng dành riêng cho nhóm từ 10 đến 30 khách để đón tiếp họp mặt gia đình hoặc liên hoan công ty. Vui lòng liên hệ trước 3 ngày.
-                </p>
-            </div>
-            <div>
-                <h4 class="font-headline-md text-lg text-stone-950 mb-2">Có thực đơn chay không?</h4>
-                <p class="font-body-md text-sm text-on-surface-variant">
-                    Có. Chúng tôi sở hữu một thực đơn chay mộc mạc tinh khiết được chế biến thuần túy từ rau củ quả, đậu hũ tươi ngon thu hoạch theo mùa để phục vụ thực khách.
-                </p>
-            </div>
-            <div>
-                <h4 class="font-headline-md text-lg text-stone-950 mb-2">Nhà hàng có giao món tận nơi không?</h4>
-                <p class="font-body-md text-sm text-on-surface-variant">
-                    Chúng tôi có dịch vụ giao món nóng ấm trong phạm vi bán kính 5km xung quanh nhà hàng. Các đơn đặt món có giá trị từ 200.000đ trở lên sẽ được hỗ trợ miễn phí vận chuyển.
-                </p>
-            </div>
-            <div>
-                <h4 class="font-headline-md text-lg text-stone-950 mb-2">Tôi có thể yêu cầu giảm mặn/giảm cay không?</h4>
-                <p class="font-body-md text-sm text-on-surface-variant">
-                    Hoàn toàn được. Quý khách chỉ cần thông báo trước cho nhân viên dọn bàn hoặc ghi chú trong biểu mẫu đặt bàn. Bếp trưởng sẽ linh hoạt gia giảm gia vị phù hợp với khẩu vị của bạn.
-                </p>
-            </div>
-            <div>
-                <h4 class="font-headline-md text-lg text-stone-950 mb-2">Nhà hàng nhận đặt tiệc sự kiện ngoài không?</h4>
-                <p class="font-body-md text-sm text-on-surface-variant">
-                    Chúng tôi có dịch vụ chuẩn bị các mâm cỗ truyền thống, set ăn hội thảo hoặc khay món ăn gia đình cho các sự kiện bên ngoài với điều kiện đặt trước ít nhất 48 tiếng.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Hospitality Quote -->
-    <section class="bg-stone-900 text-[#fff9ed] py-20 text-center">
-        <div class="max-w-2xl mx-auto px-8">
-            <blockquote class="font-headline-lg text-2xl italic mb-4">"Mỗi bữa ăn là một lời mời chân thành, mỗi vị khách ghé thăm là một người bạn tri kỷ."</blockquote>
-            <span class="font-label-caps text-label-caps text-stone-400">Triết Lý Hiếu Khách Việt</span>
-        </div>
-    </section>
-</main>
-
-<!-- Footer Component -->
-<footer class="bg-[#FAF9F6] dark:bg-stone-950 border-t border-stone-200 dark:border-stone-800 flex flex-col md:flex-row justify-between items-center w-full px-8 md:px-16 py-12 gap-8 text-[10px] tracking-widest uppercase">
-    <div class="text-xl font-serif italic tracking-[0.2em] text-stone-900 dark:text-stone-50">SẮC VỊ</div>
-    <div class="flex flex-wrap justify-center gap-6 md:gap-8">
-        <a class="text-stone-400 dark:text-stone-600 hover:text-[#b61041] transition-opacity duration-300" href="#">Bảo mật</a>
-        <a class="text-stone-400 dark:text-stone-600 hover:text-[#b61041] transition-opacity duration-300" href="#">Điều khoản</a>
-        <a class="text-stone-400 dark:text-stone-600 hover:text-[#b61041] transition-opacity duration-300" href="lien-he.html">Liên hệ</a>
-        <a class="text-stone-400 dark:text-stone-600 hover:text-[#b61041] transition-opacity duration-300" href="#">Bản tin</a>
-    </div>
-    <div class="text-stone-400 dark:text-stone-600">
-        © 2024 SẮC VỊ. KHÚC CA DI SẢN ẨM THỰC VIỆT.
-    </div>
-</footer>
-
-<script>
-    function toggleMobileMenu() {
-        const menu = document.getElementById('mobileMenu');
-        const overlay = document.getElementById('mobileMenuOverlay');
-        if (menu.classList.contains('translate-x-full')) {
-            menu.classList.remove('translate-x-full');
-            menu.classList.add('translate-x-0');
-            overlay.classList.remove('hidden');
-        } else {
-            menu.classList.add('translate-x-full');
-            menu.classList.remove('translate-x-0');
-            overlay.classList.add('hidden');
-        }
-    }
-    document.addEventListener("DOMContentLoaded", () => {
-        const path = window.location.pathname.split("/").pop() || "index.html";
-        const navMap = {
-            "index.html": "nav-index",
-            "vung-mien.html": "nav-vung-mien",
-            "thuc-don.html": "nav-thuc-don",
-            "nguyen-lieu.html": "nav-nguyen-lieu",
-            "cong-thuc.html": "nav-cong-thuc",
-            "duong-pho.html": "nav-duong-pho",
-            "lich-su.html": "nav-lich-su",
-            "lien-he.html": "nav-lien-he"
-        };
-        const activeId = navMap[path];
-        if (activeId) {
-            const activeEl = document.getElementById(activeId);
-            if (activeEl) {
-                activeEl.classList.remove("text-stone-500", "dark:text-stone-400");
-                activeEl.classList.add("text-[#b61041]", "font-semibold");
-            }
-            const mobileActiveEl = document.querySelector(`#mobileMenu a[href="${path}"]`);
-            if (mobileActiveEl) {
-                mobileActiveEl.classList.add("text-[#b61041]", "font-semibold");
-            }
-        }
-
-        // Intersection Observer for Scroll Reveals
-        const observerOptions = {
-            root: null,
-            rootMargin: "0px",
-            threshold: 0.15
-        };
-        
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("active");
-                    observer.unobserve(entry.target); // Reveal only once
-                }
-            });
-        }, observerOptions);
-        
-        const revealElements = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
-        revealElements.forEach(el => observer.observe(el));
-    });
-</script>
+  <footer class="site-footer"><div class="container site-footer__inner"><a class="brand" href="index.html">Sắc Vị</a><nav class="footer-links" aria-label="Liên kết cuối trang"><a href="lien-he.html">Liên hệ</a><a href="thuc-don.html">Thực đơn</a><a href="lich-su.html">Lịch sử</a></nav><p>© 2026 Sắc Vị. Tinh hoa ẩm thực Việt.</p></div></footer>
+  <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,390 +1,92 @@
 <!DOCTYPE html>
-<html class="light" lang="vi">
+<html lang="vi">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Vùng Miền - Sắc Vị</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "surface-variant": "#e8e2d6",
-                        "on-surface": "#1e1c14",
-                        "inverse-on-surface": "#f6f0e4",
-                        "on-surface-variant": "#5a4042",
-                        "on-error-container": "#93000a",
-                        "error-container": "#ffdad6",
-                        "tertiary-fixed-dim": "#c8c6c2",
-                        "on-error": "#ffffff",
-                        "primary-fixed": "#ffd9dc",
-                        "on-secondary-fixed-variant": "#474746",
-                        "surface-dim": "#dfd9ce",
-                        "tertiary": "#5c5c58",
-                        "inverse-primary": "#ffb2ba",
-                        "on-tertiary": "#ffffff",
-                        "primary-fixed-dim": "#ffb2ba",
-                        "on-tertiary-container": "#fefcf7",
-                        "surface-container-high": "#eee8db",
-                        "on-secondary": "#ffffff",
-                        "surface": "#fff9ed",
-                        "secondary": "#5f5e5e",
-                        "surface-tint": "#b91543",
-                        "outline-variant": "#e2bec0",
-                        "on-primary-container": "#fffbff",
-                        "inverse-surface": "#333028",
-                        "surface-container-low": "#f9f3e7",
-                        "on-secondary-fixed": "#1b1c1c",
-                        "secondary-fixed-dim": "#c8c6c5",
-                        "on-primary-fixed-variant": "#910030",
-                        "secondary-container": "#e4e2e1",
-                        "secondary-fixed": "#e4e2e1",
-                        "on-background": "#1e1c14",
-                        "on-tertiary-fixed-variant": "#474744",
-                        "error": "#ba1a1a",
-                        "tertiary-fixed": "#e4e2dd",
-                        "primary-container": "#d93158",
-                        "on-tertiary-fixed": "#1b1c19",
-                        "surface-container": "#f3ede1",
-                        "surface-container-lowest": "#ffffff",
-                        "background": "#fff9ed",
-                        "on-primary-fixed": "#400010",
-                        "surface-container-highest": "#e8e2d6",
-                        "primary": "#b61041",
-                        "tertiary-container": "#757571",
-                        "outline": "#8e6f72",
-                        "on-secondary-container": "#656464",
-                        "on-primary": "#ffffff",
-                        "surface-bright": "#fff9ed"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0px",
-                        "lg": "0px",
-                        "xl": "0px",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "unit": "8px",
-                        "margin-mobile": "24px",
-                        "gutter": "32px",
-                        "section-gap": "160px",
-                        "margin-desktop": "80px",
-                        "container-max": "1440px"
-                    },
-                    "fontFamily": {
-                        "sans": ["Be Vietnam Pro", "sans-serif"],
-                        "serif": ["Noto Serif", "serif"],
-                        "body-md": ["Be Vietnam Pro"],
-                        "headline-lg": ["Noto Serif"],
-                        "display-xl": ["Noto Serif"],
-                        "body-lg": ["Be Vietnam Pro"],
-                        "headline-md": ["Noto Serif"],
-                        "label-caps": ["Be Vietnam Pro"]
-                    },
-                    "fontSize": {
-                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "400" }],
-                        "display-xl": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "300" }],
-                        "body-lg": ["18px", { "lineHeight": "1.8", "letterSpacing": "0.01em", "fontWeight": "400" }],
-                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "400" }],
-                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "600" }]
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body { background-color: #FEFDF5; }
-        .text-mustard { color: #E9C46A; }
-        .text-brick { color: #E76F51; }
-        .text-leaf { color: #2A9D8F; }
-        .bg-mustard { background-color: #E9C46A; }
-        .bg-brick { background-color: #E76F51; }
-        .bg-leaf { background-color: #2A9D8F; }
-        .border-brick { border-color: #E76F51; }
-        .border-mustard { border-color: #E9C46A; }
-        .border-leaf { border-color: #2A9D8F; }
-
-        /* Custom Scroll Reveal Animations */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 1.2s cubic-bezier(0.215, 0.610, 0.355, 1), transform 1.2s cubic-bezier(0.215, 0.610, 0.355, 1);
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .reveal-left {
-            opacity: 0;
-            transform: translateX(-40px);
-            transition: opacity 1.2s cubic-bezier(0.215, 0.610, 0.355, 1), transform 1.2s cubic-bezier(0.215, 0.610, 0.355, 1);
-        }
-        .reveal-left.active {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        .reveal-right {
-            opacity: 0;
-            transform: translateX(40px);
-            transition: opacity 1.2s cubic-bezier(0.215, 0.610, 0.355, 1), transform 1.2s cubic-bezier(0.215, 0.610, 0.355, 1);
-        }
-        .reveal-right.active {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        /* Animation Delays */
-        .delay-100 { transition-delay: 100ms; animation-delay: 100ms; }
-        .delay-200 { transition-delay: 200ms; animation-delay: 200ms; }
-        .delay-300 { transition-delay: 300ms; animation-delay: 300ms; }
-        .delay-400 { transition-delay: 400ms; animation-delay: 400ms; }
-
-        /* Direct Entrance Animations */
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        .animate-fade-up {
-            animation: fadeUp 1.2s cubic-bezier(0.215, 0.610, 0.355, 1) both;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vùng miền - Sắc Vị</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="text-on-surface font-sans antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">Sắc Vị</a>
+      <nav class="site-nav" aria-label="Điều hướng chính">
+        <a id="nav-index" href="index.html">Trang chủ</a><a id="nav-vung-mien" href="vung-mien.html">Vùng miền</a><a id="nav-thuc-don" href="thuc-don.html">Thực đơn</a><a id="nav-nguyen-lieu" href="nguyen-lieu.html">Nguyên liệu</a><a id="nav-cong-thuc" href="cong-thuc.html">Công thức</a><a id="nav-duong-pho" href="duong-pho.html">Đường phố</a><a id="nav-lich-su" href="lich-su.html">Lịch sử</a><a id="nav-lien-he" href="lien-he.html">Liên hệ</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" type="button" aria-label="Ngôn ngữ"><span class="material-symbols-outlined">language</span></button>
+        <button class="icon-button menu-button" type="button" aria-label="Mở menu" data-menu-toggle><span class="material-symbols-outlined">menu</span></button>
+      </div>
+    </div>
+  </header>
+  <aside class="mobile-nav" id="mobileMenu" aria-label="Điều hướng di động">
+    <div class="mobile-nav__head"><a class="brand" href="index.html">Sắc Vị</a><button class="icon-button" type="button" aria-label="Đóng menu" data-menu-toggle><span class="material-symbols-outlined">close</span></button></div>
+    <nav class="mobile-nav__links"><a href="index.html">Trang chủ</a><a href="vung-mien.html">Vùng miền</a><a href="thuc-don.html">Thực đơn</a><a href="nguyen-lieu.html">Nguyên liệu</a><a href="cong-thuc.html">Công thức</a><a href="duong-pho.html">Đường phố</a><a href="lich-su.html">Lịch sử</a><a href="lien-he.html">Liên hệ</a></nav>
+  </aside>
+  <div class="menu-overlay" id="mobileMenuOverlay" data-menu-toggle></div>
 
-<!-- Navigation Bar -->
-<nav class="bg-[#FAF9F6] dark:bg-stone-950 font-serif tracking-tight text-stone-900 dark:text-stone-50 border-stone-200 dark:border-stone-800 flex justify-between items-center w-full px-8 md:px-16 py-6 border-b z-50 sticky top-0 ease-in-out transition-all">
-    <div class="flex-1">
-        <a href="index.html" class="text-2xl font-serif italic tracking-tighter text-stone-900 dark:text-stone-50">Sắc Vị</a>
-    </div>
-    <div class="hidden xl:flex gap-8 items-center justify-center">
-        <a id="nav-index" class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300" href="index.html">Trang Chủ</a>
-        <a id="nav-vung-mien" class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300" href="vung-mien.html">Vùng Miền</a>
-        <a id="nav-thuc-don" class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300" href="thuc-don.html">Thực Đơn</a>
-        <a id="nav-nguyen-lieu" class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300" href="nguyen-lieu.html">Nguyên Liệu</a>
-        <a id="nav-cong-thuc" class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300" href="cong-thuc.html">Công Thức</a>
-        <a id="nav-duong-pho" class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300" href="duong-pho.html">Đường Phố</a>
-        <a id="nav-lich-su" class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300" href="lich-su.html">Lịch Sử</a>
-        <a id="nav-lien-he" class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-widest text-[10px] hover:text-[#b61041] transition-colors duration-300" href="lien-he.html">Liên Hệ</a>
-    </div>
-    <div class="flex-1 flex justify-end gap-4 text-[#b61041] dark:text-[#F3708D] items-center">
-        <button class="hover:text-stone-900 transition-colors duration-300">
-            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">language</span>
-        </button>
-        <button class="hover:text-stone-900 transition-colors duration-300">
-            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">search</span>
-        </button>
-        <button onclick="toggleMobileMenu()" class="xl:hidden hover:text-stone-900 transition-colors duration-300">
-            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0; font-size: 28px;">menu</span>
-        </button>
-    </div>
-</nav>
-
-<!-- Mobile Menu Drawer -->
-<div id="mobileMenu" class="fixed inset-y-0 right-0 z-50 w-full max-w-xs bg-background border-l border-outline-variant shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out xl:hidden flex flex-col p-8">
-    <div class="flex justify-between items-center mb-8">
-        <span class="font-serif italic text-2xl text-stone-950">Sắc Vị</span>
-        <button onclick="toggleMobileMenu()" class="text-stone-950 hover:text-primary transition-colors focus:outline-none">
-            <span class="material-symbols-outlined text-3xl">close</span>
-        </button>
-    </div>
-    <nav class="flex flex-col gap-5 text-sm font-sans uppercase tracking-widest">
-        <a href="index.html" class="hover:text-primary transition-colors py-2 border-b border-stone-100/50">Trang Chủ</a>
-        <a href="vung-mien.html" class="hover:text-primary transition-colors py-2 border-b border-stone-100/50">Vùng Miền</a>
-        <a href="thuc-don.html" class="hover:text-primary transition-colors py-2 border-b border-stone-100/50">Thực Đơn</a>
-        <a href="nguyen-lieu.html" class="hover:text-primary transition-colors py-2 border-b border-stone-100/50">Nguyên Liệu</a>
-        <a href="cong-thuc.html" class="hover:text-primary transition-colors py-2 border-b border-stone-100/50">Công Thức</a>
-        <a href="duong-pho.html" class="hover:text-primary transition-colors py-2 border-b border-stone-100/50">Đường Phố</a>
-        <a href="lich-su.html" class="hover:text-primary transition-colors py-2 border-b border-stone-100/50">Lịch Sử</a>
-        <a href="lien-he.html" class="hover:text-primary transition-colors py-2 border-b border-stone-100/50">Liên Hệ</a>
-    </nav>
-</div>
-<!-- Mobile Menu Overlay -->
-<div id="mobileMenuOverlay" class="fixed inset-0 z-40 bg-stone-950/20 backdrop-blur-sm hidden transition-opacity duration-300 xl:hidden" onclick="toggleMobileMenu()"></div>
-
-<main>
-    <!-- Hero Map Section -->
-    <section class="w-full max-w-container-max mx-auto px-margin-desktop py-24 min-h-[819px] flex flex-col items-center justify-center relative">
-        <h1 class="font-display-xl text-display-xl text-on-background mb-16 text-center italic animate-fade-up">Bản Đồ Vị Giác</h1>
-        <div class="relative w-full max-w-3xl aspect-[2/3] mx-auto">
-            <!-- Map Background -->
-            <img alt="Bản đồ trừu tượng Việt Nam" class="w-full h-full object-cover opacity-30 grayscale contrast-150 mix-blend-multiply rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbjgnIHwVeQLxr0MuTHTyB3ldI2FDeKSUtYrYBH3Oo6WUrkYfVyNtidfuykf2LeyZOEd0wxdM-Uqm3-pVXhkBwkvobZQ4q5vqExqP6a8Ry8JjjO75E4MviOwqkO5F4X-ikZt6CRqj0rFWnK1PXWA4Kyx0QmtKPHNfjjO51IXJ_kP8Vn_KQMpx5RB0iCkVzPTrvy4bkfqZbYqTCuw2tpBfOQ3RSJnd3uVW3w_QRM9LBvRGTPlekOFK8lpAmIQFq8skZmz0o7q67pA"/>
-            
-            <!-- Hotspot: North -->
-            <div class="absolute top-[20%] left-[45%] group z-10 cursor-pointer">
-                <div class="w-3 h-3 bg-primary rounded-full ring-4 ring-primary-fixed/50 group-hover:scale-150 transition-transform duration-500 relative">
-                    <!-- Popup -->
-                    <div class="absolute top-1/2 left-8 -translate-y-1/2 w-48 bg-surface p-6 opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 shadow-[0_32px_64px_-12px_rgba(30,28,20,0.15)] pointer-events-none border border-tertiary-fixed before:content-[''] before:absolute before:w-8 before:h-[1px] before:bg-primary before:-left-8 before:top-1/2">
-                        <span class="font-label-caps text-label-caps text-primary block mb-2">MIỀN BẮC</span>
-                        <h3 class="font-headline-md text-headline-md text-on-background text-xl leading-tight">Tinh Tế &amp;<br/>Hài Hòa</h3>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Hotspot: Central -->
-            <div class="absolute top-[50%] left-[65%] group z-10 cursor-pointer">
-                <div class="w-3 h-3 bg-primary rounded-full ring-4 ring-primary-fixed/50 group-hover:scale-150 transition-transform duration-500 relative">
-                    <!-- Popup -->
-                    <div class="absolute top-1/2 right-8 -translate-y-1/2 w-48 bg-surface p-6 opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 shadow-[0_32px_64px_-12px_rgba(30,28,20,0.15)] pointer-events-none border border-tertiary-fixed after:content-[''] after:absolute after:w-8 after:h-[1px] after:bg-primary after:-right-8 after:top-1/2 text-right">
-                        <span class="font-label-caps text-label-caps text-primary block mb-2">MIỀN TRUNG</span>
-                        <h3 class="font-headline-md text-headline-md text-on-background text-xl leading-tight">Đậm Đà &amp;<br/>Cay Nồng</h3>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Hotspot: South -->
-            <div class="absolute top-[80%] left-[40%] group z-10 cursor-pointer">
-                <div class="w-3 h-3 bg-primary rounded-full ring-4 ring-primary-fixed/50 group-hover:scale-150 transition-transform duration-500 relative">
-                    <!-- Popup -->
-                    <div class="absolute top-1/2 left-8 -translate-y-1/2 w-48 bg-surface p-6 opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 shadow-[0_32px_64px_-12px_rgba(30,28,20,0.15)] pointer-events-none border border-tertiary-fixed before:content-[''] before:absolute before:w-8 before:h-[1px] before:bg-primary before:-left-8 before:top-1/2">
-                        <span class="font-label-caps text-label-caps text-primary block mb-2">MIỀN NAM</span>
-                        <h3 class="font-headline-md text-headline-md text-on-background text-xl leading-tight">Ngọt Ngào &amp;<br/>Sống Động</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <main>
+    <section class="page-hero">
+      <img class="page-hero__image" src="assets/img/bua-com.jpg" alt="Mâm cơm Việt Nam">
+      <div class="page-hero__content">
+        <span class="eyebrow">Bản đồ hương vị</span>
+        <h1>Ẩm thực ba miền</h1>
+        <p>Mỗi vùng đất có khí hậu, thổ nhưỡng và nếp sống riêng, tạo nên những khẩu vị không thể trộn lẫn.</p>
+      </div>
     </section>
 
-    <!-- Editorial Content -->
-    <section class="max-w-container-max mx-auto px-margin-desktop py-32">
-        <!-- Region: North -->
-        <div class="grid grid-cols-12 gap-gutter mb-32 items-center">
-            <div class="col-span-12 md:col-span-7 reveal-left">
-                <img alt="Bát Phở Bắc ngon tao nhã" class="w-full h-auto object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700 shadow-md" src="assets/img/pho-viet.jpg"/>
-            </div>
-            <div class="col-span-12 md:col-span-4 md:col-start-9 flex flex-col justify-center reveal-right">
-                <span class="font-label-caps text-label-caps text-tertiary mb-6 relative pl-6 before:content-[''] before:absolute before:w-4 before:h-[1px] before:bg-tertiary before:left-0 before:top-1/2">BẮC BỘ</span>
-                <h2 class="font-headline-lg text-headline-lg text-on-background mb-8 leading-tight">Nét Thanh Tao Của Mùa Thu Hà Nội</h2>
-                <p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
-                    Ẩm thực miền Bắc chuộng sự tinh tế, thanh nhạt và chú trọng vào độ tươi ngon tự nhiên của nguyên liệu. Nước dùng trong vắt của bát Phở, vị đậm đà vừa phải của mắm tôm, hay chút chua thanh của sấu là những nốt hương đặc trưng không thể nhầm lẫn. Không cầu kỳ trong gia vị tẩm ướp, món ăn miền Bắc như một bản nhạc dạo êm đềm, đòi hỏi người thưởng thức phải chậm rãi để cảm nhận trọn vẹn.
-                </p>
-                <a class="inline-flex items-center gap-2 font-label-caps text-label-caps text-primary hover:text-on-background transition-colors w-fit group" href="thuc-don.html#mon-chinh">
-                    Khám phá món ăn miền Bắc
-                    <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
-                </a>
-            </div>
-        </div>
-
-        <!-- Region: Central -->
-        <div class="grid grid-cols-12 gap-gutter mb-32 items-center">
-            <div class="col-span-12 md:col-span-4 md:col-start-2 flex flex-col justify-center z-10 order-2 md:order-1 reveal-left">
-                <span class="font-label-caps text-label-caps text-tertiary mb-6 relative pl-6 before:content-[''] before:absolute before:w-4 before:h-[1px] before:bg-tertiary before:left-0 before:top-1/2">TRUNG BỘ</span>
-                <h2 class="font-headline-lg text-headline-lg text-on-background mb-8 leading-tight">Bản Hòa Tấu Của Nắng Và Gió</h2>
-                <p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
-                    Ẩm thực miền Trung mang đậm tính cách con người nơi đây: chắt chiu, đậm đà và bùng nổ. Gia vị được sử dụng mạnh tay, đặc biệt là vị cay nồng của ớt và vị mặn mòi của các loại mắm tôm, mắm ruốc. Những món ăn mang màu sắc rực rỡ, thiên về gam đỏ sậm, như một lời khẳng định về sức sống mãnh liệt, để lại dư vị sâu sắc khó phai.
-                </p>
-                <a class="inline-flex items-center gap-2 font-label-caps text-label-caps text-primary hover:text-on-background transition-colors w-fit group" href="thuc-don.html#mon-chinh">
-                    Khám phá món ăn miền Trung
-                    <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
-                </a>
-            </div>
-            <div class="col-span-12 md:col-span-6 md:col-start-7 order-1 md:order-2 reveal-right">
-                <img alt="Bún bò Huế rực rỡ sắc màu" class="w-full h-[600px] object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700 shadow-md" src="assets/img/bun-bo-hue.png"/>
-            </div>
-        </div>
-
-        <!-- Region: South -->
-        <div class="grid grid-cols-12 gap-gutter items-start">
-            <div class="col-span-12 md:col-span-10 md:col-start-2 relative reveal">
-                <img alt="Phong cảnh chợ nổi Miền Tây sông nước" class="w-full h-[550px] object-cover shadow-sm" src="assets/img/south.png"/>
-                <div class="md:absolute -bottom-24 right-0 w-full md:w-[600px] bg-surface p-12 shadow-[0_32px_64px_-12px_rgba(30,28,20,0.1)] border border-tertiary-fixed reveal delay-200">
-                    <span class="font-label-caps text-label-caps text-tertiary mb-6 relative pl-6 before:content-[''] before:absolute before:w-4 before:h-[1px] before:bg-tertiary before:left-0 before:top-1/2">NAM BỘ</span>
-                    <h2 class="font-headline-lg text-headline-lg text-on-background mb-6 leading-tight">Sự Phóng Khoáng Của Vùng Đất Chín Rồng</h2>
-                    <p class="font-body-md text-body-md text-on-surface-variant mb-8">
-                        Chịu ảnh hưởng từ nền nông nghiệp trù phú và sự giao thoa văn hóa đa dạng, ẩm thực miền Nam mang đặc trưng ngọt ngào, béo ngậy và vô cùng phong phú. Vị ngọt của đường, nước cốt dừa xuất hiện trong hầu hết các món ăn. Sự phóng khoáng thể hiện qua cách nêm nếm thoải mái, kết hợp nguyên liệu táo bạo, tạo nên một bức tranh ẩm thực đa sắc, rực rỡ và tràn đầy nhựa sống.
-                    </p>
-                    <a class="inline-flex items-center gap-2 font-label-caps text-label-caps text-primary hover:text-on-background transition-colors w-fit group" href="thuc-don.html#mon-chinh">
-                        Khám phá món ăn miền Nam
-                        <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
-                    </a>
-                </div>
-            </div>
-        </div>
+    <section class="section">
+      <div class="container">
+        <article class="feature">
+          <div class="feature__image reveal-left"><img src="assets/img/north.png" alt="Món ăn miền Bắc"></div>
+          <div class="feature__content reveal-right">
+            <span class="eyebrow">Miền Bắc</span>
+            <h2>Thanh, tinh và giữ vị gốc</h2>
+            <p>Ẩm thực miền Bắc đề cao sự hài hòa. Gia vị được dùng vừa phải để tôn nguyên liệu, nước dùng trong và hương thơm tự nhiên.</p>
+            <p>Phở Hà Nội, bún chả, chả cá Lã Vọng và bánh cuốn là những đại diện tiêu biểu cho tinh thần ấy.</p>
+          </div>
+        </article>
+        <article class="feature feature--reverse">
+          <div class="feature__image reveal-right"><img src="assets/img/central.png" alt="Món ăn miền Trung"></div>
+          <div class="feature__content reveal-left">
+            <span class="eyebrow">Miền Trung</span>
+            <h2>Đậm đà, cay nồng và cầu kỳ</h2>
+            <p>Miền Trung gói trong món ăn sự khắc nghiệt của nắng gió và sự tinh tế của cung đình. Món ăn thường nhỏ, sắc nét và giàu tầng vị.</p>
+            <p>Bún bò Huế, mì Quảng, bánh bèo, bánh xèo và các loại mắm tạo nên dấu ấn mạnh mẽ.</p>
+          </div>
+        </article>
+        <article class="feature">
+          <div class="feature__image reveal-left"><img src="assets/img/south.png" alt="Món ăn miền Nam"></div>
+          <div class="feature__content reveal-right">
+            <span class="eyebrow">Miền Nam</span>
+            <h2>Phóng khoáng, ngọt lành và nhiều rau trái</h2>
+            <p>Ẩm thực miền Nam rộng mở với sản vật sông nước, vườn cây và giao thương. Vị ngọt dịu, rau sống phong phú và nước chấm đa dạng là điểm nhận diện.</p>
+            <p>Cơm tấm, cá kho tộ, lẩu mắm, gỏi cuốn và chè là những món ăn gần gũi với đời sống thường ngày.</p>
+          </div>
+        </article>
+        <section class="section">
+          <div class="section-heading reveal"><span class="eyebrow">Cách nhận diện</span><h2>Bốn dấu hiệu của khẩu vị vùng miền</h2></div>
+          <div class="note-grid">
+            <article class="note-card reveal"><h3>Gia vị</h3><p>Miền Bắc tiết chế, miền Trung sắc cạnh, miền Nam phóng khoáng hơn với vị ngọt.</p></article>
+            <article class="note-card reveal"><h3>Rau ăn kèm</h3><p>Mỗi vùng có bộ rau thơm riêng, quyết định cảm giác tươi và hậu vị.</p></article>
+            <article class="note-card reveal"><h3>Nước dùng</h3><p>Phở, bún bò, hủ tiếu đều khác nhau ở xương, gia vị và thời gian ninh.</p></article>
+            <article class="note-card reveal"><h3>Nước chấm</h3><p>Nước mắm, mắm nêm, tương và muối ớt tạo điểm nhấn cuối cùng.</p></article>
+          </div>
+        </section>
+      </div>
     </section>
-</main>
+  </main>
 
-<!-- Footer Component -->
-<footer class="bg-[#FAF9F6] dark:bg-stone-950 border-t border-stone-200 dark:border-stone-800 flex flex-col md:flex-row justify-between items-center w-full px-8 md:px-16 py-12 mt-32 gap-8 text-[10px] tracking-widest uppercase">
-    <div class="text-xl font-serif italic tracking-[0.2em] text-stone-900 dark:text-stone-50">SẮC VỊ</div>
-    <div class="flex flex-wrap justify-center gap-6 md:gap-8">
-        <a class="text-stone-400 dark:text-stone-600 hover:text-[#b61041] transition-opacity duration-300" href="#">Bảo mật</a>
-        <a class="text-stone-400 dark:text-stone-600 hover:text-[#b61041] transition-opacity duration-300" href="#">Điều khoản</a>
-        <a class="text-stone-400 dark:text-stone-600 hover:text-[#b61041] transition-opacity duration-300" href="lien-he.html">Liên hệ</a>
-        <a class="text-stone-400 dark:text-stone-600 hover:text-[#b61041] transition-opacity duration-300" href="#">Bản tin</a>
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <a class="brand" href="index.html">Sắc Vị</a>
+      <nav class="footer-links" aria-label="Liên kết cuối trang"><a href="lien-he.html">Liên hệ</a><a href="thuc-don.html">Thực đơn</a><a href="lich-su.html">Lịch sử</a></nav>
+      <p>© 2026 Sắc Vị. Tinh hoa ẩm thực Việt.</p>
     </div>
-    <div class="text-stone-400 dark:text-stone-600">
-        © 2024 SẮC VỊ. KHÚC CA DI SẢN ẨM THỰC VIỆT.
-    </div>
-</footer>
-
-<script>
-    function toggleMobileMenu() {
-        const menu = document.getElementById('mobileMenu');
-        const overlay = document.getElementById('mobileMenuOverlay');
-        if (menu.classList.contains('translate-x-full')) {
-            menu.classList.remove('translate-x-full');
-            menu.classList.add('translate-x-0');
-            overlay.classList.remove('hidden');
-        } else {
-            menu.classList.add('translate-x-full');
-            menu.classList.remove('translate-x-0');
-            overlay.classList.add('hidden');
-        }
-    }
-    document.addEventListener("DOMContentLoaded", () => {
-        const path = window.location.pathname.split("/").pop() || "index.html";
-        const navMap = {
-            "index.html": "nav-index",
-            "vung-mien.html": "nav-vung-mien",
-            "thuc-don.html": "nav-thuc-don",
-            "nguyen-lieu.html": "nav-nguyen-lieu",
-            "cong-thuc.html": "nav-cong-thuc",
-            "duong-pho.html": "nav-duong-pho",
-            "lich-su.html": "nav-lich-su",
-            "lien-he.html": "nav-lien-he"
-        };
-        const activeId = navMap[path];
-        if (activeId) {
-            const activeEl = document.getElementById(activeId);
-            if (activeEl) {
-                activeEl.classList.remove("text-stone-500", "dark:text-stone-400");
-                activeEl.classList.add("text-[#b61041]", "font-semibold");
-            }
-            const mobileActiveEl = document.querySelector(`#mobileMenu a[href="${path}"]`);
-            if (mobileActiveEl) {
-                mobileActiveEl.classList.add("text-[#b61041]", "font-semibold");
-            }
-        }
-
-        // Intersection Observer for Scroll Reveals
-        const observerOptions = {
-            root: null,
-            rootMargin: "0px",
-            threshold: 0.15
-        };
-        
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("active");
-                    observer.unobserve(entry.target); // Reveal only once
-                }
-            });
-        }, observerOptions);
-        
-        const revealElements = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
-        revealElements.forEach(el => observer.observe(el));
-    });
-</script>
+  </footer>
+  <script src="js/main.js"></script>
 </body>
 </html>
