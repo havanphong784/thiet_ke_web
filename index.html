@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sắc Vị - Tinh hoa ẩm thực Việt Nam</title>
+  <title>Sắc Vị - Hành trình qua hương vị ba miền</title>
   <meta name="description" content="Sắc Vị - Khám phá ẩm thực Việt Nam qua hương vị ba miền Bắc - Trung - Nam. Công thức, nguyên liệu và câu chuyện văn hóa sau mỗi món ăn.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -52,103 +52,106 @@
 
   <main>
     <!-- Hero -->
-    <section class="hero">
-      <video class="hero__media" src="assets/video/cooking.mp4" autoplay muted loop playsinline poster="assets/img/hero_pho.png"></video>
+    <section class="hero hero--tall">
+      <img class="hero__media" src="assets/img/stitch/hero-kitchen.jpg" alt="Traditional Vietnamese kitchen scene">
+      <div class="hero__overlay"></div>
       <div class="hero__content">
-        <span class="eyebrow">Ẩm thực Việt Nam</span>
+        <span class="eyebrow" style="color: var(--gold);">ẨM THỰC VIỆT NAM</span>
         <h1>Hành trình qua hương vị ba miền</h1>
-        <p>Từ nồi phở nghi ngút khói đến mâm cơm gia đình, Sắc Vị kể câu chuyện văn hóa Việt bằng món ăn, nguyên liệu và ký ức.</p>
+        <p>Tinh hoa ẩm thực chắt lọc từ những góc bếp xưa.</p>
       </div>
     </section>
 
-    <!-- Giới thiệu -->
+    <!-- Intro -->
     <section class="section">
       <div class="container">
         <div class="section-heading section-heading--center reveal">
-          <span class="eyebrow">Khám phá</span>
-          <h2>Một nền ẩm thực cân bằng, tinh tế và giàu bản sắc</h2>
-          <p>Ẩm thực Việt kết hợp vị chua, cay, mặn, ngọt cùng rau thơm, nước dùng và kỹ thuật chế biến truyền thống.</p>
+          <h2>Hương Vị Ba Miền</h2>
+          <div style="height: 1px; width: 96px; background: rgba(194,78,58,0.3); margin: 16px auto 0;"></div>
         </div>
-        <div class="card-grid card-grid--three">
-          <article class="card reveal">
-            <div class="card__image"><img src="assets/img/north.png" alt="Ẩm thực miền Bắc"></div>
-            <div class="card__body">
-              <h3>Miền Bắc</h3>
-              <p>Thanh nhã, chuẩn mực và chú trọng vị nguyên bản như phở, bún chả, chả cá.</p>
+        
+        <div class="card-grid card-grid--three mb-24">
+          <article class="card editorial-border reveal" data-card-link="vung-mien.html#mien-bac" tabindex="0" role="link">
+            <div class="card__image"><img src="assets/img/stitch/north-dish.jpg" alt="Miền Bắc"></div>
+            <div class="card__body text-center" style="padding: 32px;">
+              <h3 style="font-style: italic; font-size: 24px; color: var(--ink); margin-bottom: 12px;">Miền Bắc</h3>
+              <p>Nét thanh tao và tinh tế trong từng gia vị.</p>
             </div>
           </article>
-          <article class="card reveal delay-100">
-            <div class="card__image"><img src="assets/img/central.png" alt="Ẩm thực miền Trung"></div>
-            <div class="card__body">
-              <h3>Miền Trung</h3>
-              <p>Đậm đà, cay nồng và cầu kỳ trong trình bày, nổi bật với bún bò Huế, bánh xèo, cơm hến.</p>
+          <article class="card editorial-border reveal delay-100" data-card-link="vung-mien.html#mien-trung" tabindex="0" role="link">
+            <div class="card__image"><img src="assets/img/stitch/central-dish.jpg" alt="Miền Trung"></div>
+            <div class="card__body text-center" style="padding: 32px;">
+              <h3 style="font-style: italic; font-size: 24px; color: var(--ink); margin-bottom: 12px;">Miền Trung</h3>
+              <p>Đậm đà, cay nồng như tình người xứ Huế.</p>
             </div>
           </article>
-          <article class="card reveal delay-200">
-            <div class="card__image"><img src="assets/img/south.png" alt="Ẩm thực miền Nam"></div>
-            <div class="card__body">
-              <h3>Miền Nam</h3>
-              <p>Phóng khoáng, nhiều rau trái, vị ngọt dịu và tinh thần giao hòa sông nước.</p>
+          <article class="card editorial-border reveal delay-200" data-card-link="vung-mien.html#mien-nam" tabindex="0" role="link">
+            <div class="card__image"><img src="assets/img/stitch/south-dish.jpg" alt="Miền Nam"></div>
+            <div class="card__body text-center" style="padding: 32px;">
+              <h3 style="font-style: italic; font-size: 24px; color: var(--ink); margin-bottom: 12px;">Miền Nam</h3>
+              <p>Sự trù phú và ngọt ngào của vùng đất phương Nam.</p>
             </div>
           </article>
         </div>
-        <div class="stat-strip reveal">
-          <div class="stat-item"><strong>3</strong><span>Miền hương vị</span></div>
-          <div class="stat-item"><strong>54</strong><span>Dân tộc</span></div>
-          <div class="stat-item"><strong>20+</strong><span>Món tiêu biểu</span></div>
-          <div class="stat-item"><strong>100%</strong><span>Ảnh địa phương</span></div>
+
+        <div class="stat-strip editorial-border-t editorial-border-b reveal" style="border-right: none; border-left: none; background: rgba(194,78,58,0.14);">
+          <div class="stat-item" style="padding: 48px 24px;"><strong>3</strong><span>Miền hương vị</span></div>
+          <div class="stat-item" style="padding: 48px 24px;"><strong>54</strong><span>Dân tộc</span></div>
+          <div class="stat-item" style="padding: 48px 24px;"><strong>20+</strong><span>Món tiêu biểu</span></div>
+          <div class="stat-item" style="padding: 48px 24px;"><strong>100%</strong><span>Ảnh địa phương</span></div>
         </div>
       </div>
     </section>
 
-    <!-- Feature: Phở -->
+    <!-- Feature Split -->
     <section class="section section--warm">
       <div class="container">
         <div class="feature">
-          <div class="feature__image reveal-left"><img src="assets/img/pho-viet.jpg" alt="Tô phở Việt Nam"></div>
+          <div class="feature__image editorial-border reveal-left"><img src="assets/img/stitch/pho-hero.jpg" alt="Tô phở Việt Nam"></div>
           <div class="feature__content reveal-right">
-            <span class="eyebrow">Món biểu tượng</span>
-            <h2>Phở là bản giao hưởng của nước dùng, bánh phở và thảo mộc</h2>
-            <p>Một tô phở ngon bắt đầu từ nước dùng trong, ngọt xương, thơm quế hồi và được cân bằng bằng chanh, ớt, rau thơm.</p>
+            <span class="eyebrow" style="margin-bottom: 8px;">Món biểu tượng</span>
+            <h2 style="font-size: clamp(32px, 5vw, 48px); line-height: 1.15;">Phở - Linh hồn của bàn tiệc Việt</h2>
+            <div style="height: 1px; width: 64px; background: rgba(194,78,58,0.3); margin-bottom: 16px;"></div>
+            <p style="margin-bottom: 24px;">Không chỉ là một món ăn, Phở là một bản giao hưởng của hương vị. Nước dùng được ninh hầm từ xương bò và thảo mộc trong nhiều giờ liền, tạo nên vị ngọt thanh tao và hương thơm đặc trưng không thể lẫn vào đâu được. Từng sợi bánh phở mềm dai, kết hợp cùng những lát thịt bò tươi ngon, điểm xuyết thêm chút hành lá và rau thơm, mang đến một trải nghiệm ẩm thực trọn vẹn, đánh thức mọi giác quan.</p>
             <a class="button" href="cong-thuc.html">Xem công thức</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Story panel -->
+    <!-- Story Panel -->
     <section class="section">
       <div class="container">
-        <div class="story-panel reveal">
-          <div class="story-panel__image"><img src="assets/img/nghe-nhan.jpg" alt="Nghệ nhân chế biến món Việt"></div>
-          <div class="story-panel__content">
-            <span class="eyebrow">Sau căn bếp</span>
-            <h2>Câu chuyện nằm trong tay người nấu</h2>
-            <p>Mỗi món ăn giữ lại một thói quen: cách nướng hành cho thơm, cách giã nước chấm, cách chọn rau theo mùa và cách dọn mâm cơm cho đủ vị.</p>
-            <p>Sắc Vị gom lại những chi tiết nhỏ đó để người xem không chỉ biết món ngon, mà còn hiểu nếp sống phía sau món ăn.</p>
-            <a class="button button--ghost" href="lich-su.html">Đọc lịch sử</a>
+        <div class="story-panel editorial-border reveal" style="padding: 0; gap: 0;">
+          <div class="story-panel__image" style="height: 100%;">
+            <img src="assets/img/stitch/goi-cuon-artisan.jpg" alt="Nghệ nhân cuốn gỏi cuốn" style="height: 100%;">
+          </div>
+          <div class="story-panel__content" style="padding: 64px 48px;">
+            <h2 style="font-size: 36px; color: var(--ink);">Câu chuyện nằm trong tay người nấu</h2>
+            <p style="margin-bottom: 24px;">Mỗi món ăn Việt là một câu chuyện được kể bằng đôi bàn tay khéo léo của người đầu bếp. Đó là sự kế thừa những bí quyết gia truyền, là sự thấu hiểu từng nguyên liệu, và là tình yêu được gửi gắm qua từng công đoạn chế biến.</p>
+            <a class="button button--outline" href="lich-su.html">Khám phá thêm</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Gợi ý hôm nay -->
-    <section class="section">
+    <!-- Today's picks -->
+    <section class="section section--warm">
       <div class="container">
-        <div class="section-heading reveal">
+        <div class="section-heading section-heading--center reveal">
           <span class="eyebrow">Gợi ý hôm nay</span>
           <h2>Những món ăn được yêu thích</h2>
         </div>
         <div class="card-grid card-grid--three">
-          <article class="card reveal" data-card-link="thuc-don.html#mon-nuoc" tabindex="0" role="link">
+          <article class="card editorial-border reveal" data-card-link="thuc-don.html#mon-nuoc" tabindex="0" role="link">
             <div class="card__image"><img src="assets/img/bun-bo-hue.jpg" alt="Bún bò Huế"></div>
             <div class="card__body"><h3>Bún bò Huế</h3><p>Nước dùng đậm vị sả, mắm ruốc và sắc đỏ hấp dẫn.</p></div>
           </article>
-          <article class="card reveal delay-100" data-card-link="thuc-don.html#khai-vi" tabindex="0" role="link">
+          <article class="card editorial-border reveal delay-100" data-card-link="thuc-don.html#khai-vi" tabindex="0" role="link">
             <div class="card__image"><img src="assets/img/goi-cuon-tom-thit.jpg" alt="Gỏi cuốn tôm thịt"></div>
             <div class="card__body"><h3>Gỏi cuốn</h3><p>Tươi nhẹ, thanh mát, ăn cùng nước chấm đậm đà.</p></div>
           </article>
-          <article class="card reveal delay-200" data-card-link="duong-pho.html" tabindex="0" role="link">
+          <article class="card editorial-border reveal delay-200" data-card-link="duong-pho.html" tabindex="0" role="link">
             <div class="card__image"><img src="assets/img/banh-mi.jpg" alt="Bánh mì Việt Nam"></div>
             <div class="card__body"><h3>Bánh mì</h3><p>Lớp vỏ giòn, nhân phong phú và tinh thần đường phố Việt.</p></div>
           </article>
@@ -156,33 +159,46 @@
       </div>
     </section>
 
-    <!-- Tips ăn Việt -->
-    <section class="section section--warm">
+    <!-- Tips Grid -->
+    <section class="section">
       <div class="container">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Trải nghiệm</span>
-          <h2>Ăn món Việt như người địa phương</h2>
+        <div class="section-heading section-heading--center reveal">
+          <h2>Bí Quyết Bếp Nước</h2>
+          <div style="height: 1px; width: 64px; background: rgba(102,82,77,0.3); margin: 16px auto 0;"></div>
         </div>
         <div class="note-grid">
-          <article class="note-card reveal"><h3>Ăn cùng rau</h3><p>Rau sống không chỉ trang trí. Rau giúp cân bằng béo, cay, mặn và làm món ăn nhẹ hơn.</p></article>
-          <article class="note-card reveal delay-100"><h3>Nước chấm riêng</h3><p>Mỗi vùng có cách pha nước chấm khác nhau, từ nước mắm chua ngọt đến mắm nêm.</p></article>
-          <article class="note-card reveal delay-200"><h3>Theo mùa</h3><p>Món ngon nhất thường đi cùng mùa rau, mùa cá và thời tiết của vùng đất đó.</p></article>
-          <article class="note-card reveal delay-300"><h3>Chia sẻ</h3><p>Mâm cơm Việt đặt ở giữa bàn để mọi người cùng gắp, cùng nêm và cùng trò chuyện.</p></article>
+          <article class="note-card editorial-border reveal group" style="background: var(--paper-warm); cursor: pointer; transition: background 0.3s ease;" onmouseover="this.style.background='var(--white)'" onmouseout="this.style.background='var(--paper-warm)'">
+            <h3 style="font-weight: 600; font-family: var(--font-display);">Mẹo chọn cá</h3>
+            <p>Cách nhận biết cá tươi ngon cho nồi kho tộ chuẩn vị miền Nam.</p>
+          </article>
+          <article class="note-card editorial-border reveal delay-100 group" style="background: var(--paper-warm); cursor: pointer; transition: background 0.3s ease;" onmouseover="this.style.background='var(--white)'" onmouseout="this.style.background='var(--paper-warm)'">
+            <h3 style="font-weight: 600; font-family: var(--font-display);">Cách ủ mắm</h3>
+            <p>Bí quyết lên men truyền thống để có giọt nước mắm nhĩ thơm lừng.</p>
+          </article>
+          <article class="note-card editorial-border reveal delay-200 group" style="background: var(--paper-warm); cursor: pointer; transition: background 0.3s ease;" onmouseover="this.style.background='var(--white)'" onmouseout="this.style.background='var(--paper-warm)'">
+            <h3 style="font-weight: 600; font-family: var(--font-display);">Lửa trong bếp</h3>
+            <p>Nghệ thuật điều chỉnh nhiệt độ khi ninh xương nấu phở.</p>
+          </article>
+          <article class="note-card editorial-border reveal delay-300 group" style="background: var(--paper-warm); cursor: pointer; transition: background 0.3s ease;" onmouseover="this.style.background='var(--white)'" onmouseout="this.style.background='var(--paper-warm)'">
+            <h3 style="font-weight: 600; font-family: var(--font-display);">Gia vị thảo mộc</h3>
+            <p>Sự kết hợp tinh tế giữa các loại thảo mộc trong ẩm thực Việt.</p>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- Newsletter -->
-    <section class="newsletter">
-      <div class="container">
-        <h2>Nhận câu chuyện ẩm thực mỗi tuần</h2>
-        <p>Cập nhật món ngon, nguyên liệu theo mùa và các địa chỉ ăn uống đáng thử.</p>
-        <form class="newsletter__form">
-          <input type="email" placeholder="Email của bạn" aria-label="Email">
-          <button class="button" type="submit">Đăng ký</button>
+    <section class="newsletter reveal" style="background: var(--primary); padding: 80px 0; text-align: center;">
+      <div class="container" style="max-width: 760px;">
+        <h2 style="color: var(--white); margin-bottom: 16px; font-family: var(--font-display); font-size: clamp(24px, 4vw, 36px);">Nhận Công Thức Mới Nhất</h2>
+        <p style="color: rgba(255,255,255,0.8); margin-bottom: 32px;">Đăng ký để nhận những câu chuyện ẩm thực và công thức nấu ăn hàng tuần.</p>
+        <form class="newsletter__form" style="display: flex; gap: 16px; justify-content: center; max-width: 480px; margin: 0 auto; flex-wrap: wrap;">
+          <input type="email" placeholder="Địa chỉ email của bạn" aria-label="Email" required style="background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.3); color: var(--white); padding: 12px 8px; flex: 1; outline: none; border-radius: 0; min-width: 200px;">
+          <button class="button" type="submit" style="background: var(--white); color: var(--primary); border: none;">Đăng ký</button>
         </form>
       </div>
     </section>
+
   </main>
 
   <footer class="site-footer">

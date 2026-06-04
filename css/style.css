@@ -24,7 +24,7 @@
 
   /* Typography */
   --font-body:    "Be Vietnam Pro", Arial, sans-serif;
-  --font-display: "Noto Serif", Georgia, serif;
+  --font-display: "Playfair Display", Georgia, serif;
 
   /* Layout */
   --container:    1180px;
@@ -61,7 +61,7 @@ body.is-locked {
 h1, h2, h3, h4 {
   margin: 0;
   font-family: var(--font-display);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.15;
 }
 
@@ -239,6 +239,17 @@ ul { margin: 0; padding: 0; list-style: none; }
 .border-top-primary  { border-top: 2px solid var(--primary); }
 .border-muted  { border: 1px solid var(--line); }
 .rounded-full  { border-radius: 9999px; }
+
+/* Editorial borders from Stitch design system */
+.editorial-border {
+  border: 1px solid rgba(194,78,58,0.14);
+}
+.editorial-border-b {
+  border-bottom: 1px solid rgba(194,78,58,0.14);
+}
+.editorial-border-t {
+  border-top: 1px solid rgba(194,78,58,0.14);
+}
 
 /* ── 11. TEXT ALIGNMENT ───────────────────────────────────── */
 .text-center { text-align: center; }
@@ -562,6 +573,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .card {
   background: var(--white);
   border: 1px solid rgba(222, 192, 186, 0.72);
+  border-radius: 0; /* Sharp corners per brand guidelines */
   transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
   cursor: pointer;
 }
