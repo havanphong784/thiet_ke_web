@@ -3,215 +3,147 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sắc Vị - Hành trình qua hương vị ba miền</title>
-  <meta name="description" content="Sắc Vị - Khám phá ẩm thực Việt Nam qua hương vị ba miền Bắc - Trung - Nam. Công thức, nguyên liệu và câu chuyện văn hóa sau mỗi món ăn.">
+  <title>Sắc Vị | Culinary Avant-Garde</title>
+  <meta name="description" content="Sắc Vị - Khám phá ẩm thực Việt Nam qua lăng kính nghệ thuật trừu tượng và tối giản.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&family=Syne:wght@400;700;800&family=Geist:wght@400;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container site-header__inner">
-      <a class="brand" href="index.html">Sắc Vị</a>
+      <a class="brand" href="index.html">SẮC VỊ</a>
       <nav class="site-nav" aria-label="Điều hướng chính">
-        <a id="nav-index" href="index.html">Trang chủ</a>
-        <a id="nav-vung-mien" href="vung-mien.html">Vùng miền</a>
-        <a id="nav-thuc-don" href="thuc-don.html">Thực đơn</a>
-        <a id="nav-nguyen-lieu" href="nguyen-lieu.html">Nguyên liệu</a>
-        <a id="nav-cong-thuc" href="cong-thuc.html">Công thức</a>
-        <a id="nav-duong-pho" href="duong-pho.html">Đường phố</a>
-        <a id="nav-lich-su" href="lich-su.html">Lịch sử</a>
-        <a id="nav-lien-he" href="lien-he.html">Liên hệ</a>
+        <a id="nav-vung-mien" href="vung-mien.html">VÙNG MIỀN</a>
+        <a id="nav-thuc-don" href="thuc-don.html">THỰC ĐƠN</a>
+        <a id="nav-nguyen-lieu" href="nguyen-lieu.html">NGUYÊN LIỆU</a>
+        <a id="nav-cong-thuc" href="cong-thuc.html">CÔNG THỨC</a>
       </nav>
-      <div class="header-actions">
-        <button class="icon-button" type="button" aria-label="Ngôn ngữ"><span class="material-symbols-outlined">language</span></button>
-        <button class="icon-button" type="button" aria-label="Tìm kiếm"><span class="material-symbols-outlined">search</span></button>
-        <button class="icon-button menu-button" type="button" aria-label="Mở menu" data-menu-toggle><span class="material-symbols-outlined">menu</span></button>
+      <div>
+        <button class="button button--ghost" type="button">MENU</button>
       </div>
     </div>
   </header>
 
-  <aside class="mobile-nav" id="mobileMenu" aria-label="Điều hướng di động">
-    <div class="mobile-nav__head">
-      <a class="brand" href="index.html">Sắc Vị</a>
-      <button class="icon-button" type="button" aria-label="Đóng menu" data-menu-toggle><span class="material-symbols-outlined">close</span></button>
-    </div>
-    <nav class="mobile-nav__links">
-      <a href="index.html">Trang chủ</a>
-      <a href="vung-mien.html">Vùng miền</a>
-      <a href="thuc-don.html">Thực đơn</a>
-      <a href="nguyen-lieu.html">Nguyên liệu</a>
-      <a href="cong-thuc.html">Công thức</a>
-      <a href="duong-pho.html">Đường phố</a>
-      <a href="lich-su.html">Lịch sử</a>
-      <a href="lien-he.html">Liên hệ</a>
-    </nav>
-  </aside>
-  <div class="menu-overlay" id="mobileMenuOverlay" data-menu-toggle></div>
-
   <main>
-    <!-- Hero -->
-    <section class="hero hero--tall">
-      <img class="hero__media" src="assets/img/stitch/hero-kitchen.jpg" alt="Traditional Vietnamese kitchen scene">
-      <div class="hero__overlay"></div>
-      <div class="hero__content">
-        <span class="eyebrow" style="color: var(--gold);">ẨM THỰC VIỆT NAM</span>
-        <h1>Hành trình qua hương vị ba miền</h1>
-        <p>Tinh hoa ẩm thực chắt lọc từ những góc bếp xưa.</p>
+    <!-- 1. Hero Section -->
+    <section class="hero-abstract">
+      <div class="container">
+        <h1 class="hero-abstract__title text-display-xl">SẮC VỊ<br>VIỆT NAM</h1>
+        <div class="text-mono text-primary" style="margin-top: 24px; max-width: 300px;">
+          <p>AN AVANT-GARDE EXPLORATION OF GASTRONOMY THROUGH A BROKEN LENS.</p>
+        </div>
       </div>
+      <img class="hero-abstract__media mask-diagonal" src="assets/img/abstract/hero.jpg" alt="Culinary abstract art">
     </section>
 
-    <!-- Intro -->
+    <!-- 2. Regional Broken Grid -->
     <section class="section">
       <div class="container">
-        <div class="section-heading section-heading--center reveal">
-          <h2>Hương Vị Ba Miền</h2>
-          <div style="height: 1px; width: 96px; background: rgba(194,78,58,0.3); margin: 16px auto 0;"></div>
-        </div>
         
-        <div class="card-grid card-grid--three mb-24">
-          <article class="card editorial-border reveal" data-card-link="vung-mien.html#mien-bac" tabindex="0" role="link">
-            <div class="card__image"><img src="assets/img/stitch/north-dish.jpg" alt="Miền Bắc"></div>
-            <div class="card__body text-center" style="padding: 32px;">
-              <h3 style="font-style: italic; font-size: 24px; color: var(--ink); margin-bottom: 12px;">Miền Bắc</h3>
-              <p>Nét thanh tao và tinh tế trong từng gia vị.</p>
+        <!-- North (Aligned Left) -->
+        <div class="grid-12 mb-24 items-center">
+          <div class="col-span-12 md:col-span-5 relative">
+            <div class="overlap-container">
+              <img class="overlap-img stark-border mask-blob" src="assets/img/abstract/north.jpg" alt="Northern Vietnam Cuisine">
+              <div class="overlap-text">
+                <span class="text-mono text-primary mb-8" style="display:block;">01 / NORTHERN PURITY</span>
+                <h2 class="text-headline mb-12">THE MINIMALIST BOWL</h2>
+                <p class="text-muted">Precision. Subtlety. The clear broths and delicate aromatics of Hanoi acting as a blank canvas.</p>
+              </div>
             </div>
-          </article>
-          <article class="card editorial-border reveal delay-100" data-card-link="vung-mien.html#mien-trung" tabindex="0" role="link">
-            <div class="card__image"><img src="assets/img/stitch/central-dish.jpg" alt="Miền Trung"></div>
-            <div class="card__body text-center" style="padding: 32px;">
-              <h3 style="font-style: italic; font-size: 24px; color: var(--ink); margin-bottom: 12px;">Miền Trung</h3>
-              <p>Đậm đà, cay nồng như tình người xứ Huế.</p>
-            </div>
-          </article>
-          <article class="card editorial-border reveal delay-200" data-card-link="vung-mien.html#mien-nam" tabindex="0" role="link">
-            <div class="card__image"><img src="assets/img/stitch/south-dish.jpg" alt="Miền Nam"></div>
-            <div class="card__body text-center" style="padding: 32px;">
-              <h3 style="font-style: italic; font-size: 24px; color: var(--ink); margin-bottom: 12px;">Miền Nam</h3>
-              <p>Sự trù phú và ngọt ngào của vùng đất phương Nam.</p>
-            </div>
-          </article>
+          </div>
         </div>
 
-        <div class="stat-strip editorial-border-t editorial-border-b reveal" style="border-right: none; border-left: none; background: rgba(194,78,58,0.14);">
-          <div class="stat-item" style="padding: 48px 24px;"><strong>3</strong><span>Miền hương vị</span></div>
-          <div class="stat-item" style="padding: 48px 24px;"><strong>54</strong><span>Dân tộc</span></div>
-          <div class="stat-item" style="padding: 48px 24px;"><strong>20+</strong><span>Món tiêu biểu</span></div>
-          <div class="stat-item" style="padding: 48px 24px;"><strong>100%</strong><span>Ảnh địa phương</span></div>
+        <!-- Central (Aligned Right) -->
+        <div class="grid-12 mb-24">
+          <div class="col-span-12 md:col-span-6 col-start-7 text-right">
+            <img class="w-full stark-border mask-diagonal" style="height: 600px; object-fit: cover;" src="assets/img/abstract/central.jpg" alt="Central Vietnam Cuisine">
+            <div style="margin-top: -80px; position: relative; z-index: 10; padding-right: 40px;">
+              <span class="text-mono text-primary mb-8" style="display:block;">02 / IMPERIAL FIRE</span>
+              <h2 class="text-headline mb-12">THE SENSORY ASSAULT</h2>
+              <p class="text-muted ml-auto" style="max-width: 400px;">Hue's royal heritage reimagined as an explosion of spice, heat, and complex layering.</p>
+            </div>
+          </div>
         </div>
+
+        <!-- South (Centered/Offset) -->
+        <div class="grid-12 mb-12 items-center">
+          <div class="col-span-12 md:col-span-8 col-start-3 text-center">
+            <div class="relative">
+              <img class="w-full stark-border mask-circle" style="height: 500px; object-fit: cover;" src="assets/img/abstract/south.jpg" alt="Southern Vietnam Cuisine">
+              <div class="absolute inset-0 flex items-center justify-center mix-blend-exclusion" style="pointer-events: none;">
+                 <h2 class="text-display-lg" style="color: white;">TROPICAL<br>GRID</h2>
+              </div>
+            </div>
+            <p class="text-mono text-primary mt-8">03 / SOUTHERN ABUNDANCE</p>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <!-- Feature Split -->
-    <section class="section section--warm">
-      <div class="container">
-        <div class="feature">
-          <div class="feature__image editorial-border reveal-left"><img src="assets/img/stitch/pho-hero.jpg" alt="Tô phở Việt Nam"></div>
-          <div class="feature__content reveal-right">
-            <span class="eyebrow" style="margin-bottom: 8px;">Món biểu tượng</span>
-            <h2 style="font-size: clamp(32px, 5vw, 48px); line-height: 1.15;">Phở - Linh hồn của bàn tiệc Việt</h2>
-            <div style="height: 1px; width: 64px; background: rgba(194,78,58,0.3); margin-bottom: 16px;"></div>
-            <p style="margin-bottom: 24px;">Không chỉ là một món ăn, Phở là một bản giao hưởng của hương vị. Nước dùng được ninh hầm từ xương bò và thảo mộc trong nhiều giờ liền, tạo nên vị ngọt thanh tao và hương thơm đặc trưng không thể lẫn vào đâu được. Từng sợi bánh phở mềm dai, kết hợp cùng những lát thịt bò tươi ngon, điểm xuyết thêm chút hành lá và rau thơm, mang đến một trải nghiệm ẩm thực trọn vẹn, đánh thức mọi giác quan.</p>
-            <a class="button" href="cong-thuc.html">Xem công thức</a>
+    <!-- 3. Pho Masterpiece Exhibit -->
+    <section class="section bg-primary pt-32 mb-24" style="position: relative;">
+      <div class="container grid-12">
+        <div class="col-span-12 md:col-span-5">
+          <h3 class="text-display-lg mb-12 text-dark">THE MASTER<br>PIECE: PHO</h3>
+          <div class="stark-border-top text-dark pt-8" style="border-color: var(--bg-color);">
+            <div class="mb-8">
+              <span class="text-mono" style="opacity: 0.6;">ELEMENT 01</span>
+              <h4 style="font-size: 24px; margin-top: 8px;">24HR CLEAR BOUILLON</h4>
+            </div>
+            <div class="mb-8">
+              <span class="text-mono" style="opacity: 0.6;">ELEMENT 02</span>
+              <h4 style="font-size: 24px; margin-top: 8px;">SILK LAMELLA NOODLE</h4>
+            </div>
+            <div class="mb-8">
+              <span class="text-mono" style="opacity: 0.6;">ELEMENT 03</span>
+              <h4 style="font-size: 24px; margin-top: 8px;">AROMATIC ESSENTIALS</h4>
+            </div>
+            <a href="cong-thuc.html" class="button button--ghost" style="border-color: var(--bg-color); color: var(--bg-color);">VIEW EXHIBIT</a>
+          </div>
+        </div>
+        <div class="col-span-12 md:col-span-7 flex justify-center items-center">
+          <div class="relative w-full" style="padding: 40px; background: var(--bg-color);">
+            <img class="w-full object-cover stark-border mask-diagonal" style="height: 600px;" src="assets/img/abstract/pho.jpg" alt="Abstract Pho Art">
           </div>
         </div>
       </div>
+      <!-- Background giant text -->
+      <div class="absolute" style="top: -20px; left: -20px; font-size: 20vw; color: rgba(18,18,18,0.05); font-family: var(--font-display); line-height: 1; pointer-events: none; white-space: nowrap;">EXHIBIT_04</div>
     </section>
 
-    <!-- Story Panel -->
+    <!-- 4. The Artisan's Journey -->
     <section class="section">
-      <div class="container">
-        <div class="story-panel editorial-border reveal" style="padding: 0; gap: 0;">
-          <div class="story-panel__image" style="height: 100%;">
-            <img src="assets/img/stitch/goi-cuon-artisan.jpg" alt="Nghệ nhân cuốn gỏi cuốn" style="height: 100%;">
-          </div>
-          <div class="story-panel__content" style="padding: 64px 48px;">
-            <h2 style="font-size: 36px; color: var(--ink);">Câu chuyện nằm trong tay người nấu</h2>
-            <p style="margin-bottom: 24px;">Mỗi món ăn Việt là một câu chuyện được kể bằng đôi bàn tay khéo léo của người đầu bếp. Đó là sự kế thừa những bí quyết gia truyền, là sự thấu hiểu từng nguyên liệu, và là tình yêu được gửi gắm qua từng công đoạn chế biến.</p>
-            <a class="button button--outline" href="lich-su.html">Khám phá thêm</a>
-          </div>
+      <div class="container grid-12 items-center">
+        <div class="col-span-12 md:col-span-6 bg-surface" style="padding: 120px 60px;">
+          <h2 class="text-display-lg mb-12">THE<br>ARTISAN'S<br>JOURNEY</h2>
+          <p class="text-muted mb-12" style="max-width: 300px;">The hands do not simply cook; they curate molecular experiences. A journey of technique and abstract vision.</p>
+          <a href="lich-su.html" class="button text-mono">READ LOG_ENTRY</a>
         </div>
-      </div>
-    </section>
-
-    <!-- Today's picks -->
-    <section class="section section--warm">
-      <div class="container">
-        <div class="section-heading section-heading--center reveal">
-          <span class="eyebrow">Gợi ý hôm nay</span>
-          <h2>Những món ăn được yêu thích</h2>
+        <div class="col-span-12 md:col-span-6">
+          <img class="w-full stark-border" style="height: 800px; object-fit: cover;" src="assets/img/abstract/chef.jpg" alt="Chef hands crafting art">
         </div>
-        <div class="card-grid card-grid--three">
-          <article class="card editorial-border reveal" data-card-link="thuc-don.html#mon-nuoc" tabindex="0" role="link">
-            <div class="card__image"><img src="assets/img/bun-bo-hue.jpg" alt="Bún bò Huế"></div>
-            <div class="card__body"><h3>Bún bò Huế</h3><p>Nước dùng đậm vị sả, mắm ruốc và sắc đỏ hấp dẫn.</p></div>
-          </article>
-          <article class="card editorial-border reveal delay-100" data-card-link="thuc-don.html#khai-vi" tabindex="0" role="link">
-            <div class="card__image"><img src="assets/img/goi-cuon-tom-thit.jpg" alt="Gỏi cuốn tôm thịt"></div>
-            <div class="card__body"><h3>Gỏi cuốn</h3><p>Tươi nhẹ, thanh mát, ăn cùng nước chấm đậm đà.</p></div>
-          </article>
-          <article class="card editorial-border reveal delay-200" data-card-link="duong-pho.html" tabindex="0" role="link">
-            <div class="card__image"><img src="assets/img/banh-mi.jpg" alt="Bánh mì Việt Nam"></div>
-            <div class="card__body"><h3>Bánh mì</h3><p>Lớp vỏ giòn, nhân phong phú và tinh thần đường phố Việt.</p></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Tips Grid -->
-    <section class="section">
-      <div class="container">
-        <div class="section-heading section-heading--center reveal">
-          <h2>Bí Quyết Bếp Nước</h2>
-          <div style="height: 1px; width: 64px; background: rgba(102,82,77,0.3); margin: 16px auto 0;"></div>
-        </div>
-        <div class="note-grid">
-          <article class="note-card editorial-border reveal group" style="background: var(--paper-warm); cursor: pointer; transition: background 0.3s ease;" onmouseover="this.style.background='var(--white)'" onmouseout="this.style.background='var(--paper-warm)'">
-            <h3 style="font-weight: 600; font-family: var(--font-display);">Mẹo chọn cá</h3>
-            <p>Cách nhận biết cá tươi ngon cho nồi kho tộ chuẩn vị miền Nam.</p>
-          </article>
-          <article class="note-card editorial-border reveal delay-100 group" style="background: var(--paper-warm); cursor: pointer; transition: background 0.3s ease;" onmouseover="this.style.background='var(--white)'" onmouseout="this.style.background='var(--paper-warm)'">
-            <h3 style="font-weight: 600; font-family: var(--font-display);">Cách ủ mắm</h3>
-            <p>Bí quyết lên men truyền thống để có giọt nước mắm nhĩ thơm lừng.</p>
-          </article>
-          <article class="note-card editorial-border reveal delay-200 group" style="background: var(--paper-warm); cursor: pointer; transition: background 0.3s ease;" onmouseover="this.style.background='var(--white)'" onmouseout="this.style.background='var(--paper-warm)'">
-            <h3 style="font-weight: 600; font-family: var(--font-display);">Lửa trong bếp</h3>
-            <p>Nghệ thuật điều chỉnh nhiệt độ khi ninh xương nấu phở.</p>
-          </article>
-          <article class="note-card editorial-border reveal delay-300 group" style="background: var(--paper-warm); cursor: pointer; transition: background 0.3s ease;" onmouseover="this.style.background='var(--white)'" onmouseout="this.style.background='var(--paper-warm)'">
-            <h3 style="font-weight: 600; font-family: var(--font-display);">Gia vị thảo mộc</h3>
-            <p>Sự kết hợp tinh tế giữa các loại thảo mộc trong ẩm thực Việt.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Newsletter -->
-    <section class="newsletter reveal" style="background: var(--primary); padding: 80px 0; text-align: center;">
-      <div class="container" style="max-width: 760px;">
-        <h2 style="color: var(--white); margin-bottom: 16px; font-family: var(--font-display); font-size: clamp(24px, 4vw, 36px);">Nhận Công Thức Mới Nhất</h2>
-        <p style="color: rgba(255,255,255,0.8); margin-bottom: 32px;">Đăng ký để nhận những câu chuyện ẩm thực và công thức nấu ăn hàng tuần.</p>
-        <form class="newsletter__form" style="display: flex; gap: 16px; justify-content: center; max-width: 480px; margin: 0 auto; flex-wrap: wrap;">
-          <input type="email" placeholder="Địa chỉ email của bạn" aria-label="Email" required style="background: transparent; border: none; border-bottom: 1px solid rgba(255,255,255,0.3); color: var(--white); padding: 12px 8px; flex: 1; outline: none; border-radius: 0; min-width: 200px;">
-          <button class="button" type="submit" style="background: var(--white); color: var(--primary); border: none;">Đăng ký</button>
-        </form>
       </div>
     </section>
 
   </main>
 
-  <footer class="site-footer">
-    <div class="container site-footer__inner">
-      <a class="brand" href="index.html">Sắc Vị</a>
-      <nav class="footer-links" aria-label="Liên kết cuối trang">
-        <a href="lien-he.html">Liên hệ</a>
-        <a href="thuc-don.html">Thực đơn</a>
-        <a href="lich-su.html">Lịch sử</a>
-      </nav>
-      <p>© 2026 Sắc Vị. Tinh hoa ẩm thực Việt.</p>
+  <footer class="site-footer bg-surface pt-32 pb-12 stark-border-top" style="margin-top: 120px;">
+    <div class="container flex justify-between items-end flex-wrap gap-8">
+      <div>
+        <span class="text-display-lg text-primary block" style="line-height: 1;">SẮC VỊ</span>
+        <p class="text-mono text-muted mt-4">© 2026 SẮC VỊ. THE ART OF TASTE.</p>
+      </div>
+      <div class="flex gap-8 text-mono">
+        <a href="lien-he.html" class="text-muted hover-primary">CONTACT</a>
+        <a href="#" class="text-muted hover-primary">PRESS</a>
+      </div>
     </div>
   </footer>
+
   <script src="js/main.js"></script>
 </body>
 </html>
