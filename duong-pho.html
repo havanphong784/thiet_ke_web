@@ -1,204 +1,224 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ẩm thực đường phố - Sắc Vị</title>
-  <meta name="description" content="Khám phá ẩm thực đường phố Việt Nam - từ bánh mì, phở vỉa hè đến gỏi cuốn và cà phê sữa đá. Nghệ thuật của những gánh hàng rong.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/pages/duong-pho.css">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Ẩm thực đường phố - Sắc Vị</title>
+    <meta content="Khám phá ẩm thực đường phố Việt Nam - từ bánh mì, phở vỉa hè đến gỏi cuốn và cà phê sữa đá. Nghệ thuật của những gánh hàng rong."
+          name="description">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+          rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/pages/duong-pho.css" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header">
+<header class="site-header">
     <div class="container site-header__inner">
-      <a class="brand" href="index.html">Sắc Vị</a>
-      <nav class="site-nav" aria-label="Điều hướng chính">
-        <a id="nav-index" href="index.html">Trang chủ</a>
-        <a id="nav-vung-mien" href="vung-mien.html">Vùng miền</a>
-        <a id="nav-thuc-don" href="thuc-don.html">Thực đơn</a>
-        <a id="nav-nguyen-lieu" href="nguyen-lieu.html">Nguyên liệu</a>
-        <a id="nav-cong-thuc" href="cong-thuc.html">Công thức</a>
-        <a id="nav-duong-pho" href="duong-pho.html">Đường phố</a>
-        <a id="nav-lich-su" href="lich-su.html">Lịch sử</a>
-        <a id="nav-lien-he" href="lien-he.html">Liên hệ</a>
-      </nav>
-      <div class="header-actions">
-        <button class="icon-button" type="button" aria-label="Ngôn ngữ"><span class="material-symbols-outlined">language</span></button>
-        <button class="icon-button" type="button" aria-label="Tìm kiếm"><span class="material-symbols-outlined">search</span></button>
-        <button class="icon-button menu-button" type="button" aria-label="Mở menu" data-menu-toggle><span class="material-symbols-outlined">menu</span></button>
-      </div>
+        <a class="brand" href="index.html">Sắc Vị</a>
+        <nav aria-label="Điều hướng chính" class="site-nav">
+            <a href="index.html" id="nav-index">Trang chủ</a>
+            <a href="vung-mien.html" id="nav-vung-mien">Vùng miền</a>
+            <a href="thuc-don.html" id="nav-thuc-don">Thực đơn</a>
+            <a href="nguyen-lieu.html" id="nav-nguyen-lieu">Nguyên liệu</a>
+            <a href="cong-thuc.html" id="nav-cong-thuc">Công thức</a>
+            <a href="duong-pho.html" id="nav-duong-pho">Đường phố</a>
+            <a href="lich-su.html" id="nav-lich-su">Lịch sử</a>
+            <a href="lien-he.html" id="nav-lien-he">Liên hệ</a>
+        </nav>
+        <div class="header-actions">
+            <button aria-label="Ngôn ngữ" class="icon-button" type="button"><span class="material-symbols-outlined">language</span>
+            </button>
+            <button aria-label="Tìm kiếm" class="icon-button" type="button"><span class="material-symbols-outlined">search</span>
+            </button>
+            <button aria-label="Mở menu" class="icon-button menu-button" data-menu-toggle type="button"><span
+                    class="material-symbols-outlined">menu</span></button>
+        </div>
     </div>
-  </header>
+</header>
 
-  <aside class="mobile-nav" id="mobileMenu" aria-label="Điều hướng di động">
+<aside aria-label="Điều hướng di động" class="mobile-nav" id="mobileMenu">
     <div class="mobile-nav__head">
-      <a class="brand" href="index.html">Sắc Vị</a>
-      <button class="icon-button" type="button" aria-label="Đóng menu" data-menu-toggle><span class="material-symbols-outlined">close</span></button>
+        <a class="brand" href="index.html">Sắc Vị</a>
+        <button aria-label="Đóng menu" class="icon-button" data-menu-toggle type="button"><span
+                class="material-symbols-outlined">close</span></button>
     </div>
     <nav class="mobile-nav__links">
-      <a href="index.html">Trang chủ</a>
-      <a href="vung-mien.html">Vùng miền</a>
-      <a href="thuc-don.html">Thực đơn</a>
-      <a href="nguyen-lieu.html">Nguyên liệu</a>
-      <a href="cong-thuc.html">Công thức</a>
-      <a href="duong-pho.html">Đường phố</a>
-      <a href="lich-su.html">Lịch sử</a>
-      <a href="lien-he.html">Liên hệ</a>
+        <a href="index.html">Trang chủ</a>
+        <a href="vung-mien.html">Vùng miền</a>
+        <a href="thuc-don.html">Thực đơn</a>
+        <a href="nguyen-lieu.html">Nguyên liệu</a>
+        <a href="cong-thuc.html">Công thức</a>
+        <a href="duong-pho.html">Đường phố</a>
+        <a href="lich-su.html">Lịch sử</a>
+        <a href="lien-he.html">Liên hệ</a>
     </nav>
-  </aside>
-  <div class="menu-overlay" id="mobileMenuOverlay" data-menu-toggle></div>
+</aside>
+<div class="menu-overlay" data-menu-toggle id="mobileMenuOverlay"></div>
 
-  <main>
+<main>
     <section class="section">
-      <div class="container">
+        <div class="container">
 
-        <!-- Art-gallery hero -->
-        <div class="gallery-hero">
-          <div class="gallery-hero__content animate-fade-up">
-            <span class="eyebrow" style="color: var(--muted);">Triển lãm đường phố</span>
-            <h1>Đường Phố<br>Sài Gòn</h1>
-            <p>Một hành trình khám phá tinh tuyển về cảnh sắc ẩm thực sống động, rộn rã và đậm đà hương vị trên những góc phố nhộn nhịp của Thành phố Hồ Chí Minh.</p>
-            <a href="#gallery" class="button">Khám phá bộ sưu tập</a>
-          </div>
-          <div class="gallery-hero__image reveal-right">
-            <img src="assets/img/banh-mi.jpg" alt="Bánh mì kẹp đầy nhân phong cách đường phố">
-            <span class="vertical-label" style="position:absolute; left:-48px; bottom: 96px;">Bánh Mì Thịt</span>
-          </div>
+            <!-- Art-gallery hero -->
+            <div class="gallery-hero">
+                <div class="gallery-hero__content animate-fade-up">
+                    <span class="eyebrow" style="color: var(--muted);">Triển lãm đường phố</span>
+                    <h1>Đường Phố<br>Sài Gòn</h1>
+                    <p>Một hành trình khám phá tinh tuyển về cảnh sắc ẩm thực sống động, rộn rã và đậm đà hương vị trên
+                        những góc phố nhộn nhịp của Thành phố Hồ Chí Minh.</p>
+                    <a class="button" href="#gallery">Khám phá bộ sưu tập</a>
+                </div>
+                <div class="gallery-hero__image reveal-right">
+                    <img alt="Bánh mì kẹp đầy nhân phong cách đường phố" src="assets/img/am-thuc-duong-pho-sai-gon.jpg">
+                    <span class="vertical-label"
+                          style="position:absolute; left:-48px; bottom: 96px;">Bánh Mì Thịt</span>
+                </div>
+            </div>
+
+            <!-- Gallery: asymmetric editorial -->
+            <div class="gallery-section" id="gallery">
+
+                <!-- Item 1 - left -->
+                <div class="gallery-item gallery-item--left reveal-left">
+                    <div class="gallery-item__image" style="aspect-ratio: 16/9; overflow:hidden;">
+                        <img alt="Bát phở bò nghi ngút khói chụp từ góc trên" src="assets/img/pho-via-he.png">
+                    </div>
+                    <div class="gallery-item__meta">
+                        <div class="gallery-item__number-box">
+                            <span class="gallery-item__number">01</span>
+                        </div>
+                        <div class="gallery-item__text">
+                            <h2>Phở Bò</h2>
+                            <p>Sự vỗ về tinh tế. Nước dùng xương bò được ninh râm ran suốt 24 tiếng, đạt độ trong trẻo
+                                thuần khiết nhưng lại ẩn chứa chiều sâu hương vị vô cùng phong phú từ hoa hồi, gừng
+                                nướng và chút quế nhẹ.</p>
+                            <span class="gallery-item__origin">Hà Nội / TP. Hồ Chí Minh</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spacer -->
+                <div class="gallery-spacer"></div>
+
+                <!-- Spacer left -->
+                <div class="gallery-spacer--left"></div>
+
+                <!-- Item 2 - right -->
+                <div class="gallery-item gallery-item--right reveal-right">
+                    <div class="gallery-item__image" style="aspect-ratio: 4/3; overflow:hidden;">
+                        <img alt="Cận cảnh gỏi cuốn tươi ngon trong suốt lộ tôm thịt"
+                             src="assets/img/goi-cuon-tom-thit.jpg">
+                    </div>
+                    <div class="gallery-item__meta">
+                        <div>
+                            <h2>Gỏi Cuốn</h2>
+                            <p>Sự hoàn mỹ trong suốt. Một bài học về kết cấu và sự tiết chế. Rau xanh giòn rụm, tôm luộc
+                                ngọt bùi, cùng độ dai dẻo vừa vặn của lớp bánh tráng được thấm nước hoàn hảo.</p>
+                            <span class="gallery-item__origin">Đồng Bằng Sông Cửu Long</span>
+                        </div>
+                        <div class="gallery-item__number-box">
+                            <span class="gallery-item__number">02</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spacer -->
+                <div class="gallery-spacer--left"></div>
+
+                <!-- Item 3 - center (circle) -->
+                <div class="gallery-item gallery-item--center reveal">
+                    <div class="gallery-item__image editorial-border"
+                         style="aspect-ratio: 1/1; overflow:hidden; border-radius: 50%;">
+                        <img alt="Ly cà phê sữa đá đang được khuấy đều" src="assets/img/ca-phe.png">
+                    </div>
+                    <div style="display:flex; flex-direction:column; align-items:center; text-align:center; padding-top: 24px;">
+                        <div class="gallery-item__number-box" style="margin-bottom: 24px;">
+                            <span class="gallery-item__number">03</span>
+                        </div>
+                        <h2 style="font-size: clamp(24px, 3.5vw, 38px); color: var(--ink); margin-bottom: 16px;">Cà Phê
+                            Sữa Đá</h2>
+                        <p style="color: var(--muted); font-size: 15px; max-width: 480px; line-height: 1.7;">Vị đắng
+                            mạnh mẽ của hạt Robusta được làm dịu lại bởi sự ngọt ngào của sữa đặc. Một nghi thức hàng
+                            ngày hòa quyện đắng và ngọt, tí tách nhỏ giọt qua chiếc phin kim loại.</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
-
-        <!-- Gallery: asymmetric editorial -->
-        <div class="gallery-section" id="gallery">
-
-          <!-- Item 1 - left -->
-          <div class="gallery-item gallery-item--left reveal-left">
-            <div class="gallery-item__image" style="aspect-ratio: 16/9; overflow:hidden;">
-              <img src="assets/img/pho-via-he.jpg" alt="Bát phở bò nghi ngút khói chụp từ góc trên">
-            </div>
-            <div class="gallery-item__meta">
-              <div class="gallery-item__number-box">
-                <span class="gallery-item__number">01</span>
-              </div>
-              <div class="gallery-item__text">
-                <h2>Phở Bò</h2>
-                <p>Sự vỗ về tinh tế. Nước dùng xương bò được ninh râm ran suốt 24 tiếng, đạt độ trong trẻo thuần khiết nhưng lại ẩn chứa chiều sâu hương vị vô cùng phong phú từ hoa hồi, gừng nướng và chút quế nhẹ.</p>
-                <span class="gallery-item__origin">Hà Nội / TP. Hồ Chí Minh</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Spacer -->
-          <div class="gallery-spacer"></div>
-
-          <!-- Spacer left -->
-          <div class="gallery-spacer--left"></div>
-
-          <!-- Item 2 - right -->
-          <div class="gallery-item gallery-item--right reveal-right">
-            <div class="gallery-item__image" style="aspect-ratio: 4/3; overflow:hidden;">
-              <img src="assets/img/goi-cuon-tom-thit.jpg" alt="Cận cảnh gỏi cuốn tươi ngon trong suốt lộ tôm thịt">
-            </div>
-            <div class="gallery-item__meta">
-              <div>
-                <h2>Gỏi Cuốn</h2>
-                <p>Sự hoàn mỹ trong suốt. Một bài học về kết cấu và sự tiết chế. Rau xanh giòn rụm, tôm luộc ngọt bùi, cùng độ dai dẻo vừa vặn của lớp bánh tráng được thấm nước hoàn hảo.</p>
-                <span class="gallery-item__origin">Đồng Bằng Sông Cửu Long</span>
-              </div>
-              <div class="gallery-item__number-box">
-                <span class="gallery-item__number">02</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Spacer -->
-          <div class="gallery-spacer--left"></div>
-
-          <!-- Item 3 - center (circle) -->
-          <div class="gallery-item gallery-item--center reveal">
-            <div class="gallery-item__image editorial-border" style="aspect-ratio: 1/1; overflow:hidden; border-radius: 50%;">
-              <img src="assets/img/ca-phe.jpg" alt="Ly cà phê sữa đá đang được khuấy đều">
-            </div>
-            <div style="display:flex; flex-direction:column; align-items:center; text-align:center; padding-top: 24px;">
-              <div class="gallery-item__number-box" style="margin-bottom: 24px;">
-                <span class="gallery-item__number">03</span>
-              </div>
-              <h2 style="font-size: clamp(24px, 3.5vw, 38px); color: var(--ink); margin-bottom: 16px;">Cà Phê Sữa Đá</h2>
-              <p style="color: var(--muted); font-size: 15px; max-width: 480px; line-height: 1.7;">Vị đắng mạnh mẽ của hạt Robusta được làm dịu lại bởi sự ngọt ngào của sữa đặc. Một nghi thức hàng ngày hòa quyện đắng và ngọt, tí tách nhỏ giọt qua chiếc phin kim loại.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
     </section>
 
     <!-- Quote band -->
     <section class="quote-band">
-      <blockquote>"Ẩm thực đường phố không chỉ là món ăn nhanh, mà là ký ức sống động của một thành phố."</blockquote>
+        <blockquote>"Ẩm thực đường phố không chỉ là món ăn nhanh, mà là ký ức sống động của một thành phố."</blockquote>
     </section>
 
     <section class="section">
-      <div class="container">
-        <div class="section-heading reveal">
-          <span class="eyebrow">Kinh nghiệm</span>
-          <h2>Đi ăn vỉa hè nên để ý điều gì?</h2>
+        <div class="container">
+            <div class="section-heading reveal">
+                <span class="eyebrow">Kinh nghiệm</span>
+                <h2>Đi ăn vỉa hè nên để ý điều gì?</h2>
+            </div>
+            <div class="note-grid">
+                <article class="note-card reveal"><h3>Giờ bán</h3>
+                    <p>Nhiều quán ngon chỉ bán vài tiếng. Đến đúng giờ giúp món còn nóng và đủ lựa chọn.</p></article>
+                <article class="note-card reveal delay-100"><h3>Quan sát nồi nước</h3>
+                    <p>Nồi nước dùng, bếp than và cách chuẩn bị rau nói nhiều về chất lượng quán.</p></article>
+                <article class="note-card reveal delay-200"><h3>Hỏi cách ăn</h3>
+                    <p>Mỗi món có thứ tự cuốn, chấm, thêm rau hoặc thêm ớt riêng.</p></article>
+                <article class="note-card reveal delay-300"><h3>Đi theo nhóm</h3>
+                    <p>Gọi nhiều món nhỏ giúp thử được nhiều hương vị trong một buổi.</p></article>
+            </div>
         </div>
-        <div class="note-grid">
-          <article class="note-card reveal"><h3>Giờ bán</h3><p>Nhiều quán ngon chỉ bán vài tiếng. Đến đúng giờ giúp món còn nóng và đủ lựa chọn.</p></article>
-          <article class="note-card reveal delay-100"><h3>Quan sát nồi nước</h3><p>Nồi nước dùng, bếp than và cách chuẩn bị rau nói nhiều về chất lượng quán.</p></article>
-          <article class="note-card reveal delay-200"><h3>Hỏi cách ăn</h3><p>Mỗi món có thứ tự cuốn, chấm, thêm rau hoặc thêm ớt riêng.</p></article>
-          <article class="note-card reveal delay-300"><h3>Đi theo nhóm</h3><p>Gọi nhiều món nhỏ giúp thử được nhiều hương vị trong một buổi.</p></article>
-        </div>
-      </div>
     </section>
-  </main>
+</main>
 
-  <footer class="site-footer">
+<footer class="site-footer">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col brand-col">
-          <a class="brand" href="index.html">Sắc Vị</a>
-          <p>Hành trình khám phá tinh hoa ẩm thực ba miền Việt Nam. Lưu giữ hương vị, lan tỏa văn hóa.</p>
-          <div class="social-links">
-            <a href="#" aria-label="Facebook">FB</a>
-            <a href="#" aria-label="Instagram">IG</a>
-            <a href="#" aria-label="YouTube">YT</a>
-          </div>
+        <div class="footer-grid">
+            <div class="footer-col brand-col">
+                <a class="brand" href="index.html">Sắc Vị</a>
+                <p>Hành trình khám phá tinh hoa ẩm thực ba miền Việt Nam. Lưu giữ hương vị, lan tỏa văn hóa.</p>
+                <div class="social-links">
+                    <a aria-label="Facebook" href="#">FB</a>
+                    <a aria-label="Instagram" href="#">IG</a>
+                    <a aria-label="YouTube" href="#">YT</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Khám Phá</h4>
+                <nav aria-label="Khám phá">
+                    <a href="vung-mien.html">Vùng Miền</a>
+                    <a href="thuc-don.html">Thực Đơn</a>
+                    <a href="nguyen-lieu.html">Nguyên Liệu</a>
+                </nav>
+            </div>
+            <div class="footer-col">
+                <h4>Câu Chuyện</h4>
+                <nav aria-label="Câu chuyện">
+                    <a href="cong-thuc.html">Công Thức</a>
+                    <a href="duong-pho.html">Đường Phố</a>
+                    <a href="lich-su.html">Lịch Sử</a>
+                </nav>
+            </div>
+            <div class="footer-col">
+                <h4>Liên Hệ</h4>
+                <p>123 Đường Văn Hóa, Quận 1, TP. Hồ Chí Minh</p>
+                <p>Email: lienhe@sacvi.vn</p>
+                <p>Điện thoại: +84 123 456 789</p>
+                <a class="button button--outline mt-4" href="lien-he.html">Gửi tin nhắn</a>
+            </div>
         </div>
-        <div class="footer-col">
-          <h4>Khám Phá</h4>
-          <nav aria-label="Khám phá">
-            <a href="vung-mien.html">Vùng Miền</a>
-            <a href="thuc-don.html">Thực Đơn</a>
-            <a href="nguyen-lieu.html">Nguyên Liệu</a>
-          </nav>
+        <div class="footer-bottom">
+            <p>© 2026 Sắc Vị. Tinh hoa ẩm thực Việt.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Bảo mật</a>
+                <a href="#">Điều khoản</a>
+            </div>
         </div>
-        <div class="footer-col">
-          <h4>Câu Chuyện</h4>
-          <nav aria-label="Câu chuyện">
-            <a href="cong-thuc.html">Công Thức</a>
-            <a href="duong-pho.html">Đường Phố</a>
-            <a href="lich-su.html">Lịch Sử</a>
-          </nav>
-        </div>
-        <div class="footer-col">
-          <h4>Liên Hệ</h4>
-          <p>123 Đường Văn Hóa, Quận 1, TP. Hồ Chí Minh</p>
-          <p>Email: lienhe@sacvi.vn</p>
-          <p>Điện thoại: +84 123 456 789</p>
-          <a href="lien-he.html" class="button button--outline mt-4">Gửi tin nhắn</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2026 Sắc Vị. Tinh hoa ẩm thực Việt.</p>
-        <div class="footer-bottom-links">
-          <a href="#">Bảo mật</a>
-          <a href="#">Điều khoản</a>
-        </div>
-      </div>
     </div>
-  </footer>
-  <script src="js/main.js"></script>
+</footer>
+<script src="js/main.js"></script>
 </body>
 </html>

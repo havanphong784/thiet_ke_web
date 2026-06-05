@@ -1,219 +1,229 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Liên hệ - Sắc Vị</title>
-  <meta name="description" content="Liên hệ với Sắc Vị - Đặt bàn ăn, hợp tác truyền thông hoặc gửi câu hỏi. Chúng tôi rất vui được gặp bạn.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/pages/lien-he.css">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Liên hệ - Sắc Vị</title>
+    <meta content="Liên hệ với Sắc Vị - Đặt bàn ăn, hợp tác truyền thông hoặc gửi câu hỏi. Chúng tôi rất vui được gặp bạn."
+          name="description">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+          rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/pages/lien-he.css" rel="stylesheet">
 </head>
 <body>
-  <header class="site-header">
+<header class="site-header">
     <div class="container site-header__inner">
-      <a class="brand" href="index.html">Sắc Vị</a>
-      <nav class="site-nav" aria-label="Điều hướng chính">
-        <a id="nav-index" href="index.html">Trang chủ</a>
-        <a id="nav-vung-mien" href="vung-mien.html">Vùng miền</a>
-        <a id="nav-thuc-don" href="thuc-don.html">Thực đơn</a>
-        <a id="nav-nguyen-lieu" href="nguyen-lieu.html">Nguyên liệu</a>
-        <a id="nav-cong-thuc" href="cong-thuc.html">Công thức</a>
-        <a id="nav-duong-pho" href="duong-pho.html">Đường phố</a>
-        <a id="nav-lich-su" href="lich-su.html">Lịch sử</a>
-        <a id="nav-lien-he" href="lien-he.html">Liên hệ</a>
-      </nav>
-      <div class="header-actions">
-        <button class="icon-button" type="button" aria-label="Ngôn ngữ"><span class="material-symbols-outlined">language</span></button>
-        <button class="icon-button" type="button" aria-label="Tìm kiếm"><span class="material-symbols-outlined">search</span></button>
-        <button class="icon-button menu-button" type="button" aria-label="Mở menu" data-menu-toggle><span class="material-symbols-outlined">menu</span></button>
-      </div>
+        <a class="brand" href="index.html">Sắc Vị</a>
+        <nav aria-label="Điều hướng chính" class="site-nav">
+            <a href="index.html" id="nav-index">Trang chủ</a>
+            <a href="vung-mien.html" id="nav-vung-mien">Vùng miền</a>
+            <a href="thuc-don.html" id="nav-thuc-don">Thực đơn</a>
+            <a href="nguyen-lieu.html" id="nav-nguyen-lieu">Nguyên liệu</a>
+            <a href="cong-thuc.html" id="nav-cong-thuc">Công thức</a>
+            <a href="duong-pho.html" id="nav-duong-pho">Đường phố</a>
+            <a href="lich-su.html" id="nav-lich-su">Lịch sử</a>
+            <a href="lien-he.html" id="nav-lien-he">Liên hệ</a>
+        </nav>
+        <div class="header-actions">
+            <button aria-label="Ngôn ngữ" class="icon-button" type="button"><span class="material-symbols-outlined">language</span>
+            </button>
+            <button aria-label="Tìm kiếm" class="icon-button" type="button"><span class="material-symbols-outlined">search</span>
+            </button>
+            <button aria-label="Mở menu" class="icon-button menu-button" data-menu-toggle type="button"><span
+                    class="material-symbols-outlined">menu</span></button>
+        </div>
     </div>
-  </header>
+</header>
 
-  <aside class="mobile-nav" id="mobileMenu" aria-label="Điều hướng di động">
+<aside aria-label="Điều hướng di động" class="mobile-nav" id="mobileMenu">
     <div class="mobile-nav__head">
-      <a class="brand" href="index.html">Sắc Vị</a>
-      <button class="icon-button" type="button" aria-label="Đóng menu" data-menu-toggle><span class="material-symbols-outlined">close</span></button>
+        <a class="brand" href="index.html">Sắc Vị</a>
+        <button aria-label="Đóng menu" class="icon-button" data-menu-toggle type="button"><span
+                class="material-symbols-outlined">close</span></button>
     </div>
     <nav class="mobile-nav__links">
-      <a href="index.html">Trang chủ</a>
-      <a href="vung-mien.html">Vùng miền</a>
-      <a href="thuc-don.html">Thực đơn</a>
-      <a href="nguyen-lieu.html">Nguyên liệu</a>
-      <a href="cong-thuc.html">Công thức</a>
-      <a href="duong-pho.html">Đường phố</a>
-      <a href="lich-su.html">Lịch sử</a>
-      <a href="lien-he.html">Liên hệ</a>
+        <a href="index.html">Trang chủ</a>
+        <a href="vung-mien.html">Vùng miền</a>
+        <a href="thuc-don.html">Thực đơn</a>
+        <a href="nguyen-lieu.html">Nguyên liệu</a>
+        <a href="cong-thuc.html">Công thức</a>
+        <a href="duong-pho.html">Đường phố</a>
+        <a href="lich-su.html">Lịch sử</a>
+        <a href="lien-he.html">Liên hệ</a>
     </nav>
-  </aside>
-  <div class="menu-overlay" id="mobileMenuOverlay" data-menu-toggle></div>
+</aside>
+<div class="menu-overlay" data-menu-toggle id="mobileMenuOverlay"></div>
 
-  <main>
+<main>
     <section class="page-hero">
-      <img class="page-hero__image" src="assets/img/bua-com.jpg" alt="Không gian nhà hàng Sắc Vị">
-      <div class="page-hero__content">
-        <span class="eyebrow">Hẹn gặp bạn</span>
-        <h1>Liên hệ với chúng tôi</h1>
-        <p>Đặt bàn, hợp tác truyền thông hoặc đơn giản là ghé thăm — Sắc Vị luôn chào đón bạn.</p>
-      </div>
+        <img alt="Không gian nhà hàng Sắc Vị" class="page-hero__image" src="assets/img/am-thuc-ba-mien.png">
+        <div class="page-hero__content">
+            <span class="eyebrow">Hẹn gặp bạn</span>
+            <h1>Liên hệ với chúng tôi</h1>
+            <p>Đặt bàn, hợp tác truyền thông hoặc đơn giản là ghé thăm — Sắc Vị luôn chào đón bạn.</p>
+        </div>
     </section>
 
     <section class="section">
-      <div class="container">
+        <div class="container">
 
-        <!-- Contact layout: info + form -->
-        <div class="contact-layout">
-          <!-- Contact info -->
-          <aside>
-            <div class="section-heading reveal">
-              <span class="eyebrow">Thông tin</span>
-              <h2>Tìm chúng tôi</h2>
-            </div>
-            <div class="contact-list">
-              <article class="contact-item reveal">
-                <h3>Địa chỉ</h3>
-                <p>123 Phố Cổ, Hoàn Kiếm, Hà Nội<br>Việt Nam</p>
-              </article>
-              <article class="contact-item reveal delay-100">
-                <h3>Điện thoại</h3>
-                <p>+84 (0) 24 1234 5678</p>
-              </article>
-              <article class="contact-item reveal delay-200">
-                <h3>Email</h3>
-                <p>hello@sacvi.vn</p>
-              </article>
-              <article class="contact-item reveal delay-300">
-                <h3>Giờ mở cửa</h3>
-                <p>Thứ Hai – Thứ Sáu: 10:00 – 22:00<br>Thứ Bảy – Chủ Nhật: 09:00 – 23:00</p>
-              </article>
-            </div>
-          </aside>
+            <!-- Contact layout: info + form -->
+            <div class="contact-layout">
+                <!-- Contact info -->
+                <aside>
+                    <div class="section-heading reveal">
+                        <span class="eyebrow">Thông tin</span>
+                        <h2>Tìm chúng tôi</h2>
+                    </div>
+                    <div class="contact-list">
+                        <article class="contact-item reveal">
+                            <h3>Địa chỉ</h3>
+                            <p>123 Phố Cổ, Hoàn Kiếm, Hà Nội<br>Việt Nam</p>
+                        </article>
+                        <article class="contact-item reveal delay-100">
+                            <h3>Điện thoại</h3>
+                            <p>+84 (0) 24 1234 5678</p>
+                        </article>
+                        <article class="contact-item reveal delay-200">
+                            <h3>Email</h3>
+                            <p>hello@sacvi.vn</p>
+                        </article>
+                        <article class="contact-item reveal delay-300">
+                            <h3>Giờ mở cửa</h3>
+                            <p>Thứ Hai – Thứ Sáu: 10:00 – 22:00<br>Thứ Bảy – Chủ Nhật: 09:00 – 23:00</p>
+                        </article>
+                    </div>
+                </aside>
 
-          <!-- Form -->
-          <div class="reveal delay-100">
-            <div class="section-heading">
-              <span class="eyebrow">Gửi tin</span>
-              <h2>Đặt bàn hoặc hỏi thăm</h2>
-            </div>
-            <form class="contact-form" action="#" method="post" novalidate>
-              <div class="form-row">
-                <div class="form-field">
-                  <label for="fullname">Họ tên</label>
-                  <input type="text" id="fullname" name="fullname" placeholder="Nguyễn Văn A" required>
+                <!-- Form -->
+                <div class="reveal delay-100">
+                    <div class="section-heading">
+                        <span class="eyebrow">Gửi tin</span>
+                        <h2>Đặt bàn hoặc hỏi thăm</h2>
+                    </div>
+                    <form action="#" class="contact-form" method="post" novalidate>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="fullname">Họ tên</label>
+                                <input id="fullname" name="fullname" placeholder="Nguyễn Văn A" required type="text">
+                            </div>
+                            <div class="form-field">
+                                <label for="phone">Số điện thoại</label>
+                                <input id="phone" name="phone" placeholder="090 xxx xxxx" type="tel">
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label for="email">Email</label>
+                            <input id="email" name="email" placeholder="ban@email.com" type="email">
+                        </div>
+                        <div class="form-field">
+                            <label for="subject">Mục đích liên hệ</label>
+                            <select id="subject" name="subject">
+                                <option value="">Chọn mục đích…</option>
+                                <option value="reservation">Đặt bàn ăn</option>
+                                <option value="media">Hợp tác truyền thông</option>
+                                <option value="event">Tổ chức sự kiện</option>
+                                <option value="other">Khác</option>
+                            </select>
+                        </div>
+                        <div class="form-field">
+                            <label for="message">Nội dung</label>
+                            <textarea id="message" name="message" placeholder="Chia sẻ thêm chi tiết…"></textarea>
+                        </div>
+                        <button class="button" type="submit">Gửi tin nhắn</button>
+                    </form>
                 </div>
-                <div class="form-field">
-                  <label for="phone">Số điện thoại</label>
-                  <input type="tel" id="phone" name="phone" placeholder="090 xxx xxxx">
+            </div>
+
+            <!-- Map section -->
+            <div class="map-section reveal" style="margin-top: 80px;">
+                <div class="section-heading" style="margin-bottom: 32px;">
+                    <span class="eyebrow">Vị trí</span>
+                    <h2>Ghé thăm chúng tôi</h2>
                 </div>
-              </div>
-              <div class="form-field">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="ban@email.com">
-              </div>
-              <div class="form-field">
-                <label for="subject">Mục đích liên hệ</label>
-                <select id="subject" name="subject">
-                  <option value="">Chọn mục đích…</option>
-                  <option value="reservation">Đặt bàn ăn</option>
-                  <option value="media">Hợp tác truyền thông</option>
-                  <option value="event">Tổ chức sự kiện</option>
-                  <option value="other">Khác</option>
-                </select>
-              </div>
-              <div class="form-field">
-                <label for="message">Nội dung</label>
-                <textarea id="message" name="message" placeholder="Chia sẻ thêm chi tiết…"></textarea>
-              </div>
-              <button class="button" type="submit">Gửi tin nhắn</button>
-            </form>
-          </div>
-        </div>
+                <div class="map-frame editorial-border">
+                    <img alt="Bản đồ vị trí nhà hàng Sắc Vị" src="assets/img/map-placeholder.jpg"
+                         style="width:100%; height:auto;">
+                </div>
+            </div>
 
-        <!-- Map section -->
-        <div class="map-section reveal" style="margin-top: 80px;">
-          <div class="section-heading" style="margin-bottom: 32px;">
-            <span class="eyebrow">Vị trí</span>
-            <h2>Ghé thăm chúng tôi</h2>
-          </div>
-          <div class="map-frame editorial-border">
-            <img src="assets/img/map-placeholder.jpg" alt="Bản đồ vị trí nhà hàng Sắc Vị" style="width:100%; height:auto;">
-          </div>
-        </div>
+            <!-- FAQ -->
+            <div style="margin-top: 80px;">
+                <div class="section-heading reveal">
+                    <span class="eyebrow">Giải đáp</span>
+                    <h2>Câu hỏi thường gặp</h2>
+                </div>
+                <div class="faq-list">
+                    <article class="faq-item reveal">
+                        <h3>Cần đặt bàn trước bao lâu?</h3>
+                        <p>Với nhóm dưới 4 người, bạn có thể đặt trước từ 2 tiếng. Nhóm từ 5 người trở lên, vui lòng đặt
+                            trước ít nhất 1 ngày để chúng tôi chuẩn bị tốt nhất.</p>
+                    </article>
+                    <article class="faq-item reveal delay-100">
+                        <h3>Có thể tổ chức sự kiện nhỏ tại Sắc Vị không?</h3>
+                        <p>Có. Chúng tôi có phòng riêng tối đa 20 người cho sinh nhật, kỷ niệm và họp nhóm. Liên hệ để
+                            biết chi tiết về dịch vụ sự kiện.</p>
+                    </article>
+                    <article class="faq-item reveal delay-200">
+                        <h3>Có chỗ đỗ xe không?</h3>
+                        <p>Có bãi gửi xe máy miễn phí tại chỗ. Khách đến bằng ô tô có thể gửi xe ở bãi đỗ công cộng cách
+                            200m.</p>
+                    </article>
+                </div>
+            </div>
 
-        <!-- FAQ -->
-        <div style="margin-top: 80px;">
-          <div class="section-heading reveal">
-            <span class="eyebrow">Giải đáp</span>
-            <h2>Câu hỏi thường gặp</h2>
-          </div>
-          <div class="faq-list">
-            <article class="faq-item reveal">
-              <h3>Cần đặt bàn trước bao lâu?</h3>
-              <p>Với nhóm dưới 4 người, bạn có thể đặt trước từ 2 tiếng. Nhóm từ 5 người trở lên, vui lòng đặt trước ít nhất 1 ngày để chúng tôi chuẩn bị tốt nhất.</p>
-            </article>
-            <article class="faq-item reveal delay-100">
-              <h3>Có thể tổ chức sự kiện nhỏ tại Sắc Vị không?</h3>
-              <p>Có. Chúng tôi có phòng riêng tối đa 20 người cho sinh nhật, kỷ niệm và họp nhóm. Liên hệ để biết chi tiết về dịch vụ sự kiện.</p>
-            </article>
-            <article class="faq-item reveal delay-200">
-              <h3>Có chỗ đỗ xe không?</h3>
-              <p>Có bãi gửi xe máy miễn phí tại chỗ. Khách đến bằng ô tô có thể gửi xe ở bãi đỗ công cộng cách 200m.</p>
-            </article>
-          </div>
         </div>
-
-      </div>
     </section>
-  </main>
+</main>
 
-  <footer class="site-footer">
+<footer class="site-footer">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col brand-col">
-          <a class="brand" href="index.html">Sắc Vị</a>
-          <p>Hành trình khám phá tinh hoa ẩm thực ba miền Việt Nam. Lưu giữ hương vị, lan tỏa văn hóa.</p>
-          <div class="social-links">
-            <a href="#" aria-label="Facebook">FB</a>
-            <a href="#" aria-label="Instagram">IG</a>
-            <a href="#" aria-label="YouTube">YT</a>
-          </div>
+        <div class="footer-grid">
+            <div class="footer-col brand-col">
+                <a class="brand" href="index.html">Sắc Vị</a>
+                <p>Hành trình khám phá tinh hoa ẩm thực ba miền Việt Nam. Lưu giữ hương vị, lan tỏa văn hóa.</p>
+                <div class="social-links">
+                    <a aria-label="Facebook" href="#">FB</a>
+                    <a aria-label="Instagram" href="#">IG</a>
+                    <a aria-label="YouTube" href="#">YT</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Khám Phá</h4>
+                <nav aria-label="Khám phá">
+                    <a href="vung-mien.html">Vùng Miền</a>
+                    <a href="thuc-don.html">Thực Đơn</a>
+                    <a href="nguyen-lieu.html">Nguyên Liệu</a>
+                </nav>
+            </div>
+            <div class="footer-col">
+                <h4>Câu Chuyện</h4>
+                <nav aria-label="Câu chuyện">
+                    <a href="cong-thuc.html">Công Thức</a>
+                    <a href="duong-pho.html">Đường Phố</a>
+                    <a href="lich-su.html">Lịch Sử</a>
+                </nav>
+            </div>
+            <div class="footer-col">
+                <h4>Liên Hệ</h4>
+                <p>123 Đường Văn Hóa, Quận 1, TP. Hồ Chí Minh</p>
+                <p>Email: lienhe@sacvi.vn</p>
+                <p>Điện thoại: +84 123 456 789</p>
+                <a class="button button--outline mt-4" href="lien-he.html">Gửi tin nhắn</a>
+            </div>
         </div>
-        <div class="footer-col">
-          <h4>Khám Phá</h4>
-          <nav aria-label="Khám phá">
-            <a href="vung-mien.html">Vùng Miền</a>
-            <a href="thuc-don.html">Thực Đơn</a>
-            <a href="nguyen-lieu.html">Nguyên Liệu</a>
-          </nav>
+        <div class="footer-bottom">
+            <p>© 2026 Sắc Vị. Tinh hoa ẩm thực Việt.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Bảo mật</a>
+                <a href="#">Điều khoản</a>
+            </div>
         </div>
-        <div class="footer-col">
-          <h4>Câu Chuyện</h4>
-          <nav aria-label="Câu chuyện">
-            <a href="cong-thuc.html">Công Thức</a>
-            <a href="duong-pho.html">Đường Phố</a>
-            <a href="lich-su.html">Lịch Sử</a>
-          </nav>
-        </div>
-        <div class="footer-col">
-          <h4>Liên Hệ</h4>
-          <p>123 Đường Văn Hóa, Quận 1, TP. Hồ Chí Minh</p>
-          <p>Email: lienhe@sacvi.vn</p>
-          <p>Điện thoại: +84 123 456 789</p>
-          <a href="lien-he.html" class="button button--outline mt-4">Gửi tin nhắn</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2026 Sắc Vị. Tinh hoa ẩm thực Việt.</p>
-        <div class="footer-bottom-links">
-          <a href="#">Bảo mật</a>
-          <a href="#">Điều khoản</a>
-        </div>
-      </div>
     </div>
-  </footer>
-  <script src="js/main.js"></script>
+</footer>
+<script src="js/main.js"></script>
 </body>
 </html>

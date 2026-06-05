@@ -5,30 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51f455c6-0994-4081-8fbc-c747c23e4e23" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/banh-mi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/banh-troi-tau.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/bua-com.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/bun-bo-hue.png" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/am-thuc-ba-mien.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/banh-mi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/banh-troi-tau.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/bua-com-gia-dinh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/ca-kho.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/ca-phe-sua-da.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/ca-phe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/che-sen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/dai-hoi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/dau-bep.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/gia-vi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/goi-buoi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/hoa-hoi-ham-xuong.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/lau-rieu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/pho-bo-nam-dinh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/pho-hero.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/pho-via-he.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/thanh-que-kho-nuong.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/thao-qua.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/xuong-ong-bo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/abstract/hero.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/banh-cuon.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/banh-mi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/bua-com.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/img/ca-kho-to.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/ca-phe-sua-da.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/che-buoi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/che-sen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/com-tam.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/gia-vi-pho.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/goi-buoi-tom-thit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/lau-rieu-cua.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/lien-he-hero.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/map-placeholder.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/nghe-nhan.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/ngu-hanh.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/img/pho-cuon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/ca-kho.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/ca-phe.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/central.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/central.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/gia-vi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/lau-rieu.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/pho-via-he.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/south.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/img/south.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/stitch/goi-cuon-artisan.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/stitch/hero-kitchen.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/stitch/pho-hero.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cong-thuc.html" beforeDir="false" afterPath="$PROJECT_DIR$/cong-thuc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/pages/cong-thuc.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/pages/cong-thuc.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/pages/duong-pho.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/pages/duong-pho.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/duong-pho.html" beforeDir="false" afterPath="$PROJECT_DIR$/duong-pho.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lich-su.html" beforeDir="false" afterPath="$PROJECT_DIR$/lich-su.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lien-he.html" beforeDir="false" afterPath="$PROJECT_DIR$/lien-he.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nguyen-lieu.html" beforeDir="false" afterPath="$PROJECT_DIR$/nguyen-lieu.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/thuc-don.html" beforeDir="false" afterPath="$PROJECT_DIR$/thuc-don.html" afterDir="false" />
@@ -92,61 +110,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.000000000000298" />
-      <entry key="MS500" value="1.003124844258667" />
-      <entry key="S2" value="1.2380800263235967" />
-      <entry key="S5" value="1.6406999413905805" />
-      <entry key="S10" value="2.089971017848323" />
-      <entry key="S30" value="3.2321217718481017" />
-      <entry key="S60" value="4.150160230880452" />
-      <entry key="M2" value="5.120390026404031" />
-      <entry key="M5" value="7.792903097225545" />
-      <entry key="M10" value="13.210471989098544" />
-      <entry key="M15" value="17.20025797678907" />
-      <entry key="M30" value="23.381416348926386" />
-      <entry key="H1" value="27.659228142527628" />
-      <entry key="H2" value="30.181363721468212" />
-      <entry key="H4" value="31.551501318355555" />
-      <entry key="D1" value="32.75295213718806" />
-      <entry key="W1" value="32.96456699294199" />
+      <entry key="MS100" value="1.524459991671014E-274" />
+      <entry key="MS500" value="1.803234360448795E-55" />
+      <entry key="S2" value="2.980226459798505E-14" />
+      <entry key="S5" value="5.792389188421503E-6" />
+      <entry key="S10" value="0.0033936069225795995" />
+      <entry key="S30" value="0.239629185681574" />
+      <entry key="S60" value="0.779126205210109" />
+      <entry key="M2" value="2.053828568559793" />
+      <entry key="M5" value="7.4078386349335155" />
+      <entry key="M10" value="19.5534159616957" />
+      <entry key="M15" value="31.70331456803971" />
+      <entry key="M30" value="60.06291589014228" />
+      <entry key="H1" value="101.70311855099666" />
+      <entry key="H2" value="163.59376656249287" />
+      <entry key="H4" value="229.01369678131354" />
+      <entry key="D1" value="321.3098523169877" />
+      <entry key="W1" value="342.31702358636363" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.6792800512408194E-30" />
-      <entry key="MS500" value="1.109443515937556E-6" />
-      <entry key="S2" value="0.03624069844460465" />
-      <entry key="S5" value="0.3612907980066358" />
-      <entry key="S10" value="0.8316401862712035" />
-      <entry key="S30" value="1.485238988935447" />
-      <entry key="S60" value="1.7224132069067655" />
-      <entry key="M2" value="1.8620800280269756" />
-      <entry key="M5" value="2.2872098645534535" />
-      <entry key="M10" value="3.285425267486479" />
-      <entry key="M15" value="4.032533314032207" />
-      <entry key="M30" value="5.1933064375311035" />
-      <entry key="H1" value="5.997000224928285" />
-      <entry key="H2" value="6.470736261791791" />
-      <entry key="H4" value="6.728035115351969" />
-      <entry key="D1" value="6.953618959161276" />
-      <entry key="W1" value="6.993347865322259" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000000006264855" />
+      <entry key="S2" value="1.0050029682087487" />
+      <entry key="S5" value="1.1201522607425305" />
+      <entry key="S10" value="1.3499752441669963" />
+      <entry key="S30" value="1.8522896412149228" />
+      <entry key="S60" value="2.231770381399767" />
+      <entry key="M2" value="2.6515698008806345" />
+      <entry key="M5" value="3.7851883295093334" />
+      <entry key="M10" value="5.572959926094226" />
+      <entry key="M15" value="7.107333691495142" />
+      <entry key="M30" value="10.553607966707771" />
+      <entry key="H1" value="14.522694300475498" />
+      <entry key="H2" value="18.581439127754475" />
+      <entry key="H4" value="22.14219150693623" />
+      <entry key="D1" value="26.788771001310028" />
+      <entry key="W1" value="27.8198335704935" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.06470405774010143" />
-      <entry key="MS500" value="0.5800707477393677" />
-      <entry key="S2" value="1.1011928920269516" />
-      <entry key="S5" value="1.8485623308951549" />
-      <entry key="S10" value="2.782873955617345" />
-      <entry key="S30" value="4.639835009300993" />
-      <entry key="S60" value="5.8274206345050725" />
-      <entry key="M2" value="6.957673072096913" />
-      <entry key="M5" value="10.06818974720902" />
-      <entry key="M10" value="16.48795238792804" />
-      <entry key="M15" value="21.226533220220652" />
-      <entry key="M30" value="28.57085531597688" />
-      <entry key="H1" value="33.654040778521534" />
-      <entry key="H2" value="36.650931612527195" />
-      <entry key="H4" value="38.27893202752238" />
-      <entry key="D1" value="39.70646741000741" />
-      <entry key="W1" value="39.957899971695845" />
+      <entry key="MS100" value="8.22975520522792E-16" />
+      <entry key="MS500" value="9.617838965011277E-4" />
+      <entry key="S2" value="0.18012290513009066" />
+      <entry key="S5" value="0.6093148794875695" />
+      <entry key="S10" value="1.0445608520059257" />
+      <entry key="S30" value="1.9642485486085963" />
+      <entry key="S60" value="2.9377877789865665" />
+      <entry key="M2" value="4.664184706045048" />
+      <entry key="M5" value="11.172269697849318" />
+      <entry key="M10" value="25.111184318459227" />
+      <entry key="M15" value="38.796967408703324" />
+      <entry key="M30" value="70.60524962887615" />
+      <entry key="H1" value="116.21756730028903" />
+      <entry key="H2" value="182.16978933555023" />
+      <entry key="H4" value="251.15263665523798" />
+      <entry key="D1" value="348.0979676522776" />
+      <entry key="W1" value="370.13675996143553" />
     </decayedShown>
   </component>
   <component name="OptimizeOnSaveOptions">
@@ -164,27 +182,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "code.cleanup.on.save": "true",
-    "git-widget-placeholder": "Reverting in new",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/Code/Web/AmThucVN/assets/video",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;origin&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Code/Web/AmThucVN/assets/video&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Code\Web\AmThucVN\assets\video" />
@@ -193,7 +211,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-WS-261.24374.125" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-WS-261.25134.101" />
       </set>
     </attachedChunks>
   </component>
@@ -212,6 +230,7 @@
       <workItem from="1780528240703" duration="4093000" />
       <workItem from="1780559441177" duration="2023000" />
       <workItem from="1780562236578" duration="2454000" />
+      <workItem from="1780660943218" duration="9169000" />
     </task>
     <servers />
   </component>
