@@ -1947,3 +1947,30 @@ ul {
     background: var(--paper-warm);
     color: var(--primary-strong);
 }
+
+/* ── 36. ARTISTIC IMAGE FRAMES ──────────────────────────────── */
+.art-frame-classic {
+  padding: 6px;
+  border: 4px double var(--gold);
+  background-color: var(--white);
+  box-sizing: border-box;
+}
+
+.art-frame-museum {
+  border: 12px solid var(--white);
+  outline: 1px solid var(--line);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+}
+
+.art-frame-offset {
+  border: 1px solid var(--gold);
+  box-shadow: 8px 8px 0 rgba(194, 78, 58, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.art-frame-offset:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0 rgba(194, 78, 58, 0.25);
+}
+
