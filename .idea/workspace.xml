@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51f455c6-0994-4081-8fbc-c747c23e4e23" name="Changes" comment="" />
+    <list default="true" id="51f455c6-0994-4081-8fbc-c747c23e4e23" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thuc-don.html" beforeDir="false" afterPath="$PROJECT_DIR$/thuc-don.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vung-mien.html" beforeDir="false" afterPath="$PROJECT_DIR$/vung-mien.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -183,7 +187,7 @@
       <workItem from="1780528240703" duration="4093000" />
       <workItem from="1780559441177" duration="2023000" />
       <workItem from="1780562236578" duration="2454000" />
-      <workItem from="1780660943218" duration="9975000" />
+      <workItem from="1780660943218" duration="10277000" />
     </task>
     <servers />
   </component>
