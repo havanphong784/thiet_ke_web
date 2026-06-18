@@ -1,23 +1,17 @@
-/* ============================================================
-   SẮC VỊ — main.js
-   Tập trung toàn bộ logic chung cho website
-   ============================================================ */
-
-/* ── 1. NAV ACTIVE STATE ──────────────────────────────────── */
-const NAV_MAP = {
-  "index.html":       "nav-index",
-  "vung-mien.html":   "nav-vung-mien",
-  "thuc-don.html":    "nav-thuc-don",
-  "nguyen-lieu.html": "nav-nguyen-lieu",
-  "cong-thuc.html":   "nav-cong-thuc",
-  "duong-pho.html":   "nav-duong-pho",
-  "lich-su.html":     "nav-lich-su",
-  "lien-he.html":     "nav-lien-he"
+const navMap = {
+  "index.html": "navIndex",
+  "vung-mien.html": "navVungMien",
+  "thuc-don.html": "navThucDon",
+  "nguyen-lieu.html": "navNguyenLieu",
+  "cong-thuc.html": "navCongThuc",
+  "duong-pho.html": "navDuongPho",
+  "lich-su.html": "navLichSu",
+  "lien-he.html": "navLienHe",
 };
 
 function setActiveNavigation() {
   const page = window.location.pathname.split("/").pop() || "index.html";
-  const activeId = NAV_MAP[page];
+  const activeId = navMap[page];
   if (!activeId) return;
 
   const el = document.getElementById(activeId);
@@ -27,9 +21,8 @@ function setActiveNavigation() {
   if (mobileEl) mobileEl.classList.add("is-active");
 }
 
-/* ── 2. MOBILE MENU ───────────────────────────────────────── */
 function toggleMobileMenu() {
-  const menu    = document.getElementById("mobileMenu");
+  const menu = document.getElementById("mobileMenu");
   const overlay = document.getElementById("mobileMenuOverlay");
   if (!menu || !overlay) return;
 
@@ -44,72 +37,79 @@ function closeMobileMenu() {
   document.body.classList.remove("is-locked");
 }
 
-/* ── 3. SCROLL REVEAL ─────────────────────────────────────── */
 function setupReveal() {
-  const items = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
+  const items = document.querySelectorAll(
+    ".reveal, .reveal-left, .reveal-right",
+  );
   if (!items.length) return;
 
   if (!("IntersectionObserver" in window)) {
-    items.forEach(item => item.classList.add("is-visible"));
+    items.forEach((item) => item.classList.add("is-visible"));
     return;
   }
 
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add("is-visible");
-      obs.unobserve(entry.target);
-    });
-  }, { threshold: 0.14 });
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        obs.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.14 },
+  );
 
-  items.forEach(item => observer.observe(item));
+  items.forEach((item) => observer.observe(item));
 }
 
-/* ── 4. MENU SECTION TABS (Thực đơn page) ────────────────── */
 function setupMenuTabs() {
   const sections = document.querySelectorAll(".menu-section");
-  const tabs     = document.querySelectorAll(".menu-tabs a");
+  const tabs = document.querySelectorAll(".menu-tabs a");
   if (!sections.length || !tabs.length) return;
 
   function activateCurrentTab() {
     const scrollPos = window.scrollY + 170;
-    sections.forEach(section => {
-      const inRange = section.offsetTop <= scrollPos
-        && section.offsetTop + section.offsetHeight > scrollPos;
+    sections.forEach((section) => {
+      const inRange =
+        section.offsetTop <= scrollPos &&
+        section.offsetTop + section.offsetHeight > scrollPos;
       if (!inRange) return;
 
-      tabs.forEach(tab => {
-        tab.classList.toggle("is-active",
-          tab.getAttribute("href") === `#${section.id}`);
+      tabs.forEach((tab) => {
+        tab.classList.toggle(
+          "is-active",
+          tab.getAttribute("href") === `#${section.id}`,
+        );
       });
     });
   }
 
   window.addEventListener("scroll", activateCurrentTab, { passive: true });
-  tabs.forEach(tab => tab.addEventListener("click", activateCurrentTab));
+  tabs.forEach((tab) => tab.addEventListener("click", activateCurrentTab));
   activateCurrentTab();
 }
 
-/* ── 5. CARD LINKS (keyboard + click) ────────────────────── */
 function setupCardLinks() {
-  document.querySelectorAll("[data-card-link]").forEach(card => {
-    const navigate = () => { window.location.href = card.dataset.cardLink; };
+  document.querySelectorAll("[data-card-link]").forEach((card) => {
+    const navigate = () => {
+      window.location.href = card.dataset.cardLink;
+    };
     card.addEventListener("click", navigate);
-    card.addEventListener("keydown", e => {
-      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); navigate(); }
+    card.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        navigate();
+      }
     });
   });
 }
 
-/* ── 6. INIT ──────────────────────────────────────────────── */
 document.addEventListener("DOMContentLoaded", () => {
-  /* Mobile menu toggles */
-  document.querySelectorAll("[data-menu-toggle]").forEach(trigger => {
+  document.querySelectorAll("[data-menu-toggle]").forEach((trigger) => {
     trigger.addEventListener("click", toggleMobileMenu);
   });
 
-  /* Close on link click */
-  document.querySelectorAll("#mobileMenu a").forEach(link => {
+  document.querySelectorAll("#mobileMenu a").forEach((link) => {
     link.addEventListener("click", closeMobileMenu);
   });
 

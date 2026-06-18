@@ -1,277 +1,410 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lịch sử ẩm thực Việt Nam - Sắc Vị</title>
-  <meta name="description" content="Lịch sử ẩm thực Việt Nam qua 7 thời kỳ - từ nền nông nghiệp lúa nước, ẩm thực cung đình Huế, giao thoa Đông Tây đến sự lan tỏa ra thế giới.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/pages/lich-su.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="container site-header__inner">
-      <a class="brand" href="index.html">Sắc Vị</a>
-      <nav class="site-nav" aria-label="Điều hướng chính">
-        <a id="nav-index" href="index.html">Trang chủ</a>
-        <a id="nav-vung-mien" href="vung-mien.html">Vùng miền</a>
-        <a id="nav-thuc-don" href="thuc-don.html">Thực đơn</a>
-        <a id="nav-nguyen-lieu" href="nguyen-lieu.html">Nguyên liệu</a>
-        <a id="nav-cong-thuc" href="cong-thuc.html">Công thức</a>
-        <a id="nav-duong-pho" href="duong-pho.html">Đường phố</a>
-        <a id="nav-lich-su" href="lich-su.html">Lịch sử</a>
-        <a id="nav-lien-he" href="lien-he.html">Liên hệ</a>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lịch sử ẩm thực Việt Nam - Sắc Vị</title>
+    <meta
+      name="description"
+      content="Lịch sử ẩm thực Việt Nam qua 7 thời kỳ - từ nền nông nghiệp lúa nước, ẩm thực cung đình Huế, giao thoa Đông Tây đến sự lan tỏa ra thế giới."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/pages/lich-su.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="index.html">Sắc Vị</a>
+        <nav class="site-nav" aria-label="Điều hướng chính">
+          <a id="navIndex" href="index.html">Trang chủ</a>
+          <a id="navVungMien" href="vung-mien.html">Vùng miền</a>
+          <a id="navThucDon" href="thuc-don.html">Thực đơn</a>
+          <a id="navNguyenLieu" href="nguyen-lieu.html">Nguyên liệu</a>
+          <a id="navCongThuc" href="cong-thuc.html">Công thức</a>
+          <a id="navDuongPho" href="duong-pho.html">Đường phố</a>
+          <a id="navLichSu" href="lich-su.html">Lịch sử</a>
+          <a id="navLienHe" href="lien-he.html">Liên hệ</a>
+        </nav>
+        <div class="header-actions">
+          <button class="icon-button" type="button" aria-label="Ngôn ngữ">
+            <span class="material-symbols-outlined">language</span>
+          </button>
+          <button class="icon-button" type="button" aria-label="Tìm kiếm">
+            <span class="material-symbols-outlined">search</span>
+          </button>
+          <button
+            class="icon-button menu-button"
+            type="button"
+            aria-label="Mở menu"
+            data-menu-toggle
+          >
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <aside class="mobile-nav" id="mobileMenu" aria-label="Điều hướng di động">
+      <div class="mobile-nav__head">
+        <a class="brand" href="index.html">Sắc Vị</a>
+        <button
+          class="icon-button"
+          type="button"
+          aria-label="Đóng menu"
+          data-menu-toggle
+        >
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
+      <nav class="mobile-nav__links">
+        <a href="index.html">Trang chủ</a>
+        <a href="vung-mien.html">Vùng miền</a>
+        <a href="thuc-don.html">Thực đơn</a>
+        <a href="nguyen-lieu.html">Nguyên liệu</a>
+        <a href="cong-thuc.html">Công thức</a>
+        <a href="duong-pho.html">Đường phố</a>
+        <a href="lich-su.html">Lịch sử</a>
+        <a href="lien-he.html">Liên hệ</a>
       </nav>
-      <div class="header-actions">
-        <button class="icon-button" type="button" aria-label="Ngôn ngữ"><span class="material-symbols-outlined">language</span></button>
-        <button class="icon-button" type="button" aria-label="Tìm kiếm"><span class="material-symbols-outlined">search</span></button>
-        <button class="icon-button menu-button" type="button" aria-label="Mở menu" data-menu-toggle><span class="material-symbols-outlined">menu</span></button>
+    </aside>
+    <div class="menu-overlay" id="mobileMenuOverlay" data-menu-toggle></div>
+
+    <main>
+      <section class="hero hero--tall">
+        <img
+          class="hero__media"
+          src="assets/img/history.png"
+          alt="Bức ảnh căn bếp xưa đầy hoài niệm"
+          style="filter: brightness(0.75)"
+        />
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+          <span class="eyebrow">Hành trình ngàn năm</span>
+          <h1>Khúc Ca Di Sản</h1>
+          <p>
+            Khám phá dòng chảy văn hóa ẩm thực Việt qua từng thời kỳ lịch sử.
+          </p>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="timeline-title">
+          <h2>Dòng Chảy Lịch Sử</h2>
+          <div class="timeline-title__line"></div>
+        </div>
+      </section>
+
+      <section class="container" style="padding-bottom: 64px">
+        <div class="history-timeline">
+          <div class="history-item reveal delay-100">
+            <div class="history-item__left">
+              <span class="history-item__era">Thời kỳ cổ đại</span>
+              <span class="history-item__number">01</span>
+            </div>
+            <div class="history-item__body">
+              <h3>Cội Nguồn Nông Nghiệp Lúa Nước</h3>
+              <p>
+                Từ ngàn năm trước, tổ tiên người Việt đã đặt nền móng cho nền
+                văn minh lúa nước sông Hồng. Những hạt gạo trắng trong, những
+                chum nước mắm mặn mòi nguyên bản đã trở thành linh hồn của bữa
+                cơm Việt ngay từ thuở sơ khai. Triết lý cơm - canh - mắm phản
+                ánh lối sống hài hòa tự nhiên, giản dị mà sâu sắc.
+              </p>
+            </div>
+          </div>
+          <div class="history-item reveal">
+            <div class="history-item__left">
+              <span class="history-item__era">Thời kỳ phong kiến</span>
+              <span class="history-item__number">02</span>
+            </div>
+            <div class="history-item__body">
+              <h3>Sự Tinh Tế Của Ẩm Thực Cung Đình</h3>
+              <p>
+                Dưới các triều đại phong kiến, đặc biệt là triều Nguyễn tại Cố
+                đô Huế, ẩm thực Việt đạt đến đỉnh cao của sự cầu kỳ và mỹ thuật.
+                Mỗi món ăn dâng vua không chỉ ngon mà còn là một tác phẩm tạo
+                hình nghệ thuật tuân thủ nghiêm ngặt ngũ hành sinh khắc. Mâm cỗ
+                cung đình Huế có thể có hàng chục món tinh mỹ, cân bằng âm dương
+                hoàn hảo.
+              </p>
+            </div>
+          </div>
+          <div class="history-item reveal">
+            <div class="history-item__left">
+              <span class="history-item__era">Thời làng xã</span>
+              <span class="history-item__number">03</span>
+            </div>
+            <div class="history-item__body">
+              <h3>Mâm Cỗ Và Nghi Lễ Cộng Đồng</h3>
+              <p>
+                Trong đình làng rêu phong ngày hội mùa hay tết đoàn viên, món ăn
+                đóng vai trò liên kết cộng đồng bền chặt. Bánh chưng xanh vuông
+                vức tượng đất, xôi gấc đỏ hồng, gà luộc cánh tiên, nem rán giòn
+                và chè kho ngọt lịm dâng cúng tổ tiên, gửi gắm ước nguyện no ấm
+                thái bình và lòng hiếu kính tổ tiên sâu sắc.
+              </p>
+            </div>
+          </div>
+          <div class="history-item reveal">
+            <div class="history-item__left">
+              <span class="history-item__era">Thời kỳ Pháp thuộc</span>
+              <span class="history-item__number">04</span>
+            </div>
+            <div class="history-item__body">
+              <h3>Giao Thoa Văn Hóa Đông Tây</h3>
+              <p>
+                Sự du nhập của bánh mì, bơ sữa, cà phê Pháp đã khơi nguồn cho
+                những sáng tạo đột phá. Người Việt tiếp nhận nhưng bản địa hóa
+                mạnh mẽ: chiếc bánh mì kẹp thịt patê chả lụa đẫm rau mùi nước
+                xốt ra đời, và cà phê phin tí tách trở thành biểu tượng tinh
+                thần giao thoa Á - Âu đầy tự hào.
+              </p>
+            </div>
+          </div>
+          <div class="history-item reveal">
+            <div class="history-item__left">
+              <span class="history-item__era">Thế kỷ XX</span>
+              <span class="history-item__number">05</span>
+            </div>
+            <div class="history-item__body">
+              <h3>Đô Thị Đường Phố &amp; Hàng Rong</h3>
+              <p>
+                Khi các đô thị phát triển sầm uất, tiếng rao của những gánh phở
+                gõ, hũ tiếu xe, xôi chè ngọt ngào len lỏi qua từng ngõ sâu. Ẩm
+                thực đường phố bình dân tạo nên nét văn hóa đặc thù đầy chất
+                thơ: nhanh, thân thiện, giá rẻ nhưng giữ trọn sự khéo léo chắt
+                chiu trong từng thìa nước dùng gia truyền.
+              </p>
+            </div>
+          </div>
+          <div class="history-item reveal">
+            <div class="history-item__left">
+              <span class="history-item__era">Sau 1975</span>
+              <span class="history-item__number">06</span>
+            </div>
+            <div class="history-item__body">
+              <h3>Sự Lan Tỏa Ra Khắp Năm Châu</h3>
+              <p>
+                Theo bước chân kiều bào hải ngoại, hương vị quê hương xuất hiện
+                rạng rỡ từ Paris, Los Angeles đến Sydney. Phở bò thơm lừng và
+                bánh mì giòn tan bước vào từ điển ẩm thực quốc tế, chinh phục
+                thế giới bằng sự lành mạnh, mộc mạc và cân bằng dinh dưỡng xuất
+                sắc.
+              </p>
+            </div>
+          </div>
+          <div class="history-item reveal">
+            <div class="history-item__left">
+              <span class="history-item__era">Thời đại hiện nay</span>
+              <span class="history-item__number">07</span>
+            </div>
+            <div class="history-item__body">
+              <h3>Linh Hồn Việt Trong Nhịp Sống Mới</h3>
+              <p>
+                Dù nhịp sống hiện đại hối hả, bếp nhà Việt vẫn luôn đỏ lửa. Kế
+                thừa di sản ngàn năm, thế hệ đầu bếp trẻ ngày nay đang viết tiếp
+                chương mới cho ẩm thực Việt bằng kỹ thuật hiện đại kết hợp với
+                cội nguồn truyền thống sâu sắc, mang Sắc Vị Việt vươn tầm nghệ
+                thuật cao cấp.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="dark-quote reveal">
+        <blockquote>
+          "Căn bếp là trái tim của ngôi nhà Việt, nơi ngọn lửa luôn cháy ấm áp
+          và tình yêu thương gia đình luôn đong đầy."
+        </blockquote>
+        <div class="dark-quote__divider"></div>
+        <cite>Di sản văn hóa Việt Nam</cite>
       </div>
-    </div>
-  </header>
 
-  <aside class="mobile-nav" id="mobileMenu" aria-label="Điều hướng di động">
-    <div class="mobile-nav__head">
-      <a class="brand" href="index.html">Sắc Vị</a>
-      <button class="icon-button" type="button" aria-label="Đóng menu" data-menu-toggle><span class="material-symbols-outlined">close</span></button>
-    </div>
-    <nav class="mobile-nav__links">
-      <a href="index.html">Trang chủ</a>
-      <a href="vung-mien.html">Vùng miền</a>
-      <a href="thuc-don.html">Thực đơn</a>
-      <a href="nguyen-lieu.html">Nguyên liệu</a>
-      <a href="cong-thuc.html">Công thức</a>
-      <a href="duong-pho.html">Đường phố</a>
-      <a href="lich-su.html">Lịch sử</a>
-      <a href="lien-he.html">Liên hệ</a>
-    </nav>
-  </aside>
-  <div class="menu-overlay" id="mobileMenuOverlay" data-menu-toggle></div>
+      <section class="section">
+        <div class="container">
+          <div class="history-feature reveal-left">
+            <div class="history-feature__image">
+              <img
+                src="assets/img/ngu-hanh.jpg"
+                alt="Ngũ hành gia vị chua cay mặn ngọt đắng"
+              />
+            </div>
+            <div class="history-feature__content reveal-right">
+              <span class="history-feature__eyebrow">Triết lý dưỡng sinh</span>
+              <h2>Ngũ Hành Trong Ẩm Thực</h2>
+              <p>
+                Bữa cơm Việt là sự dung hòa kỳ diệu của Ngũ Hành: Kim (vị cay
+                nồng), Mộc (vị chua thanh), Thủy (vị mặn mà), Hỏa (vị đắng ấm),
+                Thổ (vị ngọt lành). Sự phối hợp gia vị tài tình không chỉ đem
+                lại khoái cảm vị giác mà còn là bài thuốc cân bằng âm dương, bồi
+                bổ khí huyết cho cơ thể theo mùa.
+              </p>
+              <blockquote class="history-feature__quote">
+                "Ăn theo thuốc, nằm theo hướng" — Trí tuệ dưỡng sinh ngàn đời
+                của ông cha ta ẩn chứa trong từng món ăn.
+              </blockquote>
+            </div>
+          </div>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero hero--tall">
-      <img class="hero__media" src="assets/img/history.png" alt="Bức ảnh căn bếp xưa đầy hoài niệm" style="filter: brightness(0.75);">
-      <div class="hero__overlay"></div>
-      <div class="hero__content">
-        <span class="eyebrow">Hành trình ngàn năm</span>
-        <h1>Khúc Ca Di Sản</h1>
-        <p>Khám phá dòng chảy văn hóa ẩm thực Việt qua từng thời kỳ lịch sử.</p>
-      </div>
-    </section>
+          <div class="history-feature history-feature--reverse reveal-right">
+            <div class="history-feature__image">
+              <img
+                src="assets/img/pho-viet.jpg"
+                alt="Bát phở bò Việt Nam nghệ thuật"
+              />
+            </div>
+            <div class="history-feature__content reveal-left">
+              <span class="history-feature__eyebrow">Tự hào dân tộc</span>
+              <h2>Vươn Tầm Bản Đồ Thế Giới</h2>
+              <p>
+                Phở, bánh mì, cà phê sữa đá không còn là những cái tên xa lạ,
+                chúng đã trở thành danh từ riêng kiêu hãnh trong ẩm thực thế
+                giới. Từ những gánh hàng rong mộc mạc vỉa hè Sài Gòn, Hà Nội đến
+                những nhà hàng đạt sao Michelin danh giá tại Paris hay Tokyo,
+                hương vị Việt chinh phục bạn bè quốc tế bằng sự chân thành, mộc
+                mạc và tinh tế vô ngần.
+              </p>
+              <a class="button" href="thuc-don.html">Khám phá thực đơn</a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <!-- Timeline title -->
-    <section class="container">
-      <div class="timeline-title">
-        <h2>Dòng Chảy Lịch Sử</h2>
-        <div class="timeline-title__line"></div>
-      </div>
-    </section>
+      <section
+        style="
+          background: var(--paper-warm);
+          padding: 96px 0;
+          border-top: 1px solid var(--line);
+          border-bottom: 1px solid var(--line);
+        "
+      >
+        <div class="container">
+          <div class="section-heading section-heading--center reveal">
+            <span class="eyebrow">Bản sắc tự nhiên</span>
+            <h2>Nguyên liệu đặc trưng</h2>
+          </div>
+          <div class="ingredients-grid">
+            <div class="ingredients-grid__card reveal">
+              <h4>Nước Mắm Cốt</h4>
+              <p>
+                Linh hồn của ẩm thực Việt. Từ Phú Quốc đến Phan Thiết, giọt nước
+                mắm chắt lọc tinh túy từ cá cơm muối biển lên men ròng rã cả
+                năm, mang hương vị mặn mòi nồng nàn không thể thay thế.
+              </p>
+            </div>
+            <div class="ingredients-grid__card reveal delay-100">
+              <h4>Rau Thơm Vườn</h4>
+              <p>
+                Húng láng, tía tô, kinh giới, ngò gai — mỗi cọng rau thơm là một
+                nốt nhạc bừng sáng vị giác. Thiếu đi mớ rau thơm tươi giòn, món
+                Việt mất đi một nửa sinh khí thuần khiết.
+              </p>
+            </div>
+            <div class="ingredients-grid__card reveal delay-200">
+              <h4>Hạt Gạo Nếp</h4>
+              <p>
+                Từ chiếc bánh chưng ngày Tết sum họp đến gói xôi sáng ấm lòng,
+                gạo nếp nương gắn bó máu thịt với tinh thần cội nguồn người
+                Việt. Dẻo quánh, ngọt hậu, thơm lừng hương đồng nội.
+              </p>
+            </div>
+            <div class="ingredients-grid__card reveal delay-300">
+              <h4>Gia Vị Tươi Mộc</h4>
+              <p>
+                Sả, gừng, nghệ tươi, ớt cay, tỏi ấm — những gia vị củ rễ mộc mạc
+                giã nhuyễn tạo nên sức sống nguyên bản. Chúng tôi trân trọng gia
+                vị tươi mới nêm nếm trực tiếp, nói không với hương liệu khô chế
+                sẵn.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <!-- Timeline 7 milestones -->
-    <section class="container" style="padding-bottom: 64px;">
-      <div class="history-timeline">
-        <div class="history-item reveal delay-100">
-          <div class="history-item__left">
-            <span class="history-item__era">Thời kỳ cổ đại</span>
-            <span class="history-item__number">01</span>
-          </div>
-          <div class="history-item__body">
-            <h3>Cội Nguồn Nông Nghiệp Lúa Nước</h3>
-            <p>Từ ngàn năm trước, tổ tiên người Việt đã đặt nền móng cho nền văn minh lúa nước sông Hồng. Những hạt gạo trắng trong, những chum nước mắm mặn mòi nguyên bản đã trở thành linh hồn của bữa cơm Việt ngay từ thuở sơ khai. Triết lý cơm - canh - mắm phản ánh lối sống hài hòa tự nhiên, giản dị mà sâu sắc.</p>
-          </div>
-        </div>
-        <div class="history-item reveal">
-          <div class="history-item__left">
-            <span class="history-item__era">Thời kỳ phong kiến</span>
-            <span class="history-item__number">02</span>
-          </div>
-          <div class="history-item__body">
-            <h3>Sự Tinh Tế Của Ẩm Thực Cung Đình</h3>
-            <p>Dưới các triều đại phong kiến, đặc biệt là triều Nguyễn tại Cố đô Huế, ẩm thực Việt đạt đến đỉnh cao của sự cầu kỳ và mỹ thuật. Mỗi món ăn dâng vua không chỉ ngon mà còn là một tác phẩm tạo hình nghệ thuật tuân thủ nghiêm ngặt ngũ hành sinh khắc. Mâm cỗ cung đình Huế có thể có hàng chục món tinh mỹ, cân bằng âm dương hoàn hảo.</p>
-          </div>
-        </div>
-        <div class="history-item reveal">
-          <div class="history-item__left">
-            <span class="history-item__era">Thời làng xã</span>
-            <span class="history-item__number">03</span>
-          </div>
-          <div class="history-item__body">
-            <h3>Mâm Cỗ Và Nghi Lễ Cộng Đồng</h3>
-            <p>Trong đình làng rêu phong ngày hội mùa hay tết đoàn viên, món ăn đóng vai trò liên kết cộng đồng bền chặt. Bánh chưng xanh vuông vức tượng đất, xôi gấc đỏ hồng, gà luộc cánh tiên, nem rán giòn và chè kho ngọt lịm dâng cúng tổ tiên, gửi gắm ước nguyện no ấm thái bình và lòng hiếu kính tổ tiên sâu sắc.</p>
+      <section class="section">
+        <div class="container">
+          <div class="story-panel reveal">
+            <div class="story-panel__image">
+              <img
+                src="assets/img/nghe-nhan.jpg"
+                alt="Nghệ nhân bếp Việt chế biến món ăn tỉ mỉ"
+              />
+            </div>
+            <div class="story-panel__content">
+              <span class="eyebrow">Tiếp nối di sản</span>
+              <h2>Gìn Giữ Lửa Bếp Việt</h2>
+              <p>
+                Di sản ẩm thực không nằm yên trên trang giấy lịch sử. Nó đập
+                nhịp sống động qua cách người bà hướng dẫn cháu vo gạo nếp thơm,
+                cách người mẹ nêm chén nước chấm tỏi ớt, và cách người đầu bếp
+                trẻ nâng niu tái hiện vị xưa quê nhà bằng tất cả tấm lòng hiếu
+                kính và tôn trọng sâu sắc.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="history-item reveal">
-          <div class="history-item__left">
-            <span class="history-item__era">Thời kỳ Pháp thuộc</span>
-            <span class="history-item__number">04</span>
-          </div>
-          <div class="history-item__body">
-            <h3>Giao Thoa Văn Hóa Đông Tây</h3>
-            <p>Sự du nhập của bánh mì, bơ sữa, cà phê Pháp đã khơi nguồn cho những sáng tạo đột phá. Người Việt tiếp nhận nhưng bản địa hóa mạnh mẽ: chiếc bánh mì kẹp thịt patê chả lụa đẫm rau mùi nước xốt ra đời, và cà phê phin tí tách trở thành biểu tượng tinh thần giao thoa Á - Âu đầy tự hào.</p>
-          </div>
-        </div>
-        <div class="history-item reveal">
-          <div class="history-item__left">
-            <span class="history-item__era">Thế kỷ XX</span>
-            <span class="history-item__number">05</span>
-          </div>
-          <div class="history-item__body">
-            <h3>Đô Thị Đường Phố &amp; Hàng Rong</h3>
-            <p>Khi các đô thị phát triển sầm uất, tiếng rao của những gánh phở gõ, hũ tiếu xe, xôi chè ngọt ngào len lỏi qua từng ngõ sâu. Ẩm thực đường phố bình dân tạo nên nét văn hóa đặc thù đầy chất thơ: nhanh, thân thiện, giá rẻ nhưng giữ trọn sự khéo léo chắt chiu trong từng thìa nước dùng gia truyền.</p>
-          </div>
-        </div>
-        <div class="history-item reveal">
-          <div class="history-item__left">
-            <span class="history-item__era">Sau 1975</span>
-            <span class="history-item__number">06</span>
-          </div>
-          <div class="history-item__body">
-            <h3>Sự Lan Tỏa Ra Khắp Năm Châu</h3>
-            <p>Theo bước chân kiều bào hải ngoại, hương vị quê hương xuất hiện rạng rỡ từ Paris, Los Angeles đến Sydney. Phở bò thơm lừng và bánh mì giòn tan bước vào từ điển ẩm thực quốc tế, chinh phục thế giới bằng sự lành mạnh, mộc mạc và cân bằng dinh dưỡng xuất sắc.</p>
-          </div>
-        </div>
-        <div class="history-item reveal">
-          <div class="history-item__left">
-            <span class="history-item__era">Thời đại hiện nay</span>
-            <span class="history-item__number">07</span>
-          </div>
-          <div class="history-item__body">
-            <h3>Linh Hồn Việt Trong Nhịp Sống Mới</h3>
-            <p>Dù nhịp sống hiện đại hối hả, bếp nhà Việt vẫn luôn đỏ lửa. Kế thừa di sản ngàn năm, thế hệ đầu bếp trẻ ngày nay đang viết tiếp chương mới cho ẩm thực Việt bằng kỹ thuật hiện đại kết hợp với cội nguồn truyền thống sâu sắc, mang Sắc Vị Việt vươn tầm nghệ thuật cao cấp.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- Dark quote -->
-    <div class="dark-quote reveal">
-      <blockquote>"Căn bếp là trái tim của ngôi nhà Việt, nơi ngọn lửa luôn cháy ấm áp và tình yêu thương gia đình luôn đong đầy."</blockquote>
-      <div class="dark-quote__divider"></div>
-      <cite>Di sản văn hóa Việt Nam</cite>
-    </div>
-
-    <!-- Ngũ hành section -->
-    <section class="section">
+    <footer class="site-footer">
       <div class="container">
-        <div class="history-feature reveal-left">
-          <div class="history-feature__image">
-            <img src="assets/img/ngu-hanh.jpg" alt="Ngũ hành gia vị chua cay mặn ngọt đắng">
+        <div class="footer-grid">
+          <div class="footer-col brand-col">
+            <a class="brand" href="index.html">Sắc Vị</a>
+            <p>
+              Hành trình khám phá tinh hoa ẩm thực ba miền Việt Nam. Lưu giữ
+              hương vị, lan tỏa văn hóa.
+            </p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook">FB</a>
+              <a href="#" aria-label="Instagram">IG</a>
+              <a href="#" aria-label="YouTube">YT</a>
+            </div>
           </div>
-          <div class="history-feature__content reveal-right">
-            <span class="history-feature__eyebrow">Triết lý dưỡng sinh</span>
-            <h2>Ngũ Hành Trong Ẩm Thực</h2>
-            <p>Bữa cơm Việt là sự dung hòa kỳ diệu của Ngũ Hành: Kim (vị cay nồng), Mộc (vị chua thanh), Thủy (vị mặn mà), Hỏa (vị đắng ấm), Thổ (vị ngọt lành). Sự phối hợp gia vị tài tình không chỉ đem lại khoái cảm vị giác mà còn là bài thuốc cân bằng âm dương, bồi bổ khí huyết cho cơ thể theo mùa.</p>
-            <blockquote class="history-feature__quote">"Ăn theo thuốc, nằm theo hướng" — Trí tuệ dưỡng sinh ngàn đời của ông cha ta ẩn chứa trong từng món ăn.</blockquote>
+          <div class="footer-col">
+            <h4>Khám Phá</h4>
+            <nav aria-label="Khám phá">
+              <a href="vung-mien.html">Vùng Miền</a>
+              <a href="thuc-don.html">Thực Đơn</a>
+              <a href="nguyen-lieu.html">Nguyên Liệu</a>
+            </nav>
+          </div>
+          <div class="footer-col">
+            <h4>Câu Chuyện</h4>
+            <nav aria-label="Câu chuyện">
+              <a href="cong-thuc.html">Công Thức</a>
+              <a href="duong-pho.html">Đường Phố</a>
+              <a href="lich-su.html">Lịch Sử</a>
+            </nav>
+          </div>
+          <div class="footer-col">
+            <h4>Liên Hệ</h4>
+            <p>470 Trần Đại Nghĩa, Ngũ Hành Sơn, Đà Nẵng 550000, Việt Nam</p>
+            <p>Email: havanphong784@gmail.com</p>
+            <p>Điện thoại: 0934861322</p>
+            <a
+              href="lien-he.html"
+              class="button button--outline site-footer__contact-btn"
+              >Gửi tin nhắn</a
+            >
           </div>
         </div>
-
-        <!-- Vươn tầm thế giới -->
-        <div class="history-feature history-feature--reverse reveal-right">
-          <div class="history-feature__image">
-            <img src="assets/img/pho-viet.jpg" alt="Bát phở bò Việt Nam nghệ thuật">
-          </div>
-          <div class="history-feature__content reveal-left">
-            <span class="history-feature__eyebrow">Tự hào dân tộc</span>
-            <h2>Vươn Tầm Bản Đồ Thế Giới</h2>
-            <p>Phở, bánh mì, cà phê sữa đá không còn là những cái tên xa lạ, chúng đã trở thành danh từ riêng kiêu hãnh trong ẩm thực thế giới. Từ những gánh hàng rong mộc mạc vỉa hè Sài Gòn, Hà Nội đến những nhà hàng đạt sao Michelin danh giá tại Paris hay Tokyo, hương vị Việt chinh phục bạn bè quốc tế bằng sự chân thành, mộc mạc và tinh tế vô ngần.</p>
-            <a class="button" href="thuc-don.html">Khám phá thực đơn</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Nguyên liệu đặc trưng -->
-    <section style="background: var(--paper-warm); padding: 96px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
-      <div class="container">
-        <div class="section-heading section-heading--center reveal">
-          <span class="eyebrow">Bản sắc tự nhiên</span>
-          <h2>Nguyên liệu đặc trưng</h2>
-        </div>
-        <div class="ingredients-grid">
-          <div class="ingredients-grid__card reveal">
-            <h4>Nước Mắm Cốt</h4>
-            <p>Linh hồn của ẩm thực Việt. Từ Phú Quốc đến Phan Thiết, giọt nước mắm chắt lọc tinh túy từ cá cơm muối biển lên men ròng rã cả năm, mang hương vị mặn mòi nồng nàn không thể thay thế.</p>
-          </div>
-          <div class="ingredients-grid__card reveal delay-100">
-            <h4>Rau Thơm Vườn</h4>
-            <p>Húng láng, tía tô, kinh giới, ngò gai — mỗi cọng rau thơm là một nốt nhạc bừng sáng vị giác. Thiếu đi mớ rau thơm tươi giòn, món Việt mất đi một nửa sinh khí thuần khiết.</p>
-          </div>
-          <div class="ingredients-grid__card reveal delay-200">
-            <h4>Hạt Gạo Nếp</h4>
-            <p>Từ chiếc bánh chưng ngày Tết sum họp đến gói xôi sáng ấm lòng, gạo nếp nương gắn bó máu thịt với tinh thần cội nguồn người Việt. Dẻo quánh, ngọt hậu, thơm lừng hương đồng nội.</p>
-          </div>
-          <div class="ingredients-grid__card reveal delay-300">
-            <h4>Gia Vị Tươi Mộc</h4>
-            <p>Sả, gừng, nghệ tươi, ớt cay, tỏi ấm — những gia vị củ rễ mộc mạc giã nhuyễn tạo nên sức sống nguyên bản. Chúng tôi trân trọng gia vị tươi mới nêm nếm trực tiếp, nói không với hương liệu khô chế sẵn.</p>
+        <div class="footer-bottom">
+          <p>© 2026 Sắc Vị. Tinh hoa ẩm thực Việt.</p>
+          <div class="footer-bottom-links">
+            <a href="#">Bảo mật</a>
+            <a href="#">Điều khoản</a>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Gìn giữ di sản -->
-    <section class="section">
-      <div class="container">
-        <div class="story-panel reveal">
-          <div class="story-panel__image"><img src="assets/img/nghe-nhan.jpg" alt="Nghệ nhân bếp Việt chế biến món ăn tỉ mỉ"></div>
-          <div class="story-panel__content">
-            <span class="eyebrow">Tiếp nối di sản</span>
-            <h2>Gìn Giữ Lửa Bếp Việt</h2>
-            <p>Di sản ẩm thực không nằm yên trên trang giấy lịch sử. Nó đập nhịp sống động qua cách người bà hướng dẫn cháu vo gạo nếp thơm, cách người mẹ nêm chén nước chấm tỏi ớt, và cách người đầu bếp trẻ nâng niu tái hiện vị xưa quê nhà bằng tất cả tấm lòng hiếu kính và tôn trọng sâu sắc.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col brand-col">
-          <a class="brand" href="index.html">Sắc Vị</a>
-          <p>Hành trình khám phá tinh hoa ẩm thực ba miền Việt Nam. Lưu giữ hương vị, lan tỏa văn hóa.</p>
-          <div class="social-links">
-            <a href="#" aria-label="Facebook">FB</a>
-            <a href="#" aria-label="Instagram">IG</a>
-            <a href="#" aria-label="YouTube">YT</a>
-          </div>
-        </div>
-        <div class="footer-col">
-          <h4>Khám Phá</h4>
-          <nav aria-label="Khám phá">
-            <a href="vung-mien.html">Vùng Miền</a>
-            <a href="thuc-don.html">Thực Đơn</a>
-            <a href="nguyen-lieu.html">Nguyên Liệu</a>
-          </nav>
-        </div>
-        <div class="footer-col">
-          <h4>Câu Chuyện</h4>
-          <nav aria-label="Câu chuyện">
-            <a href="cong-thuc.html">Công Thức</a>
-            <a href="duong-pho.html">Đường Phố</a>
-            <a href="lich-su.html">Lịch Sử</a>
-          </nav>
-        </div>
-        <div class="footer-col">
-          <h4>Liên Hệ</h4>
-          <p>470 Trần Đại Nghĩa, Ngũ Hành Sơn, Đà Nẵng 550000, Việt Nam</p>
-          <p>Email: havanphong784@gmail.com</p>
-          <p>Điện thoại: 0934861322</p>
-          <a href="lien-he.html" class="button button--outline mt-4">Gửi tin nhắn</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2026 Sắc Vị. Tinh hoa ẩm thực Việt.</p>
-        <div class="footer-bottom-links">
-          <a href="#">Bảo mật</a>
-          <a href="#">Điều khoản</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <script src="js/main.js"></script>
-</body>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
 </html>

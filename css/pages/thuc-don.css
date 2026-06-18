@@ -1,8 +1,3 @@
-/* ============================================================
-   THỰC ĐƠN PAGE — css/pages/thuc-don.css
-   ============================================================ */
-
-/* Menu section grid items */
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -13,13 +8,14 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-/* Menu card (mới - dành cho thực đơn phong phú) */
 .menu-card {
   display: flex;
   flex-direction: column;
   background: var(--white);
   border: 1px solid var(--line);
-  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
 }
 
 .menu-card:hover {
@@ -48,7 +44,7 @@
   position: absolute;
   top: 16px;
   left: 16px;
-  background: rgba(28, 27, 26, 0.80);
+  background: rgba(28, 27, 26, 0.8);
   color: var(--white);
   font-size: 9px;
   font-weight: 700;
@@ -89,7 +85,6 @@
   line-height: 1.65;
 }
 
-/* Section divider with large number */
 .section-divider {
   border-top: 1px solid var(--line);
   padding-top: 32px;
@@ -129,7 +124,6 @@
   font-size: 16px;
 }
 
-/* Featured dual-image row (món nước) */
 .duo-feature {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -194,7 +188,6 @@
   line-height: 1.7;
 }
 
-/* Tráng miệng card (bordered) */
 .dessert-card {
   border: 1px solid rgba(222, 192, 186, 0.5);
   padding: 32px;
@@ -250,7 +243,6 @@
   color: var(--gold);
 }
 
-/* Seasonal grid */
 .seasonal-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -295,7 +287,6 @@
   text-transform: uppercase;
 }
 
-/* Philosophy quote */
 .philosophy-quote {
   max-width: 560px;
   margin: 0 auto;
@@ -323,7 +314,6 @@
   color: var(--gold);
 }
 
-/* CTA booking section */
 .cta-booking {
   background: var(--surface-low);
   border: 1px solid rgba(222, 192, 186, 0.5);

@@ -1,8 +1,3 @@
-/* ============================================================
-   NGUYÊN LIỆU PAGE — css/pages/nguyen-lieu.css
-   ============================================================ */
-
-/* Bento grid - asymmetric ingredient layout */
 .bento-grid {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -31,7 +26,6 @@
   gap: var(--gutter);
 }
 
-/* Ingredient showcase item */
 .ingredient-showcase {
   display: flex;
   flex-direction: column;
@@ -78,7 +72,6 @@
   max-width: 480px;
 }
 
-/* Pull quote with left border */
 .pull-quote {
   max-width: 768px;
   margin: 0 auto;
@@ -95,7 +88,6 @@
   line-height: 1.45;
 }
 
-/* Ritual process list */
 .ritual-list {
   display: flex;
   flex-direction: column;
