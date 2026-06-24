@@ -104,7 +104,28 @@ function setupCardLinks() {
   });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const [headerRes, footerRes] = await Promise.all([
+      fetch("components/header.html"),
+      fetch("components/footer.html"),
+    ]);
+
+    if (headerRes.ok) {
+      const headerHtml = await headerRes.text();
+      const headerPlaceholder = document.getElementById("header-placeholder");
+      if (headerPlaceholder) headerPlaceholder.outerHTML = headerHtml;
+    }
+
+    if (footerRes.ok) {
+      const footerHtml = await footerRes.text();
+      const footerPlaceholder = document.getElementById("footer-placeholder");
+      if (footerPlaceholder) footerPlaceholder.outerHTML = footerHtml;
+    }
+  } catch (error) {
+    console.error("Lỗi khi tải component:", error);
+  }
+
   document.querySelectorAll("[data-menu-toggle]").forEach((trigger) => {
     trigger.addEventListener("click", toggleMobileMenu);
   });
