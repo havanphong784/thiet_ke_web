@@ -19,13 +19,6 @@
   margin-top: 48px;
 }
 
-.bento-grid__pair {
-  grid-column: span 7;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--gutter);
-}
-
 .ingredient-showcase {
   display: flex;
   flex-direction: column;
@@ -43,10 +36,6 @@
 
 .ingredient-showcase__image--medium {
   height: 400px;
-}
-
-.ingredient-showcase__image--short {
-  height: 300px;
 }
 
 .ingredient-showcase__image img {
@@ -137,14 +126,9 @@
 
   .bento-grid__wide,
   .bento-grid__narrow,
-  .bento-grid__center,
-  .bento-grid__pair {
+  .bento-grid__center {
     grid-column: span 1;
     margin-top: 0;
-  }
-
-  .bento-grid__pair {
-    grid-template-columns: 1fr;
   }
 
   .ingredient-showcase__image--tall,
